@@ -1,0 +1,8 @@
+baseurl = 'http://mlavi.github.io/'
+languageCode = 'en-us'
+title = "Mark's Blog"
+author = "Mark Lavi"
+
+nocomment = true
+noread = true
+authorlinkedin = 'http://www.linkedin.com/in/marklavi'
