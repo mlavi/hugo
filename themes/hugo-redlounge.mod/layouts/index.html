@@ -42,11 +42,20 @@
                 {{ end }}
             </p>
             <article class="post-summary">
-                  {{ .Summary }}
-              </article>
-              <div class="read-more-link">
-                  <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
-              </div>
+              {{ .Summary }}
+            </article>
+            {{ if .Params.tags }}
+                  <div class="tags-list"><!--post-tags?-->
+                  <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+                  {{ range .Params.tags }}
+                  <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseUrl}}/tags/{{ . | urlize }}">{{ . }}</a>,
+                  {{ end }}
+                  </div>
+             {{ end }}
+
+            <div class="read-more-link">
+               <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
+            </div>
           </section>
           {{ end }}
         </div>

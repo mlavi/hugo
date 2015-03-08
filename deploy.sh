@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 
-#TEST=1
+if [[ ! -f bugs.yaml ]]; then
+  TEST=1
+fi
 
 # http://jekyllrb.com/docs/continuous-integration/
 # http://gohugo.io/tutorials/github-pages-blog/
@@ -9,7 +11,7 @@ set -e # halt script on error
 # Build the project. 
 echo -e "\nSTART: build..."
 rm -rf public/*
-hugo --theme='hugo-redlounge'
+hugo --theme='hugo-redlounge.mod'
 if [[ $? > 0 ]]; then
   echo "ERROR: build, exiting."; exit 1;
 fi
