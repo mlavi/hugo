@@ -7,7 +7,6 @@ set -e # halt script on error
 # http://gohugo.io/tutorials/github-pages-blog/
 
 # Build the project. 
-
 echo -e "\nSTART: build..."
 rm -rf public/*
 hugo --theme='hugo-redlounge'

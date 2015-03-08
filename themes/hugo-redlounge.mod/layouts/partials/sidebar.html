@@ -1,0 +1,36 @@
+<div class="sidebar pure-u-1 pure-u-md-1-4" style="background: black no-repeat url(/img/firefox_nebula.jpg);">
+  <div class="header">
+    {{ partial "sidebarheader.html" . }}
+
+    {{ if .Site.Params.sidebartitle }}<h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>{{ end }}
+    {{ if .Site.Params.sidebartagline }}<h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>{{ end }}
+
+    {{ .Site.Title }}
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseUrl }}">Home</a></li>
+        <li class="nav-item"><span class="nav-item-separator">//</span><a class="subscribe-button icon-feed" href="{{ .RSSLink }}">Subscribe</a></li>
+
+        {{ range .Site.Menus.main }}
+          <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Url }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <ul id="all-tags">Tag Cloud<br />
+       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+       <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
+       {{ end }}
+      </ul>
+    </nav>
+
+    {{ if .Site.Menus.social }}
+    <div class="social-buttons">
+      {{ range .Site.Menus.social }}
+        {{ if .Url }}
+        <a href="{{ .Url }}" target="_blank">{{ .Pre }}</a>
+        {{ end }}
+      {{ end }}
+      
+    </div>
+    {{ end }}
+  </div>
+</div>
