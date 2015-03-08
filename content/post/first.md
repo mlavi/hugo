@@ -1,7 +1,7 @@
 +++
 date = "2015-03-06T14:11:47-08:00"
 title = "Time for a new development project!"
-tags = ["blog", "prototype", "cms", "static"]
+tags = ["blog", "prototype", "CMS", "static"]
 +++
 
 Embarking on a new adventure is always the best time in a project because all your dreams
@@ -10,7 +10,7 @@ Embarking on a new adventure is always the best time in a project because all yo
 
 ### Then you start...
 
-You find that your idea is broad and multi-faceted, tools are in various states of acceptable
+You find that your idea is broad and multifaceted, tools are in various states of acceptable
  use and documentation, and there is a bevy of dependencies: each representing a small
  landscape to conquer.
 
@@ -23,7 +23,7 @@ But I'm prototyping, so it's all good, right?
 
 I'll update later with how I've navigated the static web site blog quest, thus far it has been an
  exercise in transferring most of the standard content management system functionality into
- smaller tools and libraries which inverts the workflow. I think the journey will be worth
+ smaller tools and libraries which inverts the work flow. I think the journey will be worth
  it because I've caught glimpses which validate this approach:
 
 - I can blog from the command line and presumably anywhere (including my phone) with some setup.

@@ -8,8 +8,11 @@ fi
 # http://jekyllrb.com/docs/continuous-integration/
 # http://gohugo.io/tutorials/github-pages-blog/
 
-# Build the project. 
-echo -e "\nSTART: build..."
+echo -e "\nSTART: Spell check contents..."
+find content -regex "*.md.bak" -delete
+find content -regex "*.md$" -execdir aspell --mode=html --warn check {} \;
+
+echo -e "\nSTART: building project..."
 rm -rf public/*
 hugo --theme='hugo-redlounge.mod'
 if [[ $? > 0 ]]; then
