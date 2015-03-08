@@ -1,8 +1,11 @@
 baseurl = 'http://mlavi.github.io/'
+url = 'http://mlavi.github.io/'
 languageCode = 'en-us'
 title = "Mark's Blog"
 author = "Mark Lavi"
-
+copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+#RSSlink = "/rss.xml"
 nocomment = true
 noread = true
 authorlinkedin = 'http://www.linkedin.com/in/marklavi'
+# git submodule add git@github.com:mlavi/mlavi.github.io.git public

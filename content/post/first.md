@@ -1,6 +1,7 @@
 +++
 date = "2015-03-06T14:11:47-08:00"
 title = "Time for a new development project!"
+tags = ["blog", "prototype", "cms", "static"]
 +++
 
 Embarking on a new adventure is always the best time in a project because all your dreams
