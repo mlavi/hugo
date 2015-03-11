@@ -1,7 +1,7 @@
 +++
 date = "2015-03-06T14:11:47-08:00"
 title = "About Mark"
-tags = ["about", "career"]
+tags = ['about', 'career', 'webmaster', 'DevOps']
 +++
 
 Mark first touched the Internet in 1991 when he was sponsored to do undergraduate research.

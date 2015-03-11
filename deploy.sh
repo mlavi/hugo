@@ -12,6 +12,7 @@ echo -e "\nSTART: Spell check contents..."
 find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
 find content -name "*.md.bak" -delete
 find content -name "*~" -delete
+echo 'TODO: grep -R -e "/`grep status archetypes/default.md`/" content/'
 
 echo -e "\nSTART: building project..."
 rm -rf public/*

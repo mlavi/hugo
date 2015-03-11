@@ -1,6 +1,6 @@
 +++
 date = "2015-03-10T23:16:27-07:00"
-tags = ["automation", "diagram", "DevOps"]
+tags = ['automation', 'diagram', 'DevOps']
 title = "A DevOps Automation State Diagram"
 +++
 
@@ -32,3 +32,5 @@ I'll update with the final product soon: you will be able to view the SVG image 
 window or tab, then scale it to your liking. I'm very happy with the results of performing this work
 with open source software and formats (currently 45Kb SVG which allows you to copy the text of the
 diagram) for flexibility and performance.
+
+*UPDATE* see the [next posting](../devops-automation/) for the "final" product.
