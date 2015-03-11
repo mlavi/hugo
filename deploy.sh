@@ -9,12 +9,13 @@ fi
 # http://gohugo.io/tutorials/github-pages-blog/
 
 echo -e "\nSTART: Spell check contents..."
-find content -regex "*.md.bak" -delete
-find content -regex "*.md$" -execdir aspell --mode=html --warn check {} \;
+find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
+find content -name "*.md.bak" -delete
+find content -name "*~" -delete
 
 echo -e "\nSTART: building project..."
 rm -rf public/*
-hugo --theme='hugo-redlounge.mod'
+hugo --verbose
 if [[ $? > 0 ]]; then
   echo "ERROR: build, exiting."; exit 1;
 fi
