@@ -14,7 +14,7 @@ Ship it and fail fast: I would love to get feedback! I also wonder if anyone can
 Here is today's snapshot of the entire DevOps Automation Diagram source and image.
 I've omitted many possible connections for the sake of showing
 the optimal automated progression from a developer's mind to the production stack.
-I've refectories terminology to help inform systems and actions, but you can see there are
+I've refactored terminology to help inform systems and actions, but you can see there are
 many moving pieces to enable modern day software development life cycle automation,
 some of which are not easily identified off the shelf.
 
