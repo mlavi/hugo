@@ -21,12 +21,16 @@ some of which are not easily identified off the shelf.
 You can "view the SVG image" in a new browser window or tab and scale it to your liking
 and then cut and paste text from it.
 
-![DevOps Automation Diagram - 2015-03-11](/img/devops-automation_2015-03-11.svg)
+### Updated! ###
+My original release was 2015-03-11 (source below), but today's update adds detail, removes many crossed lines
+for simple visual flow parsing, and is organized vertically.
 
-Source code: (I'm unsure if I should name the file devops-automation.plantuml?)
+![DevOps Automation Diagram - 2015-03-17](/img/devops_automation.pu.svg)
+
+Source code: devops_automation.pu
 {{< highlight "js+genshitext" >}}
 @startuml
-title DevOps Automation (2015-03-11)
+title DevOps Automation (2015-03-11) by Mark Lavi
 state Development {
   Development: language
   Development: editor
