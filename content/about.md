@@ -18,3 +18,5 @@ Mark's approach mixes software engineering disciplines with art and operations, 
  Internet architecture, real-time media, and the ability to nurture people, developers,
  networks, and systems to work together. His multidisciplinary practice is complimented
  by the term [DevOps](https://en.wikipedia.org/wiki/DevOps).
+
+You can review Mark's career and endorsements at https://www.linkedin.com/in/marklavi

@@ -39,7 +39,7 @@ of BTD (build, test, and deployment) in order to become proper service designers
 2. **Test:** QualityAssurance creates *tests* for the build artifacts
 3. **Deploy:** Operations *deploys* the artifacts
 
-I call this the BTD pattern, but astute readers will note it should be the TBD pattern! :~)
+I call this the BTD pattern, **but astute readers will note it should be the TBD pattern** because we want to achieve test driven development of code, tests, and operations.
 
 BTD is nothing revelatory, it is the traditional pipeline for software development.
 The [DevOps Automation Diagram](../devops-automation/) at a high level *is* a BTD pattern,

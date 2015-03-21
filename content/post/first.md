@@ -17,7 +17,8 @@ You find that your idea is broad and multifaceted, tools are in various states o
 ### ... to sink into reality!
 
 The original title of this first post was "Time for a new Blog" to document my experiment
- with Github Pages, Jekyll, and Hugo: it has been a fascinating study in scope creep.
+ with [Jekyll and Github Pages](http://jekyllrb.com/docs/github-pages/) before settling on
+ [Hugo](http://gohugo.io/overview/introduction/): it has been a fascinating study in scope creep.
 
 But I'm prototyping, so it's all good, right?
 
@@ -30,6 +31,23 @@ I'll update later with how I've navigated the static web site blog quest, thus f
 - I can test the build of my content, templates, and enhanced work on those elements.
 - Everything under revision control, therefore: blog + content = testable software!
 
-Even though I've accomplished much with Joomla, WordPress, Drupal, and ModX over the years,
- you inevitably fall out of love after the first month with complex and brittle software.
- Will it happen again?
+### A Static Web CMS?
+
+Even though I've accomplished much with various web content management systems (CMS) such as
+ Joomla, WordPress, Drupal, and ModX over the years, you inevitably fall *out of love* after
+ the first month with complex and brittle software. Will it happen again?
+
+A static, compiled web site removes and loses dynamic, server-side functionality for persistence and
+interaction, or does it? With the advent of application service providers (ASP) or cloud hosted
+anything-as-a-service, we can move from server-side to service providers for comments and
+who knows what else? In addition, we can leverage improved web client capabilities to shift
+what was server-side to client-side processing.
+
+This will be a great experiment!
+
+### Infrastructure as Code
+
+The real purpose of this blog will be to catalog and share my research and development towards my passion:
+Infrastructure as Code. It is a ripe time for system and design thinking because the entire industry is
+trying to solve basic problems and automate their solution while integrating many different systems and
+disciplines. It is an exciting and disruptive time!

@@ -17,9 +17,15 @@
       </ul>
       <ul id="all-tags">Tag Cloud<br />
        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-       <li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li>
+       <!--li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li-->
        {{ end }}
+{{ $data := .Data }}
+{{ range $key, $value := .Site.Taxonomies.tags.ByCount }}
+<li><span class="dark-red"><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }}</a></span>
+ <span class="decorative-marker">//</span> {{ $value.Count }}</li>
+{{ end }}
       </ul>
+
     </nav>
 
     {{ if .Site.Menus.social }}

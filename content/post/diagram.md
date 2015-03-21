@@ -4,16 +4,20 @@ tags = ['automation', 'diagram', 'DevOps']
 title = "A DevOps Automation State Diagram"
 +++
 
-Two wonderful things today:
+### Beautiful Tool and Diagram
 
-- I found exactly the tool I have been looking for over the years!
+I found and created two wonderful things today:
+
+1. I found exactly the tool I have been looking for over the years!
   I used Wikipedia and [alternativeTo](http://alternativeto.net) to survey the market for competitors
   to my favorite open source object drawing tool, [Dia](https://wiki.gnome.org/Apps/Dia).
 
-- The following snapshot shows authoring the work-in-progress...
+2. The following snapshot shows authoring a work-in-progress diagram... I've been trying to create this
+  for a quite a while and I'm glad to have the time to do it properly.
+
   ![DevOps Automation Diagram](/img/devops-automation-screenshot.png)
 
-The DevOps mission of reducing friction between the developer's code and deployment to production
+The DevOps mission to reduce all friction between the developer's code and deployment to production
 is mostly captured by this diagram. It has been in my head for a while, extended past but based on
 work with my colleagues at Pertino. It is mostly complete, a bit of an eye-chart, and I want to
 improve the flow by reducing crossing lines. Working on this as a state diagram has yielded some
@@ -33,4 +37,6 @@ window or tab, then scale it to your liking. I'm very happy with the results of 
 with open source software and formats (currently 45Kb SVG which allows you to copy the text of the
 diagram) for flexibility and performance.
 
-*UPDATE* see the [next posting](../devops-automation/) for the "final" product.
+### UPDATE
+
+Please see the [next posting](../devops-automation/) for the "final" product.
