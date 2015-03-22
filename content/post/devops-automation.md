@@ -3,6 +3,11 @@ date = "2015-03-11T10:35:41-07:00"
 tags = ['DevOps', 'automation', 'diagram', 'failfast', 'shipit']
 title = "Today's DevOps Automation Diagram"
 +++
+#shipit and #failfast: I want to share and discuss the DevOps Automation Diagram for continuous deployment.
+Via open source and this blog, we can elevate the state of our software engineering and service design!
+<!--more-->
+
+### Quotes and Motivation
 
 - "Perfect is the enemy of good." --[Volare](http://en.wikiquote.org/wiki/Perfection) (paraphrased)
 - "Fail fast." --[Ward Cunningham](http://en.wikiquote.org/wiki/Ward_Cunningham#The_Simplest_Thing_that_Could_Possibly_Work)

@@ -3,6 +3,12 @@ date = "2015-03-06T14:11:47-08:00"
 title = "About Mark"
 tags = ['about', 'career', 'webmaster', 'DevOps']
 +++
+A DevOps professional with pioneering work on the world's biggest Internet real-time event
+ and web sites from an engineering, operations, content, and marketing perspective.
+ My focus is on people and software development along with system design thinking for the
+ whole life cycle: I can build, grow, and manage teams, applications, networks, and servers
+ to work together while planning and nurturing their continuous improvement.
+<!--more-->
 
 Mark first touched the Internet in 1991 when he was sponsored to do undergraduate research.
  After graduation and Internet withdrawal, he joined the first national commercial Internet

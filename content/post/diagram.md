@@ -3,7 +3,10 @@ date = "2015-03-10T23:16:27-07:00"
 tags = ['automation', 'diagram', 'DevOps']
 title = "A DevOps Automation State Diagram"
 +++
-
+Wonderful accomplishments kicked-off my Infrastructure as Code project.
+One needs to start with a map of the world before deciding where to focus their efforts. 
+It's even better when you can optimize and render the new map in real-time!
+<!--more-->
 ### Beautiful Tool and Diagram
 
 I found and created two wonderful things today:

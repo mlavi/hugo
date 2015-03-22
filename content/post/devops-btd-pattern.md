@@ -1,12 +1,13 @@
 +++
 date = "2015-03-18T21:02:15-07:00"
-status = "draft"
-tags = ["DevOps", "pattern", "build", "test", "deploy"]
+tags = ["DevOps", "build", "test", "deploy", "pattern"]
 title = "DevOps BTD Pattern for Continuous Deployment"
-
 +++
+What happens when you find the same macro and micro pattern in your diagram? You reinforce your goals
+to improve code flow and service design on the way to test driven development!
+<!--more-->
 
-### Code Friction and Service Design ###
+### Code Flow and Service Design
 
 I created the [DevOps Automation Diagram](../devops-automation/) to map out the flow of code from
 developer to production in a wholly automated manner: better known as continuous deployment.
@@ -29,7 +30,7 @@ from shared responsibilities, creating barriers to proper service design and lif
 verbal indications of code friction. They are blockers for engineers on any team or any domain
 to embrace their responsibility for service design over the entire life cycle of code.
 
-### BTD: Build, Test, Deploy Pattern ###
+### BTD: Build, Test, Deploy Pattern
 
 We've talked about breaking down the traditional walls between software development, quality assurance,
 and operations by describing a responsibility for all of these teams to embrace all of the disciplines
@@ -70,7 +71,7 @@ does not code tests, code deployment, and code builds, then test deployments and
 The DevOps engineer must test monitors, deployments, and builds as well.
 This expanded skill set must be part of the engineering culture for service design and imbued into all.
 
-SoftwareDeveloper codes and performs BTD:
+**SoftwareDeveloper** codes and performs BTD:
 
 1. BDD feature descriptions (with help from product management, customer support, and sales)
 1. TDD unit test cases + test data (with help from QualityAssurance)
@@ -79,7 +80,7 @@ SoftwareDeveloper codes and performs BTD:
 1. Related logs, metrics, and monitors for internal SLAs (with help from Operations)
 1. Deployable and configurable artifacts (with help from Operations)
 
-QualityAssurance codes and performs BTD:
+**QualityAssurance** codes and performs BTD:
 
 1. Test plan
 1. Test cases and test data (with help from SoftwareDevelopers) that leverage logs, monitors, and metrics
@@ -87,7 +88,7 @@ QualityAssurance codes and performs BTD:
 1. Integration tests (with help from SoftwareDevelopers)
 1. Deployment tests (with help from Operations)
 
-Operations codes and performs BTD:
+**Operations** codes and performs BTD:
 
 1. Deployment Tools and tests
 1. Server OS builds, run times, and dependencies

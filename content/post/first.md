@@ -3,6 +3,10 @@ date = "2015-03-06T14:11:47-08:00"
 title = "Time for a new development project!"
 tags = ["blog", "prototype", "CMS", "static"]
 +++
+What does one do when laid off? You need to scratch that itch and address the things
+that are in the back of your head and occasionally keep you awake at night. Technical dreams
+and technical debt follow as I start my Infrastructure as Code blog.
+<!--more-->
 
 Embarking on a new adventure is always the best time in a project because all your dreams
  are possible! You research your ideas, find new tools and libraries, and smell the fresh

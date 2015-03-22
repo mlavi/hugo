@@ -5,7 +5,7 @@
     {{ if .Site.Params.sidebartitle }}<h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>{{ end }}
     {{ if .Site.Params.sidebartagline }}<h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>{{ end }}
 
-    {{ .Site.Title }}
+    <span style="background: black;">{{ .Site.Title }}</span>
     <nav class="nav">
       <ul class="nav-list">
         <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseUrl }}">Home</a></li>
@@ -15,17 +15,14 @@
           <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Url }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
-      <ul id="all-tags">Tag Cloud<br />
-       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-       <!--li><a href="/tags/{{ $name | urlize }}">{{ $name }}</a></li-->
-       {{ end }}
+      <ul id="all-tags"><span style="background: black;"><em><stong>Tag Cloud</strong></em></span><br />
 {{ $data := .Data }}
 {{ range $key, $value := .Site.Taxonomies.tags.ByCount }}
-<li><span class="dark-red"><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }}</a></span>
- <span class="decorative-marker">//</span> {{ $value.Count }}</li>
+<li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }}</a><span
+ class="decorative-marker">//</span><a
+ name="{{ $value.Name | urlize }}">{{ $value.Count }}</a></li>
 {{ end }}
       </ul>
-
     </nav>
 
     {{ if .Site.Menus.social }}
