@@ -3,8 +3,8 @@ date = "2015-03-18T21:02:15-07:00"
 tags = ["DevOps", "build", "test", "deploy", "pattern"]
 title = "DevOps BTD Pattern for Continuous Deployment"
 +++
-What happens when you find the same macro and micro pattern in your diagram? You reinforce your goals
-to improve code flow and service design on the way to test driven development!
+What happens when you find the same macro and micro pattern in your automation diagram?
+ You reinforce your goals to improve code flow and service design on the way to test driven development!
 <!--more-->
 
 ### Code Flow and Service Design
