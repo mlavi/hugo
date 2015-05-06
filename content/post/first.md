@@ -37,15 +37,24 @@ I'll update later with how I've navigated the static web site blog quest, thus f
 
 ### A Static Web CMS?
 
-Even though I've accomplished much with various web content management systems (CMS) such as
- Joomla, WordPress, Drupal, and ModX over the years, you inevitably fall *out of love* after
- the first month with complex and brittle software. Will it happen again?
+Even though I've accomplished much (including e-commerce) with various web content management systems
+(CMS) such as:
+ [Plone](http://plone.org/), [TWiki](http://twiki.org/) & [Foswiki](http://foswiki.org/),
+ [Joomla](http://www.joomla.org/),
+ [WordPress](http://wordpress.org),
+ [Drupal](http://drupal.org),
+ and [ModX](http://modx.com)
+over the years, you inevitably fall *out of love* after the first month with complex and brittle software
+when you extend it into the enterprise by adding integrations, plugins, etc. which have their own security
+attack surface, dependencies, update schedule, and incompatibilities.
+
+You wonder if Share Point is just as evil (I'm sure it is!) and will I fall out of love with a static CMS?
 
 A static, compiled web site removes and loses dynamic, server-side functionality for persistence and
 interaction, or does it? With the advent of application service providers (ASP) or cloud hosted
-anything-as-a-service, we can move from server-side to service providers for comments and
-who knows what else? In addition, we can leverage improved web client capabilities to shift
-what was server-side to client-side processing.
+anything-as-a-service, we can move from server-side to service providers for authentication, spam filtered
+comments, forms and polls, advertising, analytics, and who knows what else?
+In addition, we can leverage improved web client capabilities to shift what was server-side to client-side processing.
 
 This will be a great experiment!
 

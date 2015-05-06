@@ -86,16 +86,16 @@ Some fun challenges and SGI trivia:
  - [Archived home page from 1997](https://web.archive.org/web/19970605011712/http://www.sgi.com/)
  - I'll see if I can dig up that original image, I think I have the poster.
 
-- SGI engineering has created an in-house improved, centralized revision control system on top of
+- SGI engineering had created an in-house improved, centralized revision control system on top of
 [RCS](https://en.wikipedia.org/wiki/Revision_Control_System),
 one of the earliest, local file Unix revision control systems. It could be thought of a
  cousin and functional equivalent to [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System)
- because it used RCS format files in the repository.
+ because it used RCS format files in the repository and allowed multiple users.
  However, it ran only on [IRIX](https://en.wikipedia.org/wiki/IRIX), which was SGI's flavor of
-Unix for the MIPS CPU family, and Engineering did not have a road map to port it to Linux. Despite SGI already transitioning from IRIX to Linux, they had not decided to end of life IRIX at that time.
+Unix for the MIPS CPU family, and there was no road map to port it to Linux. Despite SGI already transitioning from IRIX to Linux, they had not decided to end of life IRIX at that time.
  - I was working to move us from SGI O2's (IRIX) on every web developer's desk to Linux or Windows laptops
  to modernize our tech stack, desktops, and tools. Some people stayed on IRIX and that was absolutely fine:
  our solution was based on open standards and transports.
- - After examining Mercurial, I moved us our team to
+ - After examining Mercurial, I moved our team to
  [Subversion (svn)](https://en.wikipedia.org/wiki/Apache_Subversion)
 because it represented a straightforward migration without a major change in context for our web developers.

@@ -7,41 +7,43 @@ title = "Container Infrastructure Strategy"
 
 In these early years of containers, "heavy containers" represent a typical approach which
 resembles virtual machines, includes the operating system user land, and desires configuration
-management. Does this represent the opposite of container promise and immutable infrastructure?
+management. Does this starting point represent the opposite of container promise and the journey
+to immutable infrastructure?
 <!--more-->
 
 ### Heavy Containers
 
 I have been researching containers for years, I encountered [an early mention for Drupal CMS hosting]
 (https://pantheon.io/blog/why-we-built-pantheon-containers-instead-virtual-machines)
- probably a year before I heard about Docker. I had worked with chroot jails earlier in my career,
+ probably a year before I heard about Docker. I had worked with
+ [chroot jails](https://en.wikipedia.org/wiki/Chroot) earlier in my career,
  but [Docker](http://docker.com) made LXC containers easy to use, just as [Vagrant](http://vagrantup.com)
  had done for Virtual Machines.
 
 For the sake of simplifying this discussion, I will not discuss dynamic runtime configuration: it is the
-subject of a future blog post. We will approximate it via static application configuration.
+subject of a future blog post. We will approximate it via static application configuration in the example.
 
 An ideal container holds an application and nothing more: the tricky part is defining your application
-and its dependencies. If you look at the full stack an application may be composed, you would consider
+and its dependencies. If you look at the full technology stack that supports an application, you would consider
 the data, code, runtime configuration, server facility, and further dependencies. e.g.:
 
 * application:
   * code: /var/www/virtualhost.example.com/micro/service/route
-  * code libraries and frameworks: /var/www/shared/language/framework-version (potentially implicitly stored with the code base)
-  * static application configuration data: /var/www/shared/configuration/databasepassword.inc.txt (potentially implicitly stored with the code base)
-* runtime facilities: (e.g.: PHP)
-  * language runtime binaries: /usr/bin/local/php-5.x
-  * language runtime configuration: /etc/php.ini
-  * language runtime dependencies: openssl, etc.
-* server facility: (e.g.: Apache-2.4.x)
-  * server binaries: /usr/bin/local/apache2**
-  * server configuration: /etc/apache2/**
-  * server runtime configuration: /etc/defaults/apache2
-  * server startup customization: /etc/init/apache2-custom
-  * server plug-ins: mod_php, mod_ssl, etc.
-  * server plug-in dependencies: openssl, php, etc.
+  * libraries and frameworks: /var/www/shared/language/framework-version (potentially implicitly stored with the code base)
+  * static configuration data: /var/www/shared/configuration/databasepassword.inc.txt (potentially implicitly stored with the code base)
+* runtime: (e.g.: PHP)
+  * binaries: /usr/bin/local/php-5.x
+  * configuration: /etc/php.ini
+  * library dependencies: openssl, etc.
+* server: (e.g.: Apache-2.4.x)
+  * binaries: /usr/bin/local/apache2**
+  * configuration: /etc/apache2/**
+  * runtime configuration: /etc/defaults/apache2
+  * startup customization: /etc/init/apache2-custom
+  * plug-ins: mod_php, mod_ssl, etc.
+  * plug-in dependencies: openssl, php, etc.
 
-It is desirable to bundle all of these things together as a full stack, static deployment unit,
+It is desirable to bundle all of these things together as a full stack into a static deployment unit,
 making your application portable and self-contained (ha ha).
 There is a challenge to decide container scope because of the natural tendency
 to follow the dependencies and bundle everything into the container, which weighs it down.
@@ -62,7 +64,7 @@ This scope (equivalent to a VM) is natural until you are comfortable with contai
 
 This is an incomplete thought: I will continue and reorganize it.
 
-You must address your audience. For developers, a development container might have everything
+Any solution must properly address the audience. For developers, a development container might have everything
 needed for production but also add troubleshooting and development tools. For production, we would use the
 lighter version of the developer container by omitting the extras accomplishing a minimal difference
 between dev and prod!
@@ -72,20 +74,21 @@ We can accomplish this by separating containers into layers, where each
 [they can be added together](http://docs.docker.com/reference/builder/#from) to compose a bigger container.
 
 Therefore, each container layer could represent an area of expertise which models how your organization
-manages resources and could progress with different development cadence. e.g.:
+manages resources and could progress with a different development cadence. e.g.:
 
 * your system administrators might take care of the base OS,
 * your network team might address firewall and networking concerns,
 * your server developer team might take care of the server runtime and dependencies,
 * your DevOps team could address configuration, etc.
+* your developers address the application and dependencies.
 
-Reusing the expertise in your organization suggests a good model to start from and
-allows independent iteration of each concern by container layer.
+Reusing the expertise in your organization suggests a good starting model
+and allows independent iteration of each concern by container layer.
 
 The result is a robust container build that dynamically invokes its dependent layers, allowing each
 to iterate as needed, reducing complexity for a single, monolithic build and risk for rapid deployment.
 
-So let's explore that idea in more detail:
+So let's explore this idea in more detail:
 
 * FROM minimalist/OS
 
