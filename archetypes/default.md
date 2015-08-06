@@ -1,5 +1,5 @@
-+++
-tags = ['', '']
-status = 'draft'
-+++
+---
+tags: ['', '']
+draft: true
+---
 <!--more-->
