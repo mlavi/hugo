@@ -1,10 +1,10 @@
 ---
 date: "2015-04-23T12:59:26-07:00"
-tags: ["html", "slide", "web"]
+tags: ["HTML", "slide", "web"]
 title: "HTML Slide Show Survey"
 ---
 
-Powerpoint and other proprietary slideware, bah!
+PowerPoint and other proprietary slide-ware, bah!
 We already have a universal, open system for communication
 called the web, so let's explore web presentation applications.
 <!--more-->
@@ -23,7 +23,7 @@ for recompiling my updates in Markdown, so I chose that, but I would revisit any
 These HTML slide systems are comprised of static HTML+CSS+JavaScript in which you author content directly.
 
   * Biggie: [Source](http://github.com/tmcw/big/)
-    || [Demo](http://www.macwright.org/biggie/) author in MarkDown, interesting forks!
+    || [Demo](http://www.macwright.org/biggie/) author in Markdown, interesting forks!
   * CSSS: [Source](https://github.com/LeaVerou/CSSS)
     || [Demo](http://leaverou.github.io/CSSS/)
     || [BlogPost](http://lea.verou.me/2010/10/my-ft2010-slides-and-csss-my-presentation-framework/)

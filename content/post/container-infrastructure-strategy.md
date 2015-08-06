@@ -16,11 +16,11 @@ to immutable infrastructure?
 The content of this blog post has been given as a talk:
 
 - 2015-05-16: presented at [RootConf 2015](https://rootconf.talkfunnel.com/2015/62-container-infrastructure-strategy) Bangalore, India.
-    - One valuable comment from the audience: the separation of responsiblities which can imply container
+    - One valuable comment from the audience: the separation of responsibilities which can imply container
  layers resembles [OSGi architecture](https://en.wikipedia.org/wiki/OSGi#Architecture). I think this is a
  great way to look at things.
 - 2015-04-28: presented to the technical staff of [TicketFly](http://www.ticketfly.com/about-us) at the invitation of Jerome, Director of Technology.
-- 2015-04-16: led the open space session/discussion at the Container Unconference, preceeding [Container Camp @ San Francisco 2015](https://container.camp/sf-2015/).
+- 2015-04-16: led the open space session/discussion at the Container Unconference, preceding [Container Camp @ San Francisco 2015](https://container.camp/sf-2015/).
 
 ### Heavy Containers
 
