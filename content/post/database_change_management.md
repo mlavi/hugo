@@ -4,15 +4,19 @@ tags = ["database", "diagram", "code"]
 title = "Database Change Management"
 
 +++
-Database configuration management tools: version your database and treat it like code!
-We want DevOps, not mysterious, hidden, hand crafted DBA ops whenever possible.
+Database configuration management tools allow us version the database and treat it like code!
+We want DevOps, not mysterious, hidden, hand crafted DBA ops whenever possible. Another
+flashback to 1998.
 <!--more-->
 
 ### Self-taught DBA
 
-In 1998, I was the co-founder of a start up named PassPoints that provided private branded
-loyalty programs for web sites. We were an ASP (Application Service Provider) and we had a
-web based API for integration. Today, we use different terms to describe the same practices:
+In 1998, I was the co-founder of a start up named
+[PassPoints](https://web.archive.org/web/20011218000620/http://www.passpoints.com/info/company_and_vision.shtml)
+that provided private branded loyalty programs for web sites.
+
+We were an ASP (Application Service Provider) and we had a web based API for integration.
+Today, we use different terms to describe the same practices:
 Software as a Service and REST API.
 
 I was the *de-facto* system administrator and after talking to our developers, we chose
@@ -29,6 +33,7 @@ deploy the Oracle 8 relational data base:
 * two days to create staging and start automating the process with shell scripts
 * two hours to complete making a production database instance with my automation.
 
+#### Agile Databases
 I may have gotten it faster, I don't remember now, but restoring data to a new instance
 can be a lengthy procedure fraught with peril. **This is a critical reason to
 make your database infrastructure agile and testable!**
@@ -37,7 +42,7 @@ Along the way, I looked for tools to help visualize the database and perform upg
 we paid for Oracle Enterprise Manager on Solaris and I found it helpful, but it was
 not valuable to me.
 
-### DB Configuration Management
+#### Database Configuration Management
 
 I had accomplished configuration management for a new database instance through shell scripts,
 another artifact from the past! However, translating that accomplishment to using a configuration
@@ -45,7 +50,7 @@ management system like Chef or Puppet is not where the DBA Ops journey should en
 
 I recently rediscovered an open source tool I used back then to visualize and map the database:
 http://schemaspy.sourceforge.net/ -- I think this would be a valuable post commit tool to add to
-a build system.
+a build system for up to date, valuable documentation of your relational data.
 
 We need to treat the data inside the database as critical infrastructure as well!
 You cannot create an ephemeral test instance of your entire service with an empty persistence
