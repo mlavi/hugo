@@ -33,7 +33,7 @@ deploy the Oracle 8 relational data base:
 * two days to create staging and start automating the process with shell scripts
 * two hours to complete making a production database instance with my automation.
 
-#### Agile Databases
+### Agile Databases
 I may have gotten it faster, I don't remember now, but restoring data to a new instance
 can be a lengthy procedure fraught with peril. **This is a critical reason to
 make your database infrastructure agile and testable!**
@@ -57,7 +57,7 @@ You cannot create an ephemeral test instance of your entire service with an empt
 tier, you need to populate your database(s) with a proper schema and bootstrap data before
 you even begin testing.
 
-### Database Evolution
+#### Database Evolution
 
 My last start-up was a polyglot development organization, which made QA and Operations
 challenging permutations, but this is the way of the world. It made us increasingly
