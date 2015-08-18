@@ -15,7 +15,7 @@ In 1998, I was the co-founder of a start up named
 [PassPoints](https://web.archive.org/web/20011218000620/http://www.passpoints.com/info/company_and_vision.shtml)
 that provided private branded loyalty programs for web sites.
 
-We were an ASP (Application Service Provider) and we had a web based API for integration.
+We were an **ASP** (Application Service Provider) and we had a web based API for integration.
 Today, we use different terms to describe the same practices:
 Software as a Service and REST API.
 
@@ -99,7 +99,8 @@ dynamic control of feature roll out. Let's use this for test driven operations, 
 
 I am sure that we borrowed another term for dynamic configuration at my last start-up.
 We discussed feature toggles, shipping features dark, and later turning them on by
-"lighting" them. Now there is an application start up (ASP? :~) for that = http://launchdarkly.com/
+"lighting" them. Now there is an application start up **(ASP? :~)** for that
+= http://launchdarkly.com/
 
 ### More to Muse Upon...
 
