@@ -43,3 +43,24 @@ diagram) for flexibility and performance.
 ### UPDATE
 
 Please see the [next posting](../devops-automation/) for the "final" product.
+
+### Post Script: 2015-08-10
+
+There are other [UML modelers](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools),
+I think (http://blog.staruml.io/) and yEd are noteworthy.
+
+However, as I explore the work flow and orchestration space, I am rediscovering
+the work done for
+[Business Process Modeling](https://en.wikipedia.org/wiki/Business_process_modeling)
+standards, such as
+[BPEL](https://en.wikipedia.org/wiki/Business_Process_Execution_Language) and
+[BPMN](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation),
+and their various implementations with modelers such as:
+
+    * www.open-esb.net
+    * [Sirius](http://www.eclipse.org/sirius/getstarted.html) and tools build on it.
+
+implemented in ServiceMix and ProcessMaker.
+
+This was triggered by my recent research into OASIS TOSCA and CAMP standards:
+everything new feels old again! :~)s
