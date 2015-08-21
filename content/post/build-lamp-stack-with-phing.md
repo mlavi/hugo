@@ -28,7 +28,7 @@ e.g.: From Netscape Enterprise Web Server to Apache, Informix and Oracle to MySQ
 
 ### Migration of Build Methods
 
-I had an ever growing shell script to perform the package builds and I refactored it for the release numbers and
+I had an ever growing shell script to perform the package builds and I re-factored it for the release numbers and
 the deployment directory to be variable driven. Although my build script was a brittle monstrosity without any
 conditionally or intelligence, it was the right approach towards infrastructure as code!
 

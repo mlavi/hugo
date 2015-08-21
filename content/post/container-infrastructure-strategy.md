@@ -11,10 +11,12 @@ management. Does this starting point represent the opposite of container promise
 to immutable infrastructure?
 <!--more-->
 
-### Update: 2015-07-14 ###
+### Update: 2015-08-20 ###
 
 The content of this blog post has been given as a talk:
 
+- 2015-08-19: presented at [Advanced AWS Meetup](http://www.meetup.com/AdvancedAWS/events/223822846/) hosted by New Relic, San Francisco, CA
+    - [DevOps and Heavy Containers](/slides/container-infrastructure-strategy.html) || [Markdown](/slides/container-infrastructure-strategy.md)
 - 2015-05-16: presented at [RootConf 2015](https://rootconf.talkfunnel.com/2015/62-container-infrastructure-strategy) Bangalore, India.
     - One valuable comment from the audience: the separation of responsibilities which can imply container
  layers resembles [OSGi architecture](https://en.wikipedia.org/wiki/OSGi#Architecture). I think this is a
@@ -31,25 +33,25 @@ I have been researching containers for years, I encountered [an early mention fo
  but [Docker](http://docker.com) made LXC containers easy to use, just as [Vagrant](http://vagrantup.com)
  had done for Virtual Machines.
 
-For the sake of simplifying this discussion, I will not discuss dynamic runtime configuration: it is the
+For the sake of simplifying this discussion, I will not discuss dynamic run time configuration: it is the
 subject of a future blog post. We will approximate it via static application configuration in the example.
 
 An ideal container holds an application and nothing more: the tricky part is defining your application
 and its dependencies. If you look at the full technology stack that supports an application, you would consider
-the data, code, runtime configuration, server facility, and further dependencies. e.g.:
+the data, code, run time configuration, server facility, and further dependencies. e.g.:
 
 * application:
   * code: /var/www/virtualhost.example.com/micro/service/route
   * libraries and frameworks: /var/www/shared/language/framework-version (potentially implicitly stored with the code base)
   * static configuration data: /var/www/shared/configuration/databasepassword.inc.txt (potentially implicitly stored with the code base)
-* runtime: (e.g.: PHP)
+* run time: (e.g.: PHP)
   * binaries: /usr/bin/local/php-5.x
   * configuration: /etc/php.ini
   * library dependencies: openssl, etc.
 * server: (e.g.: Apache-2.4.x)
   * binaries: /usr/bin/local/apache2**
   * configuration: /etc/apache2/**
-  * runtime configuration: /etc/defaults/apache2
+  * run time configuration: /etc/defaults/apache2
   * startup customization: /etc/init/apache2-custom
   * plug-ins: mod_php, mod_ssl, etc.
   * plug-in dependencies: openssl, php, etc.
@@ -89,7 +91,7 @@ manages resources and could progress with a different development cadence. e.g.:
 
 * your system administrators might take care of the base OS,
 * your network team might address firewall and networking concerns,
-* your server developer team might take care of the server runtime and dependencies,
+* your server developer team might take care of the server run time and dependencies,
 * your DevOps team could address configuration, etc.
 * your developers address the application and dependencies.
 
@@ -104,7 +106,7 @@ So let's explore this idea in more detail:
 * FROM minimalist/OS
 
 Because every guest container resides on a container host OS, refactoring should take into account
-the container runtime and container host facilities. This becomes interesting if you've picked 
+the container run time and container host facilities. This becomes interesting if you've picked 
 a minimal Linux distribution such as [CoreOS](http://coreos.com/),
 [Passenger-docker](https://github.com/phusion/passenger-docker#why_use),
 [RancherOS](http://rancher.com/rancher-os/), or etc. because they are optimized to run containers
@@ -115,7 +117,7 @@ with sshd and more.
 * FROM server/facility
 * FROM server/runtime
 
-Because your server facility or runtime typically do not change unless there is a new release
+Because your server facility or run time typically do not change unless there is a new release
 which contains a security, performance, or feature fix, this is the next candidate for removal
 from a container and refactoring to its own container layer. This likely includes the server dependencies (libraries and other run-times).
 
@@ -211,7 +213,8 @@ but then use [Packer to build your container artifact](https://packer.io/docs/bu
 
 It appears this approach is also endorsed by
 [Ansible](http://www.ansible.com/blog/ansible-and-containers-why-and-how) and
-[Chef](https://docs.chef.io/containers.html)
+[Chef](https://docs.chef.io/containers.html),
+[Chef Slides](http://www.slideshare.net/mpgoetz/packing-it-in-images-containers-and-config-management-37015676)
 while potentially supported by [Puppet](https://puppetlabs.com/blog/simplify-managing-docker-puppet)
 and [SaltStack](http://saltstack.com/saltstack-delivers-more-automation-docker-lxc-application-containers/),
 but I think we can say this needs some more thought and evangelism because our entire
