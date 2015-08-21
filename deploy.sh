@@ -8,6 +8,9 @@ fi
 # http://jekyllrb.com/docs/continuous-integration/
 # http://gohugo.io/tutorials/github-pages-blog/
 
+# init a new working copy:
+# git rm public && git submodule add git@github.com:mlavi/mlavi.github.io.git public && hugo
+
 echo -e "\nSTART: Spell check contents..."
 find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
 find content -name "*.md.bak" -delete
