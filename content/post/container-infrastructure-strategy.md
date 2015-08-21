@@ -2,7 +2,6 @@
 date = "2015-04-04T07:55:39-07:00"
 tags = ["heavy", "container", "immutable", "infrastructure", "configuration"]
 title = "Container Infrastructure Strategy"
-
 +++
 
 In these early years of containers, "heavy containers" represent a typical approach which
@@ -15,12 +14,14 @@ to immutable infrastructure?
 
 The content of this blog post has been given as a talk:
 
-- 2015-08-19: presented at [Advanced AWS Meetup](http://www.meetup.com/AdvancedAWS/events/223822846/) hosted by New Relic, San Francisco, CA
+- 2015-08-19: presented at [Advanced AWS Meetup](http://www.meetup.com/AdvancedAWS/events/223822846/)
+  hosted by New Relic, San Francisco, CA
     - [DevOps and Heavy Containers](/slides/container-infrastructure-strategy.html) || [Markdown](/slides/container-infrastructure-strategy.md)
-- 2015-05-16: presented at [RootConf 2015](https://rootconf.talkfunnel.com/2015/62-container-infrastructure-strategy) Bangalore, India.
+- 2015-05-16: presented at [RootConf 2015](https://rootconf.talkfunnel.com/2015/62-container-infrastructure-strategy)
+  Bangalore, India.
     - One valuable comment from the audience: the separation of responsibilities which can imply container
- layers resembles [OSGi architecture](https://en.wikipedia.org/wiki/OSGi#Architecture). I think this is a
- great way to look at things.
+ layers resembles [OSGi architecture](https://en.wikipedia.org/wiki/OSGi#Architecture).
+ I think this is a great way to look at things.
 - 2015-04-28: presented to the technical staff of [TicketFly](http://www.ticketfly.com/about-us) at the invitation of Jerome, Director of Technology.
 - 2015-04-16: led the open space session/discussion at the Container Unconference, preceding [Container Camp @ San Francisco 2015](https://container.camp/sf-2015/).
 
