@@ -21,7 +21,7 @@ You find that your idea is broad and multifaceted, tools are in various states o
 ### ... to sink into reality!
 
 The original title of this first post was "Time for a new Blog" to document my experiment
- with [Jekyll and Github Pages](http://jekyllrb.com/docs/github-pages/) before settling on
+ with [Jekyll and GitHub Pages](http://jekyllrb.com/docs/github-pages/) before settling on
  [Hugo](http://gohugo.io/overview/introduction/): it has been a fascinating study in scope creep.
 
 But I'm prototyping, so it's all good, right?
