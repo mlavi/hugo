@@ -1,7 +1,7 @@
 +++
 date = "2015-04-10T08:44:19-07:00"
-tags = ["LAMP", "build", "Phing", 'sgi']
-title = "Building the LAMP stack with Phing"
+tags = ['LAMP', 'build', 'Phing', 'sgi', 'webmaster', 'web']
+title = 'Building the LAMP stack with Phing'
 
 +++
 

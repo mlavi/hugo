@@ -1,7 +1,7 @@
 +++
 date = "2015-03-06T14:11:47-08:00"
 title = "Time for a new development project!"
-tags = ["blog", "CMS", "static"]
+tags = ["about", "CMS", "infrastructure"]
 +++
 What does one do when laid off? You need to scratch that itch and address the things
 that are in the back of your head and occasionally keep you awake at night. Technical dreams

@@ -1,6 +1,6 @@
 +++
 date = "2015-03-11T10:35:41-07:00"
-tags = ['DevOps', 'automation', 'diagram', 'failfast', 'shipit']
+tags = ['DevOps', 'automation', 'diagram']
 title = "Today's DevOps Automation Diagram"
 +++
 #shipit and #failfast: I want to share and discuss the DevOps Automation Diagram for continuous deployment.

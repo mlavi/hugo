@@ -1,6 +1,6 @@
 +++
 date = "2015-03-06T14:11:47-08:00"
-title = "About Mark"
+title = 'About Mark'
 tags = ['about', 'career', 'webmaster', 'DevOps']
 +++
 A DevOps professional with pioneering work on the world's biggest Internet real-time event

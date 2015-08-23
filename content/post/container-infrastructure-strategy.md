@@ -1,6 +1,6 @@
 +++
 date = "2015-04-04T07:55:39-07:00"
-tags = ["heavy", "container", "immutable", "infrastructure", "configuration"]
+tags = ["container", "immutable", "infrastructure", "configuration"]
 title = "Container Infrastructure Strategy"
 +++
 
@@ -29,17 +29,19 @@ The content of this blog post has been given as a talk:
 
 I have been researching containers for years, I encountered [an early mention for Drupal CMS hosting]
 (https://pantheon.io/blog/why-we-built-pantheon-containers-instead-virtual-machines)
- probably a year before I heard about Docker. I had worked with
- [chroot jails](https://en.wikipedia.org/wiki/Chroot) earlier in my career,
- but [Docker](http://docker.com) made LXC containers easy to use, just as [Vagrant](http://vagrantup.com)
- had done for Virtual Machines.
+probably a year before I heard about Docker. I had worked with
+[chroot jails](https://en.wikipedia.org/wiki/Chroot) earlier in my career,
+but [Docker](http://docker.com) made Linux containers (LXC) easy to use,
+just as [Vagrant](http://vagrantup.com) has done for Virtual Machines.
 
-For the sake of simplifying this discussion, I will not discuss dynamic run time configuration: it is the
-subject of a future blog post. We will approximate it via static application configuration in the example.
+For the sake of simplifying this discussion, I will not discuss dynamic run time configuration
+and service discovery: it is the subject of a future blog post. We will approximate it via static
+application configuration in the example.
 
 An ideal container holds an application and nothing more: the tricky part is defining your application
-and its dependencies. If you look at the full technology stack that supports an application, you would consider
-the data, code, run time configuration, server facility, and further dependencies. e.g.:
+and its dependencies. If you look at the full technology stack that supports an application,
+you would consider the data, code, run time configuration, server facility, and further dependencies.
+e.g.:
 
 * application:
   * code: /var/www/virtualhost.example.com/micro/service/route
@@ -239,8 +241,8 @@ but then use [Packer to build your container artifact](https://packer.io/docs/bu
 
 It appears this approach is also endorsed by
 [Ansible](http://www.ansible.com/blog/ansible-and-containers-why-and-how) and
-[Chef](https://docs.chef.io/containers.html),
-[Chef Slides](http://www.slideshare.net/mpgoetz/packing-it-in-images-containers-and-config-management-37015676)
+[Chef](https://docs.chef.io/containers.html)
+([slides](http://www.slideshare.net/mpgoetz/packing-it-in-images-containers-and-config-management-37015676)),
 while potentially supported by [Puppet](https://puppetlabs.com/blog/simplify-managing-docker-puppet)
 and [SaltStack](http://saltstack.com/saltstack-delivers-more-automation-docker-lxc-application-containers/),
 but I think we can say this needs some more thought and evangelism because our entire
