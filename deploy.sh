@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 # init a new working copy:
-# git rm public && git submodule add git@github.com:mlavi/mlavi.github.io.git public && hugo
+# rm -rf public; git rm public || echo # make idempotent
+# git submodule add git@github.com:mlavi/mlavi.github.io.git public && hugo
 
 if [[ ! -f bugs.yaml ]]; then
   TEST=1
