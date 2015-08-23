@@ -109,7 +109,7 @@ Because every guest container resides on a container host, which is an area of O
 and innovation as they are optimized to run containers (i.e.: boot to container):
 
 * [CoreOS](http://coreos.com/)
-* [Project Atomic](http://www.projectatomic.io/docs/introduction/) by RedHat
+* [Project Atomic](http://www.projectatomic.io/docs/introduction/) by Red Hat
 * [RancherOS](http://rancher.com/rancher-os/)
 * 'Snappy' [Ubuntu Core](http://www.ubuntu.com/cloud/tools/snappy)
 * All modern Linux distributions are the default candidates for container hosting in development
