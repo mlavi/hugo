@@ -1,0 +1,3 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:mlavi/mlavi.github.io.git
