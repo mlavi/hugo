@@ -2,9 +2,9 @@
 date = "2015-08-26T08:59:59-07:00"
 tags = ["artifact", "build", 'distribution',]
 title = 'Artifact Repositories'
-
 +++
-
+The past: desktop builds uploaded to FTP server, the present: global artifact delivery networks.
+Release management and artifact repositories are they way we deliver software and infrastructure today.
 <!--more-->
 ### Ship the Bits
 
