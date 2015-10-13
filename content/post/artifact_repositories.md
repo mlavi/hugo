@@ -31,8 +31,8 @@ OS platform, and client versions. Considerations include:
   * different editions (subsets of the build if they are not handled as separates)
   * check sums and code signing
   * packaging:
-    * metadata for each OS or runtime
-    * versus bundling an installer as a self extracting executable
+      * metadata for each OS or runtime
+      * versus bundling an installer as a self extracting executable
   * documentation
   * licensing and potentially providing source code
   * third party licensing
