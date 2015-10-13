@@ -25,7 +25,7 @@ We will cover the following topics so that you can understand and chart your own
  - The Journey to DevOps via:
      - Cloud Agility
      - Infrastructure as Code
-     - Test, Build, Deploy pattern
+     - Test, Build, Deploy Pattern
      - Pets versus Cattle versus Bacteria
      - Infrastructure Models and Orchestration
  - Epilogue: BusinessOps
