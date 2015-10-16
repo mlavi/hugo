@@ -6,7 +6,7 @@ set -e # halt script on error
 #  init a new working copy:
 #  rm -rf public; git rm public # make idempotent
 #  git submodule add --force git@github.com:mlavi/mlavi.github.io.git public
-#  rm -rf public/*; ./deploy
+#  rm -rf public/*; ./deploy.sh
 
 if [[ ! -f bugs.yaml ]]; then
   TEST=1
