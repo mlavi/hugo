@@ -9,10 +9,19 @@ For a term that is not even six years old, DevOps remains a mysterious pursuit
  you can understand and chart your own journey to DevOps. Hint: it is a cultural term!
 <!--more-->
 
-I will polish the slides and elaborate further, but they hammer the key points efficiently!
-Please contact me with any follow up questions or comments.
+### Update: 2015-10-16
 
-The content of this blog post has been given as a talk:
+I have polished the slides to reinforce and elaborate on key points.
+Please contact me with any follow up questions or comments.
+I am happy to give this talk to any organization and I have provided the slides for you to present as well!
+
+### Abstract
+
+A brief history of the DevOps movement and community with a cross section view of many methods and practices that are breaking down the barriers to achieve agility and continuous delivery.
+DevOps seems intangible: you can't buy it, there is no certification, and frankly, there is no universal definition, yet everyone wants it or already "does" it, but still has trouble identifying it.
+I will cover many topics so that you can understand and chart your own journey to DevOps.
+
+The actual content of this blog post has been given as a talk:
 
 - 2015-10-03: presented at [Silicon Valley Code Camp 2015](https://www.siliconvalley-codecamp.com/Session/2015/demystifying-devops)
   San Jose, CA
