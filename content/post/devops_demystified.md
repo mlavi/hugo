@@ -8,6 +8,9 @@ For a term that is not even six years old, DevOps remains a mysterious pursuit
  for many software engineering organizations. Let me define DevOps to help you
  understand and chart your own journey to DevOps. *Hint:* it is a cultural term!
 <!--more-->
+### Update: 2015-11-09
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I will present Demystifying <a href="https://twitter.com/hashtag/DevOps?src=hash">#DevOps</a> at the <a href="https://twitter.com/awscloud">@awscloud</a> San Mateo MeetUp on Tuesday, November 17 6:30pm <a href="https://twitter.com/Coupa">@Coupa</a>. RSVP = <a href="https://t.co/skrJVpeGEI">https://t.co/skrJVpeGEI</a></p>&mdash; Mark (@calm_mark) <a href="https://twitter.com/calm_mark/status/662066673428467716">November 5, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Update: 2015-10-16
 
