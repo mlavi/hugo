@@ -8,14 +8,10 @@ For a term that is not even six years old, DevOps remains a mysterious pursuit
  for many software engineering organizations. Let me define DevOps to help you
  understand and chart your journey to DevOps. *Hint:* it is a cultural term!
 <!--more-->
-### Update: 2015-11-09
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">I will present Demystifying <a href="https://twitter.com/hashtag/DevOps?src=hash">#DevOps</a> at the <a href="https://twitter.com/awscloud">@awscloud</a> San Mateo MeetUp on Tuesday, November 17 6:30pm <a href="https://twitter.com/Coupa">@Coupa</a>. RSVP = <a href="https://t.co/skrJVpeGEI">https://t.co/skrJVpeGEI</a></p>&mdash; Mark (@calm_mark) <a href="https://twitter.com/calm_mark/status/662066673428467716">November 5, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+### Update: 2015-11-18
 
-### Update: 2015-10-16
-
-I have polished the slides twice to reinforce and elaborate on key points.
-I am happy to give this talk to any organization
+I have polished and reorganized the slides a few times to improve the flow, reinforce,
+ and elaborate on key points.  I am happy to give this talk to any organization
  and I have provided the slides for your evangelism efforts as well!
 Please contact me with any follow up questions or comments.
 
@@ -36,9 +32,9 @@ I will cover many topics so that you can understand and chart your journey to De
  - The Journey to DevOps
      - Agile Infrastructure in the Cloud
      - Infrastructure as Code
-     - Infrastructure Orchestration and Models
-     - Test, Build, Deploy Pattern
      - Pets versus Cattle versus Bacteria
+     - Test, Build, Deploy Pattern
+     - Infrastructure Orchestration and Models
  - Epilogue: BusinessOps
      - We are all DevOps: your call to action!
 
@@ -49,15 +45,22 @@ DevOps is the *process* of removing all friction between the developer and custo
 However, DevOps is a culturally rendered term: it is practiced by people and dynamically bound
 to their capabilities.
 
-Elaboration: [I Dream of DevOps, but what is DevOps?](https://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/)
+Elaboration: [I Dream of DevOps, but What is DevOps?](https://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/)
 
 ### Presentation
 
+- Slides: [DevOps Demystified](/slides/devops-demystified.html) || [Markdown](/slides/devops-demystified.md)
+
 The actual content of this blog post has been given as a talk:
 
+- 2015-11-17: presented at [AWS Bay Area Meetup](http://www.meetup.com/awsgurus/events/226547082/)
+    - Typical Meetup attrition: 75 registered, 25+ attended.
+    - Tweets ensued:
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">RT <a href="https://twitter.com/raravena80">@raravena80</a>: Awesome meetup at <a href="https://twitter.com/Coupa">@Coupa</a> HQ with <a href="https://twitter.com/calm_mark">@calm_mark</a> !! <a href="https://t.co/5kljKrreD3">pic.twitter.com/5kljKrreD3</a></p>&mdash; Coupa Software (@Coupa) <a href="https://twitter.com/Coupa/status/666818169798021120">November 18, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 - 2015-10-03: presented at [Silicon Valley Code Camp 2015](https://www.siliconvalley-codecamp.com/Session/2015/demystifying-devops)
-  San Jose, CA
-    - Slides: [DevOps Demystified](/slides/devops-demystified.html) || [Markdown](/slides/devops-demystified.md)
     - Nice turnout of 13 registered, 85 interested, and about 40 attendees.
     - Tweets ensued:
 
