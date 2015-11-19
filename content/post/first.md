@@ -24,6 +24,8 @@ The original title of this first post was "Time for a new Blog" to document my e
  with [Jekyll and GitHub Pages](http://jekyllrb.com/docs/github-pages/) before settling on
  [Hugo](http://gohugo.io/overview/introduction/): it has been a fascinating study in scope creep.
 
+Recently, I discovered [MkDocs](http://www.mkdocs.org/) for "Project documentation with Markdown."
+
 But I'm prototyping, so it's all good, right?
 
 I'll update later with how I've navigated the static web site blog quest, thus far it has been an
@@ -45,11 +47,13 @@ Even though I've accomplished much (including e-commerce) with various web conte
  [Drupal](http://drupal.org),
  [WordPress](http://wordpress.org),
  and [ModX](http://modx.com).
-Over the years, you inevitably fall *out of love* after the first month with complex and brittle software
-when you extend it into the enterprise by adding integrations, plugins, etc. which have their own security
-attack surface, dependencies, update schedule, and incompatibilities.
+over the years, you inevitably fall *out of love* with them after the first month. You discover a
+landscape of complex and brittle software when you extend a web CMS into the enterprise by adding
+integrations, plugins, etc. which have their own security attack surface, dependencies, update schedule,
+and incompatibilities.
 
-You wonder if Share Point is just as evil (I'm sure it is!) and will I fall out of love with a static CMS?
+You wonder if Share Point and Alfresco is just as evil (I am sure they are) and 
+you wonder if you will fall out of love with a static CMS?
 
 This is not a unique problem, it is shared by many other classes of software (like Jenkins, JIRA,
 and your web browser) and once you extend any API or customize any work flow (Oracle EBS). It is
