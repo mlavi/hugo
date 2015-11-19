@@ -56,7 +56,7 @@ The actual content of this blog post has been given as a talk:
 - 2015-11-17: presented at [AWS Bay Area Meetup](http://www.meetup.com/awsgurus/events/226547082/)
     - Typical Meetup attrition: 75 registered, 25+ attended.
     - DevOps definition suggestions:
-        - Change "remove friction" to "enable collaboration." I feel that is nearly the flip side of the same coin, but it does not recurse.
+        - Change "remove friction" to "enable collaboration." I feel that is nearly the flip side of the same coin, but it does not allow recursion.
         - Drop the word "value." I considered this, but does the definition become too abstract? I feel value yields the properties of something tangible and measurable.
     - Tweets ensued:
 
