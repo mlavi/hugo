@@ -3,7 +3,7 @@ date = "2015-08-26T08:59:59-07:00"
 tags = ["artifact", "build", 'distribution',]
 title = 'Artifact Repositories'
 +++
-The past: desktop builds uploaded to FTP server, the present: global artifact delivery networks.
+The past: desktop builds uploaded to the FTP server; the present: global artifact delivery networks.
 Release management and artifact repositories are they way we deliver software and infrastructure today.
 <!--more-->
 ### Ship the Bits
@@ -11,7 +11,7 @@ Release management and artifact repositories are they way we deliver software an
 Once upon a time, software release management was as simple as performing a desktop build, 
 uploading the results to a FTP server, updating the web site, and sending an email.
 
-Software repositories can be that simple, but the state of the art has advanced to support
+Software repositories can still be that simple, but the state of the art has advanced to support
 secure deployments for continuous delivery to multiple clusters in data centers around the
 world multiple times per hour!
 
@@ -19,11 +19,11 @@ world multiple times per hour!
 
 There are many considerations for release management today, assuming that our build candidate
 has passed all of the required tests to become an official release. Now that we pursue
-infrastructure as code, we also build and deploy our software as infrastructure artifacts.
+infrastructure as code, we can also build and deploy our software as infrastructure artifacts.
 
 The simple monolithic build of static code and library dependencies has transitioned into
-a collection of multiple versioned artifacts which must be integrated and configured as a
-system even before considering the deployment permutation matrix of multiple hardware,
+a collection of multiple versioned artifacts which must be integrated, configured, and orchestrated
+as a system even before considering the deployment permutation matrix of multiple hardware,
 OS platform, and client versions. Considerations include:
 
 * Build Post Processing:
@@ -56,19 +56,20 @@ However, there are guidelines you can adopt:
 * [Software Versioning](https://en.wikipedia.org/wiki/Software_versioning) at Wikipedia
 * [Semantic Versioning](http://semver.org/)
 
-While many software package formats specify the metadata requirements, a few have standardized
+While many software package formats specify their metadata requirements, a few have standardized
 on [DOAP: Description of a Project](https://github.com/edumbill/doap/wiki).
 
 ### Software Artifact Repositories
 
 [Feature Matrix of Archiva, Artifactory, Maven](http://binary-repositories-comparison.github.io/)
 
-While an engineering organization produces build artifacts, they often bundle other third
-party open or closed source libraries. In order to speed manual developer builds and automated
+While an engineering organization produces build artifacts, they often bundle third party
+open or closed source libraries. In order to speed manual developer builds and automated
 build systems, these external resources can be cached to increase build speed, reliability, and
-conserve upstream network bandwidth.
+conserve upstream network bandwidth. Conversely, these can be used to publish artifacts for
+public consumption as well.
 
-While each language may have it's own packaging format for build artifacts, e.g.:
+Many languages have their own packaging format for build artifacts, e.g.:
 
 * Java: .jar, .war, and .ear
 * JavaScript: .npm
@@ -77,17 +78,22 @@ While each language may have it's own packaging format for build artifacts, e.g.
 * Python: .egg, .whl
 * Ruby: .gem
 
+There also exist library dependency descriptions:
+* Bundler for Ruby gems
+* Berkshelf for Chef recipes
+
 We also have operating system package management:
 
 * RedHat, Fedora, CentOS and related derivatives: .rpm format with yum repositories
 * Debian, Ubuntu, and related derivatives: .deb format with apt repositories and Launchpad PPA
 
-And now we have public and private container repositories as hosted services or private deployments:
+Infrastructure artifacts follow a similar pattern: public and private container
+repositories as hosted services or private deployments:
 
 * [Docker Hub](https://hub.docker.com/)
 * [Quay.io](https://quay.io/) and [CoreOS Enterprise Registry](https://coreos.com/products/enterprise-registry/)
 
-Along with Vagrant box hosting:
+Along with [Vagrant](https://www.vagrantup.com/) box hosting:
 
 * [Atlas](https://atlas.hashicorp.com/search/)
 * [VagrantBox.es](http://www.vagrantbox.es/)
