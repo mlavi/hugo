@@ -6,12 +6,12 @@ title = "DevOps Demystified"
 +++
 For a term that is not even six years old, DevOps remains a mysterious pursuit
  for many software engineering organizations. Let me define DevOps to help you
- understand and chart your journey to DevOps. *Hint:* it is a cultural term!
+ understand and chart your own journey. *Hint:* it is a cultural term!
 <!--more-->
 ### Update: 2015-11-18
 
 I have polished and reorganized the slides a few times to improve the flow, reinforce,
- and elaborate on key points.  I am happy to give this talk to any organization
+ and elaborate on key points. I am happy to give this talk to any organization
  and I have provided the slides for your evangelism efforts as well!
 Please contact me with any follow up questions or comments.
 
@@ -55,6 +55,9 @@ The actual content of this blog post has been given as a talk:
 
 - 2015-11-17: presented at [AWS Bay Area Meetup](http://www.meetup.com/awsgurus/events/226547082/)
     - Typical Meetup attrition: 75 registered, 25+ attended.
+    - DevOps definition suggestions:
+        - Change "remove friction" to "enable collaboration." I feel that is nearly the flip side of the same coin, but it does not recurse.
+        - Drop the word "value." I considered this, but does the definition become too abstract? I feel value yields the properties of something tangible and measurable.
     - Tweets ensued:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">RT <a href="https://twitter.com/raravena80">@raravena80</a>: Awesome meetup at <a href="https://twitter.com/Coupa">@Coupa</a> HQ with <a href="https://twitter.com/calm_mark">@calm_mark</a> !! <a href="https://t.co/5kljKrreD3">pic.twitter.com/5kljKrreD3</a></p>&mdash; Coupa Software (@Coupa) <a href="https://twitter.com/Coupa/status/666818169798021120">November 18, 2015</a></blockquote>
