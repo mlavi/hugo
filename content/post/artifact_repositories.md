@@ -92,6 +92,7 @@ repositories as hosted services or private deployments:
 
 * [Docker Hub](https://hub.docker.com/)
 * [Quay.io](https://quay.io/) and [CoreOS Enterprise Registry](https://coreos.com/products/enterprise-registry/)
+* [Amazon EC2 Container Registry](https://aws.amazon.com/ecr/details/)
 
 Along with [Vagrant](https://www.vagrantup.com/) box hosting:
 
@@ -112,7 +113,7 @@ so the SaaS subscription may be a better option.
 These are specific to build artifacts, however they can be considered a special case
 of content delivery networks such as Akami, [CacheFly](https://cachefly.com), and Fastly
 as well as related to content accelerators such as CloudFlare
- and Amazon [CloudFront](https://aws.amazon.com/cloudfront/)
+and [Amazon CloudFront](https://aws.amazon.com/cloudfront/)
 
 * JFrog's [Bintray](https://bintray.com)
 * [SourceForge](http://sf.net)

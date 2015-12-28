@@ -35,7 +35,9 @@ but [Docker](http://docker.com) made Linux containers (LXC) easy to use,
 just as [Vagrant](http://vagrantup.com) has done for Virtual Machines.
 
 For the sake of simplifying this discussion, I will not discuss dynamic run time configuration
-and service discovery: it is the subject of a future blog post. We will approximate it via static
+and service discovery: it is the subject of a future blog post and I think
+[12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
+discusses many issues and solutions. We will approximate it via static
 application configuration in the example.
 
 An ideal container holds an application and nothing more: the tricky part is defining your application
