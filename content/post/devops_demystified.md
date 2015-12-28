@@ -62,7 +62,7 @@ The actual content of this blog post has been given as a talk:
             - I considered this, but the definition becomes too abstract: value yields tangible and measurable properties.
     - Tweets ensued:
 
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">RT <a href="https://twitter.com/raravena80">@raravena80</a>: Awesome meetup at <a href="https://twitter.com/Coupa">@Coupa</a> HQ with <a href="https://twitter.com/calm_mark">@calm_mark</a> !! <a href="https://t.co/5kljKrreD3">pic.twitter.com/5kljKrreD3</a></p>&mdash; Coupa Software (@Coupa) <a href="https://twitter.com/Coupa/status/666818169798021120">November 18, 2015</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">RT <a href="https://twitter.com/raravena80">@raravena80</a>: Awesome Meetup at <a href="https://twitter.com/Coupa">@Coupa</a> HQ with <a href="https://twitter.com/calm_mark">@calm_mark</a> !! <a href="https://t.co/5kljKrreD3">pic.twitter.com/5kljKrreD3</a></p>&mdash; Coupa Software (@Coupa) <a href="https://twitter.com/Coupa/status/666818169798021120">November 18, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 - 2015-10-03: presented at [Silicon Valley Code Camp 2015](https://www.siliconvalley-codecamp.com/Session/2015/demystifying-devops)
