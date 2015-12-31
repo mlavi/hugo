@@ -55,6 +55,7 @@ However, there are guidelines you can adopt:
 
 * [Software Versioning](https://en.wikipedia.org/wiki/Software_versioning) at Wikipedia
 * [Semantic Versioning](http://semver.org/)
+* [GNU Coding Standards: Release Version Numbers](https://www.gnu.org/prep/standards/html_node/Releases.html#index-version-numbers_002c-for-releases)
 
 While many software package formats specify their metadata requirements, a few have standardized
 on [DOAP: Description of a Project](https://github.com/edumbill/doap/wiki).
