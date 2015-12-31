@@ -2,11 +2,17 @@
 set -e # halt script on error
 # Install hugo; hugo server --watch &
 #  hugo new post/name.md --editor=gedit &
-# Filesystem:
+# ____ Filesystem:
 #  init a new working copy:
 #  rm -rf public; git rm public # make idempotent
 #  git submodule add --force git@github.com:mlavi/mlavi.github.io.git public
 #  rm -rf public/*; ./deploy.sh
+# ____ Fish: function slides
+#  cd ~/Documents/github.com/mlavi/hugo/static/slides
+#  echo; pwd; ls
+#  . landslide/bin/activate.fish
+#  echo 'set PAGE x watchmedo shell-command --pattern="*.md" --command="landslide --relative --embed --quiet $PAGE.md --destination $PAGE.html" &'
+# end
 
 if [[ ! -f bugs.yaml ]]; then
   TEST=1
