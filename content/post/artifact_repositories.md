@@ -93,6 +93,7 @@ repositories as hosted services or private deployments:
 
 * [Docker Hub](https://hub.docker.com/)
 * [Quay.io](https://quay.io/) and [CoreOS Enterprise Registry](https://coreos.com/products/enterprise-registry/)
+* [Google Container Registry](https://cloud.google.com/container-registry/)
 * [Amazon EC2 Container Registry](https://aws.amazon.com/ecr/details/)
 
 Along with [Vagrant](https://www.vagrantup.com/) box hosting:
