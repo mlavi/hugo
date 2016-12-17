@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e # halt script on error
 # Install hugo; hugo server --watch &
+# hugo version # https://github.com/spf13/hugo/releases
+# sudo apt-get remove hugo && sudo dpkg -i /home/mark/Downloads/hugo_0.17-64bit.deb && hugo version
 #  hugo new post/name.md --editor=gedit &
 # ____ Filesystem:
 #  init a new working copy:

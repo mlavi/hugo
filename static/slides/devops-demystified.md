@@ -6,14 +6,13 @@ A brief history of the DevOps movement and community with a cross section view
  of many methods and practices that are breaking down the barriers to achieve
  agility and continuous delivery.
 
-For a term that is not even six years old, DevOps remains a mysterious pursuit
+For a term less than a decade old, DevOps remains a mysterious pursuit
  for many software engineering organizations.
 
-DevOps seems intangible: you can't buy it, there is no certification, and frankly,
- there is no universal definition, yet everyone wants it or already "does" it,
- but still has trouble identifying it.
+DevOps seems intangible: you can't buy it, there is no certification, and no
+ universal definition, yet everyone who wants it or does it has trouble identifying it.
 
-We will cover the following topics so that you can understand and chart your own
+We will cover these topics so that you can understand and chart your own
  journey to DevOps.
 
 ---
@@ -21,7 +20,7 @@ We will cover the following topics so that you can understand and chart your own
 
  - A Definition and Cultural Rendering of DevOps
      - A Brief History of DevOps
-     - DevOps Impact on Organizations
+     - DevOps Success and Challenges
  - The Journey to DevOps
      - Agile Infrastructure in the Cloud
      - Infrastructure as Code
@@ -62,10 +61,11 @@ A culturally rendered term, but Mark's time tested definition follows:
 
 DevOps has many implications (values, tools, and practices) and it is
 dynamically bound to the capabilities of the people who practice it,
-therefore it will vary by organization.
+therefore it can vary person by person on the same team.
 
 - Illustration: [DevOps Automation Diagram](http://mlavi.github.io/post/devops-automation/)
 - Rumination: [I Dream of DevOps, but What is DevOps?](https://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/)
+- [Portmanteau](https://en.wiktionary.org/wiki/portmanteau#Etymology_2): two or more terms combined; a hybrid or mash-up
 
 ---
 ## Beware of DevOps Hype and Abuse!
@@ -75,42 +75,58 @@ therefore it will vary by organization.
 
 Ask yourself: *Does this [thing] meet our definition of DevOps?*
 
+Use your definition as a lens to evaluate any use of the term!
+
 - Rumination: [Why is DevOps So Hard?](https://calm.io/2015/10/20/why-is-devops-so-hard/)
 
 ---
 ## A Brief History of DevOps
 
-- 2008: "Agile Infrastructure" non-discussion at Agile Conference
-    - Patrick Debois finds Andrew Clay Shafer, they create:
-        - [Agile System Administration](https://groups.google.com/forum/#!forum/agile-system-administration) Google Group: virtual community
-- 2009:
-    - May: "10+ Deploys Per Day: Dev & Ops Cooperation at Flickr" [Video](https://www.youtube.com/watch?v=LdOe18KhtT4) [Slides](http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr)
- by John Allspaw and Paul Hammond at Velocity Conference
-    - October: [DevOpsDays Belgium](http://devopsdays.org): physical community begins
+2009:
+
+- February: [Agile System Administration](https://groups.google.com/forum/#!forum/agile-system-administration) Google Group: virtual community begins
+- May: Velocity conference in San Jose, CA:
+     - "Agile Infrastructure" [Slides](http://www.slideshare.net/littleidea/agile-infrastructure-velocity-09)
+       by Andrew Clay Shafer
+     - "10+ Deploys Per Day: Dev & Ops Cooperation at Flickr" [Video](https://www.youtube.com/watch?v=LdOe18KhtT4) [Slides](http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr)
+ by John Allspaw and Paul Hammond
+- August: Agile 2009 conference in Chicago
+    - [Patrick Debois](https://groups.google.com/forum/#!topic/agile-system-administration/HKCTSee2u4w) rejected talks leads him to find Andrew Clay Shafer
+    - Discussion ensues and the term DevOps is born
+- October: [DevOpsDays Belgium](https://groups.google.com/forum/#!topic/agile-system-administration/hp7WBg4uCJI): physical community begins
 
 ---
 ## A Brief History of DevOps (continued)
 
 - 2013: [The Phoenix Project](https://en.wikipedia.org/wiki/The_Phoenix_Project:_A_Novel_About_IT,_DevOps,_and_Helping_Your_Business_Win)
   book by Gene Kim, Kevin Behr, George Spafford
-- Today: a mysterious movement, buzzword, and a dynamic community!
-    - Industry studies showing DevOps enables business agility, lower MTTF
+- 2014: Annnual [State of DevOps Report](https://devops-research.com/research.html) begins
+    - Industry survey and analysis shows DevOps enables business agility, lower MTTR<br />
+    "high-performing IT organizations are twice as likely to exceed their profitability, market share and productivity goals, and that high performers achieved higher levels of both throughput and stability."
+- 2016: [Measuring DevOps ROI](https://devops.com/iterative-indicators-measuring-devops-roi/)
+    - 200X deploy applications more frequently than slow performers
+    - 2,555X faster lead times
+    - 24X faster recovery times
+    - 3X lower change failure rates.
+    - completed by roughly 4,600 technology practitioners
+- Today: a growing mysterious world-wide movement, buzzword, and dynamic community
     - "Rediscovery" of lean processes, [Agile Manifesto](http://www.agilemanifesto.org/), etc.
 
 References:
 
 - [The History Of DevOps](http://itrevolution.com/the-history-of-devops/) by Damon Edwards
 - [DevOps: A History](https://www.youtube.com/watch?v=IIkbn2V5A40) by Nell Shamrell-Harrington
+
 ---
-# How to Journey to DevOps?
+# DevOps Success and Challenges
 
 - We are all DevOps: ongoing impact to engineering organizations
 - Break down silos that impede holistic solutions and change
-    - Dev + Ops; not developers vs. QA vs. operations
-    - Fail fast, fix fast
+    - Dev + Ops; not developers vs. test/QA vs. operations
+    - Fail fast, fix fast = antifragile, agile attitude
 
 ---
-# How to Journey to DevOps? (continued)
+# How to Journey to DevOps?
 
 - Relentless iteration and automation to achieve goals:
     - *Continuous Delivery* = multiple production deploys per day,
@@ -275,6 +291,7 @@ DevOps and Automation Architect, Nutanix || [mark.lavi@nutanix.com](mailto:mark.
 
 ##Your Next Steps
 
-- Find your local DevOps community and join us!
-- Evangelize: sildes on my *Infrastructure as Code* blog =
+- **Find:** your local DevOps community and join us!
+    - [DevOpsDays.org](http://www.devopsdays.org), [MeetUp](https://www.meetup.com/find/devops/), and [devopsconferences.com](http://devopsconferences.com/?past)
+- **Evangelize:** sildes on my *Infrastructure as Code* blog =
   [http://mlavi.github.io/post/devops_demystified/](http://mlavi.github.io/post/devops_demystified/)
