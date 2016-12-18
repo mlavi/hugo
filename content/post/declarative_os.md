@@ -17,7 +17,7 @@ OS side of the equation.
 [NixOS Linux](http://nixos.org/) is Linux operating system distribution which
 uses a declarative model for system configuration, software management, and
 [remote operation](http://nixos.org/nixops/). [Nix](http://nixos.org/nix/),
-the package manager, works on MacOS and Linux, understands package dependencies,
+the package manager, works on Mac OS and Linux, understands package dependencies,
 and allows multiple versions of software to coexist, making rollback easy.
 Nix works with the combination build system and Nix package repository named
 [Hydra](http://nixos.org/hydra/). There is a public repository of Nix
@@ -61,7 +61,7 @@ I found this interesting, but a bit overwhelming to start diving into!
 
 There is more to investigate:
 
-- Intel's [Clear Linux Project](https://clearlinux.org/) is distro which
+- Intel's [Clear Linux Project](https://clearlinux.org/) is distribution which
   attempts to secure and run containers with optimal performance
   on Intel hardware. Most interesting is their design goal of making [the OS
   stateless](https://clearlinux.org/features/stateless). This approach should
