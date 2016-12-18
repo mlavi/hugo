@@ -18,17 +18,18 @@ We will cover these topics so that
 ---
 ## Agenda
 
- - A Definition and Cultural Rendering of DevOps
-     - A Brief History of DevOps
-     - DevOps Success and Challenges
- - The Journey to DevOps
-     - Agile Infrastructure
-     - Infrastructure as Code
-     - Pets versus Cattle versus Bacteria
-     - Test, Build, Deploy Pattern
-     - Infrastructure Orchestration and Models
- - Epilogue: BusinessOps
-     - We are all DevOps: your call to action!
+- A Definition and Cultural Rendering of DevOps
+    - A Brief History of DevOps
+    - DevOps Success and Challenges
+- The Technical Journey to DevOps
+    - Agile Infrastructure
+    - Infrastructure as Code
+    - Pets versus Cattle versus Bacteria
+    - Test, Build, Deploy Pattern
+   - Infrastructure Orchestration and Models
+- Epilogue: BusinessOps
+    - We are all DevOps: your call to action!
+
 ---
 # Mark Lavi
 
@@ -145,7 +146,7 @@ Technology + Culture transformation for business agility<sup>3</sup>
 <br />&nbsp;&nbsp;&nbsp;Manufacturing Analog: [Toyota Production System](https://en.wikipedia.org/wiki/Toyota_Production_System)
 
 ---
-# How to Journey to DevOps?
+# The Journey to DevOps
 
 **We are all DevOps:** continual evolution for organizations
 
@@ -159,7 +160,7 @@ Technology + Culture transformation for business agility<sup>3</sup>
         - Fail fast, fix fast = antifragile attitude, minimize risk, increase flow
 
 ---
-# How to Journey to DevOps?
+# The Journey to DevOps (continued)
 
 - Closed loop feedback for health and value measurements<sup>4</sup>
   <br />= monitors + logs + metrics for KPIs: Key Performance Indicators
@@ -173,14 +174,15 @@ Technology + Culture transformation for business agility<sup>3</sup>
 "What is measured improves."
 
 ---
-# The Journey to DevOps: Overview
- - Agile Infrastructure
- - Infrastructure as Code
- - Immutable Infrastructure
- - Microservices
- - Pets versus Cattle versus Bacteria
- - Test, Build, Deploy Pattern
- - Infrastructure Orchestration and Models 
+# Technical Journey to DevOps: Overview
+
+- Agile Infrastructure
+- Infrastructure as Code
+    - Immutable Infrastructure
+    - Microservices
+    - Pets versus Cattle versus Bacteria
+- Test, Build, Deploy Pattern
+- Infrastructure Orchestration and Models 
 
 ---
 ## Agile Infrastructure
@@ -198,14 +200,15 @@ Technology + Culture transformation for business agility<sup>3</sup>
 *Infrastructure as Code* = software engineering practices applied to infrastructure
 
 - Version everything: even the database<sup>5</sup>
-- *Configuration Management*
+- *Configuration Management*<sup>6</sup>
     - Deploy all the things!
-    - CASP = Build + configure at run-time
+    - Build + configure at run-time
 - Ephemeral stacks and environments
     - Test all the things!
     - Challenge: full stack orchestration
 
 <sup>5</sup> Blog: [Database Change Management](http://mlavi.github.io/post/database_change_management/)
+<br /><sup>6</sup> [Software Configuration Management Systems](https://en.wikipedia.org/wiki/Continuous_configuration_automation) such as Puppet, Chef, Salt, Ansible, Juju, CFengine, etc.
 
 ---
 ## Infrastructure as Code (continued)
@@ -221,10 +224,16 @@ Technology + Culture transformation for business agility<sup>3</sup>
 ---
 ## Immutable Infrastructure
 
-- Build time infrastructure artifacts = build system + configuration management
-- Ideal for non-persistant tiers:
+- Think of a system that has only:
+    - a read-only filesystem
+    - environment variables for dynamic, runtime configuration
+- Infrastructure artifacts = build system + configuration management at build time
+    - Infrastructure is built and placed in a repository for distribution
+- Ideal for non-persistent application tiers:
     - Simplify deployment: ship logs, metrics, etc. off the "box"
     - Roll 'em in and out of the load balancer, measure twice!
+    - Industry is addressing persistence, but cloud native apps are also a solution
+- Closes the risk and gap between development and production
 
 ---
 ## Microservices
@@ -242,7 +251,7 @@ per component, team, feature, etc.
 Reference: [Amazon REST API manifesto](https://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/)
 
 ---
-## Pets versus Cattle<sup>5</sup>
+## Pets versus Cattle<sup>7</sup>
 
 - Cloud agility enables ephemeral fleets
     - *Pet* = uptime of years, named, backup maintenence
@@ -251,7 +260,7 @@ Reference: [Amazon REST API manifesto](https://apievangelist.com/2012/01/12/the-
 
 This is a lens to evaluate infrastructure and ops; evolve to fleet management + app first design
 
-<sup>5</sup> [Discussion on attribution of Pets versus Cattle](https://news.ycombinator.com/item?id=7311704)
+<sup>7</sup> [Discussion on attribution of Pets versus Cattle](https://news.ycombinator.com/item?id=7311704)
 
 ---
 ## Pets vs. Cattle vs. Bacteria (continued)
@@ -261,13 +270,13 @@ This is a lens to evaluate infrastructure and ops; evolve to fleet management + 
 - Agile, lightweight, smaller, faster VMs:
     - ideal approach for *continuous delivery* of *immutable infrastructure* artifacts, especially microservices
     - minimal difference between laptop and production, millisecond activation
-    - *Bacteria*<sup>6</sup> = lifecycle on the order of seconds: build, run, test, destroy
+    - *Bacteria*<sup>8</sup> = lifecycle on the order of seconds: build, run, test, destroy
 - Early days: Docker as a tool versus Docker as a platform
     - PERL motto = [There is more than one way to do it](http://en.wikipedia.org/wiki/There%27s_more_than_one_way_to_do_it).
 - Production challenges remain: orchestration, health, networking, persistence, dynamic configuration
   -- many issues solved by adopting a container PaaS with limited flexibility
 
-<sup>6</sup> Bacteria is the term I learned from [Tori Wieldt](https://blog.newrelic.com/author/toriwieldt/), New Relic Developer Advocate,
+<sup>8</sup> Bacteria is the term I learned from [Tori Wieldt](https://blog.newrelic.com/author/toriwieldt/), New Relic Developer Advocate,
 seems better than "insect" which also is in use.
 
 ---
@@ -275,13 +284,13 @@ seems better than "insect" which also is in use.
 
 Between development and production:
 
- - the differences should be minimized<sup>7</sup>
+ - the differences should be minimized<sup>9</sup>
  - troubleshooting output and tools should be no different.
 
 Therefore, development environments *SHOULD EVOLVE* from fully mocked
  systems to fully integrated application environments, leading to:
 
-<sup>7</sup> See **Immutable Infrastructure**
+<sup>9</sup> See **Immutable Infrastructure**
 
 ---
 ## Test, Build, Deploy Pattern (continued)
@@ -308,21 +317,23 @@ Reference: [BTD Pattern Blog Entry](http://mlavi.github.io/post/devops-btd-patte
     - Application management lifecycle: all dependencies and operations
 - Continuous Deployment + Upgrades:
     - Blue-Green (Red-Black): parallel population, atomic cutover
-    - Rolling vs. canary: incremental cutover
+    - Rolling vs. canary: incremental cutover with testing
     - Test and measure your operations
          - Close the loop to Continuous Delivery
+- New disciplines and opportunities:
+    - API version management
+    - Dynamic feature roll out: Feature flags/lightness, aka "Death to Staging"
+    - RuggedDevOps and SecDevOps, NetDevOps
 
 ---
 ## Infrastructure Models
 
 - Local versus Global Redundancy
-    - Load balance everything
-    - Clustered everything
-- Automate runbooks = *operations as code*
+    - Load balance everything in a local context
+    - Distributed, clustered workload schedulers
+    - Global load balancing of clusters
+- Automate runbooks and change controls = *operations as code*
     - ChatOps = democratized operations are agile ops
-- New disciplines and opportunities:
-    - API version management
-    - Dynamic feature roll out: Feature flags/lightness, aka "Death to Staging"
 
 ---
 # Epilogue: BusinessOps
@@ -330,7 +341,9 @@ Reference: [BTD Pattern Blog Entry](http://mlavi.github.io/post/devops-btd-patte
 - DevOps escapes the technology domain
 - Apply DevOps to business customers, systems, and processes
 - Business agility: everything is ripe for automation!
-    - Compliance and Security
+    - Compliance<sup>10</sup> and Security
+
+<sup>10</sup> [Compliance at Velocity](http://pages.chef.io/rs/255-VFB-268/images/compliance-at-velocity2015.pdf)
 
 ---
 # Thank You, Questions?

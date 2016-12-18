@@ -1349,14 +1349,14 @@ aside {
 <li>DevOps Success and Challenges</li>
 </ul>
 </li>
-<li>The Journey to DevOps<ul>
+<li>The Technical Journey to DevOps<ul>
 <li>Agile Infrastructure</li>
 <li>Infrastructure as Code</li>
 <li>Pets versus Cattle versus Bacteria</li>
 <li>Test, Build, Deploy Pattern</li>
-<li>Infrastructure Orchestration and Models</li>
 </ul>
 </li>
+<li>Infrastructure Orchestration and Models</li>
 <li>Epilogue: BusinessOps<ul>
 <li>We are all DevOps: your call to action!</li>
 </ul>
@@ -1714,7 +1714,7 @@ by John Allspaw and Paul Hammond</li>
         <div class="slide slide-11">
           <div class="inner">
             
-            <header><h1>How to Journey to DevOps?</h1></header>
+            <header><h1>The Journey to DevOps</h1></header>
             
             
             <section><p><strong>We are all DevOps:</strong> continual evolution for organizations</p>
@@ -1762,7 +1762,7 @@ by John Allspaw and Paul Hammond</li>
         <div class="slide slide-12">
           <div class="inner">
             
-            <header><h1>How to Journey to DevOps?</h1></header>
+            <header><h1>The Journey to DevOps (continued)</h1></header>
             
             
             <section><ul>
@@ -1806,15 +1806,17 @@ by John Allspaw and Paul Hammond</li>
         <div class="slide slide-13">
           <div class="inner">
             
-            <header><h1>The Journey to DevOps: Overview</h1></header>
+            <header><h1>Technical Journey to DevOps: Overview</h1></header>
             
             
             <section><ul>
 <li>Agile Infrastructure</li>
-<li>Infrastructure as Code</li>
+<li>Infrastructure as Code<ul>
 <li>Immutable Infrastructure</li>
 <li>Microservices</li>
 <li>Pets versus Cattle versus Bacteria</li>
+</ul>
+</li>
 <li>Test, Build, Deploy Pattern</li>
 <li>Infrastructure Orchestration and Models </li>
 </ul></section>
@@ -1889,9 +1891,9 @@ by John Allspaw and Paul Hammond</li>
             <section><p><em>Infrastructure as Code</em> = software engineering practices applied to infrastructure</p>
 <ul>
 <li>Version everything: even the database<sup>5</sup></li>
-<li><em>Configuration Management</em><ul>
+<li><em>Configuration Management</em><sup>6</sup><ul>
 <li>Deploy all the things!</li>
-<li>CASP = Build + configure at run-time</li>
+<li>Build + configure at run-time</li>
 </ul>
 </li>
 <li>Ephemeral stacks and environments<ul>
@@ -1900,7 +1902,8 @@ by John Allspaw and Paul Hammond</li>
 </ul>
 </li>
 </ul>
-<p><sup>5</sup> Blog: <a href="http://mlavi.github.io/post/database_change_management/">Database Change Management</a></p></section>
+<p><sup>5</sup> Blog: <a href="http://mlavi.github.io/post/database_change_management/">Database Change Management</a>
+<br /><sup>6</sup> <a href="https://en.wikipedia.org/wiki/Continuous_configuration_automation">Software Configuration Management Systems</a> such as Puppet, Chef, Salt, Ansible, Juju, CFengine, etc.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1973,12 +1976,22 @@ by John Allspaw and Paul Hammond</li>
             
             
             <section><ul>
-<li>Build time infrastructure artifacts = build system + configuration management</li>
-<li>Ideal for non-persistant tiers:<ul>
-<li>Simplify deployment: ship logs, metrics, etc. off the "box"</li>
-<li>Roll 'em in and out of the load balancer, measure twice!</li>
+<li>Think of a system that has only:<ul>
+<li>a read-only filesystem</li>
+<li>environment variables for dynamic, runtime configuration</li>
 </ul>
 </li>
+<li>Infrastructure artifacts = build system + configuration management at build time<ul>
+<li>Infrastructure is built and placed in a repository for distribution</li>
+</ul>
+</li>
+<li>Ideal for non-persistent application tiers:<ul>
+<li>Simplify deployment: ship logs, metrics, etc. off the "box"</li>
+<li>Roll 'em in and out of the load balancer, measure twice!</li>
+<li>Industry is addressing persistence, but cloud native apps are also a solution</li>
+</ul>
+</li>
+<li>Closes the risk and gap between development and production</li>
 </ul></section>
             
           </div>
@@ -2044,7 +2057,7 @@ each with a public API (REST), enables independent, continuous:</p>
         <div class="slide slide-19">
           <div class="inner">
             
-            <header><h2>Pets versus Cattle<sup>5</sup></h2></header>
+            <header><h2>Pets versus Cattle<sup>7</sup></h2></header>
             
             
             <section><ul>
@@ -2056,7 +2069,7 @@ each with a public API (REST), enables independent, continuous:</p>
 </li>
 </ul>
 <p>This is a lens to evaluate infrastructure and ops; evolve to fleet management + app first design</p>
-<p><sup>5</sup> <a href="https://news.ycombinator.com/item?id=7311704">Discussion on attribution of Pets versus Cattle</a></p></section>
+<p><sup>7</sup> <a href="https://news.ycombinator.com/item?id=7311704">Discussion on attribution of Pets versus Cattle</a></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -2091,7 +2104,7 @@ each with a public API (REST), enables independent, continuous:</p>
 <li>Agile, lightweight, smaller, faster VMs:<ul>
 <li>ideal approach for <em>continuous delivery</em> of <em>immutable infrastructure</em> artifacts, especially microservices</li>
 <li>minimal difference between laptop and production, millisecond activation</li>
-<li><em>Bacteria</em><sup>6</sup> = lifecycle on the order of seconds: build, run, test, destroy</li>
+<li><em>Bacteria</em><sup>8</sup> = lifecycle on the order of seconds: build, run, test, destroy</li>
 </ul>
 </li>
 <li>Early days: Docker as a tool versus Docker as a platform<ul>
@@ -2101,7 +2114,7 @@ each with a public API (REST), enables independent, continuous:</p>
 <li>Production challenges remain: orchestration, health, networking, persistence, dynamic configuration
   -- many issues solved by adopting a container PaaS with limited flexibility</li>
 </ul>
-<p><sup>6</sup> Bacteria is the term I learned from <a href="https://blog.newrelic.com/author/toriwieldt/">Tori Wieldt</a>, New Relic Developer Advocate,
+<p><sup>8</sup> Bacteria is the term I learned from <a href="https://blog.newrelic.com/author/toriwieldt/">Tori Wieldt</a>, New Relic Developer Advocate,
 seems better than "insect" which also is in use.</p></section>
             
           </div>
@@ -2134,12 +2147,12 @@ seems better than "insect" which also is in use.</p></section>
             
             <section><p>Between development and production:</p>
 <ul>
-<li>the differences should be minimized<sup>7</sup></li>
+<li>the differences should be minimized<sup>9</sup></li>
 <li>troubleshooting output and tools should be no different.</li>
 </ul>
 <p>Therefore, development environments <em>SHOULD EVOLVE</em> from fully mocked
  systems to fully integrated application environments, leading to:</p>
-<p><sup>7</sup> See <strong>Immutable Infrastructure</strong></p></section>
+<p><sup>9</sup> See <strong>Immutable Infrastructure</strong></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -2224,11 +2237,17 @@ seems better than "insect" which also is in use.</p></section>
 </li>
 <li>Continuous Deployment + Upgrades:<ul>
 <li>Blue-Green (Red-Black): parallel population, atomic cutover</li>
-<li>Rolling vs. canary: incremental cutover</li>
+<li>Rolling vs. canary: incremental cutover with testing</li>
 <li>Test and measure your operations<ul>
 <li>Close the loop to Continuous Delivery</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>New disciplines and opportunities:<ul>
+<li>API version management</li>
+<li>Dynamic feature roll out: Feature flags/lightness, aka "Death to Staging"</li>
+<li>RuggedDevOps and SecDevOps, NetDevOps</li>
 </ul>
 </li>
 </ul></section>
@@ -2263,17 +2282,13 @@ seems better than "insect" which also is in use.</p></section>
             
             <section><ul>
 <li>Local versus Global Redundancy<ul>
-<li>Load balance everything</li>
-<li>Clustered everything</li>
+<li>Load balance everything in a local context</li>
+<li>Distributed, clustered workload schedulers</li>
+<li>Global load balancing of clusters</li>
 </ul>
 </li>
-<li>Automate runbooks = <em>operations as code</em><ul>
+<li>Automate runbooks and change controls = <em>operations as code</em><ul>
 <li>ChatOps = democratized operations are agile ops</li>
-</ul>
-</li>
-<li>New disciplines and opportunities:<ul>
-<li>API version management</li>
-<li>Dynamic feature roll out: Feature flags/lightness, aka "Death to Staging"</li>
 </ul>
 </li>
 </ul></section>
@@ -2310,10 +2325,11 @@ seems better than "insect" which also is in use.</p></section>
 <li>DevOps escapes the technology domain</li>
 <li>Apply DevOps to business customers, systems, and processes</li>
 <li>Business agility: everything is ripe for automation!<ul>
-<li>Compliance and Security</li>
+<li>Compliance<sup>10</sup> and Security</li>
 </ul>
 </li>
-</ul></section>
+</ul>
+<p><sup>10</sup> <a href="http://pages.chef.io/rs/255-VFB-268/images/compliance-at-velocity2015.pdf">Compliance at Velocity</a></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -2446,19 +2462,19 @@ seems better than "insect" which also is in use.</p></section>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">How to Journey to DevOps?</a></th>
+        <th><a href="#slide11">The Journey to DevOps</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">How to Journey to DevOps?</a></th>
+        <th><a href="#slide12">The Journey to DevOps (continued)</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">The Journey to DevOps: Overview</a></th>
+        <th><a href="#slide13">Technical Journey to DevOps: Overview</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
@@ -2489,7 +2505,7 @@ seems better than "insect" which also is in use.</p></section>
         </tr>
         
         <tr id="toc-row-19" class="sub">
-          <th><a href="#slide19">Pets versus Cattle<sup>5</sup></a></th>
+          <th><a href="#slide19">Pets versus Cattle<sup>7</sup></a></th>
           <td><a href="#slide19">19</a></td>
         </tr>
         
