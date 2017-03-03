@@ -8,6 +8,11 @@ For a term that is not even six years old, DevOps remains a mysterious pursuit
  for many software engineering organizations. Let me define DevOps to help you
  understand and chart your own journey. *Hint:* it is a cultural term!
 <!--more-->
+### Update: 2016-12-17
+Yet another refactoring and updates with expanded citations, leveraging a bit of
+my last four months of DevOps evangelism for Nutanix across five countries. It
+could use more more work!
+
 ### Update: 2015-11-18
 
 I have polished and reorganized the slides a few times to improve the flow, reinforce,
@@ -52,6 +57,11 @@ Elaboration: [I Dream of DevOps, but What is DevOps?](https://calm.io/2015/09/23
 - Slides: [DevOps Demystified](/slides/devops-demystified.html) || [Markdown](/slides/devops-demystified.md)
 
 The actual content of this blog post has been given as a talk:
+
+- 2016-12-17: presented at [Cloud Computing Basics](https://www.meetup.com/Cloud-Computing-Basics/events/234108925/)
+    - Online presentation captured and uploaded to [YouTube](https://www.youtube.com/watch?v=7WBEhtQssn8):
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/7WBEhtQssn8" frameborder="0" allowfullscreen></iframe>
 
 - 2015-11-17: presented at [AWS Bay Area Meetup](http://www.meetup.com/awsgurus/events/226547082/)
     - Typical Meetup attrition: 75 registered, 25+ attended.
