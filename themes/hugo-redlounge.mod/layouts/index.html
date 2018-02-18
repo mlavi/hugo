@@ -9,7 +9,7 @@
 
           <div class="posts">
             {{ $Site := .Site }}
-            {{ range .Site.Pages }}
+            {{ range .Data.Pages }}
             <section  class="post">
                 <header class="post-header">
                     {{ if .Params.thumbnail }}
@@ -41,21 +41,24 @@
                 </div>
                 {{ end }}
             </p>
-            <article class="post-summary">
-              {{ .Summary }}
-            </article>
-            {{ if .Params.tags }}
+            {{ if .Truncated  }}
+              <article class="post-summary">
+                  {{ .Summary }}
+              </article>
+              {{ if .Params.tags }}
                   <div class="tags-list"><!--post-tags?-->
                   <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
                   {{ range .Params.tags }}
-                  <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
+                      <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
                   {{ end }}
                   </div>
-             {{ end }}
-
-            <div class="read-more-link">
-               <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
-            </div>
+              {{ end }}
+              <div class="read-more-link">
+                  <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
+              </div>
+            {{ else }}
+              {{ .Content }}
+            {{ end }}
           </section>
           {{ end }}
         </div>

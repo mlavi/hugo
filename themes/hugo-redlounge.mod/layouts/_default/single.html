@@ -46,55 +46,57 @@
             	{{ end }}
             {{ end }}
 
-	{{ $Site := .Site }}
-	{{ if .Params.categories }}
-		<div class="post-categories">
-		{{ range .Params.categories }}
-			<a class="post-category post-category-{{ . | urlize }}" href="{{ $Site.BaseURL}}/categories/{{ . | urlize }}">{{ . }}</a>
-		{{ end }}
-		</div>
-	{{ end }}
+			{{ $Site := .Site }}
+			{{ if .Params.categories }}
+				<div class="post-categories">
+				{{ range .Params.categories }}
+					<a class="post-category post-category-{{ . | urlize }}" href="{{ $Site.BaseURL}}/categories/{{ . | urlize }}">{{ . }}</a>
+				{{ end }}
+				</div>
+			{{ end }}
 
-	{{ if .Params.socialsharing }}
-	    	{{ partial "socialsharing.html" . }}
-    {{ end }}
+			{{ if .Params.socialsharing }}
+		    	{{ partial "socialsharing.html" . }}
+		    {{ end }}
 
-	{{ if .Params.bannerinline }}
-		<img src="{{ .Params.bannerinline }}" class="pure-img content-banner-image-inline" />
-	{{ end }}
+			{{ if .Params.bannerinline }}
+				<img src="{{ .Params.bannerinline }}" class="pure-img content-banner-image-inline"
+                                     style="{{ if .Params.bannerfill }}width: 100%;{{ end }}
+                                            {{ if .Params.bannerheight }}height: {{ .Params.bannerheight }}px;{{ end }}" />
+			{{ end }}
 
-        {{ .Content }}
+            {{ .Content }}
 	
-	{{ if .Params.socialsharing }}
-	    	{{ partial "socialsharing.html" . }}
-    {{ end }}
+			{{ if .Params.socialsharing }}
+		    	{{ partial "socialsharing.html" . }}
+		    {{ end }}
 
-	{{ if .Params.tags }}
-		<div class="tags-list">
-		<span class="dark-red">Tags</span><span class="decorative-marker">//</span>
-		{{ range .Params.tags }}
-                <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
-                {{ end }}
-		</div>
-	{{ end }}
+			{{ if .Params.tags }}
+				<div class="tags-list">
+					<span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+					{{ range .Params.tags }}
+	                <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
+	                {{ end }}
+				</div>
+			{{ end }}
 
-	{{ if not .Params.nopaging }}
-		<div class="paging">
-		<span class="paging-label">More Reading</span>
-		{{ if .Prev }}
-			<div class="paging-newer">
-			<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
-			<a class="paging-link" href="{{ .Prev.RelPermalink }}">{{ .Prev.Title }}</a>
+			{{ if not .Params.nopaging }}
+				<div class="paging">
+					<span class="paging-label">More Reading</span>
+					{{ if .Prev }}
+					<div class="paging-newer">
+						<span class="dark-red">Newer</span><span class="decorative-marker">//</span>
+						<a class="paging-link" href="{{ .Prev.RelPermalink }}">{{ .Prev.Title }}</a>
+		            </div>
+		            {{ end }}
+
+					{{ if .Next }}
+					<div class="paging-older">
+						<span class="dark-red">Older</span><span class="decorative-marker">//</span>
+			            <a class="paging-link" href="{{ .Next.RelPermalink }}">{{ .Next.Title  }}</a>
+		            </div>
+		            {{ end }}
 	            </div>
-            {{ end }}
-
-		{{ if .Next }}
-			<div class="paging-older">
-			<span class="dark-red">Older</span><span class="decorative-marker">//</span>
-	            <a class="paging-link" href="{{ .Next.RelPermalink }}">{{ .Next.Title  }}</a>
-	            </div>
-            {{ end }}
-            </div>
             {{ end }}
           </section>
           {{ if not .Params.nocomment }}
