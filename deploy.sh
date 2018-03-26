@@ -66,5 +66,5 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push --force-with-lease origin master
+git push origin HEAD:master --force-with-lease
 cd ..

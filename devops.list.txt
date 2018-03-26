@@ -1,0 +1,45 @@
+warren.piersol@nutanix.com; todd.nelson@nutanix.com
+John.Farchich@nutanix.com; John.Marlow@Nutanix.com
+rstephens@nutanix.com>; shawn.thepuatrakul@nutanix.com; marc.zlotnikoff@nutanix.com
+mike.nixon@nutanix.com; michael.mcgrann@nutanix.com>; kelly@nutanix.com
+ralf.kovacevic@nutanix.com; philipp.hagen@nutanix.com
+alan@nutanix.com; seb@nutanix.com
+
+Sales : Vincent Gibert
+SE: Alexandre Arrive-Cornec"
+Janne Viitala (Sales), Juha Kangaskoski (SE), Joel Lindberg (SE)
+Klaus Peteratzinger
+Abhilash Mana
+
+yongseo.choi@nutanix.com; yhlee@nutanix.com
+jim.xu@nutanix.com; leiming.pan@nutanix.com
+rajesh.krishnia@nutanix.com
+evian.ang@nutanix.com; moting.fu@nutanix.com
+mayvia.toh@nutanix.com
+saytion.phang@nutanix.com; pk@nutanix.com
+shankar.garikapati@nutanix.com; faiz.shakir@nutanix.com
+
+Mike Jacobs
+Patrice Nicolle
+
+nui.ananviroj@nutanix.com; panuwit@nutanix.com
+Oscart@nutanix.com; Ryan.Corby@nutanix.com
+scott.ragsdale@nutanix.com
+
+Kevin Bacon (SE)
+Klaus Peteratzinger 
+Andreas Ehrenreiter
+Fred Mayne (AM)  Andrew Borrelli (SE)
+Joseph Burns
+Sachin Chheda
+
+james.wright@nutanix.com; jason.mantell@nutanix.com; crasmussen@nutanix.com
+david.scott@nutanix.com; stuart.jennings@nutanix.com
+david.hurley@nutanix.com; ron.barrett@nutanix.com
+ivor.rego@nutanix.com; james.harman@nutanix.com
+
+"Sales: Hiroki Nakahara <hiroki.nakahara@nutanix.com>;
+kazuya.morita@nutanix.com
+Akio Shimizu(SE)
+Jeremie Brison (SE)
+Lutz Federkeil (SE), Michael Röhrig (Sales)
