@@ -5,8 +5,8 @@ title: "Infrastructure as Code and Calm Blueprints"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me and posted on Nov 3, 2015 at
-http://calm.io/2015/11/03/infrastructure-as-code-and-calm-blueprints/
+ was originally written by me, posted on Nov 3, 2015 at
+http://calm.io/2015/11/03/infrastructure-as-code-and-calm-blueprints/,
 and slightly enhanced on February 18, 2018.
 <!--more-->
 

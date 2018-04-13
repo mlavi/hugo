@@ -5,8 +5,8 @@ title: "Reconciling Configuration Management and Immutable Infrastructure"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me and posted on May 26, 2016 at
-http://calm.io/2016/05/26/reconciling-configuration-management-and-immutable-infrastructure/
+ was originally written by me, posted on May 26, 2016 at
+http://calm.io/2016/05/26/reconciling-configuration-management-and-immutable-infrastructure/,
 and slightly enhanced on February 18, 2018.
 <!--more-->
 
@@ -27,7 +27,7 @@ As organizations move servers from the data center to the cloud, traditional
 I characterized the traditional IT operator and system administrator value
  system which views change as risk to system and application availability
  and showed their progressive journey to DevOps in my Calm.io blog post
- [Configuration Management in the DevOps World](tbd).
+ [Configuration Management in the DevOps World](/post/calm.io-recap/calm.io-configuration-management-in-the-devops-world/).
  I generally use the terms server, resource, box, and node interchangeably.
 
 When the primary measure of success is keeping servers up for years without
@@ -57,9 +57,9 @@ One cannot scale efforts beyond a small, hand maintained population of pets
 Per the [Internet meme](https://memegenerator.net/X-All-The-Things),
  we want to automate all the things!
 
-I quote from my blog post on [Configuration Management in the DevOps World](tbd):
+I quote from my blog post on [Configuration Management in the DevOps World](/post/calm.io-recap/calm.io-configuration-management-in-the-devops-world/):
 
-"Configuration Management represents the next step after provisioning
+> "Configuration Management represents the next step after provisioning
  a nascent infrastructure resource to install and configure it to perform
  a certain role, such as a web server, database, etc."
 
@@ -222,7 +222,7 @@ Mounting the infrastructure artifact file system as read only and relying on
  and software build systems. By eliminating the barrier between application
  and infrastructure, operators have joined developers in creating buildable
  and testable infrastructure, which should be tied to
- [application integration testing](tbd).
+ [application integration testing](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/#application-integration-testing-and-continuous-delivery).
  Now the application *IS* the infrastructure!
 
 Immutable infrastructure yields an amazing breakthrough: infrastructure reuse!

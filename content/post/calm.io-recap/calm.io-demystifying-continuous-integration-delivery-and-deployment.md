@@ -5,8 +5,8 @@ title: "Demystifying Continuous Integration, Delivery, and Deployment"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me and posted on December 28, 2015 at
-http://calm.io/2015/12/28/demystifying-continuous-integration-delivery-and-deployment/
+ was originally written by me, posted on December 28, 2015 at
+http://calm.io/2015/12/28/demystifying-continuous-integration-delivery-and-deployment/,
 and slightly enhanced on February 18, 2018.
 <!--more-->
 
@@ -31,7 +31,7 @@ The goal is to build and test software artifacts, then deliver and test them in 
 
 # Build Systems #
 
-It is extremely rare to find a software engineering organization taking the pains to unify their development environments with the aim of making them consistent and immutable for all developers. It is a typical practice for developers to customize their environments to make themselves as productive as possible. While there is some justification to this policy, there is also a repeated productivity cost when the excuse “it worked on my laptop” is used. This is a signal for DevOps evangelism and it will be the topic of a future blog entry!
+It is extremely rare to find a software engineering organization taking the pains to unify their development environments with the aim of making them consistent and immutable for all developers. It is a typical practice for developers to customize their environments to make themselves as productive as possible. While there is some justification to this policy, there is also a repeated productivity cost when the excuse "it worked on my laptop" is used. This is a signal for DevOps evangelism and *it will be the topic of a future blog entry!*
 
 Given that developer environments vary, their local development build results can also vary and challenge reproduction elsewhere due to any uniqueness. The traditional answer for software engineering is to adopt a build system which should be:
 
@@ -94,7 +94,8 @@ The traditional software engineering organization uses the successful build resu
 The testing and quality assurance teams consume the build artifacts to assess the quality of the features across the permutations of platforms for delivery. However, the existence of manual hand offs to testing and later to operation teams signals the need for DevOps evangelism when we hear “my work built fine, so there is no problem as far as I am concerned!” Before the days of DevOps, traditional testing happens before any operations and deployment considerations were addressed.
 
 Increasingly, developers are writing unit tests for their code while manual quality assurance and test work is being automated and delegated to test systems and test providers. I define Continuous Integration Testing as the sum of all the automated tests from various teams, systems, and providers that are invoked during CI.
-Continuous Integration Testing
+
+# Continuous Integration Testing #
 
 Now that CI can eliminate broken builds, the next step is to test the build artifact(s) for new functionality and existing functionality regressions, thereby guaranteeing a minimum software quality threshold. This is called Continuous Integration Testing and it invokes automated tests on the new build artifacts. While this stage may represent the state of the art for many organizations, huge amounts of variability exist in automated continuous integration testing because it can represent an exponential increase in test scope and time to deliver results. Major areas of test scope include:
 
@@ -105,8 +106,8 @@ Now that CI can eliminate broken builds, the next step is to test the build arti
 * Unit Testing:
   * How many new features are tested?
   * How many existing features are tested for regression?
-  * How long does it take to test the full set of features, i.e. how to optimize functional unit testing in context of CI and outside of CI?
-  * Have our mock objects diverged and need update to model the rest of the application components, external systems/providers, and APIs, i.e.: how to test our mock objects?
+  * How long does it take to test the full set of features, _i.e._ how to optimize functional unit testing in context of CI and outside of CI?
+  * Have our mock objects diverged and need update to model the rest of the application components, external systems/providers, and APIs, _i.e.:_ how to test our mock objects?
 
 Just as before, there is a trade off between time to test and exhaustive test scope. Assuming an optimization of the unit test scope and that the test systems/providers have cloud scalability, CI can achieve continuous integration testing results with speed. For the best of both worlds, adding periodic exhaustive continuous integration testing allows further confidence software quality and brings down the barriers to automation of delivery.
 
@@ -114,12 +115,13 @@ Just as before, there is a trade off between time to test and exhaustive test sc
 
 It is natural to align all of the engineering teams into delivering a single, composite piece of software: a monolithic application. However, the challenges of scale and coordination ultimately fragment the monolith over time to evolve to a distributed application architecture. You can understand the turmoil engineering organizations have when they decide to refactor their monolith into components because they simultaneously decrease the complexity of testing each component while increasing the complexity of testing the whole integrated application because all of the components must be assembled.
 
-Refactoring the monolith benefits each team to advance their features, tests, and deployments independently, achieving engineering agility. This approach is exemplified by Microservices, a logical candidate for Immutable Infrastructure, and a future blog entry topic!
+Refactoring the monolith benefits each team to advance their features, tests, and deployments independently, achieving engineering agility. This approach is exemplified by Microservices, a logical candidate for Immutable Infrastructure, *and a future blog entry topic!*
 
 Unless CI is building a monolith, each build artifact now represents an isolated component of a larger application system that must work together. This increases the scale and complexity of testing and deployment; it must be addressed via DevOps automation to test the entire application build artifacts together.
-Application Integration Testing and Continuous Delivery
 
-Given the challenges of microservices, distributed application components, and dependent systems, testing must expand to cover the full application. While continuous integration testing merely tests a build artifact in isolation, a new set of tests must exercise the application as a whole and I call it application integration testing.
+# Application Integration Testing and Continuous Delivery #
+
+Given the challenges of microservices, distributed application components, and dependent systems, testing must expand to cover the full application. While continuous integration testing merely tests a build artifact in isolation, a new set of tests must exercise the application as a whole and I call it _application integration testing._
 
 In the context of the software delivery pipeline, the term "integration" is overloaded and it must be distinguished: it is important to say that continuous integration (CI) does not necessarily imply any testing at all. However, application integration testing can be added to continuous integration testing and it is required for continuous delivery.
 
@@ -132,19 +134,20 @@ Continuous delivery is the instantiation of the application to an integration st
   * How to bring up a set of new resources, each with the proper build or existing artifacts, and configured to work together?
   * Can it be accomplished with configuration management or other methods? How about handling dynamic configuration management?
 * Application Orchestration:
-  * How do insure that the order of each resource/artifact dependencies are satisfied to bring up the application as a whole? i.e.: the back end services must be ready before the business tier logic can start to connect to them and so on throughout the application before testing can start!
+  * How do insure that the order of each resource/artifact dependencies are satisfied to bring up the application as a whole? *i.e.:* the back end services must be ready before the business tier logic can start to connect to them and so on throughout the application before testing can start!
 * Application Integration Testing:
   * Functional unit tests exercise a feature on a build artifact in isolation, can you retest the application features on the whole system?
   * Does your integration testing include performance, scale, and security testing?
 
 When an organization provides answers to the above, it can create an ephemeral test environments for application integration testing on deployed build artifacts. The application integration tests can be optimized into tests which exercise a small set of critical features and transactions throughout the entire application life cycle in order to consume as little time as possible for the next generation, ad hoc CI process.
 
-This is how a DevOps approach can enable next generation continuous integration: not only are broken builds eliminated, but we can achieve a minimal set of software quality and deployability through automated application integration testing. Application orchestration and deployability are true examples of the blending of DEVelopment and OPerationS together.
+This is how a DevOps approach can enable next generation continuous integration: not only are broken builds eliminated, but we can achieve a minimal set of software quality and deployability through automated application integration testing. Application orchestration and deployability are true examples of the blending of __DEV__elopment and __OP__eration__S__ together.
 
 Testing is a diverse area and the scope of performance, security, longevity testing can only follow and build on application integration testing: they are often omitted or performed manually and represent other areas ripe for automation.
 
 Continuous delivery is the deployment of a fully orchestrated application instance for application integration testing and we will reuse this methodology for continuous deployment.
-Continuous Deployment
+
+# Continuous Delivery and Continuous Deployment #
 
 What is the difference between Continuous Delivery and Continuous Deployment? Ideally, very little except for test scope and destination.
 
@@ -152,4 +155,9 @@ Application integration testing is an example of continuous delivery to test app
 
 Longer lived test environment instances represent an infrastructure management challenge that an organization will decide based on the need to perform forensics, preserve reproducible bugs, and hand off to teams to perform manual tests. All of these represent automation friction which can prevent or block ephemeral continuous delivery and another call for DevOps evangelism!
 
-If exhaustive application integration testing passes, then continuous delivery could target staging and even production applications automatically, achieving continuous deployment, i.e.: continuous deployment is simply continuous delivery to production. Each engineering organization must determine the scope and period of automated, exhaustive application integration testing, which returns to the periodic integration model, but remains a frictionless path to achieve our DevOps definition of delivering value from the developer to the customer.
+If exhaustive application integration testing passes, then continuous delivery could target staging and even production applications automatically, achieving continuous deployment, *i.e.:* continuous deployment is simply continuous delivery to production. Each engineering organization must determine the scope and period of automated, exhaustive application integration testing, which returns to the periodic integration model, but remains a frictionless path to achieve our DevOps definition of delivering value from the developer to the customer.
+
+# Postscript 2018-04-13: Netscape Tinderbox #
+
+When I started work for Netscape in 1996, it was the first time I had worked for a software company. I had not realized that a continuous integration build server was something fairly new: *Tinderbox* merely existed and it made perfect sense for release engineering to identify broken builds. A recent article pointed me to a reference which reveals this was not the case, [it was pioneering work](
+https://oduinn.com/2014/06/04/farewell-to-tinderbox/)!

@@ -5,9 +5,9 @@ title: "Why is DevOps So Hard?"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me and posted on October 20, 2015 at
-http://calm.io/2015/10/20/why-is-devops-so-hard/
-and slightly enhanced on February 18, 2018.
+ was originally written by me, posted on October 20, 2015 at
+http://calm.io/2015/10/20/why-is-devops-so-hard/,
+and slightly enhanced on February 27, 2018.
 <!--more-->
 
 For the amount of attention the term DevOps generates these days,
@@ -159,7 +159,7 @@ I could continue, but already you can see that we are early in the days of
  to the level we expect of the other critical systems we use to run our
  organizations.
 
-# Postscript: February 27, 2018 #
+# Postscript February 27, 2018: Pets versus Cattle #
 
 <sup>1</sup>These are clues where I use the lens of
  "[Pets versus Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/)"

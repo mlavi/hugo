@@ -58,13 +58,14 @@ In February, 2017, the Nutanix mid-year sales kick off included an intense
  sales methodology training based on selling positive business outcomes to
  customers. It galvanized me to figure out new ways to communicate about DevOps,
  Nutanix, and Calm. Abstractly, the sales methodology is similar to the TSIA
- [Digital Transformation Journey Infographic](http://blog.tsia.com/blog/navigating-the-world-of-digital-transformation-offers-infographic)
+ [Digital Transformation Journey Infographic](http://blog.tsia.com/blog/navigating-the-world-of-digital-transformation-offers-infographic).
 
 # Preparation #
-In April 9-13, I was at Nutanix headquarters preparing to be a speaker at the
+
+During April 9-13, 2017 I was at Nutanix headquarters preparing to be a speaker at the
  third annual Nutanix .Next User conference with over 4000 attendees. 
 
- to explain Calm's value proposition to my colleagues.
+To explain Calm's value proposition to my colleagues,
  I likened DevOps to the business outcome of *[agility](#agility-devops)*
  and Pets versus Cattle (or removing all single points of failure)
  to the business outcome of *[scalability](#scalability-removing-pets).*

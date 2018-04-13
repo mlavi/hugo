@@ -17,35 +17,39 @@ From September 23, 2015 to May 26, 2016,
 # Original, but Slightly Enhanced Articles #
 
 Listed by publishing date, these articles are a progressive journey to DevOps.
-I've moved the final paragraphs from most of the articles to the
- [Calm.io Calls to Action](#calm-io-calls-to-action) sections that follow.
+I've moved the final paragraphs out from most of the articles to the
+ [Calm.io Calls to Action](#calm-io-calls-to-action) section as well as
+slightly enhancing each article in February, 2018:
 
-* [September 23, 2015](http://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/):
-  * [I Dream of DevOps, but What is DevOps?](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
-  slightly enhanced on February 18, 2018
-  * Call to action: [Calm and DevOps](#calm-and-devops)
-* [October 20, 2015](http://calm.io/2015/10/20/why-is-devops-so-hard/):
-  * [Why is DevOps So Hard?](/post/calm.io-recap/calm.io-why-is-devops-so-hard/)
-  slightly enhanced on February 18, 2018
-  * Call to action: [Calm is the DevOps Solution](#calm-is-the-devops-solution)
-* [November 3, 2015](http://calm.io/2015/11/03/infrastructure-as-code-and-calm-blueprints/):
-  * [Infrastructure as Code and Calm Blueprints](/post/calm.io-recap/calm.io-infrastructure-as-code-and-calm-blueprints/)
-  slightly enhanced on February 18, 2018
-  * Call to action: Calm blueprints represent the full potential of Infrastructure as Code, please contact us for a demonstration of Calm today!
-* [December 28, 2015](http://calm.io/2015/12/28/demystifying-continuous-integration-delivery-and-deployment/):
-  * [Demystifying Continuous Integration, Delivery, and Deployment](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/)
-  slightly enhanced on February 18, 2018
-  * Call to action:
+* September 23, 2015:
+ [I Dream of DevOps, but What is DevOps?](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
+  * [Original URL](http://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/)
+  and call to action: [Calm and DevOps](#calm-and-devops)
+  * Postscript February 18, 2018: [DevOps Definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/#postscript-february-18-2018-devops-definition)
+* October 20, 2015:
+ [Why is DevOps So Hard?](/post/calm.io-recap/calm.io-why-is-devops-so-hard/)
+  * [Original URL](http://calm.io/2015/10/20/why-is-devops-so-hard/)
+  and call to action: [Calm is the DevOps Solution](#calm-is-the-devops-solution)
+  * Postscript February 27, 2018: [Pets versus Cattle](/post/calm.io-recap/calm.io-why-is-devops-so-hard/#postscript-february-27-2018-pets-versus-cattle)
+* November 3, 2015:
+ [Infrastructure as Code and Calm Blueprints](/post/calm.io-recap/calm.io-infrastructure-as-code-and-calm-blueprints/)
+  * [Original URL](http://calm.io/2015/11/03/infrastructure-as-code-and-calm-blueprints/)
+   and call to action:
+   Calm blueprints represent the full potential of Infrastructure as Code, please contact us for a demonstration of Calm today!
+* December 28, 2015:
+ [Demystifying Continuous Integration, Delivery, and Deployment](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/)
+  * [Original URL](http://calm.io/2015/12/28/demystifying-continuous-integration-delivery-and-deployment/)
+  and call to action:
   [The Role of Calm in Continuous Delivery and Deployment](#the-role-of-calm-in-continuous-delivery-and-deployment)
-* [May 24, 2016](http://calm.io/2016/05/24/configuration-management-in-the-devops-world/):
-  * [Configuration Management in the DevOps World](/post/calm.io-recap/calm.io-configuration-management-in-the-devops-world/)
-  slightly enhanced on February 18, 2018
-  * Call to action: [Calm and Configuration Management](#calm-and-configuration-management)
-* [May 26, 2016](http://calm.io/2016/05/26/reconciling-configuration-management-and-immutable-infrastructure/):
-  * [Reconciling Configuration Management and Immutable Infrastructure](/post/calm.io-recap/calm.io-reconciling_configuration_management_and_immutable_infrastructure)
-  slightly enhanced on February 18, 2018
-  * Call to action:
-  [Calm and Immutable Infrastructure](#calm-and-immutable-infrastructure)
+  * Postscript 2018-04-13: [Netscape Tinderbox](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/#postscript-2018-04-13-netscape-tinderbox)
+* May 24, 2016:
+ [Configuration Management in the DevOps World](/post/calm.io-recap/calm.io-configuration-management-in-the-devops-world/)
+  * [Original URL](http://calm.io/2016/05/24/configuration-management-in-the-devops-world/)
+  and call to action: [Calm and Configuration Management](#calm-and-configuration-management)
+* May 26, 2016:
+ [Reconciling Configuration Management and Immutable Infrastructure](/post/calm.io-recap/calm.io-reconciling_configuration_management_and_immutable_infrastructure)
+  * [Original URL](http://calm.io/2016/05/26/reconciling-configuration-management-and-immutable-infrastructure/)
+  and call to action: [Calm and Immutable Infrastructure](#calm-and-immutable-infrastructure)
 
 # Calm.io Calls to Action: #
 

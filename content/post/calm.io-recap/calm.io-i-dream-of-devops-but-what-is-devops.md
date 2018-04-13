@@ -5,8 +5,8 @@ title: "I Dream of DevOps, but What is DevOps?"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me and posted on September 23, 2015 at
-http://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/
+ was originally written by me, posted on September 23, 2015 at
+http://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/,
 and slightly enhanced on February 18, 2018, be sure to see the
 [Postscript](#postscript-february-18-2018) for significant developments!
 <!--more-->
@@ -159,7 +159,7 @@ Because we do not have a universal, citable definition of
 
 Mark Lavi is Calm’s Technology Evangelist, see his [brief biography](/about/).
 
-# Postscript: February 18, 2018 #
+# Postscript February 18, 2018: DevOps Definition #
 
 <sup>1</sup>In
  __[The DevOps Handbook](https://itrevolution.com/book/the-devops-handbook/)__
@@ -175,7 +175,7 @@ From page 4:
 
 While I believe my definition is sufficiently abstract and succinct,
  I think the definitions are complimentary! This article was written
- years before the book was published.
+ years before the __DevOps Handbook__ was published.
 
 In August, 2016 [Nutanix](https://www.nutanix.com/products/calm/)
  acquired my employer, [Calm.io](/tags/calm.io). I constantly struggled
