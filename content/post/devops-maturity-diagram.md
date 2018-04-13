@@ -19,7 +19,7 @@ In August, 2016 [Nutanix](https://www.nutanix.com/products/calm/)
  acquired my employer, [Calm.io](/tags/calm.io). My role became the first
  DevOps Solutions Architect in Sales Engineering supporting North America.
  At Calm, our audience was the DevOps practitioner, but Nutanix had a broader
- and more traditional IT, Datacenter, and Operations audience. I struggled to
+ and more traditional IT, Data center, and Operations audience. I struggled to
  explain the benefits of DevOps in under a minute and my "elevator pitch"
  failed more often than succeeded. Every failure and success inspired me
  to do better and I constantly asked for feedback to improve. I still do!
@@ -127,13 +127,13 @@ Eventually I arrived at graphing the abstract progressions of both agility and
 
 IMG:__DevOps Journey Diagram__
 
-In April 26, I presented the DevOps Journey diagram to a large defence
- contractor and before I completed my explaination, one of the audience
+In April 26, I presented the DevOps Journey diagram to a large defense
+ contractor and before I completed my explanation, one of the audience
  said, "we're a pet shop and depending on the team, we're between stage
  0 and 0.5."
 
 The first diagram was incredibly effective, but I knew I was conflating many
- concerns. For example, replatforming a data center onto Nutanix improved
+ concerns. For example, re-platforming a data center onto Nutanix improved
  infrastructure by migrating to a distributed system (pets to cattle)
  moving up along the vertical access, but it also progressed automated
  operations to the right along the horizontal axis. It didn't make sense
@@ -148,7 +148,7 @@ The combination of infrastructure and operational automation implied multiple
  success would only be for the "Ops" side of the organization. It would
  ignore the other side of the DevOps equation, the "Dev" or developer impact
  that could be achieved by extending to application infrastructure and the
- software development lifecycle. The combination of both sides of the house
+ software development life cycle. The combination of both sides of the house
  is the realm of DevOps and it addresses the total delivery of business value,
  further reinforcing
  [my DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/).

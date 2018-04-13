@@ -8,7 +8,7 @@ From September 23, 2015 to May 26, 2016,
  I took hiatus from my personal blog to explore, explain, and write a number
  of DevOps articles for my employer on the
  [Calm.io blog](http://calm.io/author/mark). Nutanix acquired Calm.io and I
- am still part of the Nutanix Calm team, but I'm reposting these articles on
+ am still part of the Nutanix Calm team, but I'm re-posting these articles on
  my personal blog since the originals are no longer directly accessible.
  I am also enhancing them to clarify language, add learnings,
  and append significant developments as postscripts.
@@ -86,7 +86,7 @@ As I have blogged before, Calm blueprints model your entire application and enca
 
 Calm compliments your existing software development pipelines for continuous integration, delivery, and deployment. Application integration testing for continuous delivery can be achieved with Calm:
 
-> A build system can invoke a Calm blueprint via our REST API to deploy an application with the latest build artifacts, perform application integration tests as operations, and then have Calm deprovision the application instance,
+> A build system can invoke a Calm blueprint via our REST API to deploy an application with the latest build artifacts, perform application integration tests as operations, and then have Calm de-provision the application instance,
 accomplishing ephemeral application integration testing environments.
 
 > The same outcome could be driven from inside a Calm blueprint, allowing you to model the entire application life cycle from build to test to deployment: invoke the build system, pull and deploy the latest artifacts, and then perform application integration test operations.

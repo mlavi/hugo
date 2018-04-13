@@ -125,7 +125,7 @@ This is a field ripe with innovation because there is a natural desire for every
 
 The field of system configuration management took a seminal (but perhaps not the first) step forward with Mark Burgess’ CFEngine in 1993. Rather than program with shell scripts (with the required permutations of complexity), a simple text declaration of desired state could be authored and CFEngine would work to accomplish the results. This model has been reproduced many times in the industry, leading to a few major players today with funny names which embrace their conceptual themes:
 
-| Name | Year Started | Agentless? | Language | Infrastructure as Code Format |
+| Name | Year Started | Agent-less? | Language | Infrastructure as Code Format |
 | --: | :--: | :--: | :--: | :--: |
 | Puppet | 2005 | No, but can run stand alone | Ruby | Domain Specific Language |
 | Chef | 2009 | No, but can run stand alone | Ruby | Ruby |

@@ -59,7 +59,7 @@ standards, such as
 The are various implementations with modelers such as:
 [Open Enterprise Service Bus](www.open-esb.net)
 and [Sirius](http://www.eclipse.org/sirius/getstarted.html)
- which might work with implementiation like [Apache ServiceMix](http://servicemix.apache.org/)
+ which might work with implementations like [Apache ServiceMix](http://servicemix.apache.org/)
  and [ProcessMaker](https://www.processmaker.com/)?
 
 This was triggered by my recent research into OASIS 

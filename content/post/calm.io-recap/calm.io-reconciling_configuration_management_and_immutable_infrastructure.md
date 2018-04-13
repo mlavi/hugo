@@ -207,10 +207,10 @@ If configuration management necessarily represents mutable infrastructure,
 
 Configuration management runs after a node is provisioned and it "builds"
  the system into a desired role with static configuration as a run time
- operation, mutating the filesystem. One concern can be addressed by
+ operation, mutating the file system. One concern can be addressed by
  refactoring static to dynamic configuration to remove a state dependency.
  The next step is to never use configuration management again after the initial
- system build for life cycle operations. The resulting filesystem is treated
+ system build for life cycle operations. The resulting file system is treated
  as an infrastructure artifact by exporting it. To recap: we can refactor
  configuration management to move from an ongoing run time operation to
  synthesize mutable infrastructure to a one time build operation producing
