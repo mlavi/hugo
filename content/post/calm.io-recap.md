@@ -148,3 +148,9 @@ Calm supports build systems to deploy your infrastructure artifacts as part of
 
 There are so many ways Calm delivers DevOps agility for your applications
  today and for your new needs tomorrow, please request a demo today!
+
+## Postscripts ##
+
+  * Postscript February 18, 2018: [DevOps Definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/#postscript-february-18-2018-devops-definition)
+  * Postscript February 27, 2018: [Pets versus Cattle](/post/calm.io-recap/calm.io-why-is-devops-so-hard/#postscript-february-27-2018-pets-versus-cattle)
+  * Postscript 2018-04-13: [Netscape Tinderbox](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/#postscript-2018-04-13-netscape-tinderbox)

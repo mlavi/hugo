@@ -20,7 +20,7 @@ The journey from a developer to the customer can be represented by a flowchart t
 
 Here is an overview of an automated software delivery pipeline:
 
-img:A software delivery pipeline
+![A software delivery pipeline](software-delivery-pipeline.png)
 
 The goal is to build and test software artifacts, then deliver and test them in a whole application context, and finally deploy them in an automated fashion. I will define and explain these terms in depth, but let me walk you through the stages of the software delivery pipeline from a high level:
 

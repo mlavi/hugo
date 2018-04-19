@@ -11,15 +11,25 @@ The opening of
 >Let me share what I’ve learned on my journey to DevOps: it is a culturally
  rendered term and it has a different meaning for everyone.
 
+In that article, I go on to define DevOps and explain the term:
+
+> <div style="text-align: center; font-weight: bold; font-size: large;">DevOps
+ is the <em>process</em> of removing all friction
+ <br />between the developer and customer value.<br /><br /></div>
+
 <!--more-->
 
 # Inspiration #
 
+How do you explain DevOps to the uninitiated or to a non-technical audience?
+
 In August, 2016 [Nutanix](https://www.nutanix.com/products/calm/)
- acquired my employer, [Calm.io](/tags/calm.io). My role became the first
- DevOps Solutions Architect in Sales Engineering supporting North America.
+ acquired my employer, [Calm.io](/tags/calm.io). I became the first
+ DevOps Solutions Architect in Sales Engineering, a subject matter expert
+ overlay role that supported North America.
  At Calm, our audience was the DevOps practitioner, but Nutanix had a broader
- and more traditional IT, Data center, and Operations audience. I struggled to
+ and more traditional IT, Data Center, and Operations audience.
+ Every day, I struggled to
  explain the benefits of DevOps in under a minute and my "elevator pitch"
  failed more often than succeeded. Every failure and success inspired me
  to do better and I constantly asked for feedback to improve. I still do!
