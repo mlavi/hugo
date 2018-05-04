@@ -75,7 +75,7 @@ In February, 2017, the Nutanix mid-year sales kick off included an intense
 
 # Preparation #
 
-On January 25, I gave a Calm deep dive session to my peers at Nutanix,
+January 25, 2017: I gave a Calm deep dive session to my peers at Nutanix,
  and there were two topic requests that shed light into the DevOps world
  for them and provided insight
  (the what, who, why that Nutanix management always cites)
@@ -89,7 +89,7 @@ The second topic was, "Why do I need DevOps?" and I landed on
  to hybrid cloud applications to show how automation accelerates
  all efforts. *TOOD: I still haven't blogged on this!*
 
-During April 9-13, 2017 I was at Nutanix headquarters preparing
+April 9-13, 2017: I was at Nutanix headquarters preparing
  to speak at the third annual Nutanix .Next User conference with
  4000 attendees. To explain Calm's value proposition to my colleagues,
  I likened DevOps to the business outcome of *[agility](#agility-devops)*
@@ -122,7 +122,7 @@ These benefits are confirmed by the
  ... meaning that the high performers achieve agility delivering value with
  DevOps, run higher quality operations with less downtime,
  and invest their productivity gains back into further automation
- in order to continue a positive feedback loop of reinvestment.
+ in order to continue a positive feedback loop of DevOps success.
  DevOps success accomplishes the very definition of an agile business,
  which accelerates away from their competition.
 
