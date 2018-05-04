@@ -31,6 +31,7 @@ In August, 2016 [Nutanix](https://www.nutanix.com/products/calm/)
  especially [@Aaditya](https://twitter.com/aaditya)
  and [@JasnoorGill](https://twitter.com/jasnoorgill),
  had created a higher-level pitch for investors to understand the need for DevOps.
+
  Nutanix had a broader and more traditional IT, Data Center,
  and Operations audience. Every day, I struggled to
  explain the benefits of DevOps in under a minute and my "elevator pitch"
