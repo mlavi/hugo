@@ -235,7 +235,8 @@ A legend not only helped explain the stages of each parallel, but also
 
 On June 29, I presented both diagrams on stage at .Next D.C.
  for my portion of the talk "AW209: Agile Infrastructure for Mode 2 Apps,"
- with my colleagues Ray Hassan (Nutanix) and Allan Naim (Google Cloud).
+ with my colleagues Ray Hassan (Nutanix) and
+ [Allan Naim](https://cloudplatform.googleblog.com/2017/07/going-Hybrid-with-Kubernetes-on-Google-Cloud-Platform-and-Nutanix.html) (Google Cloud).
 
 # Update: 2018-05-03 #
 
