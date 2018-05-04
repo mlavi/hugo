@@ -1,7 +1,7 @@
 ---
 date: "2017-04-12T12:00:00-07:00"
 tags: ['DevOps', 'maturity', 'diagram']
-title: "DevOps Maturity Diagram"
+title: "The DevOps Maturity Diagram"
 draft: false
 ---
 The opening of
@@ -27,9 +27,12 @@ In August, 2016 [Nutanix](https://www.nutanix.com/products/calm/)
  acquired my employer, [Calm.io](/tags/calm.io). I became the first
  DevOps Solutions Architect in Sales Engineering, a subject matter expert
  overlay role that supported North America.
- At Calm, our audience was the DevOps practitioner, but Nutanix had a broader
- and more traditional IT, Data Center, and Operations audience.
- Every day, I struggled to
+ At Calm, our audience was the DevOps practitioner and my colleagues,
+ especially [@Aaditya](https://twitter.com/aaditya)
+ and [@JasnoorGill](https://twitter.com/jasnoorgill),
+ had created a higher-level pitch for investors to understand the need for DevOps.
+ Nutanix had a broader and more traditional IT, Data Center,
+ and Operations audience. Every day, I struggled to
  explain the benefits of DevOps in under a minute and my "elevator pitch"
  failed more often than succeeded. Every failure and success inspired me
  to do better and I constantly asked for feedback to improve. I still do!
@@ -72,8 +75,22 @@ In February, 2017, the Nutanix mid-year sales kick off included an intense
 
 # Preparation #
 
+On January 25, I gave a Calm deep dive to my peers at Nutanix,
+ and there were two major topic requests and discussions that shed
+ light into the DevOps world for them and provided insight
+ (the what, who, why that Nutanix management always cites)
+ for the Calm automation product's value and audience for DevOps.
+
+The first topic was, "What does a software developer do?"
+ and I showed the [DevOps Automation Diagram](../devops-automation)
+ to explain the value chain between the developer and the customer,
+ then showed the [Build, Test, Deploy pattern](../devops-btd-pattern).
+The second topic was, "Why do I need DevOps?" and I landed on
+ the roughly ten? steps it takes to refactor from monolith
+ to hybrid cloud applications. *TOOD: I still haven't to blogged on it!*
+
 During April 9-13, 2017 I was at Nutanix headquarters preparing to be a speaker at the
- third annual Nutanix .Next User conference with over 4000 attendees. 
+ third annual Nutanix .Next User conference with 4000 attendees.
 
 To explain Calm's value proposition to my colleagues,
  I likened DevOps to the business outcome of *[agility](#agility-devops)*
@@ -116,6 +133,10 @@ My interpretation is that the high performers have achieved DevOps maturity,
  [my DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
  because they have achieved agility.
 
+> __Devops Evenglism Slides forthcoming:__
+ they are an update, expansion, and summary of my earlier work
+ [DevOps Demystified ](../devops_demystified)
+ 
 ## Scalability = Removing Pets ##
 
 Understanding that the lens of
@@ -125,22 +146,41 @@ Understanding that the lens of
  and service level agreements. Any organization can progressively refactor
  and remove their pets to unlock unprecedented levels of scalability.
 
-# First Diagram: DevOps Journey Stages #
+Upon adopting this lens, the entire world looks different and it is
+ easy to identify the traditional values which no longer apply.
+ Continual discovery reveals invisible prison bars which constrain progress.
 
-Eventually I arrived at graphing the abstract progressions of both agility and
- scalability to create the __DevOps Journey Stages Diagram__. I reversed the initial
+> __Devops Evenglism Slides forthcoming:__
+ they are an update, expansion, and summary of my earlier work
+ [DevOps Demystified ](../devops_demystified)
+ 
+# First Diagram: DevOps Journey #
+
+I arrived at graphing the abstract progressions of both agility and
+ scalability to create the __DevOps Journey Diagram__. I reversed the initial
  axes layout and I arrived at Gartner-like diagram which yielded instant
  "up and to the right" parsing at a glance. The diagram yielded insight into
  the successive stages for a journey to DevOps to travel from the lower left
- quadrant to the upper right quadrant. With my experience, I identified the
- stages of the DevOps journey, something that I had experienced. Success!
+ quadrant to the upper right quadrant.
 
-IMG:__DevOps Journey Diagram__
+![DevOps Journey Diagram](../devops-journey.png)
 
-In April 26, I presented the DevOps Journey diagram to a large defense
- contractor and before I completed my explanation, one of the audience
- said, "we're a pet shop and depending on the team, we're between stage
- 0 and 0.5."
+With my career experience, confirmed by speaking to peers at DevOpsDays
+ as well as many Calm.io and Nutanix customers,
+ I identified the DevOps Journey Stages. Success!
+ I added a side explanation for the stages of the journey to help orient
+ where one might be and where one could go next:
+
+|Stage|Outcomes|
+|-----|--------|
+|0|Hand maintained monoliths, in a pet data center, with backups for revision control|
+|1|Programatic change controls and operations|
+|2|Deploy new workloads with configuration management|
+|3|Cattle everywhere: build test driven infra artifacts, hybrid cloud deployments, KPI driven operations|
+
+In April 26, I presented the DevOps Journey Stages diagram to a large defense
+ contractor and before I completed my explanation, one of the audience said,
+ "we're a pet shop and depending on the team, we're between stage 0 and 0.5."
 
 The first diagram was incredibly effective, but I knew I was conflating many
  concerns. For example, re-platforming a data center onto Nutanix improved
@@ -164,9 +204,9 @@ The combination of infrastructure and operational automation implied multiple
  [my DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/).
 
 So how could one address the multiple aspects and progressive stages of the
- DevOps journey across the entire organization? Did I need more dimensions
- or could there be parallels? Which choice and enhancement could convey this
- complexity and enhance the first diagram without spoiling its simplicity?
+ DevOps journey across the entire organization? What could convey additional
+ complexity, recognize the inherent traditional organization silos,
+ and enhance the first diagram without spoiling its simplicity?
 
 ## Decomposure Aligns Parallel Journeys ##
 
@@ -178,10 +218,52 @@ I worked to decompose the journey into four parallels, each
 
 A legend not only helped explain the stages of each parallel, but also
  illustrated the advanced business outcomes of a mature DevOps organization
- through examples.
+ through examples. The examples show how DevOps can align different teams,
+ responsibilities, and agendas to transform an organization to achieve
+ agility and scale.
 
-On June 29, I showed both diagrams on stage at .Next AW209.
+|Stage|Infrastructure|Architecture|Operations|Culture|
+|-----|---|---|---|---|
+|0|Single server, single datacenter|Monolithic|Hands-on|Silos|
+|1|||Repeatable|Governable|
+|2|Syntheized, ephermeral|Distributed, scale out|Delegable deploy+ops|Testable with metrics|
+|3|Hybrid clouds|Global + active|KPI driven lifecycle|Data-driven experiments|
 
 # Second Diagram: DevOps Maturity #
 
-IMG:__DevOps Maturity Diagram__
+![DevOps Maturity Diagram](../devops-maturity.png)
+
+On June 29, I presented both diagrams on stage at .Next D.C.
+ for my portion of the talk "AW209: Agile Infrastructure for Mode 2 Apps,"
+ with my colleagues Ray Hassan (Nutanix) and Allan Naim (Google Cloud).
+
+# Update: 2018-05-03 #
+
+My proposal was accepted by the organizers, voted upon by the attendees, and
+ delivered as a talk at DevOpsDays Austin,
+[How to Sell DevOps in Under an Hour](https://www.devopsdays.org/events/2018-austin/program/mark-lavi/)
+ with this abstract:
+
+> You've entered a new customer's conference room,
+ the introductions are complete, and you have the remainder of an hour to
+ change their traditions: how would you explain and sell DevOps to
+ non-technical management, engineering, and IT?
+ For the past three years, I've travelled to small and large businesses
+ around the world to explain how DevOps can continually impact
+ any organization and I've evolved to speak the language of business
+ and demonstrate positive business outcomes.
+
+> With two simple definitions of agility and scalability
+ (better known to our community as "DevOps" and "Pets versus Cattle,"
+ respectively), you can explain and diagram the stages of a DevOps journey
+ to any organization. Once the journey has been mapped out,
+ it can be deconstructed over parallel dimensions of cultural,
+ architectural, operational, and infrastructure progression
+ to illustrate how any organization can achieve DevOps Maturity.
+ I’ll show early work on how we're building with our customers
+ cost metric models to determine DevOps total cost of ownership.
+
+I didn't get to the DevOps TCO model, but I was happy
+ John Willis [@botchagalupe](https://twitter.com/botchagalupe)
+ was at the talk and he helped define DevOps, agreeing that it is cultural:
+ "at the end of the day, it is what you make of it."
