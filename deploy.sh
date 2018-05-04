@@ -30,8 +30,8 @@ fi
 # http://jekyllrb.com/docs/continuous-integration/
 # http://gohugo.io/tutorials/github-pages-blog/
 
-echo -e "\nSTART: Spell check contents..."
-find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
+#echo -e "\nSTART: Spell check contents..."
+#find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
 find content -name "*.md.bak" -delete
 find content -name "*~" -delete
 echo 'TODO: grep -R -e "/`grep status archetypes/default.md`/" content/'

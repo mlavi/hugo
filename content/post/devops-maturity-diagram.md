@@ -75,24 +75,23 @@ In February, 2017, the Nutanix mid-year sales kick off included an intense
 
 # Preparation #
 
-On January 25, I gave a Calm deep dive to my peers at Nutanix,
- and there were two major topic requests and discussions that shed
- light into the DevOps world for them and provided insight
+On January 25, I gave a Calm deep dive session to my peers at Nutanix,
+ and there were two topic requests that shed light into the DevOps world
+ for them and provided insight
  (the what, who, why that Nutanix management always cites)
  for the Calm automation product's value and audience for DevOps.
-
 The first topic was, "What does a software developer do?"
  and I showed the [DevOps Automation Diagram](../devops-automation)
  to explain the value chain between the developer and the customer,
  then showed the [Build, Test, Deploy pattern](../devops-btd-pattern).
 The second topic was, "Why do I need DevOps?" and I landed on
  the roughly ten? steps it takes to refactor from monolith
- to hybrid cloud applications. *TOOD: I still haven't to blogged on it!*
+ to hybrid cloud applications to show how automation accelerates
+ all efforts. *TOOD: I still haven't blogged on this!*
 
-During April 9-13, 2017 I was at Nutanix headquarters preparing to be a speaker at the
- third annual Nutanix .Next User conference with 4000 attendees.
-
-To explain Calm's value proposition to my colleagues,
+During April 9-13, 2017 I was at Nutanix headquarters preparing
+ to speak at the third annual Nutanix .Next User conference with
+ 4000 attendees. To explain Calm's value proposition to my colleagues,
  I likened DevOps to the business outcome of *[agility](#agility-devops)*
  and Pets versus Cattle (or removing all single points of failure)
  to the business outcome of *[scalability](#scalability-removing-pets).*
@@ -136,7 +135,7 @@ My interpretation is that the high performers have achieved DevOps maturity,
 > __Devops Evenglism Slides forthcoming:__
  they are an update, expansion, and summary of my earlier work
  [DevOps Demystified ](../devops_demystified)
- 
+
 ## Scalability = Removing Pets ##
 
 Understanding that the lens of
@@ -153,7 +152,7 @@ Upon adopting this lens, the entire world looks different and it is
 > __Devops Evenglism Slides forthcoming:__
  they are an update, expansion, and summary of my earlier work
  [DevOps Demystified ](../devops_demystified)
- 
+
 # First Diagram: DevOps Journey #
 
 I arrived at graphing the abstract progressions of both agility and
