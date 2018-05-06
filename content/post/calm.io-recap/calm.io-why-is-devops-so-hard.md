@@ -2,12 +2,12 @@
 date: "2015-10-20T12:00:00-07:00"
 tags: ['automation', 'DevOps', 'culture']
 title: "Why is DevOps So Hard?"
-draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me, posted on October 20, 2015 at
+ was originally written and posted by me on October 20, 2015 at
 http://calm.io/2015/10/20/why-is-devops-so-hard/,
-and slightly enhanced on February 27, 2018.
+and slightly enhanced on February 27, 2018, be sure to see the
+[Postscript](#postscript-february-18-2018-devops-definition) for significant developments!
 <!--more-->
 
 For the amount of attention the term DevOps generates these days,

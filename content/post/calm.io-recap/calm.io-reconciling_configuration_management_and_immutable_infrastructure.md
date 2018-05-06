@@ -2,10 +2,9 @@
 date: "2016-05-26T12:00:00-07:00"
 tags: ['automation', 'DevOps', 'immutable', 'configuration management']
 title: "Reconciling Configuration Management and Immutable Infrastructure"
-draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me, posted on May 26, 2016 at
+ was originally written and posted by me on May 26, 2016 at
 http://calm.io/2016/05/26/reconciling-configuration-management-and-immutable-infrastructure/,
 and slightly enhanced on February 18, 2018.
 <!--more-->

@@ -2,12 +2,12 @@
 date: "2015-12-28T12:00:00-07:00"
 tags: ['automation', 'DevOps', 'Continuous Integration', 'Continuous Delivery', 'Continuous Deployment']
 title: "Demystifying Continuous Integration, Delivery, and Deployment"
-draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me, posted on December 28, 2015 at
+ was originally written and posted by me on December 28, 2015 at
 http://calm.io/2015/12/28/demystifying-continuous-integration-delivery-and-deployment/,
-and slightly enhanced on February 18, 2018.
+and slightly enhanced on February 18, 2018, be sure to see the
+[Postscript](#postscript-2018-04-13-netscape-tinderbox) for more perspective!
 <!--more-->
 
 Traditional software engineering organizations separate duties between teams for development, build, testing/quality assurance, release, and operations. This approach increases work by hiring people in silos, fostering separation of duties, manual hand offs, and injects human issues into the process of delivering quality software. How does DevOps help solve traditional problems of scaling human efforts to speed the delivery of increasingly complex software to the customer?

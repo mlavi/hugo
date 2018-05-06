@@ -5,7 +5,7 @@ title: "Configuration Management in the DevOps World"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me, posted on May 24, 2016 at
+ was originally written and posted by me on May 24, 2016 at
 http://calm.io/2016/05/24/configuration-management-in-the-devops-world/,
 and slightly enhanced on February 18, 2018.
 <!--more-->
@@ -18,7 +18,6 @@ Configuration Management is a category of tool which is an essential building
  and operations for applications.
 
 # Ye Olde System Administrator #
-IMG: Interlocking puzzle pieces
 
 Configuration Management can help automate "all the things" by capturing
  system and administrative operators' brilliance.
@@ -48,7 +47,8 @@ Change control review boards constrain work, change control windows and planned
  to drive risk out of managing infrastructure and applications.
  The worst behavior can emerge in people to abuse their power
  and this has been famously captured by the fictional
- [BOFH: Bastard Operator From Hell inspired by reality](https://en.wikipedia.org/wiki/Bastard_Operator_From_Hell).
+ [BOFH: Bastard Operator From Hell](https://en.wikipedia.org/wiki/Bastard_Operator_From_Hell)
+ inspired by reality.
 
 A traditional system administrator names their servers
  and hand maintains the infrastructure and applications

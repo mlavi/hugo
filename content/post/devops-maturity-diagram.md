@@ -17,6 +17,7 @@ In that article, I go on to define DevOps and explain the term:
  is the <em>process</em> of removing all friction
  <br />between the developer and customer value.<br /><br /></div>
 
+Let me share my experience to easily chart the progressive stages of DevOps maturity.
 <!--more-->
 
 # Inspiration #
@@ -86,9 +87,9 @@ The first topic was, "What does a software developer do?"
  to explain the value chain between the developer and the customer,
  then showed the [Build, Test, Deploy pattern](../devops-btd-pattern).
 The second topic was, "Why do I need DevOps?" and I landed on
- the roughly ten? steps it takes to refactor from monolith
- to hybrid cloud applications to show how automation accelerates
- all efforts. *TOOD: I still haven't blogged on this!*
+ [the roughly ten steps it takes to refactor from monolith
+ to hybrid cloud applications](../ten_steps_from_pets_to_cattle)
+ to show how automation accelerates all efforts.
 
 April 9-13, 2017: I was at Nutanix headquarters preparing
  to speak at the third annual Nutanix .Next User conference with
@@ -133,7 +134,7 @@ My interpretation is that the high performers have achieved DevOps maturity,
  [my DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
  because they have achieved agility.
 
-> __Devops Evenglism Slides forthcoming:__
+> __Devops Evangelism Slides forthcoming:__
  they are an update, expansion, and summary of my earlier work
  [DevOps Demystified ](../devops_demystified)
 
@@ -150,7 +151,7 @@ Upon adopting this lens, the entire world looks different and it is
  easy to identify the traditional values which no longer apply.
  Continual discovery reveals invisible prison bars which constrain progress.
 
-> __Devops Evenglism Slides forthcoming:__
+> __Devops Evangelism Slides forthcoming:__
  they are an update, expansion, and summary of my earlier work
  [DevOps Demystified ](../devops_demystified)
 
@@ -178,7 +179,7 @@ With my career experience, confirmed by speaking to peers at DevOpsDays
 |2|Deploy new workloads with configuration management|
 |3|Cattle everywhere: build test driven infra artifacts, hybrid cloud deployments, KPI driven operations|
 
-In April 26, I presented the DevOps Journey Stages diagram to a large defense
+On April 26, I presented the DevOps Journey diagram to a large defense
  contractor and before I completed my explanation, one of the audience said,
  "we're a pet shop and depending on the team, we're between stage 0 and 0.5."
 
@@ -193,7 +194,7 @@ The first diagram was incredibly effective, but I knew I was conflating many
 ## Conflation and Oversimplification? ##
 
 The combination of infrastructure and operational automation implied multiple
- aspects of journey. Progress could be made in any dimension by a siloed
+ aspects of the journey. Progress could be made in any dimension by a siloed
  infrastructure or operations team by adopting the Nutanix platform, but this
  success would only be for the "Ops" side of the organization. It would
  ignore the other side of the DevOps equation, the "Dev" or developer impact

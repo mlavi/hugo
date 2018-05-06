@@ -1,6 +1,6 @@
 ---
 date: "2018-02-18T12:00:00-07:00"
-tags: ['automation', 'DevOps', 'calm.io']
+tags: ['automation', 'DevOps', 'Calm']
 title: "Calm.io: a blog series recap!"
 draft: false
 ---

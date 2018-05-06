@@ -2,10 +2,11 @@
 date: "2018-04-15T12:46:39-07:00"
 title: 'External Source Citation Clouds'
 tags: ['blog', 'navigation']
+draft: true
 ---
 I love tag clouds, given sufficient meta-data, they help navigate through
  a slice of an information corpus. As valuable as internal navigation is,
- external sources are essential to see how scholarly your authors might be.
+ external sources are essential to see how scholarly authors are.
 <!--more-->
 
 # Directory, Metadata, Object, Metastructure Pattern #

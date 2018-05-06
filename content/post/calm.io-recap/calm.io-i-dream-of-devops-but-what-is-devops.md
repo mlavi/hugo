@@ -5,7 +5,7 @@ title: "I Dream of DevOps, but What is DevOps?"
 draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me, posted on September 23, 2015 at
+ was originally written and posted by me on September 23, 2015 at
 http://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/,
 and slightly enhanced on February 18, 2018, be sure to see the
 [Postscript](#postscript-february-18-2018) for significant developments!

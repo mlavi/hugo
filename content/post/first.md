@@ -55,10 +55,11 @@ You wonder if Share Point and Alfresco are just as evil (I am sure they are) and
 so you wonder if you will also inevitably fall out of love with a static CMS?
 
 This is not a unique problem, it is shared by many other classes of software (like Jenkins, JIRA,
-and your web browser) and once you extend any API or customize a work flow (Oracle EBS). It is
-an indication of richness, complexity, and technical debt.
+and your web browser) once you extend any API or customize a work flow (Oracle EBS). It is
+an indication of rich platform, ecosystem, or framework, but every customization leads to
+increased complexity and technical debt.
 
-A static, compiled web site removes and loses dynamic, server-side functionality for persistence and
+A static, compiled web site loses dynamic, server-side functionality for persistence and
 interaction, or does it? With the advent of application service providers (ASP) or cloud hosted
 anything-as-a-service, we can move from server-side to service providers for authentication, spam filtered
 comments, forms and polls, advertising, analytics, and who knows what else?

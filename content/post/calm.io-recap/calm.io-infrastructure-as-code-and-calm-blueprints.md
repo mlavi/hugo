@@ -2,10 +2,9 @@
 date: "2015-11-03T12:00:00-07:00"
 tags: ['automation', 'DevOps', 'Infrastructure as Code', 'Blueprint']
 title: "Infrastructure as Code and Calm Blueprints"
-draft: false
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
- was originally written by me, posted on Nov 3, 2015 at
+ was originally written and posted by me on November 3, 2015 at
 http://calm.io/2015/11/03/infrastructure-as-code-and-calm-blueprints/,
 and slightly enhanced on February 18, 2018.
 <!--more-->
