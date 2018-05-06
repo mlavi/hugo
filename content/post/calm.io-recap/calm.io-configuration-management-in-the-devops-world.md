@@ -1,6 +1,6 @@
 ---
 date: "2016-05-24T12:00:00-07:00"
-tags: ['automation', 'DevOps', 'Configuration Management']
+tags: ['automation', 'DevOps', 'Configuration Management', 'Calm']
 title: "Configuration Management in the DevOps World"
 draft: false
 ---

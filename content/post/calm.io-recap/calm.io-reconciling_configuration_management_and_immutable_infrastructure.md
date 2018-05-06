@@ -1,6 +1,6 @@
 ---
 date: "2016-05-26T12:00:00-07:00"
-tags: ['automation', 'DevOps', 'immutable', 'configuration management']
+tags: ['automation', 'DevOps', 'immutable', 'configuration management', 'Calm']
 title: "Reconciling Configuration Management and Immutable Infrastructure"
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)

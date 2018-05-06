@@ -1,6 +1,6 @@
 ---
 date: "2015-12-28T12:00:00-07:00"
-tags: ['automation', 'DevOps', 'Continuous Integration', 'Continuous Delivery', 'Continuous Deployment']
+tags: ['automation', 'DevOps', 'Continuous Integration', 'Continuous Delivery', 'Continuous Deployment', 'Calm']
 title: "Demystifying Continuous Integration, Delivery, and Deployment"
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)

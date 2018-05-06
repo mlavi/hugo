@@ -1,6 +1,6 @@
 ---
 date: "2015-11-03T12:00:00-07:00"
-tags: ['automation', 'DevOps', 'Infrastructure as Code', 'Blueprint']
+tags: ['automation', 'DevOps', 'Infrastructure as Code', 'Blueprint', 'Calm']
 title: "Infrastructure as Code and Calm Blueprints"
 ---
 This [Calm.io blog recap](/post/calm.io-recap/)
