@@ -11,13 +11,9 @@ The opening of
 >Let me share what I’ve learned on my journey to DevOps: it is a culturally
  rendered term and it has a different meaning for everyone.
 
-In that article, I go on to define DevOps and explain the term:
-
-> <div style="text-align: center; font-weight: bold; font-size: large;">DevOps
- is the <em>process</em> of removing all friction
- <br />between the developer and customer value.<br /><br /></div>
-
-Let me share my experience to easily chart the progressive stages of DevOps maturity.
+In that article, I go on to define DevOps and explain the term. Let me share
+my experience to easily chart the journey of progressive stages
+to DevOps maturity.
 <!--more-->
 
 # Inspiration #
@@ -92,7 +88,7 @@ The second topic was, "Why do I need DevOps?" and I landed on
  to show how automation accelerates all efforts.
 
 April 9-13, 2017: I was at Nutanix headquarters preparing
- to speak at the third annual Nutanix .Next User conference with
+ to speak at the third annual Nutanix .Next user conference with
  4000 attendees. To explain Calm's value proposition to my colleagues,
  I likened DevOps to the business outcome of *[agility](#agility-devops)*
  and Pets versus Cattle (or removing all single points of failure)
@@ -100,17 +96,45 @@ April 9-13, 2017: I was at Nutanix headquarters preparing
 
 ## Agility = DevOps ##
 
+> <div style="text-align: center; font-weight: bold; font-size: large;">DevOps
+ is the <em>process</em> of removing all friction
+ <br />between the developer<sup>1</sup> and customer value.<br /><br /></div>
+
 [My DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
  aligns everyone to deliver frictionless business value, however the
  impact can be summarized as business agility. When anyone can
  [build, test, and deploy](devops-btd-pattern.md) value, business processes
  are transparent and work is democratized.
- The next stage is to progressively automate these operations with key
- performance indicators and metrics for heuristically driven business operations.
- DevOps extends to run the business:
- the organization constantly tunes and expands the automation systems,
- while the employees engage to respond to new business initiatives and
- improve business efficiency, all resulting in business agility!
+
+<sup>1</sup> To understand the emergent value of software developers,
+ see https://thenewkingmakers.com/.
+
+Furthermore, the value chain or steam between the developer and customer is
+bi-directional! During the value chain mapping exercise, discovery of friction
+in the forms of technical debt and cultural debt will abound. Therefore,
+you are "doing DevOps" when you remove friction, even if you are doing it for
+yourself on your own laptop: it will pay dividends down the value stream.
+
+DevOps success is a mixture of culture and technology enablement, allowing
+ the organization to transform and achieve agility. This can be observed
+ in the manufacturing industry by the
+ [Toyota Production System](https://en.wikipedia.org/wiki/Toyota_Production_System)
+ and I elaborate on this in
+ [Why is DevOps so Hard?](/post/calm.io-recap/calm.io-why-is-devops-so-hard/).
+
+If technology and cultural factors enable friction-free DevOps success,
+ it is easy to observe their corresponding challenges in organizations:
+ fragmentation foils any technology integration
+ and people naturally tend to be pets, causing single points of failure,
+ concentrated power, and manual handoffs which foil automation.
+
+The next stage of refactoring friction out of the value stream is to
+progressively automate operations with key performance indicators and metrics for
+ [heuristically driven business operations](/post/ten_steps_from_pets_to_cattle/#10-heuristic-driven-operations).
+DevOps extends to run the business when
+the organization constantly tunes and expands the automation systems,
+while the employees engage to respond to new business initiatives and
+improve business efficiency, all resulting in business agility!
 
 These benefits are confirmed by the
  [annual State of DevOps surveys](https://devops-research.com/research.html),
@@ -134,9 +158,9 @@ My interpretation is that the high performers have achieved DevOps maturity,
  [my DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
  because they have achieved agility.
 
-> __Devops Evangelism Slides forthcoming:__
- they are an update, expansion, and summary of my earlier work
- [DevOps Demystified ](../devops_demystified)
+> __DevOps Evangelism Slides forthcoming:__
+ speaker notes are above, but they are an update, expansion, and summary
+ of my earlier work [DevOps Demystified ](../devops_demystified)
 
 ## Scalability = Removing Pets ##
 
@@ -151,12 +175,71 @@ Upon adopting this lens, the entire world looks different and it is
  easy to identify the traditional values which no longer apply.
  Continual discovery reveals invisible prison bars which constrain progress.
 
-> __Devops Evangelism Slides forthcoming:__
- they are an update, expansion, and summary of my earlier work
- [DevOps Demystified ](../devops_demystified)
+Some abstract examples:
+
+|Category|Pets|Cattle|
+|--------|----|------|
+|Organization:|Single Point of Failure (SPoF)|Fleet (no SPoF)|
+|Naming:|Members of a theme|Naming Conventions and Numbers|
+|Remediation:|MTTF|Replace to maintain SLA|
+|Infrastructure:|Scale up|Scale out|
+|Architecture:|Monolith|Distributed, Microservice|
+
+Some technology examples:
+
+|Category|Pets|Cattle|
+|--------|----|------|
+|Naming:|earth.corp|webtier-01.ahv01.prod.corp|
+|Uptime Goal:|Years|Seconds|
+|Failure:|MTTR of minutes + hours|No SPoF!|
+|Network:|Hardware|Software Defined|
+|Storage:|SAN|Distributed File System|
+|Datacenter:|Single AWS Region, Cluster, or DC|Multiple Enterprise/Hybrid Clouds|
+
+Some cultural examples:
+
+|Category|Pets|Cattle|
+|--------|----|------|
+|People:|Heroic admin at HQ<sup>2</sup>|Global Operations team|
+|Operations:|Hands on:manual ops, change controls|Hands off:monitors, KPIs, ChatOps|
+|Values:|DevOps team|DevOps mindset distributed across entire organization|
+
+<sup>2</sup> *e.g.:* the sysadmin in __The Phoenix Project__,
+by Gene Kim, Kevin Behr, George Spafford: IT Revolution Press, 2013
+
+Yes, I consider the DevOps team a pet! This can be a controversial statement
+  until you use the lens and definition, but this will be a future blog entry.
+
+> __DevOps Evangelism Slides forthcoming:__
+speaker notes are above, but they are an update, expansion, and summary
+of my earlier work [DevOps Demystified ](../devops_demystified)
+
+At this point, it should be easy to ask "How many pets do you have?"
+ and categorize the answers into culture and technology.
+ This will be developed further for maturity shortly.
+
+To paraphrase the journey to DevOps: we all must become DevOps,
+ working to continuous improve<sup>3</sup>:
+
+- __Cultural change__ to reduce dev+test+ops silos
+- __Automation__ increasing value delivery, by accomplishing:
+  - Agility by democratizing expertise and distributing work
+     - Results: continuous integration, delivery, and deployment
+  - Scalability by eliminating single points of failure
+     - Results: cattle infrastructure and operations
+- __Feedback__ measuring closed loop value<sup>4</sup>
+  - Results: monitors + logs + metrics for Key Performance Indicators
+
+<sup>3</sup> Based on [C(L)AMS by John Willis & Damon Edwards](http://itrevolution.com/devops-culture-part-1/)
+<br /><sup>4</sup> *[Proverb:](https://athinkingperson.com/2012/12/02/who-said-what-gets-measured-gets-managed/)*
+"What is measured improves."
+
+This cycle is repeated to insure value increases by observing the
+ feedback measured from cultural and automation changes.
 
 # First Diagram: DevOps Journey #
 
+Back to early April, 2017 when I was preparing for my talk,
 I arrived at graphing the abstract progressions of both agility and
  scalability to create the __DevOps Journey Diagram__. I reversed the initial
  axes layout and I arrived at Gartner-like diagram which yielded instant
@@ -179,8 +262,9 @@ With my career experience, confirmed by speaking to peers at DevOpsDays
 |2|Deploy new workloads with configuration management|
 |3|Cattle everywhere: build test driven infra artifacts, hybrid cloud deployments, KPI driven operations|
 
-On April 26, I presented the DevOps Journey diagram to a large defense
- contractor and before I completed my explanation, one of the audience said,
+The next week, on April 26, 2017: I presented the DevOps Journey diagram to a
+large defense contractor and before I completed my explanation,
+one of the audience said,
  "we're a pet shop and depending on the team, we're between stage 0 and 0.5."
 
 The first diagram was incredibly effective, but I knew I was conflating many
@@ -228,7 +312,7 @@ A legend not only helped explain the stages of each parallel, but also
 |0|Single server, single datacenter|Monolithic|Hands-on|Silos|
 |1|||Repeatable|Governable|
 |2|Syntheized, ephermeral|Distributed, scale out|Delegable deploy+ops|Testable with metrics|
-|3|Hybrid clouds|Global + active|KPI driven lifecycle|Data-driven experiments|
+|3|Hybrid clouds|Global + active|[KPI driven lifecycle](/post/ten_steps_from_pets_to_cattle/#10-heuristic-driven-operations)|Data-driven experiments|
 
 # Second Diagram: DevOps Maturity #
 

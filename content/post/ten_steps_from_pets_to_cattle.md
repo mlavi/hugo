@@ -56,6 +56,8 @@ For the sake of reaching a larger audience, I picked a web application hosted
     - database hosts the data: OS + DB.
 - Build and Deploy: 2X
   - Built by hand, so very little parallel installation time savings
+- MTTR: 1X
+  - Repair is a restoral, estimated at half the build and deploy time of this step
 - Benefits:
   - Separation of each function allows better management of each concern
   - Easier to backup web without downtime
@@ -77,6 +79,8 @@ For the sake of reaching a larger audience, I picked a web application hosted
   - 4X: Built by hand, so very little parallel installation time savings
   - 1X: Increased time to configure Master+Minion database
   - 1X: Increased time to configure OS firewalls, web proxy
+- MTTR: 3X
+  - Repair is a restoral, estimated at half the build and deploy time of this step
 - Benefits:
   - A single server in the web tier can fail or be maintained without
   application downtime
@@ -93,7 +97,7 @@ For the sake of reaching a larger audience, I picked a web application hosted
   - Increased complexity to troubleshoot network
   - No DMZ network for further isolation
 
-# 4: Calm blueprint for Ops #
+# 4: Calm Blueprint for Ops #
 
 If all of the previous steps were on bare metal, then it is time to virtualize:
  called P2V: physical to virtual. My selfish agenda is do this on
@@ -111,22 +115,42 @@ documented operations and infrastructure: it is a start on the road to
 infrastructure as code and marks the transition to becoming a developer:
  programming ahead!
 
-With more work, one can have push button, separate environment deployments,
- but this is a derivative restoral in parallel and localize strategy: it can
- be better this will stage #5.
+- Design: a translation of stage #4.
+  - 5 servers, brownfield imported
+- Build and Deploy: 2X
+  - Estimating automation to cut down on manual operations and human error at
+    33% savings, then parallelization at half of that.
+  - However, one now adds initial blueprint development time.
+- Development: 3X
+  - 2X: Add some time to learn and bootstrap Calm and Karan.
+  - 1X: minimal because brownfield import, then adding actions for each
+    documented change control or runbook operations should be a cut and paste
+    with minimal orchestration and variable/macro substitution.
+- MTTR: 1X
+  - Repair is a restoral, estimated at half the build and deploy time of this step
+- Benefits:
+  - Documented Production
+  - Added maintenance operations, can be delegated and audited under RBAC
+- Criticism:
+  - We can improve!
 
-In the meantime, let's explore what the blueprint unlocks:
+Let's explore what the blueprint unlocks for the future:
+
+- With more work, one can have push button, separate environment deployments,
+ but this is a derivative restoral in parallel and localize strategy: it can
+ be better and this will be [stage #5](#5-synthesis-with-scripting).
 - Adding a revision control service, unless you don't need collaboration
  paves the way to CI of blueprints, infrastructure, and applications.
- This will be stage #8.
+ This will be [stage #8](#8-infrastructure-ci-cd).
 - Adding monitoring, metrics, and logs allows on to heuristically trigger
  these operations: zero-click operations = self-healing, anti-fragile business.
- This will be stage #10.
+ This will be [stage #10](#10-heuristic-driven-operations).
 
 # 5: Synthesis with Scripting #
 
-Cloning the blueprint from #4, one can now refactor each host to create a new VM
-instead, then use Powershell scripting to stand up each service from scratch.
+Cloning the blueprint [from #4](#4-calm-blueprint-for-ops),
+ one can now refactor each host to create a new VM
+ instead, then use Powershell scripting to stand up each service from scratch.
 If desired, one can skip this step to proceed to configuration management.
 
 # 6: Configuration Management #
@@ -163,6 +187,10 @@ The Calm blueprint from #8 can be cloned and refactored for parallel deployments
 Adding monitoring, metrics, and logs allows on to heuristically trigger
  these operations: zero-click operations = self-healing, anti-fragile business.
  <hr />
+# Postscript #
+
+As mentioned in [Under Construction](#under-construction),
+ there is more to to add! Here are snapshots from my notes:
 ![Ten Steps](../IMAG1394.jpg)
 ![1408](../IMAG1408.jpg)
 ![1409](../IMAG1409.jpg)
@@ -174,6 +202,8 @@ Adding monitoring, metrics, and logs allows on to heuristically trigger
   -
 - Build and Deploy: X
   -
+- MTTR: X
+  - Repair is a restoral, estimated at half the build and deploy time of this step
 - Benefits:
   -
 - Criticism:
