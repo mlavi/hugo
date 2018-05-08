@@ -24,6 +24,7 @@ I've been discussing this with my Nutanix colleagues
 # Manifest #
 
 Some simple principles:
+
 - Open source components are preferred to remove licensing from the equation
   when possible
 - Containerized workloads on Kubernetes are preferred, but it is okay to
@@ -31,6 +32,7 @@ Some simple principles:
 - Work for a minimum viable product first, then add phased expansion goals.
 
 The building blocks include:
+
 - Authentication
   - Expansion: Secrets management
   - Expansion: Service Discovery and DNS
@@ -53,6 +55,7 @@ The building blocks include:
 # Design #
 
 The governance and management lifecycle should include:
+
 - Provision users into groups under authentication,
   ideally with passwords and SSH keys
   - One admin account, initially
@@ -74,6 +77,7 @@ The governance and management lifecycle should include:
 
 This would an incredible achievement: an ephemeral DevOps in a Box environment.
  It could be used to demonstrate application:
+
 - CI/CD pipeline with integration testing
 - integration testing as monitors
 - health metrics
@@ -121,6 +125,7 @@ After reviewing the [Awesome Kubernetes](https://github.com/ramitsurana/awesome-
  This would be the way to prototype the larger system components on my laptop.
 
 Some research turned up possibilities to accelerate local development:
+
 - [GitKube](https://gitkube.sh/) versus
  [a local registry](https://blog.hasura.io/sharing-a-local-registry-for-minikube-37c7240d0615)
 - [Skaffold](https://github.com/GoogleContainerTools/skaffold)

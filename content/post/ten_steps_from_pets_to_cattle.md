@@ -14,8 +14,11 @@ Why do we need DevOps when IT and Operations succeed in their responsibility
 <!--more-->
 # Under Construction #
 
-The following pictures are from my notebook and outline this article.
-Please return back while to see how I flesh out the presentation.
+The following pictures in the [Postscript](#postscript) are from my notebook
+ and outline this article. Please return back in a week to see how I flesh
+ out the presentation.
+
+# Overview #
 
 January 25, 2017: I gave a Calm deep dive session to my peers at Nutanix,
  and there were two topic requests that shed light into the DevOps world
@@ -31,6 +34,9 @@ For the sake of reaching a larger audience, I picked a web application hosted
  on a Windows server with IIS web server and MS-SQL database. For this exercise,
  we focus on application infrastructure; a SAN or backup system target is out
  of scope.
+
+Throughout this exercise, I will use a mythical, relative value of X
+ as a unit of work and time, my guess is that it is 3 hours.
 
 # 1: The Monolith in Production #
 
@@ -54,9 +60,9 @@ For the sake of reaching a larger audience, I picked a web application hosted
   - Two servers:
     - web hosts the application: OS + web
     - database hosts the data: OS + DB.
-- Build and Deploy: 2X
-  - Built by hand, so very little parallel installation time savings
-- MTTR: 1X
+- Build and Deploy: 1.5X
+  - Built by hand, so little parallel OS installation time savings
+- MTTR: .75X
   - Repair is a restoral, estimated at half the build and deploy time of this step
 - Benefits:
   - Separation of each function allows better management of each concern
@@ -76,7 +82,7 @@ For the sake of reaching a larger audience, I picked a web application hosted
     - Web tier: 2* web hosts the application: OS + web
     - Database: 2* database hosts the data: OS + DB.
 - Build and Deploy: 6X
-  - 4X: Built by hand, so very little parallel installation time savings
+  - 4X: Built by hand, so little parallel OS installation time savings
   - 1X: Increased time to configure Master+Minion database
   - 1X: Increased time to configure OS firewalls, web proxy
 - MTTR: 3X
