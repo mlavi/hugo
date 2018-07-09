@@ -3,15 +3,9 @@ date = "2015-03-10T23:16:27-07:00"
 tags = ['automation', 'diagram', 'DevOps']
 title = "A DevOps Automation State Diagram"
 +++
-<<<<<<< HEAD
-Wonderful accomplishments kicked-off my Infrastructure as Code project.
-One needs to start with a map of the world before deciding where to focus their efforts.
-It's even better when you can optimize and render the new map in real-time!
-=======
 Wonderful accomplishments kicked-off my Infrastructure as Code project:
 one should start with a map of the world before deciding where to focus,
 but it is even better when you can optimize and render a new map in real-time!
->>>>>>> 6b48f7952b2646966068e210c7e07d60c693c643
 <!--more-->
 ## Beautiful Tool and Diagram
 
