@@ -9,6 +9,7 @@ For a term that is not even six years old, DevOps remains a mysterious pursuit
  understand and chart your own journey. *Hint:* it is a cultural term!
 <!--more-->
 ### Update: 2016-12-17
+
 Yet another refactoring and updates with expanded citations, leveraging a bit of
 my last four months of DevOps evangelism for Nutanix across five countries. It
 could use more more work!
@@ -50,7 +51,7 @@ DevOps is the *process* of removing all friction between the developer and custo
 However, DevOps is a culturally rendered term: it is practiced by people and dynamically bound
 to their capabilities.
 
-Elaboration: [I Dream of DevOps, but What is DevOps?](https://calm.io/2015/09/23/i-dream-of-devops-but-what-is-devops/)
+Elaboration: [I Dream of DevOps, but What is DevOps?](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
 
 ### Presentation
 

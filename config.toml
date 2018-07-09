@@ -1,5 +1,5 @@
-baseURL = 'http://mlavi.github.io/'
-url = 'http://mlavi.github.io/'
+baseURL = 'https://mlavi.github.io/'
+url = 'https://mlavi.github.io/'
 languageCode = 'en-us'
 title = "Mark's Blog"
 author = "Mark Lavi"

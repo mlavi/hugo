@@ -106,6 +106,7 @@ We discussed feature toggles, shipping features dark, and later turning them on 
 
 I will review these links later and update this blog entry:
 
+- https://www.martinfowler.com/articles/evodb.html
 - http://blog.codinghorror.com/get-your-database-under-version-control/
 - http://www.infoq.com/articles/Database-Version-Control
 - **Does not appear to be open source:** dbmaestro.com || klonio.com

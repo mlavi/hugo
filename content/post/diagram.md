@@ -47,20 +47,22 @@ Please see the [next posting](../devops-automation/) for the "final" product.
 ### Post Script: 2015-08-10
 
 There are other [UML modelers](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools),
-I think (http://blog.staruml.io/) and yEd are noteworthy.
+ I think [StarUML](http://blog.staruml.io/)
+ and [yEd](https://www.yworks.com/products/yed) are noteworthy.
 
 However, as I explore the work flow and orchestration space, I am rediscovering
 the work done for
 [Business Process Modeling](https://en.wikipedia.org/wiki/Business_process_modeling)
 standards, such as
 [BPEL](https://en.wikipedia.org/wiki/Business_Process_Execution_Language) and
-[BPMN](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation),
-and their various implementations with modelers such as:
+[BPMN](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation).
+The are various implementations with modelers such as:
+[Open Enterprise Service Bus](www.open-esb.net)
+and [Sirius](http://www.eclipse.org/sirius/getstarted.html)
+ which might work with implementations like [Apache ServiceMix](http://servicemix.apache.org/)
+ and [ProcessMaker](https://www.processmaker.com/)?
 
-  * www.open-esb.net
-  * [Sirius](http://www.eclipse.org/sirius/getstarted.html) and tools build on it.
-
-implemented in ServiceMix and ProcessMaker.
-
-This was triggered by my recent research into OASIS TOSCA and CAMP standards:
-everything new feels old again! :~)s
+This was triggered by my recent research into OASIS
+ [TOSCA](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=tosca)
+ and [CAMP](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=camp)
+ standards: everything new feels old again! :~)

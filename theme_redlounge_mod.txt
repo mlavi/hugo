@@ -1,0 +1,102 @@
+#  static/css/mlavi.css
+#   cd themes; git clone https://github.com/tmaiaroto/hugo-redlounge
+#   vi hugo-redlounge/layouts/partials/header.html
+##  <!-- CSS -->
+#  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/mlavi.css">
+#   vi hugo-redlounge/layouts/partials/sidebar.html
+#    <div class="sidebar pure-u-1 pure-u-md-1-4" style="background: black no-repeat url(/img/firefox_nebula.jpg);">
+#...
+##    <nav class="nav">
+##      <ul class="nav-list">
+#        <li class="nav-item"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }} <span class="nav-item-separator">//</span> Home</a></li>
+#        <li class="nav-item"><span class="nav-item-separator">//</span> <a class="subscribe-button icon-feed" href="{{ .RSSLink }}">Subscribe</a></li>
+##        {{ range .Site.Menus.main }}
+##          <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
+##        {{ end }}
+##      </ul>
+#      <ul id="all-tags"><span style="background: black;"><em><stong>Tag Cloud</strong></em></span><br />
+# vi hugo-redlounge/layouts/index.html?
+##          {{ if .Truncated  }}
+##            <article class="post-summary">
+##                {{ .Summary }}
+##            </article>
+#              {{ if .Params.tags }}
+#                  <div class="tags-list"><!--post-tags?-->
+#                  <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
+#                  {{ range .Params.tags }}
+#                      <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
+#                  {{ end }}
+#                  </div>
+##           {{ end }}
+##            <div class="read-more-link">
+##                <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
+##            </div>
+##           {{ else }}
+
+diff --git a/layouts/index.html b/layouts/index.html
+index 01144a4..f62a300 100644
+--- a/layouts/index.html
++++ b/layouts/index.html
+@@ -45,6 +45,14 @@
+               <article class="post-summary">
+                   {{ .Summary }}
+               </article>
++              {{ if .Params.tags }}
++                  <div class="tags-list"><!--post-tags?-->
++                  <span class="dark-red">Tags</span><span class="decorative-marker">//</span>
++                  {{ range .Params.tags }}
++                      <a class="post-tag post-tag-{{ . | urlize }}" href="{{ $Site.BaseURL}}/tags/{{ . | urlize }}">{{ . }}</a>,
++                  {{ end }}
++                  </div>
++              {{ end }}
+               <div class="read-more-link">
+                   <a href="{{ .RelPermalink }}"><span class="read-more-slashes">//</span>Read More...</a>
+               </div>
+diff --git a/layouts/partials/header.html b/layouts/partials/header.html
+index 7717001..2d4bb89 100644
+--- a/layouts/partials/header.html
++++ b/layouts/partials/header.html
+@@ -9,6 +9,7 @@
+   {{ partial "og.html" . }}
+ 
+   <!-- CSS -->
++  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/mlavi.css">
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/base-min.css">
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.5.0/pure-min.css">
+   <!--[if lte IE 8]>
+diff --git a/layouts/partials/sidebar.html b/layouts/partials/sidebar.html
+index 7608aea..c8cbfcf 100644
+--- a/layouts/partials/sidebar.html
++++ b/layouts/partials/sidebar.html
+@@ -1,4 +1,4 @@
+-<div class="sidebar pure-u-1 pure-u-md-1-4">
++<div class="sidebar pure-u-1 pure-u-md-1-4" style="background: black no-repeat url(/img/firefox_nebula.jpg);">
+   <div class="header">
+     {{ partial "sidebarheader.html" . }}
+ 
+@@ -8,14 +8,23 @@
+ 
+     {{ if .Site.Params.sidebartitle }}<h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>{{ end }}
+     {{ if .Site.Params.sidebartagline }}<h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>{{ end }}
+-
++ 
+     <nav class="nav">
+       <ul class="nav-list">
+-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseURL }}">Home</a></li>
++        <li class="nav-item"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }} <span class="nav-item-separator">//</span> Home</a></li>
++        <li class="nav-item"><span class="nav-item-separator">//</span> <a class="subscribe-button icon-feed" href="{{ .RSSLink }}">Subscribe</a></li>
+         {{ range .Site.Menus.main }}
+           <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
+         {{ end }}
+       </ul>
++      <ul id="all-tags"><span style="background: black;"><em><stong>Tag Cloud</strong></em></span><br />
++      {{ $data := .Data }}
++      {{ range $key, $value := .Site.Taxonomies.tags.ByCount }}
++      <li><a href="/tags/{{ $value.Name | urlize }}">{{ $value.Name }}</a><span
++        class="decorative-marker">//</span><a
++        name="{{ $value.Name | urlize }}">{{ $value.Count }}</a></li>
++      {{ end }}
++      </ul>
+     </nav>
+ 
+     {{ if .Site.Menus.social }}

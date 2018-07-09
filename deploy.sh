@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 set -e # halt script on error
-# Install hugo; hugo server --watch &
-# hugo version # https://github.com/spf13/hugo/releases
-# sudo apt-get remove hugo && sudo dpkg -i /home/mark/Downloads/hugo_0.17-64bit.deb && hugo version
+# hugo server --watch &
+#  Install hugo:
+#  hugo version # https://github.com/spf13/hugo/releases
+#   sudo apt-get remove hugo && sudo dpkg -i /home/mark/Downloads/hugo_0.17-64bit.deb && hugo version
+#   vs. brew --version && brew update && brew upgrade
+#    brew list ; brew cask list ; brew desc -n /libff*/
+#  Install hugo theme:
+#   cd themes; git clone https://github.com/tmaiaroto/hugo-redlounge 
+# git config --local --edit
 #  hugo new post/name.md --editor=gedit &
 # ____ Filesystem:
 #  init a new working copy:
@@ -20,11 +26,12 @@ if [[ ! -f bugs.yaml ]]; then
   TEST=1
 fi
 
+# https://help.github.com/articles/adding-a-cname-file-to-your-repository/
 # http://jekyllrb.com/docs/continuous-integration/
 # http://gohugo.io/tutorials/github-pages-blog/
 
-echo -e "\nSTART: Spell check contents..."
-find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
+#echo -e "\nSTART: Spell check contents..."
+#find content -name "*.md" -execdir aspell --mode=html --warn check {} \;
 find content -name "*.md.bak" -delete
 find content -name "*~" -delete
 echo 'TODO: grep -R -e "/`grep status archetypes/default.md`/" content/'
@@ -59,5 +66,5 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git push origin master
+git push origin HEAD:master --force-with-lease
 cd ..
