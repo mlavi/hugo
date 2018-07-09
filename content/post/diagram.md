@@ -4,7 +4,7 @@ tags = ['automation', 'diagram', 'DevOps']
 title = "A DevOps Automation State Diagram"
 +++
 Wonderful accomplishments kicked-off my Infrastructure as Code project.
-One needs to start with a map of the world before deciding where to focus their efforts. 
+One needs to start with a map of the world before deciding where to focus their efforts.
 It's even better when you can optimize and render the new map in real-time!
 <!--more-->
 ### Beautiful Tool and Diagram
@@ -57,8 +57,8 @@ standards, such as
 [BPMN](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation),
 and their various implementations with modelers such as:
 
-    * www.open-esb.net
-    * [Sirius](http://www.eclipse.org/sirius/getstarted.html) and tools build on it.
+  * www.open-esb.net
+  * [Sirius](http://www.eclipse.org/sirius/getstarted.html) and tools build on it.
 
 implemented in ServiceMix and ProcessMaker.
 

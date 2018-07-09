@@ -27,13 +27,14 @@ You can "view the SVG image" in a new browser window or tab and scale it to your
 and then cut and paste text from it.
 
 ### Updated! ###
-My original release was 2015-03-11 (source below), but today's update adds detail, removes many crossed lines
-for simple visual flow parsing, and is organized vertically.
+My original release was 2015-03-11 (source below), but today's update adds detail, removes many crossed lines for simple visual flow parsing, and is organized vertically.
 
-![DevOps Automation Diagram - 2015-03-17](/img/devops_automation.pu.svg)
+![DevOps Automation Diagram - 2015-03-17](devops_automation.pu.svg)
 
 Source code: devops_automation.pu
 {{< highlight "js+genshitext" >}}
+
+```PlantUML
 @startuml
 title DevOps Automation (2015-03-11) by Mark Lavi
 state Development {
@@ -185,7 +186,7 @@ state Stack {
   node -> Logs
   node -> Metrics
 }
-@enduml
+@enduml```
 
 {{< /highlight >}}
 
