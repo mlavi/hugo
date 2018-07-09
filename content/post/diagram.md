@@ -3,11 +3,17 @@ date = "2015-03-10T23:16:27-07:00"
 tags = ['automation', 'diagram', 'DevOps']
 title = "A DevOps Automation State Diagram"
 +++
+<<<<<<< HEAD
 Wonderful accomplishments kicked-off my Infrastructure as Code project.
 One needs to start with a map of the world before deciding where to focus their efforts.
 It's even better when you can optimize and render the new map in real-time!
+=======
+Wonderful accomplishments kicked-off my Infrastructure as Code project:
+one should start with a map of the world before deciding where to focus,
+but it is even better when you can optimize and render a new map in real-time!
+>>>>>>> 6b48f7952b2646966068e210c7e07d60c693c643
 <!--more-->
-### Beautiful Tool and Diagram
+## Beautiful Tool and Diagram
 
 I found and created two wonderful things today:
 
@@ -40,11 +46,11 @@ window or tab, then scale it to your liking. I'm very happy with the results of 
 with open source software and formats (currently 45Kb SVG which allows you to copy the text of the
 diagram) for flexibility and performance.
 
-### UPDATE
+## Post Script
 
 Please see the [next posting](../devops-automation/) for the "final" product.
 
-### Post Script: 2015-08-10
+### Update: 2015-08-10
 
 There are other [UML modelers](https://en.wikipedia.org/wiki/List_of_Unified_Modeling_Language_tools),
  I think [StarUML](http://blog.staruml.io/)
@@ -66,3 +72,14 @@ This was triggered by my recent research into OASIS
  [TOSCA](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=tosca)
  and [CAMP](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=camp)
  standards: everything new feels old again! :~)
+
+### Update: 2018-06-15
+
+At the last HashiConf, I heard about a GraphViz markdown facility called
+ [Mermaid](https://mermaidjs.github.io/). I'm investigating that now because
+ I hadn't maintained my Eclipse installation which meant I lost access to PlantUML.
+
+Garage time reminder for myself: ````themes/*.mod/[static||layout/shortcodes]/mermaid````
+
+Along the way I found http://asciiflow.com/ and http://stable.ascii-flow.appspot.com/#Draw,
+ which are amusing!

@@ -10,3 +10,17 @@ nocomment = true
 noread = true
 authorlinkedin = 'http://www.linkedin.com/in/marklavi'
 # git submodule add git@github.com:mlavi/mlavi.github.io.git public
+# https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

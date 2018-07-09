@@ -51,7 +51,7 @@ landscape of complex and brittle software when you extend a web CMS into the ent
 integrations, plugins, etc. which have their own security attack surface, dependencies, update schedule,
 and incompatibilities.
 
-You wonder if Share Point and Alfresco are just as evil (I am sure they are) and 
+You wonder if Share Point and Alfresco are just as evil (I am sure they are) and
 so you wonder if you will also inevitably fall out of love with a static CMS?
 
 This is not a unique problem, it is shared by many other classes of software (like Jenkins, JIRA,
@@ -71,6 +71,24 @@ This will be a great experiment!
 
 The real purpose of this blog will be to catalog and share my research and development towards my passion:
 *Infrastructure as Code* which will lead to my dream of *behavior driven DevOps.*
- It is a ripe time for system and design thinking because the entire industry 
+ It is a ripe time for system and design thinking because the entire industry
  is trying to solve basic problems and automate solutions while integrating many
  different systems and disciplines. It is an exciting and disruptive time!
+
+## Postscript: 2018-05-21 ##
+
+I have to say, I enjoy a static web CMS under version control with simple deployment testing!
+Hugo has been pretty great, but I'm curious about https://nanoc.ws/ now.
+
+## Postscript: 2018-06-15 ##
+
+The EU GDPR: [General Data Protection Regulation](https://www.eugdpr.org/) and
+ audience comments as a service Disqus injecting ads has caused a general
+ re-evaluation of static web sites and dynamic comments. Some research needed:
+
+- https://montyflatts.com/mission-blog-comments/
+- https://stiobhart.net/2017-02-24-isso-comments/
+- https://www.vis4.net/blog/2017/10/hello-schnack/
+- https://coralproject.net/talk/
+- https://github.com/vkuznecovas/mouthful
+- https://staticman.net/

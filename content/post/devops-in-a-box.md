@@ -130,3 +130,13 @@ Some research turned up possibilities to accelerate local development:
  [a local registry](https://blog.hasura.io/sharing-a-local-registry-for-minikube-37c7240d0615)
 - [Skaffold](https://github.com/GoogleContainerTools/skaffold)
 - Research: https://blog.hasura.io/draft-vs-gitkube-vs-helm-vs-ksonnet-vs-metaparticle-vs-skaffold-f5aa9561f948
+
+## Postscript: 2018-06-17
+
+There are a number of CI/CD facilities out there worthy of some investigation:
+
+- https://www.chef.io/automate/
+  - https://docs.chef.io/workflow.html
+  - https://blog.chef.io/2018/05/23/chef-automate-2-a-modern-platform-for-continuous-automation/
+- https://about.gitlab.com/2017/06/29/whats-next-for-gitlab-ci/
+  - https://docs.gitlab.com/ee/topics/autodevops/

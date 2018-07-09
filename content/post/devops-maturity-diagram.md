@@ -37,14 +37,15 @@ In August, 2016 [Nutanix](https://www.nutanix.com/products/calm/)
 
 ## Mentoring ##
 
-Two discussions with Nutanix executives were another set of inspirations:
+Two discussions with Nutanix executives were another set of inspirations how to
+ explain DevOps:
 
 * In December, 2016, I spoke with Nutanix Chief Development Officer,
  [Sunil Potti](https://www.linkedin.com/in/sunilpotti/)
  [@sunilpotti](https://twitter.com/sunilpotti),
  and he explained how Calm's integration into the Nutanix control plane made
  the platform stronger in contrast to the separate, diluted, fragmented
- experience that competitors continually bring to market.
+ "bolt on" experience that competitors continually bring to market.
 * In January, 2017, I spoke with Nutanix Chief Architect (now co-CTO),
  [Binny Gill](https://www.linkedin.com/in/binny-gill-015977/)
  [@binnygill](https://twitter.com/binnygill),
@@ -68,8 +69,9 @@ In hindsight, I could see both discussions partially explained as a learning
 In February, 2017, the Nutanix mid-year sales kick off included an intense
  sales methodology training based on selling positive business outcomes to
  customers. It galvanized me to figure out new ways to communicate about DevOps,
- Nutanix, and Calm. Abstractly, the sales methodology is similar to the TSIA
- [Digital Transformation Journey Infographic](http://blog.tsia.com/blog/navigating-the-world-of-digital-transformation-offers-infographic).
+ Nutanix, and Calm. Abstractly, the sales methodology is similar to the
+ Technology Services Industry Association [Digital Transformation Journey
+ Infographic: "Navigating the World of Recurring Revenue Offers"](http://blog.tsia.com/blog/navigating-the-world-of-digital-transformation-offers-infographic).
 
 # Preparation #
 
@@ -157,6 +159,8 @@ My interpretation is that the high performers have achieved DevOps maturity,
  maturity perfectly aligns with
  [my DevOps definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/)
  because they have achieved agility.
+
+This further validated by http://www.eweek.com/it-management/capgemini-survey-finds-enterprises-reaping-profits-from-it-automation?dni=445883873&rni=24948142&utm_campaign=EWK_NL_EP_20180510_STR1L2&utm_medium=email
 
 > __DevOps Evangelism Slides forthcoming:__
  speaker notes are above, but they are an update, expansion, and summary
