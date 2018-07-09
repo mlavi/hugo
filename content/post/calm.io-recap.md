@@ -11,7 +11,7 @@ From September 23, 2015 to May 26, 2016,
  am still part of the Nutanix Calm team, but I'm re-posting these articles on
  my personal blog since the originals are no longer directly accessible.
  I am also enhancing them to clarify language, add learnings,
- and append significant developments as postscripts.
+ and append significant developments as [postscripts](#postscripts).
 <!--more-->
 
 # Original, but Slightly Enhanced Articles #
@@ -149,7 +149,7 @@ Calm supports build systems to deploy your infrastructure artifacts as part of
 There are so many ways Calm delivers DevOps agility for your applications
  today and for your new needs tomorrow, please request a demo today!
 
-## Postscripts ##
+# Postscripts #
 
   * Postscript February 18, 2018: [DevOps Definition](/post/calm.io-recap/calm.io-i-dream-of-devops-but-what-is-devops/#postscript-february-18-2018-devops-definition)
   * Postscript February 27, 2018: [Pets versus Cattle](/post/calm.io-recap/calm.io-why-is-devops-so-hard/#postscript-february-27-2018-pets-versus-cattle)

@@ -139,3 +139,4 @@ There are a number of CI/CD facilities out there worthy of some investigation:
   - https://docs.chef.io/workflow.html
   - https://blog.chef.io/2018/05/23/chef-automate-2-a-modern-platform-for-continuous-automation/
 - https://about.gitlab.com/2017/06/29/whats-next-for-gitlab-ci/
+  - https://docs.gitlab.com/ee/topics/autodevops/
