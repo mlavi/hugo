@@ -81,4 +81,4 @@ On Windows, you can configure your PuTTY session to use your SSH keypair, but it
 
 On the Unix/Linux/MacOS side of the house, you can generate your keypair with ssh-keygen and load your OpenSSH keypair into ssh-agent upon shell invocation.
 
-Fortunately, because you have likely provided your SSH keypair while provisioning a blueprint, Calm reuse these credentials when you audit the Application deployment: pick the Manage tab, choose the VM service desired, and then leverage the Web terminal session to log in with one-click!
+Fortunately, because you have likely provided your SSH keypair while provisioning a blueprint, Calm will reuse these credentials when you audit the Application deployment: pick the Manage tab, choose the VM service desired, and then leverage the Web terminal session to log in with one-click!
