@@ -2,6 +2,8 @@
 
 mpd --version && mpd ~/.config/mpd/mpd.conf && ncmpc || ncmpcpp
 
+# TODO: netstat check on port 6600 already in use
+
 #ncmpcpp
 # /usr/local/share/doc/ncmpcpp/bindings fn-F1 for help
 # U in a client to rebuild/Update the server DB from filesystem/sources.

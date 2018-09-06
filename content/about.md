@@ -26,6 +26,7 @@ Mark's approach mixes software engineering disciplines with art and operations, 
  by the term [DevOps](https://en.wikipedia.org/wiki/DevOps).
 
 You can review Mark's career and endorsements
- on [LinkedIn](https://www.linkedin.com/in/marklavi)
-You can follow Mark on [Twitter @calm_mark](https://twitter.com/calm_mark)
- and [GitHub](https://github.com/mlavi)
+ on [LinkedIn](https://www.linkedin.com/in/marklavi),
+follow him on Twitter [@calm_mark](https://twitter.com/calm_mark)
+ and GitHub [@mlavi](https://github.com/mlavi),
+ or read his [blog](http://mlavi.github.io).
