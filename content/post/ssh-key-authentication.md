@@ -19,9 +19,8 @@ I will continue to update and expand this blog, it serves as a script for a quic
   - But if you must use a static password, make it mathematically secure.
   - SSH keys = long mathematical passwords, broken into public and private parts.
 
-Combining these two ideas together, one would want to dynamically insert
- SSH public keys onto a cloud VM during instantiation.
- For Linux, cloud-init provides this facility.
+Combining these two ideas together, one would want to dynamically insert SSH public
+ keys onto a cloud VM during instantiation. For Linux, cloud-init provides this facility.
 
 ## The Details: SSH ##
 
@@ -82,4 +81,4 @@ On Windows, you can configure your PuTTY session to use your SSH keypair, but it
 
 On the Unix/Linux/MacOS side of the house, you can generate your keypair with ssh-keygen and load your OpenSSH keypair into ssh-agent upon shell invocation.
 
-Fortunately, because you have likely provided your SSH keypair while provisioning a blueprint, Calm can take care of this for you by Calm when you audit the Application deployment: pick the Manage tab, choose the VM service desired, and then leverage the Web terminal session to log in with one-click!
+Fortunately, because you have likely provided your SSH keypair while provisioning a blueprint, Calm reuse these credentials when you audit the Application deployment: pick the Manage tab, choose the VM service desired, and then leverage the Web terminal session to log in with one-click!
