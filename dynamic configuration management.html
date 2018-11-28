@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>dynamic configuration management</title>
+  </head>
+  <body>
+    As infrastructure migrates from static and long lived to virtual and
+    ephemeral, supporting architectures like DNS, load balancers,
+    firewalls, and networks must adapt to continual change, creating a
+    management burden for systems that aren't automated or do not scale.
+    A DevOps mindset will help guide your evaluation of new and old
+    solutions that help with resource inventory, service discovery, and
+    dynamic configuration management.<br>
+    <br>
+    How does one manage an inventory? With a spreadsheet that requires
+    manual updates every time a change occurs. One can evolve to an
+    accounting system of assets or realize that an inventory is part of
+    a larger supply chain of vendors, partners, and customers and adopt
+    an enterprise management system which integrates these concerns and
+    hopefully integrates with other systems to automate the inventory
+    process. As we adopt multiple data centers and clouds for global
+    capacity and redundancy, we see a similar evolution in DevOps
+    tooling where we can integrate different providers and populations
+    of resources.<br>
+    <br>
+    Configuration management represents an ideal way to automate the
+    building of infrastructure and can maintain a resource inventory for
+    nodes under its control.<br>
+    <br>
+    There is more than one way to do things: there are trade offs to
+    where you shift the functionality when you remove configuration
+    management. The good news is that the Calm blueprint can easily
+    serve as a proxy for lightweight requirements of application state
+    maintenance and here docs in shell is the easiest manner to drive
+    that to configuration files.<br>
+    <br>
+    You could consider any number of Ruby template libraries, like ERB,
+    since that seems to be a language you are familiar with. Despite
+    performance concerns, I also think Consul templates might be
+    considerable.<br>
+    As you refactor towards containers, you will see that static
+    configuration files are friction on making containers dynamic.
+    Therefore, dynamic configuration management (essentially lookups)
+    for application configuration are desirable and many people use
+    environment variables as their first approach with containers. I'm
+    going to blog on this topic.<br>
+    <br>
+    If you can bootstrap a container (with environment variables) to
+    query a data source (a database, registry, LDAP, DNS, Consul,
+    Zookeeper, etcd, etc.) you can make a container much more dynamic
+    and reusable.<br>
+    Let me give you two references that point the way to microservices
+    from our webinar:
+    https://calm.io/wp-content/uploads/2016/webinar/deploying_docker_containers_in_production/#/section-2/page-4
+    -- see the "Twelve-Factor App" for principles and "12 Fractured
+    Apps" counter-examples<br>
+    <br>
+    Finally, we have a whole new category of lookups/dynamic
+    configuration management that has implications on the application
+    code base, but really is the logical conclusion of this journey:
+    feature flags, which goes by a number of other names like "lighting"
+    features. Essentially, you can ship code execution paths that are
+    toggled on and off by dynamic configuration management. In this
+    manner, given proper instrumentation, you can canary test code in
+    production, determine its "health," and revert even faster then
+    redeployment.<br>
+    As you can see, we're beginning to move away from static
+    configuration files.
+  </body>
+</html>

@@ -18,6 +18,17 @@ head -n20 ~/.config/mpd/mpd.conf
 https://formulae.brew.sh/formula/
 brew install mpc mpd --with-lame
 
+MPD requires a config file to start.
+Please copy it from /usr/local/etc/mpd/mpd.conf into one of these paths:
+  - ~/.mpd/mpd.conf
+  - ~/.mpdconf
+and tailor it to your needs.
+
+To have launchd start mpd now and restart at login:
+  brew services start mpd
+Or, if you don't want/need a background service you can just run:
+  mpd
+
 https://www.musicpd.org/doc/user/config.html
 
 https://threadbox.net/2011/12/27/mpd-on-mac-os-x/

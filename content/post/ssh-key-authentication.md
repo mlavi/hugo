@@ -35,6 +35,7 @@ Combining these two ideas together, one would want to dynamically insert SSH pub
   and append .pem file suffix.
 - Make your keys passphraseless (*i.e.*: no password to unlock)
  and store them in a secure place.
+ - https://portal.nutanix.com/#/page/docs/details?targetId=Nutanix-Calm-Admin-Operations-Guide-v59:nuc-generating-ssh-key-windows-t.html
 
 # Use Your SSH Keypair #
 
@@ -77,8 +78,10 @@ https://portal.nutanix.com/kb/5232
 
 ## In Practice ##
 
-On Windows, you can configure your PuTTY session to use your SSH keypair, but it is even better to load your SSH keypair into PuTTY-Agent for every PuTTY session to attempt to use.
+On Windows, you can configure your PuTTY session to use your SSH keypair, but it is even better to load your SSH keypair into PuTTY-Agent for every PuTTY session to attempt to use. While your PuTTY client software will use your PuTTY keypair, _please note that you must export your PuTTY keypair to the OpenSSH format to be used on the server._ Furthermore, during upload, Calm may require you to name your private key with the .pem file suffix. You can workaround this by opening your private key file, selecting all, and then cutting and pasting the contents.
 
-On the Unix/Linux/MacOS side of the house, you can generate your keypair with ssh-keygen and load your OpenSSH keypair into ssh-agent upon shell invocation.
+On the Unix/Linux/MacOS side of the house, you can generate your keypair with ssh-keygen and load your OpenSSH keypair into ssh-agent upon shell invocation. In this example, I used 4096 bits (which is considered secure today, less bits are easier to crack), I saved my key into my home directory's .ssh folder, and I also saved it without a passphrase to make things easier. I would recommend using a passphrase next, because Calm can support it now.
+
+````ssh-keygen -b 4096 -f ~/.ssh/First.LastName.passphraseless````
 
 Fortunately, because you have likely provided your SSH keypair while provisioning a blueprint, Calm will reuse these credentials when you audit the Application deployment: pick the Manage tab, choose the VM service desired, and then leverage the Web terminal session to log in with one-click!

@@ -1,0 +1,11 @@
+<!-- 
+ https://gohugo.io/templates/shortcode-templates/#checking-for-existence
+ cd ${theme.mod}
+ mkdir layouts/shortcodes && cd $_ \
+ && wget https://github.com/vjeantet/hugo-theme-docdock/blob/master/layouts/shortcodes/mermaid.html 
+ cd ../../static && git clone https://github.com/knsv/mermaid.git
+ e.g.: https://github.com/vjeantet/hugo-theme-docdock/tree/master/static/mermaid
+ -->
+<link href="{{"mermaid/mermaid.css" | relURL}}" type="text/css" rel="stylesheet"/>
+<script defer src="{{"mermaid/mermaid.js" | relURL}}">mermaid.initialize({startOnLoad:true});</script>
+<div class="mermaid" align="{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}" >{{ safeHTML .Inner  }}</div>
