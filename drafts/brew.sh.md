@@ -1,5 +1,6 @@
-brew --version && brew update && brew upgrade
-pushd ~/Documents/github.com/mlavi/hugo && brew bundle dump --force && popd
+brew --version && brew update && brew upgrade \
+&& pushd ~/Documents/github.com/mlavi/hugo && brew bundle dump --force && popd
+
 brew deps --tree --installed
 brew desc -n /libff*/
 
@@ -11,9 +12,11 @@ https://brew.sh
 sudo chown -R $(whoami) /usr/local/sbin
 
 https://caskroom.github.io/search
+https://formulae.brew.sh/formula/
 brew search && brew cask list
 
-# Node is a binary install from nodejs.org
+# Node #
+Binary install from nodejs.org
 
 # bash
 In order to use this build of bash as your login shell, it must be added to /etc/shells.

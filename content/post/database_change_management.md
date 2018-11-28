@@ -110,3 +110,4 @@ I will review these links later and update this blog entry:
 - http://blog.codinghorror.com/get-your-database-under-version-control/
 - http://www.infoq.com/articles/Database-Version-Control
 - **Does not appear to be open source:** dbmaestro.com || klonio.com
+- http://bluesoft.github.io/bee/
