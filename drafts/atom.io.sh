@@ -55,6 +55,8 @@ To investigate:
   - https://atom.io/packages/script
   - https://atom.io/packages/platformio-ide-terminal
 - https://atom.io/packages/git-blame
+- apm install atom-mdtoc
+  vs.: https://atom.io/packages/markdown-toc-auto || https://atom.io/packages/markdown-toc
 
 CLI accelation/shell research:
 - https://google.github.io/styleguide/shell.xml
