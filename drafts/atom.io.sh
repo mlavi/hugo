@@ -2,7 +2,9 @@
 
 echo http://atom.io
 echo https://atom.io/packages
-apm list --bare --installed > atomfile.txt
+
+cd ~/Documents/github.com/mlavi/hugo/drafts && \
+  apm list --bare --installed > atomfile.txt
 
 apm install linter && apm install linter-shellcheck && cat <<EoM
   Dependencies installed: intentions, linter-ui, busysignal
@@ -26,7 +28,7 @@ EoM
 apm install language-bats && cat <<EoM
   echo Possibly redundant in consideration of the above, although missing function jump
   brew install bats-core
-  https://github.com/bats-core/bats-core
+  https://github.com/f-core/bats-core
 EoM
 apm install atom-ide-ui && cat <<EoM
   https://github.com/facebook-atom/atom-ide-ui
@@ -55,9 +57,11 @@ Python/etc. interactive environments/workbooks:
 -
 - http://xon.sh/
 
-Next:
-  - apm install git-time-machine # split-diff
-  - https://atom.io/packages/git-time-machine
+apm install git-time-machine
+  Dependencies: split-diff
+  https://atom.io/packages/git-time-machine
+
+?apm install imdone-atom
 
 Disabled:
 - linter && linter-ui-default && markdown-preview
