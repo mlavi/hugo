@@ -2,8 +2,29 @@
 
 echo http://atom.io
 echo https://atom.io/packages
+apm list --bare --installed > atomfile.txt
+
+apm install linter && apm install linter-shellcheck && cat <<EoM
+  Dependencies installed: intentions, linter-ui, busysignal
+  https://github.com/koalaman/shellcheck
+EoM
+
+apm disable markdown-preview \
+&& apm install markdown-preview-enhanced && cat <<EoM
+  https://atom.io/packages/markdown-preview-enhanced
+  https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=plantuml
+  https://atom.io/packages/atom-mermaid
+EoM
+
+apm install git-blame && cat <<EoM
+  https://atom.io/packages/git-blame
+EoM
+apm install atom-mdtoc && cat <<EoM
+  vs. https://atom.io/packages/markdown-toc-auto || https://atom.io/packages/markdown-toc
+EoM
 
 apm install language-bats && cat <<EoM
+  echo Possibly redundant in consideration of the above, although missing function jump
   brew install bats-core
   https://github.com/bats-core/bats-core
 EoM
@@ -13,13 +34,9 @@ EoM
 npm i -g bash-language-server && apm install ide-bash ; cat <<EoM
   https://github.com/
 EoM
+
 apm install language-groovy # for Jenkinsfile http://groovy-lang.org/
-apm install markdown-preview-enhanced && cat <<EoM
-  disable markdown-preview first
-  https://atom.io/packages/markdown-preview-enhanced
-  https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=plantuml
-  https://atom.io/packages/atom-mermaid
-EoM
+
 cat <<-EoM
 Python/etc. interactive environments/workbooks:
 
@@ -39,13 +56,9 @@ Python/etc. interactive environments/workbooks:
 - http://xon.sh/
 
 Next:
-- https://atom.io/packages/git-time-machine
   - apm install git-time-machine # split-diff
-- shellcheck? -- See CLI acceleration/research below.
+  - https://atom.io/packages/git-time-machine
 
-Also installed:
-- busy-signal
-- intentions
 Disabled:
 - linter && linter-ui-default && markdown-preview
 To investigate:
@@ -54,9 +67,6 @@ To investigate:
 - https://atom.io/packages/hey-pane
   - https://atom.io/packages/script
   - https://atom.io/packages/platformio-ide-terminal
-- https://atom.io/packages/git-blame
-- apm install atom-mdtoc
-  vs.: https://atom.io/packages/markdown-toc-auto || https://atom.io/packages/markdown-toc
 
 CLI accelation/shell research:
 - https://google.github.io/styleguide/shell.xml
@@ -66,8 +76,6 @@ CLI accelation/shell research:
   && sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'\
   && sudo apt-get update && sudo apt-get install atom gir1.2-gnomekeyring-1.0
 
-- Shellcheck = https://github.com/koalaman/shellcheck
-  - apm install linter && apm install linter-shellcheck # intentions, linter-ui, busysignal?
 - https://github.com/mvdan/sh
   - https://github.com/mvdan/sh/releases | Download shfmt_v2.5.1_linux_amd64, where to put on path?
   - mkdir ~/bin || echo '~/bin already exists.' \
