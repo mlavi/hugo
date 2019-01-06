@@ -7,7 +7,7 @@ Installed:
 - Software Manager:
   - meld chromium-browser nemo-terminal
   - bluetooth^manager
-- sudo apt-get update && sudo apt-get install git tree
+- sudo apt-get update && sudo apt-get install git jq tree
 - sudo apt install snapd && sudo snap install slack --classic
 - See: Atom with Dotfiles+Shell+CLI acceleration/research=blog/atom.md
 - Desktop launcher for: Atom, Slack, Meld
@@ -77,7 +77,7 @@ Linux on Dell XPS:
 
 # Music
 - sudo apt-get install --install-suggests ncmpcpp
-- No sound from most sources, only desktop switches? or is it too quiet, saw +150% volume 
+- No sound from most sources, only desktop switches? or is it too quiet, saw +150% volume
 
 Dotfiles portability+learning+acceleration:
 - https://github.com/webpro/awesome-dotfiles

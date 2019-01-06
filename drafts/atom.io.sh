@@ -41,6 +41,10 @@ EoM
 apm install git-blame && cat <<EoM
   https://atom.io/packages/git-blame
 EoM
+apm install termination && cat <<EoM
+  https://atom.io/packages/termination
+  keeps a permanent tiny bottom strip, send feedback for movable?
+EoM
 # tried on Mac only...
 apm install language-bats && cat <<EoM
   echo Possibly redundant in consideration of the above, although missing function jump
@@ -87,7 +91,19 @@ To investigate:
 - https://atom.io/packages/atom-clock
 - https://atom.io/packages/hey-pane
   - https://atom.io/packages/script
-  - https://atom.io/packages/platformio-ide-terminal
+- Term(s)/Terminal(s):
+  - https://atom.io/packages/terminal-tab # simple
+  - https://atom.io/packages/terminal-plus
+    - fork: https://atom.io/packages/vk-terminal
+    - fork: https://atom.io/packages/platformio-ide-terminal
+      - fork: https://atom.io/packages/tokamak-terminal
+      - fork: https://atom.io/packages/termination
+  - https://atom.io/packages/atom-xterm # node-LTS dep
+  - apm install atom-domterm && cat
+    - https://atom.io/packages/atom-domterm # Fed29 tested
+    - http://domterm.org/Downloading-and-building.html
+  - https://atom.io/packages/terminal-commands
+  - https://atom.io/packages/run-in-terminal
 
 CLI accelation/shell research:
 - https://google.github.io/styleguide/shell.xml
