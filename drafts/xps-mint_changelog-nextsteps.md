@@ -7,6 +7,13 @@ Installed:
 - Software Manager:
   - meld chromium-browser nemo-terminal
   - bluetooth^manager
+  - Texlive-full
+    - sudo tl-paper set all letter && latex small2e
+    - find / -name texlive 2>&1 | grep -v -e denied -e Invalid
+    - less /usr/share/texlive/release-texlive.txt
+    - firefox file:///usr/share/texlive/readme-html.dir/readme.en.html
+    - sudo apt-get install perl-tk # http://tug.org/texlive/distro.html#perltk
+    - tlmgr -gui # http://tug.org/texlive/tlmgr.html
 - sudo apt-get update && sudo apt-get install git tree
 - sudo apt install snapd && sudo snap install slack --classic
 - sudo apt-get install --install-suggests ncmpcpp
@@ -64,3 +71,5 @@ Next for cli/keyboard shortcuts:
     - https://justgetflux.com/linux.html
     - ````sudo add-apt-repository ppa:nathan-renniewaldock/flux \
       && sudo apt-get update && sudo apt-get -y install fluxgui````
+  - visual disk, power, network, memory, cpu panel applet
+  - Suspend OS: not working
