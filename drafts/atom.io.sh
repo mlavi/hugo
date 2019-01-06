@@ -3,12 +3,15 @@
 echo http://atom.io
 echo https://atom.io/packages
 
-cd ~/Documents/github.com/mlavi/hugo/drafts && \
-  apm list --bare --installed > atomfile.txt
+cd ~/Documents/github.com/mlavi/hugo/drafts \
+  && apm list --bare --installed > atomfile-"$(uname -s)".txt
+
+#xps-mint: https://atom.io/packages/format-shell
 
 apm install linter && apm install linter-shellcheck && cat <<EoM
   Dependencies installed: intentions, linter-ui, busysignal
   https://github.com/koalaman/shellcheck
+  ? https://atom.io/packages/format-shell
 EoM
 
 apm disable markdown-preview \
@@ -18,13 +21,14 @@ apm disable markdown-preview \
   https://atom.io/packages/atom-mermaid
 EoM
 
-apm install git-blame && cat <<EoM
-  https://atom.io/packages/git-blame
-EoM
 apm install atom-mdtoc && cat <<EoM
   vs. https://atom.io/packages/markdown-toc-auto || https://atom.io/packages/markdown-toc
 EoM
 
+# install xps-mint only so far
+apm install git-blame && cat <<EoM
+  https://atom.io/packages/git-blame
+EoM
 apm install language-bats && cat <<EoM
   echo Possibly redundant in consideration of the above, although missing function jump
   brew install bats-core
