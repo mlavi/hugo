@@ -55,6 +55,7 @@
         && sudo apt-get update && sudo apt-get -y install fluxgui
         sudo apt-get remove fluxgui #no xflux!
     - not seeing anything after setting city via fluxgui (appears as applet)
+    - https://www.reddit.com/r/linuxmint/comments/68u4g6/flux_on_linux_mint/
   - KeepassXC (Linux+Mac+Android) https://keepassxc.org/
     - https://keepassxc.org/download/#linux
       - https://packages.ubuntu.com/source/cosmic/keepassxc
@@ -134,6 +135,10 @@
 # Vagrant
 - https://www.vagrantup.com/downloads.html
   - Download Debian 64-bit = 2.2.0 x86
+
+# WebEx
+  - https://at.projects.genivi.org/wiki/display/TOOL/WebEx+on+Linux
+  - https://gazelle.ihe.net/content/using-webex-under-linux
 
 # Power
   gnome-power-statistics & # Power monitor
