@@ -91,6 +91,26 @@
           sudo systemctl enable docker
           rm -rf ~/.docker/ # && sudo reboot
 
+# VPN
+- Palo Alto Global Connect:
+  - [Openconnect VPN Client](http://www.infradead.org/openconnect/index.html)
+    - sudo apt-get install openconnect network-manager-openconnect-gnome
+      - Enables Cisco+Juniper VPN via NW Mgr applet
+      - Suggested packages: dnsmasq openssh-server resolvconf
+      - Confirmed --script=
+      - package is v7.08-3 doesn't have --protocol=gp, v8, released in January 2019!! does.
+      - sudo apt-get remove openconnect vpnc-scripts
+    - http://www.infradead.org/openconnect/building.html
+      - https://github.com/dlenski/openconnect#installation
+      - http://lists.infradead.org/pipermail/openconnect-devel/2019-January/005180.html 8.0.1
+        - ftp://ftp.infradead.org/pub/openconnect/openconnect-8.01.tar.gz.asc
+
+      tar xvf openconnect*z && cd openconn*/
+      sudo apt-get -y install \
+        build-essential gettext autoconf automake libproxy-dev \
+        libxml2-dev libtool vpnc-scripts pkg-config libgnutls28-dev
+      ./configure && make && sudo make install && sudo ldconfig && which openconnect
+  - [Openconnect VPN Server](http://ocserv.gitlab.io/www/index.html)
 # Next for cli/keyboard shortcuts:
 - Gestures to switch desktops
 - Suspend OS: not working
