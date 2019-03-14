@@ -82,3 +82,7 @@ The actual content of this blog post has been given as a talk:
 
 <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">&quot;DevOps is a culturally rendered term.&quot; <a href="https://twitter.com/calm_mark">@calm_mark</a></p>&mdash; Noah Kantrowitz (@kantrn) <a href="https://twitter.com/kantrn/status/650414900682973184">October 3, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## Additional Links ##
+
+Although there are no citations for [@Gortees](http://blog.jgriffiths.org/)'s work or images, which I find lacking in academic and ethical values, I do admire his presentation #24 at [SpiceWorld 2018](https://spiceworks.hubs.vidyard.com/watch/5s2nNbixLaS4NF5bdJvuFJ?) = "Why is Automation So Hard?" He charts the progression of automation with automative manufacturing from Ford to Toyota to illustrate DevOps parallels. However, the Toyota Production System is frequently cited by many of my DevOps colleagues, so I would like to encourage him to improve his ethics for the future.

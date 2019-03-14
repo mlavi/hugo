@@ -338,7 +338,7 @@ My proposal was accepted by the organizers, voted upon by the attendees, and
  the introductions are complete, and you have the remainder of an hour to
  change their traditions: how would you explain and sell DevOps to
  non-technical management, engineering, and IT?
- For the past three years, I've travelled to small and large businesses
+ For the past three years, I've traveled to small and large businesses
  around the world to explain how DevOps can continually impact
  any organization and I've evolved to speak the language of business
  and demonstrate positive business outcomes.
@@ -357,3 +357,26 @@ I didn't get to the DevOps TCO model, but I was happy
  John Willis [@botchagalupe](https://twitter.com/botchagalupe)
  was at the talk and he helped define DevOps, agreeing that it is cultural:
  "at the end of the day, it is what you make of it."
+
+# Update: 2019-02-22 #
+
+Variations for abstracts:
+
+    Demystifying DevOps: Agile Infrastructure and Applications for IT
+    (Session Title maximum 25 words/75 characters, Description maximum 150 words)
+
+    Business expectations for IT have changed, have you been asked to provide IaaS: Infrastructure as a Service?
+
+    IaaS efforts vary in maturity: on-demand infrastructure is the minimum deliverable, but can you drive continuous operations for security patching, performance scaling, backups, disaster recover, show back costs, and audits? Providing a mature IaaS experience equates to public cloud parity, but that was established over a decade ago.
+
+    Expectations today have grown to PaaS: Platform as a Service and SaaS: Software as a Service, where application deployments are the criterion for business success. These efforts also vary in maturity: all of the IaaS experience must be extended "up the stack" to the application life cycle, while also providing self service governance for one-click application installations and upgrades.
+
+    Learn how to map your journey to DevOps, where advanced IT services and service levels requires understanding new responsibilities and skill sets.
+
+    Learning Objectives and Key Takeaways: (maximum 30 words)
+
+    # Understanding "DevOps" with a clear definition, cultural implications, and how it achieves business agility.
+    # Understanding "Pets versus Cattle," then using it to evaluate and eliminate single points of failure to achieve scalability.
+    # Mapping agility and scalability goals onto the DevOps Maturity Diagram to illustrate your journey towards advanced IT services and service levels.
+
+-
