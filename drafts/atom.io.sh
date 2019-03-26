@@ -68,14 +68,14 @@ Python/etc. interactive environments/workbooks:
   - http://ipython.org/
     - https://jupyter.readthedocs.io/en/latest/install.html
       - https://www.anaconda.com/download/#macos (Python 2.7 or 3.6 distro with easy package mgmt)
-
     - https://jupyter.readthedocs.io/en/latest/running.html#running
 - anaconda Py2.7:
   conda install ipykernel
   python -m ipykernel install --user
   apm install hydrogen
+  - conda update conda && conda update anaconda
+  - https://docs.anaconda.com/anaconda/user-guide/troubleshooting/#conda-update-anaconda-command-does-not-install-the-latest-version-of-anaconda
 - https://github.com/lgeiger/hydrogen-launcher
--
 - http://xon.sh/
 
 apm install git-time-machine
