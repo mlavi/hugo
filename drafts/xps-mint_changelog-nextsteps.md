@@ -95,6 +95,8 @@
     - https://github.com/obsproject/obs-studio/wiki/Install-Instructions#linux
     - sudo add-apt-repository ppa:obsproject/obs-studio
       sudo apt-get update && sudo apt-get install obs-studio
+- https://atari800.tistory.com/category/Run%20on%20Ubuntu
+  - Toggle on screen keyboard: quarter, Tablet
 
 # VPN
 - Palo Alto Global Connect:
