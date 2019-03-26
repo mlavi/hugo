@@ -19,7 +19,7 @@
   - meld chromium-browser nemo-terminal
   - bluetooth^manager
 - Apt:
-  - sudo apt-get update && sudo apt-get install git jq tree
+  - sudo apt-get update && sudo apt-get install git jq tree xdotool ffmpeg
   - sudo apt install snapd && sudo snap install slack --classic
   - See: Atom with Dotfiles+Shell+CLI acceleration/research=blog/atom.md
 - Desktop launcher for: Atom, Slack, Meld
@@ -91,6 +91,11 @@
           sudo systemctl enable docker
           rm -rf ~/.docker/ # && sudo reboot
 
+  - Open Broadcast Studio
+    - https://github.com/obsproject/obs-studio/wiki/Install-Instructions#linux
+    - sudo add-apt-repository ppa:obsproject/obs-studio
+      sudo apt-get update && sudo apt-get install obs-studio
+
 # VPN
 - Palo Alto Global Connect:
   - [Openconnect VPN Client](http://www.infradead.org/openconnect/index.html)
@@ -110,13 +115,76 @@
         build-essential gettext autoconf automake libproxy-dev \
         libxml2-dev libtool vpnc-scripts pkg-config libgnutls28-dev
       ./configure && make && sudo make install && sudo ldconfig && which openconnect
+
+      - http://www.infradead.org/openconnect/nonroot.html
+
+      sudo ip tuntap add vpn0 mode tun user ${USER}
+
+      openconnect -i vpn0 -s 'sudo -E /usr/share/vpnc-scripts/vpnc-script' \
+       --usergroup=portal --protocol=gp --user=mark.lavi gp.nutanix.com
+
   - [Openconnect VPN Server](http://ocserv.gitlab.io/www/index.html)
+
+# kubeclt+Minikube
+- https://github.com/kubernetes/minikube/releases
+  - https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management
+  - vs. asdf (learned later)
+
+      sudo apt-get update && sudo apt-get install -y apt-transport-https
+      curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+      echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+      sudo apt-get update && sudo apt-get install -y kubectl
+ - https://kubernetes.io/docs/tasks/tools/install-kubectl/#configure-kubectl
+
+ - https://kubernetes.io/docs/tasks/tools/install-minikube/#linux
+  - via https://github.com/asdf-vm/asdf
+
+      sudo apt-get install automake autoconf libreadline-dev libncurses-dev \
+        libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev
+      git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.2
+      echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+      echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+
+      asdf plugin-add minikube && asdf list-all minikube
+      asdf install minikube 0.32.0 && asdf global minikube 0.32.0
+      asdf which minikube
+
+      asdf plugin-add minikube && asdf plugin-update
+      asdf current minikube && asdf list-all minikube
+
+- https://github.com/kubernetes/minikube#quickstart
+- https://kubernetes.io/docs/setup/minikube/#quickstart
+
+      minikube config set WantReportErrorPrompt false
+      minikube start --vm-driver=virtualbox # none is not for developer machines!
+
+# Next
+sudo apt-get install parted-doc gparted
+
+- https://gparted.org/livecd.php
+- http://www.sysresccd.org
+
+how to grow partition mint
+how to change recovery mode/boot/console resolution from grub
+
+# Grub resolution
+- c for console; videoinfo
+  640x480
+  800x600
+  *1024x768
+  1280x1024
+  1600x1200
+  was*1920x1080
+  native:3480x2160
+
 # Next for cli/keyboard shortcuts:
 - Gestures to switch desktops
 - Suspend OS: not working
 - disk space expansion/management
   - Timeshift GUI: snapshots via rsync
   - sudo du -hs /var/cache/apt/archives && sudo apt-get clean
+  - Can Win10 RW ext4?
+  - Can Linux RW win partition
 - Toggle radio = Bluetooth+WiFi \(fn-Home = Antenna icon\) versus airplane mode?
 - Toggle portfolio/auto rotate layout
 - Long click = right click?
