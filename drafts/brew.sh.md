@@ -4,9 +4,9 @@ https://caskroom.github.io/search
 https://formulae.brew.sh/formula/
 brew search
 brew cask list && brew cask outdated && brew cask update
-# fish, vagrant-managr, node, easysimbl?
+### fish, vagrant-managr, node, easysimbl?
 
-    brew --version && brew cask outdated && brew update && brew upgrade && \
+    brew --version && brew update && brew upgrade && brew cask upgrade && \
     pushd ~/Documents/github.com/mlavi/hugo/drafts/ && brew bundle dump --force && popd
 
 brew deps --tree --installed
@@ -74,7 +74,6 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 # Can't remove/upgrade six: https://github.com/pypa/pip/issues/3165
 pip install --upgrade sphinx --ignore-installed six
 
-
 ==> Caveats
 This formula is keg-only, which means it was not symlinked into /usr/local,
 because macOS provides the BSD libedit library, which shadows libreadline.
@@ -139,7 +138,22 @@ For compilers to find this software you may need to set:
     CPPFLAGS: -I/usr/local/opt/gettext/include
 
 ==> Caveats
+==> emacs-mac
 This is YAMAMOTO Mitsuharu's "Mac port" addition to
+GNU Emacs 26. This provides a native GUI support for Mac OS X
+10.6 - 10.14. After installing, see README-mac and NEWS-mac
+in /usr/local/opt/emacs-mac for the port details.
+
+Emacs.app was installed to:
+  /usr/local/opt/emacs-mac
+
+To link the application to default Homebrew App location:
+  ln -s /usr/local/opt/emacs-mac/Emacs.app /Applications
+Other ways please refer:
+  https://github.com/railwaycat/homebrew-emacsmacport/wiki/Alternative-way-of-place-Emacs.app-to-Applications-directory
+
+For an Emacs.app CLI starter, see:
+  https://gist.github.com/4043945This is YAMAMOTO Mitsuharu's "Mac port" addition to
 GNU Emacs 26. This provides a native GUI support for Mac OS X
 10.6 - 10.13. After installing, see README-mac and NEWS-mac
 in /usr/local/opt/emacs-mac for the port details.

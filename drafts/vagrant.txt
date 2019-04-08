@@ -1,0 +1,19 @@
+__ box __
+centos/7               (virtualbox, 1707.01)
+chef/centos-6.5        (vmware_desktop, 1.0.0)
+fedora/23              (virtualbox, 0)
+mlavi/centos7-20180703 (virtualbox, 0)
+mlavi/trusty-180727    (virtualbox, 0)
+ubuntu/trusty64        (virtualbox, 20160406.0.0)
+ubuntu/xenial64        (virtualbox, 20160610.0.0)
+ubuntu/xenial64        (virtualbox, 20180727.0.0)
+ubuntu/xenial64        (virtualbox, 20180831.0.0)
+__ plugin __
+vagrant-auto_network (1.0.3, global)
+  - Version Constraint: > 0
+vagrant-cachier (1.2.1, global)
+  - Version Constraint: > 0
+vagrant-hostsupdater (1.1.1.160, global)
+  - Version Constraint: > 0
+vagrant-vbguest (0.16.0, global)
+  - Version Constraint: > 0

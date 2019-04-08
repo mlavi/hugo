@@ -1,5 +1,7 @@
-for i in box plugin; do echo __ ${i} __ ; vagrant ${i} list; done
-$ cd /Users/mark/Documents/github.com/ideadevice/infra/poc/ubuntu \
+cd ~/Documents/github.com/mlavi/hugo/drafts && rm vagrant.txt
+for i in box plugin; do echo __ ${i} __ >> vagrant.txt ;\
+ vagrant ${i} list >> vagrant.txt ; done ; cat vagrant.txt
+$ cd ~/Documents/github.com/ideadevice/infra/poc/ubuntu \
   && vagrant box update && vagrant plugin update
 
 brew cask install vagrant
@@ -20,6 +22,7 @@ vagrant-nixos-plugin
 vagrant-share
 
 # vagrant global-status --prune
+# vagrant box remove ubuntu/xenial64 --box-version 20180831.0.0
 
 #_____
 
