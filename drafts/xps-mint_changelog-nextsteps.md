@@ -1,4 +1,24 @@
-# BIOS/OS
+<!-- MDTOC maxdepth:6 firsth1:1 numbering:0 flatten:0 bullets:1 updateOnSave:1 -->
+
+- [BIOS and Linux OS](#bios-and-linux-os)   
+- [Installed:](#installed)   
+- [VPN](#vpn)   
+   - [Gaming](#gaming)   
+- [kubeclt+Minikube](#kubecltminikube)   
+- [Next](#next)   
+- [Grub resolution](#grub-resolution)   
+- [Next for cli/keyboard shortcuts:](#next-for-clikeyboard-shortcuts)   
+- [Dotfiles portability+learning+acceleration:](#dotfiles-portabilitylearningacceleration)   
+- [VirtualBox](#virtualbox)   
+- [Vagrant](#vagrant)   
+- [WebEx](#webex)   
+- [Power](#power)   
+- [Music](#music)   
+- [Texlive](#texlive)   
+
+<!-- /MDTOC -->
+<hr/>
+# BIOS and Linux OS
 - 2019-01-07: Upgraded to 19.1 (Tessa) with Ubuntu Bionic base
   - [Tessa release notes](https://www.linuxmint.com/rel_tessa_cinnamon.php) talk about trackpad, sound, stun/pause video drivers
   - [Ubuntu release notes](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes)
@@ -126,6 +146,13 @@
        --usergroup=portal --protocol=gp --user=mark.lavi gp.nutanix.com
 
   - [Openconnect VPN Server](http://ocserv.gitlab.io/www/index.html)
+
+## Gaming
+- https://atari800.tistory.com/category/Run%20on%20Ubuntu
+  1. Install [Wine](http://www.wikihow.com/Install-Wine-on-Ubuntu)
+  2. Install [Winetricks and MS jet 4.0 engine](http://brianpaul.wordpress.com/2013/09/13/ubuntu-using-microsoft-access-with-wine-msjet40-dll-error-fixed/)
+  3. Run 'a8_best_gamepack.exe'
+    - NOTE: If the user interface does not work, please disable the skin in the option or set 'gSkin=0' in the 'gamepack\ini\option.ini'.
 
 # kubeclt+Minikube
 - https://github.com/kubernetes/minikube/releases

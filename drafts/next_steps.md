@@ -7,17 +7,64 @@
     - Add /etc/hosts
       - Evaluate switching due to limits?
     - Add XCKeePassDB
-  - Research [NoxPlayer](https://www.bignox.com/): Android emulator for Win+Mac
-  - https://github.com/jmdugan/blocklists/blob/master/corporations/facebook/all
-  - https://tails.boum.org/install/download-iso/index.en.html
-  - https://buttercup.pw/
-    - https://chrome.google.com/webstore/search/buttercup
+    - https://buttercup.pw/
+      - https://chrome.google.com/webstore/search/buttercup
+-PS4:
+  - https://support.playstation.com/s/article/Upgrade-PS4-HDD?language=en_US
+  - https://www.gamesradar.com/how-to-upgrade-ps4-hard-drive/
+  - https://www.geek.com/games/a-new-way-to-re-download-p-t-on-ps4-has-been-discovered-1652670/
+  - http://wololo.net/downloads/index.php/download/8395 suwi (squid unofficial Windows installer) R20110308
+  - http://wololo.net/2016/04/10/how-to-redownload-p-t-silent-hills/
+- Research [NoxPlayer](https://www.bignox.com/): Android emulator for Win+Mac
+
+- Misc:
   - https://searx.me/
   - https://github.com/MycroftAI
   - https://github.com/esbenp/heimdal
   - https://ballerina.io
   - https://pi-hole.net
+  - http://www.dowse.eu/ = on/off button for IoT
   - https://www.openhab.com/addons/
+  - https://vivaldi.com/blog/vivaldi-different-from-chrome/
+  - HTML2md = http://breakdance.io/docs.html
+  - https://miniflux.app/ RSS web reader
+  - https://oss.oetiker.ch/smokeping/doc/reading.en.html network latency tool
+  - [Google product maintenance of microservice APIs](https://slashdot.org/comments.pl?sid=13257238&threshold=1&commentsort=0&mode=thread&cid=57991130)
+- DNS API
+  - https://en.wikipedia.org/wiki/Comparison_of_DNS_server_software#Packaging
+  - https://getdnsapi.net/ and Stubby to piHole
+  - https://github.com/Neilpang/acme.sh/wiki/dnsapi#73-use-maradns-api
+- DDI: DHCP, DNS, IPAM
+  - https://en.wikipedia.org/wiki/IP_address_management
+  - https://github.com/cvicente/Netdot/
+  - http://www.netmagis.org/spec.html
+  - https://spritelink.github.io/NIPAP/
+  - https://kb.nocproject.org/display/DOC/Introduction
+  - https://phpipam.net/api/api_documentation/
+- Python
+  - https://github.com/vinta/awesome-python
+  - https://github.com/faif/python-patterns
+- Security
+  - https://www.passwordstore.org/#extensions : pass
+    - FF&Chrome via https://github.com/passff/passff-host#passff-host
+  - Sync FF bookmarks via WebDAV: https://addons.mozilla.org/en-US/firefox/addon/floccus/
+  - https://heads.dyne.org/
+    - https://tails.boum.org/install/download-iso/index.en.html
+  - https://github.com/jmdugan/blocklists/blob/master/corporations/facebook/all
+  - https://www.grc.com/sqrl/sqrl.htm :Secure Quick Reliable Login via QR code
+  - https://notabug.org/themusicgod1/cloudflare-tor greatest MitM/CDN
+  - https://www.keycloak.org/ SSO, IAM, SAML, Oauth2
+  - https://docs.wso2.com/display/IS541/Getting+Started+with+the+Management+Console
+- Kanban:
+  - https://kanboard.org/plugins.html
+  - https://taskboard.matthewross.me/
+  - https://github.com/wekan/wekan
+  - http://taigaio.github.io/taiga-doc/dist/setup-alternatives.html#setup-taiga-scripts
+  - https://restya.com/board
+  - https://docs.tuleap.org/installation-guide/docker-image.html PM+CI+more
+  - https://mattermost.com/download/ ChatOps and more
+
+
 Done:
-- Github 2FA/OTP: AndOTP
+- Github 2FA/OTP: AndOTP via F-Droid.org
   - https://superuser.com/questions/462478/is-there-a-google-authenticator-desktop-client
