@@ -111,3 +111,4 @@ I will review these links later and update this blog entry:
 - http://www.infoq.com/articles/Database-Version-Control
 - **Does not appear to be open source:** dbmaestro.com || klonio.com
 - http://bluesoft.github.io/bee/
+- http://www.brunton-spall.co.uk/post/2014/05/06/database-migrations-done-right/
