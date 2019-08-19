@@ -2,13 +2,13 @@ https://brew.sh || https://docs.brew.sh/Manpage.html
 
 https://caskroom.github.io/search
 https://formulae.brew.sh/formula/
+Outdated? fish, vagrant-managr, node, easysimbl?
+
+    brew --version && brew update && brew upgrade && brew cask upgrade \
+    && pushd ~/Documents/github.com/mlavi/hugo/drafts/ && brew bundle dump --force && popd
+
 brew search
 brew cask list && brew cask outdated && brew cask update
-### fish, vagrant-managr, node, easysimbl?
-
-    brew --version && brew update && brew upgrade && brew cask upgrade && \
-    pushd ~/Documents/github.com/mlavi/hugo/drafts/ && brew bundle dump --force && popd
-
 brew deps --tree --installed
 brew desc -n /libff*/
 
