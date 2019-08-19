@@ -355,13 +355,15 @@ See: https://docs.brew.sh/Homebrew-and-Python
       - https://kubernetes.io/docs/tasks/tools/install-minikube/
         - https://minikube.sigs.k8s.io/docs/start/
           - KVM or VirtualBox
-        - 1.3.1 installed and sha256sum checked
+        - 1.3.1 installed (via package from releases page) and sha256sum checked
         - Installed VirtualBox-6.0, above. New key appended to procedure on page.
         - Installed VirtualBox 6.0.10 Oracle VM VirtualBox Extension Pack
+        - minikube config set vm-driver virtualbox
         - minikube dashboard
   - TODO: https://github.com/GoogleCloudPlatform/skaffold (supersedes freshpod)
   - minikube start --cpus 4 --memory 4096
   - https://github.com/helm/helm/blob/master/docs/install.md #2.14.3
+    - versus linuxbrew: brew install kubernetes-helm
     - https://helm.sh/docs/using_helm/#quickstart-guide
     - helm init --history-max 200
   - cd ~/Documents/github.com/ && mkdir jenkins-x && cd $_

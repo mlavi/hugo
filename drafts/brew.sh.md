@@ -18,14 +18,26 @@ sudo chown -R $(whoami) /usr/local/sbin
 
 # Install on Linux
 https://docs.brew.sh/Homebrew-on-Linux
-
+  - https://docs.brew.sh/Analytics.html
 sudo apt-get install build-essential curl file git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-    test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-brew install hello
+    test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv) # added this to .bash_aliases
+    test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+    test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+    echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+    brew install hello
+- Configure Linuxbrew in your ~/.profile by running
+    echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >>~/.profile
+- Add Linuxbrew to your PATH
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+- We recommend that you install GCC by running:
+    brew install gcc
+- Run `brew help` to get started
+- Further documentation:
+    https://docs.brew.sh
+Warning: /home/linuxbrew/.linuxbrew/bin is not in your PATH.
+Bash completion has been installed to:
+  /home/linuxbrew/.linuxbrew/etc/bash_completion.d
 
 # Node #
 Binary install from nodejs.org
