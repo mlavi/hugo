@@ -3,9 +3,10 @@
 echo http://atom.io
 echo https://atom.io/packages
 
-# curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add - \
-#  && sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'\
-#  && sudo apt-get update && sudo apt-get install atom gir1.2-gnomekeyring-1.0
+curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add - \
+  && sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'\
+  && sudo apt-get update && sudo apt-get -y install atom gir1.2-gnomekeyring-1.0
+# add Atom to desktop: right click on Desktop, +Create a new launcher here... Seach for icon.
 
 cd ~/Documents/github.com/mlavi/hugo/drafts \
   && apm list --bare --installed > atomfile-"$(uname -s)".txt
