@@ -28,7 +28,7 @@
   - See Next/Linux on XPS section
 - 2019-01-xx: Disabled BIOS SecureBoot to enable VirtualBox kernel drivers
 - 2018-xx: After trying Linux Services for Windows, installed dual-boot Mint
-- 2018-xx: Recieved Dell XPS laptop with Win10
+- 2018-xx: Received Dell XPS laptop with Win10
 # Installed:
 - Grub Customizer:
   - https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer
@@ -89,10 +89,9 @@
     - Nice to have it remain minimized/applet/desktop 2?
   - Brave = https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux
 
-        curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key add -
-        UBUNTU_CODENAME=$( (grep DISTRIB_CODENAME /etc/upstream-release/lsb-release || grep DISTRIB_CODENAME /etc/lsb-release) 2>/dev/null | cut -d'=' -f2 )
-        echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-$UBUNTU_CODENAME.list
+        # see directions for updates
         sudo apt update && sudo apt install brave-browser brave-keyring
+        #sudo apt-key del "x y z"
   - Docker
     - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
