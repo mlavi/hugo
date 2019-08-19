@@ -78,12 +78,13 @@
 
           sudo apt-get remove docker docker-engine docker.io containerd runc
           sudo apt-get -y install apt-transport-https \
-              ca-certificates curl software-properties-common
+              ca-certificates curl gnupg-agent software-properties-common
           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
           sudo add-apt-repository \
            "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
            $(cat /etc/upstream-release/lsb-release | grep CODENAME | awk -F= '{print $2}') stable"
-          sudo apt-get update && sudo apt-get -y install docker-ce
+           #versus: $(lsb_release -cs) stable" = Malformed input, repository not added.
+          sudo apt-get update && sudo apt-get -y install docker-ce docker-ce-cli containerd.io
           sudo docker container run hello-world
     - https://docs.docker.com/install/linux/linux-postinstall/
 
@@ -243,6 +244,13 @@ how to change recovery mode/boot/console resolution from grub
   - sudo apt-get install --install-suggests ncmpcpp
   - No sound from most sources, only desktop switches? or is it too quiet, saw +150% volume
 
+# Kodi+Jellyfish
+- https://kodi.wiki/view/HOW-TO:Install_Kodi_for_Linux
+
+    sudo apt-get install software-properties-common && sudo add-apt-repository ppa:team-xbmc/ppa
+    sudo apt-get update && sudo apt-get -y install kodi
+- Kodi:
+  - Add-ons > Download > Look and Feel > Screensaver > Digital Clock Screensaver
 # Texlive
   - Texlive-full (via Software Manager) = apt-get remove texlive-full
     - sudo tl-paper set all letter && latex small2e
@@ -257,3 +265,158 @@ how to change recovery mode/boot/console resolution from grub
     - sudo mkdir /usr/local/texlive/2018 && sudo chown -R $(whoami):$(whoami) /usr/local/texlive
     - ./install-tl -gui text
     - ./install-tl -gui wizard
+
+# Windows
+- Foobar2000 player, Winamp
+
+# Mint desktop
+- keychain15
+- docker installed
+- sudo apt-get install unison-all-gtk ssh
+  - Suggested packages: molly-guard monkeysphere rssh
+  - Recommended packages:  ncurses-term ssh-import-id
+  - Linux brew.sh, vs. Unison dockerfile build or native compile?
+- See ~/barrier.*
+- Had to adjust .atom/storage/application.json and ../config.cson for paths
+- quot vodet music player installed
+
+## Worksession
+- sudo apt-get install hugo
+- brew install openconnect
+  - ==> Caveats
+==> openssl
+A CA file has been bootstrapped using certificates from the SystemRoots
+keychain. To add additional certificates (e.g. the certificates added in
+the System keychain), place .pem files in
+  /home/linuxbrew/.linuxbrew/etc/openssl/certs
+
+and run
+  /home/linuxbrew/.linuxbrew/opt/openssl/bin/c_rehash
+==> libtool
+In order to prevent conflicts with Apple's own libtool we have prepended a "g"
+so, you have instead: glibtool and glibtoolize.
+==> python
+Python has been installed as
+  /home/linuxbrew/.linuxbrew/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /home/linuxbrew/.linuxbrew/opt/python/libexec/bin
+
+If you need Homebrew's Python 2.7 run
+  brew install python@2
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /home/linuxbrew/.linuxbrew/lib/python3.7/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+
+- apt-get install authenticator # https://gitlab.gnome.org/World/Authenticator
+  - Versus flathub
+  - Re-Setup Github
+- jenkins-x.io
+  - https://jenkins-x.io/getting-started/install/
+    - curl -L https://github.com/jenkins-x/jx/releases/latest/download/jx-linux-amd64.tar.gz | tar xzv \
+    mv jx ~/bin/
+  - https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux
+    - brew install kubectl
+      - ==> kubernetes-cli
+      Bash completion has been installed to: /home/linuxbrew/.linuxbrew/etc/bash_completion.d
+  - https://jenkins-x.io/getting-started/boot/
+    - https://github.com/jenkins-x/cloud-environments
+      - https://kubernetes.io/docs/tasks/tools/install-minikube/
+        - https://minikube.sigs.k8s.io/docs/start/
+          - KVM or VirtualBox
+        - 1.3.1 installed and sha256sum checked
+        - Installed VirtualBox-6.0, above. New key appended to procedure on page.
+        - Installed VirtualBox 6.0.10 Oracle VM VirtualBox Extension Pack
+        - minikube dashboard
+  - TODO: https://github.com/GoogleCloudPlatform/skaffold (supersedes freshpod)
+  - minikube start --cpus 4 --memory 4096
+  - https://github.com/helm/helm/blob/master/docs/install.md #2.14.3
+    - https://helm.sh/docs/using_helm/#quickstart-guide
+    - helm init --history-max 200
+  - cd ~/Documents/github.com/ && mkdir jenkins-x && cd $_
+      - git clone https://github.com/jenkins-x/cloud-environments.git
+      - cd cloud-environments/env-minikube/ && make install
+    - jx create cluster minikube
+    - jx install --provider=minikube --git-username mlavi --git-api-token see secrets.mintdesktop.txt
+      - /home/mark/.jx/cloud-environments/env-minikube/myvalues.yaml
+
+      ? Select Jenkins installation type: Serverless Jenkins X Pipelines with Tekton
+Context "minikube" modified.
+set exposeController Config Domain 192.168.99.101.nip.io
+Git configured for user: Mark Lavi and email mlavi@users.noreply.github.com
+helm installed and configured
+nginx ingress controller already enabled
+Set up a Git username and API token to be able to perform CI/CD
+? Do you wish to use mlavi as the local Git user for GitHub server: Yes
+Select the CI/CD pipelines Git server and user
+? Do you wish to use GitHub as the pipelines Git server: Yes
+Setting the pipelines Git server https://github.com and user name mlavi.
+Cloning the Jenkins X cloud environments repo to /home/mark/.jx/cloud-environments
+? A local Jenkins X cloud environments repository already exists, recreating with latest: Yes
+Cloning the Jenkins X cloud environments repo to /home/mark/.jx/cloud-environments
+Enumerating objects: 1440, done.
+Total 1440 (delta 0), reused 0 (delta 0), pack-reused 1440
+Updating Secret jx-install-config in namespace jx
+Setting up prow config into namespace jx
+Installing tekton into namespace jx
+WARNING: failed to create system vault in namespace jx due to no "jx-vault-minikube" vault found in namespace "jx"
+
+Installing Prow into namespace jx
+with values file /home/mark/.jx/cloud-environments/env-minikube/myvalues.yaml
+
+? Defaulting workload build pack: Kubernetes Workloads: Automated CI+CD with GitOps Promotion
+Setting the team build pack to kubernetes-workloads repo: https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes.git ref: master
+Installing jx into namespace jx
+Installing jenkins-x-platform version: 2.0.951
+
+
+WARNING: waiting for install to be ready, if this is the first time then it will take a while to download images
+Jenkins X deployments ready in namespace jx
+Configuring the TeamSettings for ImportMode YAML
+Creating default staging and production environments
+? Select the organization where you want to create the environment repository: mlavi-workshops
+Using Git provider GitHub at https://github.com
+? Using Git user name: mlavi
+? Using organisation: mlavi-workshops
+Creating repository mlavi-workshops/environment-snarlnimble-staging
+Creating Git repository mlavi-workshops/environment-snarlnimble-staging
+Pushed Git repository to https://github.com/mlavi-workshops/environment-snarlnimble-staging
+
+Creating staging Environment in namespace jx
+Created environment staging
+Namespace jx-staging created
+Creating GitHub webhook for mlavi-workshops/environment-snarlnimble-staging for url http://hook.jx.192.168.99.101.nip.io/hook
+Using Git provider GitHub at https://github.com
+? Using Git user name: mlavi
+? Using organisation: mlavi-workshops
+Creating repository mlavi-workshops/environment-snarlnimble-production
+Creating Git repository mlavi-workshops/environment-snarlnimble-production
+Pushed Git repository to https://github.com/mlavi-workshops/environment-snarlnimble-production
+
+Creating production Environment in namespace jx
+Created environment production
+Namespace jx-production created
+Creating GitHub webhook for mlavi-workshops/environment-snarlnimble-production for url http://hook.jx.192.168.99.101.nip.io/hook
+
+Jenkins X installation completed successfully
+
+
+	********************************************************
+
+	     NOTE: Your admin password is: see secrets.mintdesktop.txt
+
+	********************************************************
+
+
+Your Kubernetes context is now set to the namespace: jx
+To switch back to your original namespace use: jx namespace jx
+Or to use this context/namespace in just one terminal use: jx shell
+For help on switching contexts see: https://jenkins-x.io/developing/kube-context/
+To import existing projects into Jenkins:       jx import
+To create a new Spring Boot microservice:       jx create spring -d web -d actuator
+To create a new microservice from a quickstart: jx create quickstart
