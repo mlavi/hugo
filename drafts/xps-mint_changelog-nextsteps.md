@@ -295,6 +295,11 @@ how to change recovery mode/boot/console resolution from grub
 # Windows
 - Foobar2000 player, Winamp
 
+# Mint laptop
+http://roaraudio.keep-cool.org/]
+Gnome Keyring management: p/w lifecycle?
+  - https://wiki.gnome.org/Apps/Seahorse
+
 # Mint desktop
 - keychain15
 - docker installed
@@ -353,6 +358,7 @@ See: https://docs.brew.sh/Homebrew-and-Python
   - https://jenkins-x.io/getting-started/boot/
     - https://github.com/jenkins-x/cloud-environments
       - https://kubernetes.io/docs/tasks/tools/install-minikube/
+        - versus: asdf plugin-list-all | less # brew cask@mac # see asdf
         - https://minikube.sigs.k8s.io/docs/start/
           - KVM or VirtualBox
         - 1.3.1 installed (via package from releases page) and sha256sum checked
@@ -361,7 +367,7 @@ See: https://docs.brew.sh/Homebrew-and-Python
         - minikube config set vm-driver virtualbox
         - minikube dashboard
   - TODO: https://github.com/GoogleCloudPlatform/skaffold (supersedes freshpod)
-  - minikube start --cpus 4 --memory 4096
+  - minikube start --cpus 3 --memory 4096
   - https://github.com/helm/helm/blob/master/docs/install.md #2.14.3
     - versus linuxbrew: brew install kubernetes-helm
     - https://helm.sh/docs/using_helm/#quickstart-guide
