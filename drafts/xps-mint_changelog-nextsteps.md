@@ -311,6 +311,21 @@ Gnome Keyring management: p/w lifecycle?
 - Had to adjust .atom/storage/application.json and ../config.cson for paths
 - quot vodet music player installed
 
+# Barrier
+- https://github.com/debauchee/barrier/wiki
+  - Linux server:
+    - https://flathub.org/apps/details/com.github.debauchee.barrier
+    - flatpak install flathub com.github.debauchee.barrier
+    - flatpak run com.github.debauchee.barrier
+  - https://members.symless.com/help/s1-troubleshooting/s1-getting-started
+    - Server: Configure interactively...
+    - Add computer name as shown in logs
+    - Reload configuration
+    - Barrier > Save Configuration: ~/barrier.conf
+  - https://github.com/debauchee/barrier/blob/master/doc/UpdateManpages.txt
+  - https://github.com/debauchee/barrier/blob/master/doc/MacReadme.txt
+- https://alternativeto.net/software/synergy/
+
 ## Worksession
 - sudo apt-get install hugo
 - brew install openconnect
