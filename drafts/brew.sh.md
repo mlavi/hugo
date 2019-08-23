@@ -4,8 +4,9 @@ https://caskroom.github.io/search
 https://formulae.brew.sh/formula/
 Outdated? fish, vagrant-managr, node, easysimbl?
 
-    brew --version && brew update && brew upgrade && brew cask upgrade \
-    && pushd ~/Documents/github.com/mlavi/hugo/drafts/ && brew bundle dump --force && popd
+    brew update && brew upgrade && brew cask upgrade \
+    && pushd ~/Documents/github.com/mlavi/hugo/drafts/ \
+    && brew bundle dump --force && popd
 
 brew search
 brew cask list && brew cask outdated && brew cask update
@@ -96,7 +97,14 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 
 # Can't remove/upgrade six: https://github.com/pypa/pip/issues/3165
 pip install --upgrade sphinx --ignore-installed six
+--
+Warning: python 3.7.3 is already installed, it's just not linked
+You can use `brew link python` to link this version.
 
+ 2019-05-29 11:13:22 ☆  C1MPH6SWG944 in ~/Documents/github.com/ideadevice/calm-dsl-engine
+± |master ?:1 ✗| → brew link python
+Linking /usr/local/Cellar/python/3.7.3... Error: Permission denied @ dir_s_mkdir - /usr/local/Frameworks
+--
 ==> Caveats
 This formula is keg-only, which means it was not symlinked into /usr/local,
 because macOS provides the BSD libedit library, which shadows libreadline.

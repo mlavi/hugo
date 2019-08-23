@@ -23,12 +23,12 @@ I've refactored terminology to help inform systems and actions, but you can see 
 many moving pieces to enable modern day software development life cycle automation,
 some of which are not easily identified off the shelf.
 
-You can "view the SVG image" in a new browser window or tab and scale it to your liking
-and then cut and paste text from it.
-
 ### Updated! ###
 My original release was 2015-03-11 (source below), but today's update adds detail, removes many crossed lines for simple visual flow parsing, and is organized vertically.
 
+[devops_automation.pu.svg](devops_automation.pu.svg) is one format, so please "view the SVG image" in a new browser window or tab and scale it to your liking, you can copy text from it.
+
+The inline display is currently broken:
 ![DevOps Automation Diagram - 2015-03-17](devops_automation.pu.svg)
 
 Source code: devops_automation.pu
