@@ -14,7 +14,14 @@
 - [WebEx](#webex)   
 - [Power](#power)   
 - [Music](#music)   
+- [Kodi+Jellyfish](#kodijellyfish)   
 - [Texlive](#texlive)   
+- [Windows](#windows)   
+- [Mint laptop](#mint-laptop)   
+- [Mint desktop](#mint-desktop)   
+- [Barrier](#barrier)   
+   - [iPod Touch](#ipod-touch)   
+   - [Worksession](#worksession)   
 
 <!-- /MDTOC -->
 <hr/>
@@ -307,7 +314,7 @@ Gnome Keyring management: p/w lifecycle?
   - Suggested packages: molly-guard monkeysphere rssh
   - Recommended packages:  ncurses-term ssh-import-id
   - Linux brew.sh, vs. Unison dockerfile build or native compile?
-- See ~/barrier.*
+- See ~/barrier.conf and [#Barrier]
 - Had to adjust .atom/storage/application.json and ../config.cson for paths
 - quot vodet music player installed
 
@@ -322,11 +329,30 @@ Gnome Keyring management: p/w lifecycle?
     - Add computer name as shown in logs
     - Reload configuration
     - Barrier > Save Configuration: ~/barrier.conf
+    - Qt: Session management error: None of the authentication protocols specified are supported
+*** WARNING *** The program 'barrier' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
+*** WARNING *** Please fix your application to use the native API of Avahi!
+*** WARNING *** For more information see <http://0pointer.de/blog/projects/avahi-compat.html>
+
   - https://github.com/debauchee/barrier/blob/master/doc/UpdateManpages.txt
   - https://github.com/debauchee/barrier/blob/master/doc/MacReadme.txt
 - https://alternativeto.net/software/synergy/
 
+## iPod Touch
+- https://support.apple.com/en-us/HT204217#ipodtouch
+  - 5th generation, A1421: May 2013
+  - https://support.apple.com/kb/SP675?viewlocale=en_US&locale=en_US
+  - Lightning connector
+  - S/N: DJ6Q40UGF4JW
 ## Worksession
+
+
+ molly-guard monkeysphere rssh
+Recommended packages:
+  ncurses-term ssh-import-id
+The following NEW packages will be installed:
+  openssh-server openssh-sftp-server
+
 - sudo apt-get install hugo
 - brew install openconnect
   - ==> Caveats
@@ -359,9 +385,10 @@ They will install into the site-package directory
 
 See: https://docs.brew.sh/Homebrew-and-Python
 
-- apt-get install authenticator # https://gitlab.gnome.org/World/Authenticator
-  - Versus flathub
-  - Re-Setup Github
+- Software sources > Authenticator # https://gitlab.gnome.org/World/Authenticator
+  - via flatpack
+    - Re-Setup Github
+    - Paypal only allows one device; migrated to mobile
 - jenkins-x.io
   - https://jenkins-x.io/getting-started/install/
     - curl -L https://github.com/jenkins-x/jx/releases/latest/download/jx-linux-amd64.tar.gz | tar xzv \
