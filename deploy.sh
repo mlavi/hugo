@@ -7,7 +7,7 @@ set -e # halt script on error
 #   vs. brew --version && brew update && brew upgrade
 #    brew list ; brew cask list ; brew desc -n /libff*/
 #  Install hugo theme:
-#   cd themes; git clone https://github.com/tmaiaroto/hugo-redlounge 
+#   cd themes; git clone https://github.com/tmaiaroto/hugo-redlounge
 # git config --local --edit
 #  hugo new post/name.md --editor=gedit &
 # ____ Filesystem:
@@ -39,7 +39,7 @@ echo 'TODO: grep -R -e "/`grep status archetypes/default.md`/" content/'
 echo -e "\nSTART: building project..."
 rm -rf public/*
 hugo --verbose
-if [[ $? > 0 ]]; then
+if [[ $? -gt 0 ]]; then
   echo "ERROR: build, exiting."; exit 1;
 fi
 
@@ -48,12 +48,14 @@ fi
 if [[ ${TEST} ]]; then
   echo -e "\nSTART: test..."
   bundle exec htmlproof --verbose ./public
-  if [[ $? > 0 ]]; then
+  if [[ $? -gt 0 ]]; then
     echo "ERROR: test, exiting."; exit 1;
   fi
 else
   echo -e "\n SKIP: test..."
 fi
+
+zip -u -r -T drafts.zip drafts && unzip -q -t ${_}.zip
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 

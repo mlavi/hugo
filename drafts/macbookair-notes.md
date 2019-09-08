@@ -10,7 +10,7 @@
   * VirtualBox + ext.pack
   * Vagrant/Consul/Packer/Terraform
   * Kitematic/Docker?
-  * Tor browser: torproject.org? vs&nbsp; `brew cask install torbrowser`
+  * Tor browser: torproject.org? vs. `brew cask install torbrowser`
   * videolan.org
 * Install Brew and Cask (implies XCode CLI and git-apple)  
   1. ruby -e "$(curl -fsSL
