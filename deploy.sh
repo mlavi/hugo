@@ -22,7 +22,7 @@ set -e # halt script on error
 #  echo 'set PAGE x watchmedo shell-command --pattern="*.md" --command="landslide --relative --embed --quiet $PAGE.md --destination $PAGE.html" &'
 # end
 
-if [[ ! -f bugs.yaml ]]; then
+if [[ -f bugs.yaml ]]; then
   TEST=1
 fi
 
@@ -56,7 +56,8 @@ else
 fi
 
 zip -u -r -T drafts.zip drafts && unzip -q -t ${_}.zip
-
+scp drafts.zip mark-xps-13-9365.mark.lavi.us:Documents/github.com/mlavi/hugo/
+scp ../dotfiles/dmz/Passwords.kdbx mark-xps-13-9365.mark.lavi.us:
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Commit changes.

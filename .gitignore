@@ -1,8 +1,9 @@
-drafts/home/
 _site/
 .sass-cache/
 .DS_Store
 *.autosave
+drafts/home/
+drafts.zip
 public
 .vagrant/
 ### Vim: Created by https://www.gitignore.io/api/vim
