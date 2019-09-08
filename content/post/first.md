@@ -92,3 +92,8 @@ The EU GDPR: [General Data Protection Regulation](https://www.eugdpr.org/) and
 - https://coralproject.net/talk/
 - https://github.com/vkuznecovas/mouthful
 - https://staticman.net/
+Self hosted, open source alternatives (from https://gohugo.io/content-management/comments/):
+- https://github.com/umputun/remark
+- https://utteranc.es/ (uses GitHub issues)
+- https://posativ.org/isso/docs/
+- https://github.com/debiki/talkyard-prod-one

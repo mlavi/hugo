@@ -10,7 +10,7 @@
   * VirtualBox + ext.pack
   * Vagrant/Consul/Packer/Terraform
   * Kitematic/Docker?
-  * Tor browser: torproject.org? vs&nbsp; `brew cask install torbrowser`
+  * Tor browser: torproject.org? vs. `brew cask install torbrowser`
   * videolan.org
 * Install Brew and Cask (implies XCode CLI and git-apple)  
   1. ruby -e "$(curl -fsSL
@@ -87,3 +87,20 @@ href="https://registry.hub.docker.com/u/stephenreed/jenkins-java8-maven-git/">co
       w/ persistent store)
 * [http://www.freesmug.org/start](http://www.freesmug.org/start)
 * Markdown examples  
+
+# SSD Upgrade
+
+- https://www.upgradeable.com.au/pages/macbook-air-ssd-upgrade-guide
+- https://www.owcdigital.com/products/aura-pro-x#overview
+  - https://eshop.macsales.com/item/OWC/S3DAPB4MB10D/
+  - https://www.owcdigital.com/assets/dealer/slicks/Product_Spec_Sheets/owc-aura-pro-x.pdf
+  - https://www.owcdigital.com/assets/products/aura-ssd/Aura-SSD-Mid-2013-Later-MacBook-Air-Pro-Retina.pdf
+  - Procedure
+     - https://www.owcdigital.com/support/formatting
+     - https://www.owcdigital.com/migrating-your-mac-os-x-installation-to-a-new-drive
+     - https://eshop.macsales.com/installvideos/macbook_air_2013_2014/
+     - [How to reinstall macOS from macOS Recovery
+](https://support.apple.com/en-us/HT204904)
+     - [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981#macos)
+     - [About macOS Recovery
+](https://support.apple.com/en-us/HT201314)

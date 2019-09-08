@@ -256,6 +256,11 @@ how to change recovery mode/boot/console resolution from grub
   - https://www.pcsteps.com/207-windows-virtual-machine-linux-windows/
   - ~10+ min install, no product key
 
+# Windows Resources
+- http://winmerge.org/
+- https://alliance.seas.upenn.edu/~bcpierce/wiki/index.php?n=Main.UnisonFAQOSSpecific#windows
+- https://github.com/Open-Shell/Open-Shell-Menu
+
 # Vagrant
 - https://www.vagrantup.com/downloads.html
   - Download Debian 64-bit = 2.2.0 x86
