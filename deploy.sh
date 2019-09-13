@@ -56,6 +56,7 @@ else
 fi
 
 zip -u -r -T drafts.zip drafts && unzip -q -t ${_}.zip
+# --recurse-paths --freshen
 scp drafts.zip mark-xps-13-9365.mark.lavi.us:Documents/github.com/mlavi/hugo/
 scp ../dotfiles/dmz/Passwords.kdbx mark-xps-13-9365.mark.lavi.us:
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
