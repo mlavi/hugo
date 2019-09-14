@@ -19,7 +19,7 @@
 - [Windows](#windows)   
 - [Mint laptop](#mint-laptop)   
 - [Mint desktop](#mint-desktop)   
-- [Barrier](#barrier)   
+- [Barrier](#barrier)
    - [iPod Touch](#ipod-touch)   
    - [Worksession](#worksession)   
 
@@ -122,12 +122,12 @@
     - https://github.com/obsproject/obs-studio/wiki/Install-Instructions#linux
     - sudo add-apt-repository ppa:obsproject/obs-studio
       sudo apt-get update && sudo apt-get install obs-studio
-- https://atari800.tistory.com/category/Run%20on%20Ubuntu
   - Toggle on screen keyboard: quarter, Tablet
 
 # VPN
 - Palo Alto Global Connect:
   - [Openconnect VPN Client](http://www.infradead.org/openconnect/index.html)
+    - 2019-09-0x: brew install openconnect
     - sudo apt-get install openconnect network-manager-openconnect-gnome
       - Enables Cisco+Juniper VPN via NW Mgr applet
       - Suggested packages: dnsmasq openssh-server resolvconf
