@@ -37,7 +37,7 @@
 - 2018-xx: After trying Linux Services for Windows, installed dual-boot Mint
 - 2018-xx: Received Dell XPS laptop with Win10
 # Installed:
-- Grub Customizer:
+- Grub Customizer: causes diskfilter boot warning/error
   - https://launchpad.net/~danielrichter2007/+archive/ubuntu/grub-customizer
   - ````sudo add-apt-repository ppa:danielrichter2007/grub-customizer \
     && sudo apt-get update && sudo apt-get install grub-customizer \
@@ -200,8 +200,11 @@ sudo apt-get install parted-doc gparted
 - https://gparted.org/livecd.php
 - http://www.sysresccd.org
 
-how to grow partition mint
-how to change recovery mode/boot/console resolution from grub
+- how to grow partition mint
+  - https://askubuntu.com/questions/492054/how-to-extend-my-root-partition
+  - https://superuser.com/questions/904611/how-to-extend-a-mint-linux-partition-on-a-dual-boot-config-with-windows-8-1
+
+- how to change recovery mode/boot/console resolution from grub
 
 # Grub resolution
 - c for console; videoinfo
@@ -257,6 +260,7 @@ how to change recovery mode/boot/console resolution from grub
   - ~10+ min install, no product key
 
 # Windows Resources
+- foobar2000.org, Winamp, PuTTY, cygwin + Steam/GoG
 - http://winmerge.org/
 - https://alliance.seas.upenn.edu/~bcpierce/wiki/index.php?n=Main.UnisonFAQOSSpecific#windows
 - https://github.com/Open-Shell/Open-Shell-Menu
@@ -304,27 +308,52 @@ how to change recovery mode/boot/console resolution from grub
     - ./install-tl -gui text
     - ./install-tl -gui wizard
 
-# Windows
-- Foobar2000 player, Winamp
-
-# Mint laptop
-http://roaraudio.keep-cool.org/]
-Gnome Keyring management: p/w lifecycle?
-  - https://wiki.gnome.org/Apps/Seahorse
+# Sync
+- mark@Mint laptop:
+  - keychain19
+  - GnuPG.key:mark@lavi.us
+  - ssh.key:mark.lavi.mint.passphrasless.pem
+  - /etc/hosts: manual source copy from dotfiles/etc/hosts (for barrier host||alias)
+  - See ~/barrier.* autostart?
+  - See Unison (destination for mark@Mac laptop)
+  - Backup? Unison to desktop?
+- mark@Desktop:
+  - keychain15
+  - GnuPG.key:rfq@atarex.com
+  - ssh.key:mark.2017.marimayhem.id_rsa.pem
+  - /etc/hosts: manual source copy from dotfiles/etc/hosts (for barrier host||alias)
+  - See ~/barrier.* autostart?
+  - Gnome Keyring management: p/w lifecycle?
+    - https://wiki.gnome.org/Apps/Seahorse
+  - See Unison?
+  - Backup? mRAID 5TB
+- mark@Mac laptop:
+  - Pertino-keychain?
+  - GnuPG.key:mark.lavi@nutanix.com?
+  - ssh.key:mark-macbookair-id_rsa.pem
+  - etc/hosts? marimayhem, dellxps13, macbookair-mark (sync for barrier host or alias)
+    - dotfiles/etc/hosts, copied2gasmask
+  - See ~/barrier.* autostart?
+  - See (macbookair-notes.md)
+  - unison # will launch QT-UI, select marimayhem profile; see Unison
+  - Backup: localTimeMachine-1TB
+  - GoG?
 
 # Mint desktop
-- keychain15
 - docker installed
 - sudo apt-get install unison-all-gtk ssh
   - Suggested packages: molly-guard monkeysphere rssh
-  - Recommended packages:  ncurses-term ssh-import-id
+  - Recommended packages: ncurses-term ssh-import-id
   - Linux brew.sh, vs. Unison dockerfile build or native compile?
-- See ~/barrier.conf and [#Barrier]
 - Had to adjust .atom/storage/application.json and ../config.cson for paths
 - quot vodet music player installed
 
 # Barrier
 - https://github.com/debauchee/barrier/wiki
+  - https://members.symless.com/help/s1-troubleshooting/s1-getting-started
+  - https://repology.org/project/barrier/packages (deb, etc.)
+  - Mac client: https://github.com/debauchee/barrier/blob/master/doc/MacReadme.txt
+    - brew cask install barrier
   - Linux server:
     - https://flathub.org/apps/details/com.github.debauchee.barrier
     - flatpak install flathub com.github.debauchee.barrier
@@ -340,8 +369,22 @@ Gnome Keyring management: p/w lifecycle?
 *** WARNING *** For more information see <http://0pointer.de/blog/projects/avahi-compat.html>
 
   - https://github.com/debauchee/barrier/blob/master/doc/UpdateManpages.txt
-  - https://github.com/debauchee/barrier/blob/master/doc/MacReadme.txt
 - https://alternativeto.net/software/synergy/
+
+# TODO:
+- http://roaraudio.keep-cool.org/
+- https://ejurgensen.github.io/forked-daapd/
+  - Linux/FreeBSD DAAP (iTunes), MPD (Music Player Daemon) and RSP (Roku) media server.
+    supports AirPlay devices/speakers, Apple Remote (and compatibles), MPD clients, Chromecast, network streaming, internet radio, Spotify and LastFM
+  - https://raspberrypi.stackexchange.com/questions/5508/redirect-audio-to-another-airplay-device
+  - http://recycledspace.com/2018/04/my-music-setup-at-home-with-mopidy-forked-daapd-and-shairport-sync.html
+  - Vizio TV Airplay (2?)
+    - https://support.vizio.com/s/article/AirPlay-HomeKit-Troubleshooting?language=en_US
+    - https://support.vizio.com/articles/en_US/EXT_Issues/Apple-AirPlay-2-and-HomeKit-Release-Information?r=2&other.VizioCommunityArticle.getArticles=1&other.VizioCommunityArticle.getArticlesProd=1&other.VizioCommunityArticle.getChatHrs=1&ui-comm-runtime-components-aura-components-siteforce-qb.Quarterback.validateRoute=1&ui-communities-components-aura-components-forceCommunity-seoAssistant.SeoAssistant.getSeoData=1
+    - https://support.vizio.com/s/article/Apple-AirPlay-2-and-HomeKit-Release-Information?language=en_US
+- https://en.wikipedia.org/wiki/Coherence_(UPNP) PS3 streamer
+
+## Worksession
 
 ## iPod Touch
 - https://support.apple.com/en-us/HT204217#ipodtouch
@@ -349,9 +392,7 @@ Gnome Keyring management: p/w lifecycle?
   - https://support.apple.com/kb/SP675?viewlocale=en_US&locale=en_US
   - Lightning connector
   - S/N: DJ6Q40UGF4JW
-## Worksession
-
-
+  
  molly-guard monkeysphere rssh
 Recommended packages:
   ncurses-term ssh-import-id
@@ -501,3 +542,8 @@ For help on switching contexts see: https://jenkins-x.io/developing/kube-context
 To import existing projects into Jenkins:       jx import
 To create a new Spring Boot microservice:       jx create spring -d web -d actuator
 To create a new microservice from a quickstart: jx create quickstart
+
+versus
+  - https://github.com/kubernetes/kops
+    - https://github.com/kubernetes/kops/blob/master/docs/addons.md
+-
