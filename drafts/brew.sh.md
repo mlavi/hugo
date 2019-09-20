@@ -6,7 +6,8 @@ Outdated? fish, vagrant-managr, node, easysimbl?
 
     brew update && brew upgrade && brew cask upgrade \
     && pushd ~/Documents/github.com/mlavi/hugo/drafts/ \
-    && brew bundle dump --force && popd
+    && brew bundle dump --force && mv Brewfile Brewfile-"$(uname -s)".txt \
+    && popd # alias update-brew.sh@.bash_profile
 
 brew search
 brew cask list && brew cask outdated && brew cask update
