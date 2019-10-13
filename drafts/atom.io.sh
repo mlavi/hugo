@@ -11,21 +11,21 @@ curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add - &&
 pushd ~/Documents/github.com/mlavi/hugo/drafts &&
   apm    list --bare --installed > atomfile-"$(uname -s)".txt && popd || exit
 
-apm install linter && apm install linter-shellcheck && cat << EoM
-  Dependencies installed: intentions, linter-ui, busysignal
+brew install shellcheck &&
+  apm install linter && apm install linter-shellcheck && cat << EoM
+  Dependencies post-installed: intentions, linter-ui, busysignal
   https://github.com/koalaman/shellcheck
+  - https://github.com/koalaman/shellcheck/wiki/Contrib#docker-wrapper-script
 EoM
 
-apm install format-shell && cat << EoM
+brew install shfmt &&
+  apm install format-shell && cat << EoM
+- must set absolute filespec, I like show notifications and format on save.
+  - made dotfiles/xps-mint/bin/shfmt-wrapper.sh
 - https://github.com/mvdan/sh
-  - https://github.com/mvdan/sh/releases | Download shfmt_v2.5.1_linux_amd64, where to put on path?
-  - mkdir ~/bin || echo '~/bin already exists.' \
-    && chmod u+x shfmt*linux_amd64 && mv shfmt*linux_amd64 ~/bin/ && pushd . \
-    && pushd ~/bin && rm -f shfmt && ln -s shfmt*linux_amd64 shfmt && popd
+  - brew install shfmt #desktop-mint, macbookair-mark
 - https://atom.io/packages/format-shell # for shfmt
-  - apm install format-shell
     - shfmt -s -d -i 2 -kp -sr -ci -bn scripts/common.lib.sh | less # really dislikes padding spaces
-    - made dotfiles/xps-mint/bin/shfmt-wrapper.sh
 EoM
 
 apm install markdown-preview-enhanced && cat << EoM
