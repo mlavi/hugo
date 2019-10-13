@@ -385,6 +385,8 @@ sudo apt-get install parted-doc gparted
 - https://en.wikipedia.org/wiki/Coherence_(UPNP) PS3 streamer
 
 ## Worksession
+flatpak install flathub io.github.quodlibet.QuodLibet
+flatpak run io.github.quodlibet.QuodLibet
 
 ## iPod Touch
 - https://support.apple.com/en-us/HT204217#ipodtouch
@@ -392,7 +394,7 @@ sudo apt-get install parted-doc gparted
   - https://support.apple.com/kb/SP675?viewlocale=en_US&locale=en_US
   - Lightning connector
   - S/N: DJ6Q40UGF4JW
-  
+
  molly-guard monkeysphere rssh
 Recommended packages:
   ncurses-term ssh-import-id
