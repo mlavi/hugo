@@ -39,6 +39,7 @@ apm install atom-mdtoc && cat << EoM
 EoM
 
 # tried on xps-mint only...
+# see comments below for JSON: pretty-json and linter-jsonlint
 apm install git-blame && cat << EoM
   https://atom.io/packages/git-blame
 EoM
