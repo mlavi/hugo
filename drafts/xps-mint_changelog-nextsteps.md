@@ -310,31 +310,34 @@ sudo apt-get install parted-doc gparted
 
 # Sync
 - mark@Mint laptop:
-  - keychain19
-  - GnuPG.key:mark@lavi.us
-  - ssh.key:mark.lavi.mint.passphrasless.pem
+  - Credentials: root != AD.corp != keyring unlockS
+    - keychain19
+    - GnuPG.key:mark@lavi.us
+    - ssh.key:mark.lavi.mint.passphrasless.pem
   - /etc/hosts: manual source copy from dotfiles/etc/hosts (for barrier host||alias)
   - See ~/barrier.* autostart?
   - See Unison (destination for mark@Mac laptop)
   - Backup? Unison to desktop?
 - mark@Desktop:
-  - keychain15
-  - GnuPG.key:rfq@atarex.com
-  - ssh.key:mark.2017.marimayhem.id_rsa.pem
+  - Credentials:
+    - keychain15
+    - GnuPG.key:rfq@atarex.com
+    - ssh.key:mark.2017.marimayhem.id_rsa.pem
   - /etc/hosts: manual source copy from dotfiles/etc/hosts (for barrier host||alias)
   - See ~/barrier.* autostart?
   - Gnome Keyring management: p/w lifecycle?
     - https://wiki.gnome.org/Apps/Seahorse
   - See Unison?
   - Backup? mRAID 5TB
-  - atom:terminator loads ~/.profile (see comments), but Terminal loads ~/.bash_aliases 
+  - atom:terminator loads ~/.profile (see comments), but Terminal loads ~/.bash_aliases
 - mark@Mac laptop:
-  - Pertino-keychain?
-  - GnuPG.key:mark.lavi@nutanix.com?
-  - ssh.key:mark-macbookair-id_rsa.pem
+  - Credentials: mark != AD.corp
+    - Pertino-keychain?
+    - GnuPG.key:mark.lavi@nutanix.com?
+    - ssh.key:mark-macbookair-id_rsa.pem
   - etc/hosts? marimayhem, dellxps13, macbookair-mark (sync for barrier host or alias)
     - dotfiles/etc/hosts, copied2gasmask
-  - See ~/barrier.* autostart?
+  - See ~/barrier.* Desired no autostart; brew cask install; Finder > ^Click > Open.
   - See (macbookair-notes.md)
   - unison # will launch QT-UI, select marimayhem profile; see Unison
   - Backup: localTimeMachine-1TB
