@@ -327,6 +327,7 @@ sudo apt-get install parted-doc gparted
     - https://wiki.gnome.org/Apps/Seahorse
   - See Unison?
   - Backup? mRAID 5TB
+  - atom:terminator loads ~/.profile (see comments), but Terminal loads ~/.bash_aliases 
 - mark@Mac laptop:
   - Pertino-keychain?
   - GnuPG.key:mark.lavi@nutanix.com?
