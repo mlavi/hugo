@@ -1,5 +1,0 @@
----
-
-- post pages seem not to render .RSSlink in
-  $ vi +35 themes/hugo-redlounge.mod/layouts/partials/header.html
-

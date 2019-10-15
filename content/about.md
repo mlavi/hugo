@@ -27,14 +27,14 @@ During his twenty+ years in Silicon Valley, he was a co-founder or early team me
  LetsTalk, Kaazing, Pertino, and Calm.io) where he held management roles in
  engineering and operations.
 
-When Calm.io was acquired, he became Nutanix's first Automation Solution Architect
+When Calm.io was acquired in 2016, he became Nutanix's first Automation Solution Architect
  in Sales Engineering, directly working with some of the largest corporations and
  government institutions. Over three years, he helped the role grow to seven peers
  worldwide, partnered with Marketing as a .NEXT and Executive Briefing Center speaker,
  and collaborated with Global Sales Enablement to deliver content and automation
  for multiple Technical Summits, Sales Kick Offs, bootcamps, hands-on-labs, and
  Sales Engineering certification around the world.
- Now, as Principal DevOps Advocate, Mark has returned to the field of
+ In 2019, as Principal DevOps Advocate, Mark has returned to the field of
  Developer Relations to adapt advanced engineering methods, technology, and culture
  to accelerate the business needs of Nutanix customers, partners, and employees globally.
 
