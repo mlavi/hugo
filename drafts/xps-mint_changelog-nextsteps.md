@@ -350,7 +350,7 @@ sudo apt-get install parted-doc gparted
   - Recommended packages: ncurses-term ssh-import-id
   - Linux brew.sh, vs. Unison dockerfile build or native compile?
 - Had to adjust .atom/storage/application.json and ../config.cson for paths
-- quot vodet music player installed
+- quot vodet music player installed via flatpack?
 
 # Barrier
 - https://github.com/debauchee/barrier/wiki
@@ -371,7 +371,6 @@ sudo apt-get install parted-doc gparted
 *** WARNING *** The program 'barrier' called 'DNSServiceRegister()' which is not supported (or only supported partially) in the Apple Bonjour compatibility layer of Avahi.
 *** WARNING *** Please fix your application to use the native API of Avahi!
 *** WARNING *** For more information see <http://0pointer.de/blog/projects/avahi-compat.html>
-
   - https://github.com/debauchee/barrier/blob/master/doc/UpdateManpages.txt
 - https://alternativeto.net/software/synergy/
 
