@@ -310,7 +310,7 @@ sudo apt-get install parted-doc gparted
 
 # Sync
 - mark@Mint laptop:
-  - Credentials: root != AD.corp != keyring unlockS
+  - Credentials: root != AD.corp != keyring unlock
     - keychain19
     - GnuPG.key:mark@lavi.us
     - ssh.key:mark.lavi.mint.passphrasless.pem
@@ -354,7 +354,6 @@ sudo apt-get install parted-doc gparted
 
 # Barrier
 - https://github.com/debauchee/barrier/wiki
-  - https://members.symless.com/help/s1-troubleshooting/s1-getting-started
   - https://repology.org/project/barrier/packages (deb, etc.)
   - Mac client: https://github.com/debauchee/barrier/blob/master/doc/MacReadme.txt
     - brew cask install barrier
@@ -362,6 +361,7 @@ sudo apt-get install parted-doc gparted
     - https://flathub.org/apps/details/com.github.debauchee.barrier
     - flatpak install flathub com.github.debauchee.barrier
     - flatpak run com.github.debauchee.barrier
+    - /app/bin/barriers -f --no-tray --debug INFO --name marimayhem --enable-crypto -c /tmp/Barrier.WLmnaX --address :24800
   - https://members.symless.com/help/s1-troubleshooting/s1-getting-started
     - Server: Configure interactively...
     - Add computer name as shown in logs
