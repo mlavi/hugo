@@ -3,37 +3,13 @@
 A troubleshooting visualizer of your PATH environment
 - nc-plugin inside mc
 - a real GUI?
-might also help illustrate your environent initiali load scripts
+might also help illustrate your environment initial load scripts
 - /etc/profile ~/.profile, etc.
 
 # 3 laws of X
 Dheeraj inverting sales people deliver technology, engineers design experiences.
     3 laws of the commerce, physics, law. (land)
 
-# Death to Lift and Shift: i.e. No SAN
-
 # Netscape
-
     Netscape reunion talk @gbc, idea: netscape-year-two + postscript, reunion.
     https://25iq.com/2014/05/31/a-dozen-things-ive-learned-from-jim-barksdale-and-barksdaleisms/#comments
-
-# The Book of Calm #
-    Work with Poitras?
-
-Web scale infrastructure requires web scale application architecture and operations.
-Operations at scale cannot be performed by hand: you have already lost the game if
-you think you can solve a problem in production by looking or fixing one server.
-
-One must re-imagine the business of IT to deliver a cloud experience and often,
-this means shedding traditional approaches to achieve a "digital transformation."
-
-Infrastructure + Apps + ops + culture must progress to hybridize and share responsibilities.
-I happen to call this state the result of adopting DevOps and can elaborate...
-
-Calm was born from bare metal data center orchestration workflow engine called Epsilon.
-Epsilon is written in Python and has a microservice architecture so it could scale workers for parallel orchestrate execution on large data centers.
-Workflows are python scripts.
-
-Calm grew out of the need to address private and public cloud infrastructures, by adding a GUI to abstract
-any type of infrastructure service to deliver applications. This top down model of
-the application allows it to be driven onto multiple infrastructures.
