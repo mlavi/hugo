@@ -1,4 +1,4 @@
-
+Summary of the devops2 marketing hook by X...
 
 Add specialists to any dev team, perform pair dev work, until they can cycle out:
 QA: to add testabilty in design for: unit/functional, application integration, API contracts, performance, and KPI
