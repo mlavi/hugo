@@ -1,3 +1,4 @@
+Career as a Feedback Loop: serial DevOps? Nomadic ramblings on the attention economoy of cloud, web, Internet native
 
 # I Couldn't Get a Job with my Degree!
 

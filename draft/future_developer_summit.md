@@ -27,8 +27,6 @@ mini exec team: PM, sales, evang, etc. watching tickets and API usage trends
 
 technology/culture/community
 
-Career as a Feedback Loop: serial DevOps? Nomadic ramblings on the attention economoy of cloud, web, Internet native
-
 -doc+sameplecode
 -dev tools, integr, and libraries
 - tutorial and how to videos
@@ -45,7 +43,8 @@ evangelism = colonialism
 
 NPS vs PRS?
 
-Blameless post-mortem vs. learning retrospective? actionable retrospectives
+Researched term from jPaulReed: Blameless post-mortem vs. learning retrospective? actionable retrospectives
+
 mathisnottheproblem.com
 
 sdata.me/WS2
@@ -89,4 +88,3 @@ I learned from Nicholas that a successful chapter contribution should be about 5
 He mentioned “dev grants” which confused me, but perhaps he meant dev guides; i.e.: if there are essential “talking to developers” guides, perhaps we could create the analog for “talking to operators.”
 
 Anyhow, I wanted to write down my meeting notes, expanded justification, and share with you, Nicholas, and Luke!
-

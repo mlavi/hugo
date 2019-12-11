@@ -7,6 +7,68 @@ title: "Cloud is a Mindset: Public Cloud Salvation"
 Gaining public cloud experience is crucial to IT careers today because it represents virtualization's next generation experience. Immaturity themes for over-reliance on the public cloud are typically due to false hopes, Operational Expenditure (OpEx) accounting, and vendor lock-in. Public Cloud salvation is when one can drive to a new cloud maturity stage with operations and workloads to multiple clouds with blended resource management. I'll explore the causes and solutions to progress cloud maturity.
 <!--more-->
 
+## Progression
+
+- DC = 1000 physical servers (unoptimized)
+  - 1 VM cluster of 200 servers, optimized with a SAN, eliminates 80% of physical infra/ops
+    - K8s cluster of 20 workers, optimized over HCI/cloud, eliminates 80% of virtual infra/ops including NW+Storage?
+      - PaaS/SaaS/functions, eliminates 80% of container infra/ops
+
+*Question: what does the 80% savings go to?*
+
+Dimensions of:
+- Infrastructure Units
+  - Physical Server:
+    - organization:
+      - data center of 1000 pizza boxes
+      - separate storage, compute, network vendor appliances
+    - efficiency:
+      - overprovisioned, idle capacity
+      - planned for 3-5 year depreciation schedule
+      - cadence (business request to ready): months
+      - justify, procure, rack and stack, network, etc.
+  - Virtual Machine:
+    - organization:
+      - virtualization cluster of a rack of 100 servers
+      - on-prem or colo
+    - cadence (business request to ready): months
+  - Containers:
+    - cadence: seconds
+    - operations: as code
+  - Serverless/Functions:
+    - cadence: seconds
+    - operations: invisible
+- Operations
+  - Bespoke human error
+  - Automation for scale:
+    - Infrastructure as Code
+    - Lifecycle Operations as Code
+    - Compliance, Testing/Metrics/Monitors/Logs as Code
+  - Consumption models:
+    - CapEx:
+      - on-prem or colo
+    - OpEx:
+      - cloud
+      - managed service provider, remote hands
+    - Hybrid blend
+- Architecture
+  - Monolith
+  - Distributed monolitic servers
+  - Business tiers:
+    - Security
+    - Presentation
+    - Business Logic
+    - Data Store
+  - Microservices with containers and functions
+    - SaaS and PaaS
+- Culture
+  - Bespoke PetOps
+  - Delegatable, auditable automation
+  - Business heuristic KPI driven ops
+  - Data driven experiments
+
+---
+
 ## The Case for the Public Cloud ##
 
 I've talked to many customers over the past four years across the world in nearly every industry of nearly every size.
