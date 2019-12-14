@@ -108,6 +108,51 @@ The fundamental problem is that most adopters have no immediate fiscal responsib
 https://www.whitehouse.gov/briefings-statements/omb-announces-cloud-smart-proposal/
 ---
 <!--more-->
+Welcome to the Hybrid Cloud Engineer Nanodegree, presented to you through a
+partnership between Udacity and Nutanix.
+
+Hello my new friends, I'm Mark Lavi, the Principal DevOps Advocate at Nutanix,
+and we're going to give you the benefits of hard won experience gained through
+the decades and then combine that experience with state of the art capabilities
+to give you mastery over the global software and hardware titans.
+You will learn about the current battle for the Information Technology (IT) to evolve
+and the strategy required to make the industry titans continually compete for your attention
+by leveraging all of them when and where you deem best, keeping you in control.
+
+The year is 2020 and you won't find this knowledge in any college level computer
+science course, a trade school, or even one of the disruptive coding/DevOps boot camps
+around the world. The global industry leaders in hardware and software are quick
+to embrace the term hybrid cloud, but they often abuse it for the purpose of locking you into
+their platform exclusively.
+
+You, my friends, are about to learn how to make any organization run efficiently
+and dynamically anywhere. Most importantly, you will have choice on how to change
+your operations anytime, on-demand.
+
+Are you ready to begin the journey to Hybrid Cloud Engineer? Let's begin!
+
+I find that is it best to start by concretely defining terms to insure we remain
+united in our understanding. This will remove any assumptions and prevent confusion,
+but more importantly, you will be on guard for those who have or are trying to manipulate you
+with outdated notions.
+
+- Hybrid: a combination of more than one type of anything.
+  Examples:
+  - on and off premise
+  - multiple hypervisors, on-prem
+  - multiple public clouds, off-prem
+- Cloud: NIST definition
+- Engineer: one who can design and implement technology.
+
+In summary, a hybrid cloud engineer can operate workloads on multiple infrastructure providers.
+The best hybrid cloud engineers will retain control so that they have choice of vendors for where to operate
+workloads, able to leverage the best of what the global market offers, on-demand.
+I consider this a tectonic shift of power in how business is run and your mastery will
+make employable anywhere where a single or few vendor choices have already been made for you.
+But over time, not only will you be able to modernize any organization, but you will
+also find the entire industry increasingly requiring hybrid cloud engineering capabilities
+to compete on a global scale.
+
 The cloud drives % of the world's GDP
 The cloud leaders are: FB, Apple, AZ, NETFLIX, VMWare, MSFT, GOOG
 The primary revenue of GOOG, FB, Twitter is advertising: you are the product.
