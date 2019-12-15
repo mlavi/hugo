@@ -4,6 +4,22 @@
 - CD and autoscale examples: with Ajit?
 - Ephemeral devops vision
 
+
+# PathGUI
+- A troubleshooting visualizer of your PATH environment
+  - nc-plugin inside mc
+  - a real GUI?
+- might also help illustrate your environment initial load scripts:
+  - /etc/profile ~/.profile, .bashrc vs .bash_aliases vs .bash_profile, etc.
+
+# 3 laws of X
+Dheeraj inverting sales people deliver technology, engineers design experiences.
+    3 laws of the commerce, physics, law. (land)
+
+# Netscape
+    Netscape reunion talk @gbc, idea: netscape-year-two + postscript, reunion.
+    https://25iq.com/2014/05/31/a-dozen-things-ive-learned-from-jim-barksdale-and-barksdaleisms/#comments
+
 ---
 
 #Demystifying Microservices

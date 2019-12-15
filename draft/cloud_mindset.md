@@ -225,3 +225,88 @@ Workflows are python scripts.
 Calm grew out of the need to address private and public cloud infrastructures, by adding a GUI to abstract
 any type of infrastructure service to deliver applications. This top down model of
 the application allows it to be driven onto multiple infrastructures.
+
+---
+# Map of the World
+
+## IaaS
+
+Typically anything behind Apache libcloud and jcloud libraries or Packer deployable
+
+- Public Cloud
+  - AWS
+  - Linode, etc.
+- Private Cloud (on premises)
+  - Apache OpenStack (AWS clone)
+  - Apache CloudStack (AWS clone in Java)
+  - Pivotal Cloud Foundry (Bosh operates on Stemcell VMs, release artifact.tar, deployment manifest)
+  - VMWare ESX+family
+  - KVM
+  - Citrix Xen
+  - Docker Containers, etc.
+
+## PaaS
+
+Platform as a Service providers, many IaaS go up the stack.
+
+- AWS Elastic Beanstalk
+- Heroku: https://devcenter.heroku.com/articles/architecting-apps
+  - buildpack (runtime) compiled to a slug + configuration + procfile = Release
+  - dynoformation  = dyno (container)
+- RedHat OpenShift Origin: https://docs.openshift.org/origin-m4/openshift-pep-010-docker-cartridges.html
+  - https://docs.openshift.org/origin-m4/oo_user_guide.html#create-a-jenkins-gear for CI
+- IBM BlueMix (hosted CloudFoundry?)
+
+Application management layers can go above these, in a contextual vs. compose fashion [REF:] which can allow infrastructure orchestration and application deployment.
+
+## Oasis Standards
+
+- CAMP: application deployablity & portability
+   - http://docs.oasis-open.org/camp/camp-spec/v1.1/cs01/camp-spec-v1.1-cs01.html#_Toc403920629
+- TOSCA: blueprint YAML
+
+## Stack Layers
+
+- Hardware
+  - Boot chain: BIOS, boot loader, PXE boot
+  - Compute (CPU, RAM)
+  - Storage
+  - Network
+- Bare Metal Hypervisor & Kernel
+  - Virtual Machine
+    - Kernel
+      - Operating System
+        - init process manager
+        - OS Applications
+          - Audit (SELinux, Apparmor, etc.)
+            - Logging/Metrics/Monitors
+          - Network
+            - Firewalls
+          - Storage
+          - Containers
+
+# Tools:
+
+- http://theforeman.org/introduction.html - provision VMs on bare metal or clouds using Chef/Puppet/Salt
+- http://servicemix.apache.org/ event based SOA tool
+  - http://www.activiti.org/components.html is a OMG BPMN 2.0 engine with modeler/designer
+    - http://www.activiti.org/userguide/index.html#activitiDesigner
+    - Invoke JBOSS http://www.drools.org/ business rules engine
+- https://github.com/signalfuse/maestro-ng Container Deployment Orchestration
+- vs. Kubernates, Mesos, Clocker
+
+# Goals:
+
+- Goal: IAC + (Variable)Immutable Infra + Mobile Persistence = ephemeral stacks/environments
+- Dream: Test Driven DevOps -> mock infrastructure, nirvana = behavior driven devops
+- Applications > Services > Deployments
+- Composable blueprints:
+  - RBAC invocation for includes (keys, infra blueprint templates)
+  - RBAC access to deployment variables (e.g. dev K8s cluster).
+  - Github push/pull access = IAC
+    - this feels like Gemfile, Berksfile, etc. a la chef environments
+    - on the way to bill of materials
+  - Conditional infrastructure: if...then...else
+    - If $source_code_repository = http://github.com,
+      - Then: include and stand up Gogs, GitLab, etc. and set variables
+      - Else: ghosted out and variable set? likely redundant
