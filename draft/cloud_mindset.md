@@ -88,7 +88,7 @@ I find that as much as customers extoll these public cloud benefits, their cloud
 ## Public Cloud Pitfalls ##
 ### False Hopes ###
 
-I am astounded, even today, when IT organizations and their management, still polmulgate the public cloud as their business' salvation.
+I am astounded, even today, when IT organizations and their management, still promulgate the public cloud as their business' salvation.
 
 ### Hypervisor Migration ###
 ### OpEx Accounting ###
@@ -108,6 +108,9 @@ The fundamental problem is that most adopters have no immediate fiscal responsib
 https://www.whitehouse.gov/briefings-statements/omb-announces-cloud-smart-proposal/
 ---
 <!--more-->
+*Rahul feedback:
+versus a plain datacenter: sw defined infra, automation makes workloads agile, APIs, software defined.*
+
 Welcome to the Hybrid Cloud Engineer Nanodegree, presented to you through a
 partnership between Udacity and Nutanix.
 
@@ -205,6 +208,18 @@ You may have noticed that I've explicitly used the adjective "public"
  nearly every time I've used the term cloud.
 
 Public cloud providers offer new hybrid solutions: Google Anthos, AWS Outpost, and MSFT Azure stack.
+---
+- Introduction to HCND (1 hr)
+  - Overview
+  - Project Scenario
+    - Fictitious company, CEO mandates it to be in multiple clouds to control costs
+    - multi-tenant capabilities, people can run their workloads indepdenently
+      - cost controls and RBAC
+    - multi-vendor strategy, no single point of failure
+- Capstone Course 1: configure an on-prem cluster, stand up PC management workload
+- Capstone Course 2: design a hybrid workload with Python
+- Capstone Course 3: automate an on-prem, private cloud 3 tier web application, provide WindowIaaS
+- Capstone Course 4: extend web tier to a public cloud, global load balance
 
 ---
 
