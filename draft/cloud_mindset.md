@@ -116,14 +116,14 @@ partnership between Udacity and Nutanix.
 
 Hello my new friends, I'm Mark Lavi, the Principal DevOps Advocate at Nutanix,
 and we're going to give you the benefits of hard won experience gained through
-the decades and then combine that experience with state of the art capabilities
-to give you mastery over the global software and hardware titans.
+the decades and then combine that experience with state of the art capabilities.
 You will learn about the current battle for the Information Technology (IT) to evolve
-and the strategy required to make the industry titans continually compete for your attention
-by leveraging all of them when and where you deem best, keeping you in control.
+and the hybrid cloud strategy required to master and make the global software and
+hardware industry titans continually compete for your attention, allowing you to
+leverage all of them when and where you deem best, keeping you in control.
 
 The year is 2020 and you won't find this knowledge in any college level computer
-science course, a trade school, or even one of the disruptive coding/DevOps boot camps
+science course, a trade school, or even one of the disruptive coding or DevOps boot camps
 around the world. The global industry leaders in hardware and software are quick
 to embrace the term hybrid cloud, but they often abuse it for the purpose of locking you into
 their platform exclusively.
