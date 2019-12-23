@@ -108,6 +108,42 @@ The fundamental problem is that most adopters have no immediate fiscal responsib
 https://www.whitehouse.gov/briefings-statements/omb-announces-cloud-smart-proposal/
 ---
 <!--more-->
+# Introduction to HCND (1 hr)
+
+## Welcome
+## Overview
+
+## Project Scenario
+We are going to posit a fictitious company for our project scenario and we're going to reuse this across all four courses this fictitious company will call wonderful company
+
+Now the wonderful Company CEO mandates that after the failure in our datacenter that we can no longer be in any single place we must be in multiple places and you are given the job to design a hybrid cloud scenario for your companies key application a web best application
+
+Not only do we need to be in the cloud according to your CEO but we must be in multiple clouds we must be hybrid it is also essential that are key web application have development test and staging in production scenarios we must have multiple teams able to spin up their own work clothes and not step on the others toes and most importantly we must be able to spin up these work clothes anywhere everywhere and put them under cost controls and quarters so that we don't have runaway controls
+
+In doing so we will have a multi vendor strategy which is a requirement no single point of failure and we will have the ability to run everywhere anywhere on demand you must present the solution back to your CEO
+
+#
+How are we going to lead you through this in the hybrid cloud nano degree?
+Well first, in course one, we will explain how to manage and configure an on premise cluster with NUTANIX the key workload and capstone for this entire course one will be the stand up the most difficult and complex workload on top of this cluster prism central which is our management control plane
+
+In course two we will design a hybrid workload with python.
+The goal will to be to design the wonderful companies three tier weather application to work on multiple clouds
+
+For course three we will take that design from course two and we will start to implemented an engineer it and run it and manage it and design it for an on brand private cloud
+
+With all the wonderful work we've done in course three (we will now extend to a public cloud and we will then globally load balance workloads across public and private clouds for a hybrid cloud outcome
+
+In summary in course one we will learn to configure and manage on prim cluster in course two we will design a hybrid workload
+In course three we will engineer and deploy that workload on from ending course for we will extend that to deploy also on a public cloud
+Achieving or hybrid cloud deployment then we will talk about global load-balancing and management
+
+- Course and Capstone Overview
+  - Capstone Course 1: configure an on-prem cluster, stand up PC management workload
+  - Capstone Course 2: design a hybrid workload with Python
+  - Capstone Course 3: automate an on-prem, private cloud 3 tier web application, provide WindowIaaS
+  - Capstone Course 4: extend web tier to a public cloud, global load balance
+
+---
 *Rahul feedback:
 versus a plain datacenter: sw defined infra, automation makes workloads agile, APIs, software defined.*
 
@@ -133,6 +169,8 @@ and dynamically anywhere. Most importantly, you will have choice on how to chang
 your operations anytime, on-demand.
 
 Are you ready to begin the journey to Hybrid Cloud Engineer? Let's begin!
+
+## Defintions
 
 I find that is it best to start by concretely defining terms to insure we remain
 united in our understanding. This will remove any assumptions and prevent confusion,
@@ -208,19 +246,6 @@ You may have noticed that I've explicitly used the adjective "public"
  nearly every time I've used the term cloud.
 
 Public cloud providers offer new hybrid solutions: Google Anthos, AWS Outpost, and MSFT Azure stack.
----
-- Introduction to HCND (1 hr)
-  - Overview
-  - Project Scenario
-    - Fictitious company, CEO mandates it to be in multiple clouds to control costs
-    - multi-tenant capabilities, people can run their workloads indepdenently
-      - cost controls and RBAC
-    - multi-vendor strategy, no single point of failure
-- Capstone Course 1: configure an on-prem cluster, stand up PC management workload
-- Capstone Course 2: design a hybrid workload with Python
-- Capstone Course 3: automate an on-prem, private cloud 3 tier web application, provide WindowIaaS
-- Capstone Course 4: extend web tier to a public cloud, global load balance
-
 ---
 
 Web scale infrastructure requires web scale application architecture and operations.
