@@ -213,7 +213,7 @@ Public cloud providers offer new hybrid solutions: Google Anthos, AWS Outpost, a
   - Overview
   - Project Scenario
     - Fictitious company, CEO mandates it to be in multiple clouds to control costs
-    - multi-tenant capabilities, people can run their workloads indepdenently
+    - multi-tenant capabilities, people can run their workloads independently
       - cost controls and RBAC
     - multi-vendor strategy, no single point of failure
 - Capstone Course 1: configure an on-prem cluster, stand up PC management workload
@@ -223,6 +223,21 @@ Public cloud providers offer new hybrid solutions: Google Anthos, AWS Outpost, a
 
 ---
 
+- Course Outline doc
+  - Hierarchy: Course > Lesson > Concept > Atom (individual learning element)
+    - Learning objective
+    - Atom summary
+    - Atom type
+      - Title/body content: image and text and video
+      - Pedagogical component: reflection, quiz, activity
+    - Key Points
+    - Resources
+- Lesson Doc in GDrive: generates preview, exports as JSON into Coco
+
+
+Outline:
+concept, headshot, text, screencast, image, Q:regex, Q:radio
+---
 Web scale infrastructure requires web scale application architecture and operations.
 Operations at scale cannot be performed by hand: you have already lost the game if
 you think you can solve a problem in production by looking or fixing one server.
