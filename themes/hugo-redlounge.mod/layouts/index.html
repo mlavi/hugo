@@ -1,3 +1,4 @@
+<!-- layouts/index.html -->
 {{ partial "header.html" . }}
 <body>
     <div id="layout" class="pure-g">
@@ -9,7 +10,9 @@
 
           <div class="posts">
             {{ $Site := .Site }}
-            {{ range .Data.Pages }}
+            {{/* printf "<!-- layouts/index.html -->" | safeHTML */}}
+            {{/* range .Data.Pages */}}
+            {{ range $Site.RegularPages }}
             <section  class="post">
                 <header class="post-header">
                     {{ if .Params.thumbnail }}
