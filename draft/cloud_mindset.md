@@ -259,7 +259,19 @@ Public cloud providers offer new hybrid solutions: Google Anthos, AWS Outpost, a
 - Capstone Course 3: automate an on-prem, private cloud 3 tier web application, provide WindowIaaS
 - Capstone Course 4: extend web tier to a public cloud, global load balance
 
+C1: Introduction
+- https://trello.com/c/NjfvVAWP/1-course-1-introduction
+- https://drive.google.com/open?id=1nBgHS6b201Z3g11suFH8DZYjH9T94flFgOwqPmgl7gs
+C3: Next Friday 1/10
+- https://trello.com/c/reBoGsPy/2-course-3-outline
+- https://github.com/mlavi/calmbootcamp/tree/hybridcloudeng
+C4: Late Jan whole thing
+- https://trello.com/c/pW8JZhuo/9-course-4-lesson-content shows 2/3
+C2: mid Feb Valentine's
+- https://trello.com/c/JiNMw8iA/7-course-2-lesson-content shows 2/24
 ---
+Template:
+
 
 - Course Outline doc
   - Hierarchy: Course > Lesson > Concept > Atom (individual learning element)
