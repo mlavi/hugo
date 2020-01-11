@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e # halt script on error
+set -e -x # halt script on error
 
 # hugo server --watch &
 #  Install hugo:
@@ -40,8 +40,8 @@ find content -name "*~" -delete
 
 # grep --recursive -e png -e jpg -e jpeg -e gif content/ > bugs.txt
 
-_DRAFT=$(      grep --ignore-case --recursive 'draft' content/ | grep --ignore-case 'true')
-_PLACEHOLDER=$(grep --ignore-case --recursive --extended-regexp 'Placeholder' content/)
+_DRAFT=$(      grep --ignore-case --recursive 'draft' content/ | grep --ignore-case 'true') || true
+_PLACEHOLDER=$(grep --ignore-case --recursive --extended-regexp 'Placeholder' content/) || true
 
 if [[ ${_PLACEHOLDER} || ${_DRAFT} ]]; then
   echo "ERROR: found Placeholder or draft:true in content/"
@@ -59,6 +59,21 @@ fi
 
 # Test the generated HTML
 # https://github.com/gjtorikian/html-proofer
+# sudo apt-get install -y ruby ruby-dev ruby-bundler
+# sudo gem install html-proofer
+#
+# Building native extensions. This could take a while...
+# Successfully installed nokogiri-1.10.7
+# Successfully installed nokogumbo-2.0.2
+# Successfully installed parallel-1.19.1
+# Successfully installed rainbow-3.0.0
+# Successfully installed ffi-1.11.3
+# Successfully installed ethon-0.12.0
+# Successfully installed typhoeus-1.3.1
+# Successfully installed yell-2.2.1
+# Successfully installed html-proofer-3.15.0
+
+#
 if [[ ${TEST} ]]; then
   echo -e "\nSTART: test..."
   if ! bundle exec htmlproof --verbose ./public; then

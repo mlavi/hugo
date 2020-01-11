@@ -9,7 +9,7 @@ RelativeURLs = true
 nocomment = true
 noread = true
 authorlinkedin = 'http://www.linkedin.com/in/marklavi'
-enableGitInfo = true 
+enableGitInfo = true
 # git submodule add git@github.com:mlavi/mlavi.github.io.git public
 # https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
@@ -25,3 +25,8 @@ enableGitInfo = true
     disable = true
   [privacy.youtube]
     disable = true
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
