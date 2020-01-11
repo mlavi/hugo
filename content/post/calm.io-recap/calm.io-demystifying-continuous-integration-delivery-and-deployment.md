@@ -20,7 +20,7 @@ The journey from a developer to the customer can be represented by a flowchart t
 
 Here is an overview of an automated software delivery pipeline:
 
-![A software delivery pipeline](software-delivery-pipeline.png)
+![A software delivery pipeline](/img/software-delivery-pipeline.png)
 
 The goal is to build and test software artifacts, then deliver and test them in a whole application context, and finally deploy them in an automated fashion. I will define and explain these terms in depth, but let me walk you through the stages of the software delivery pipeline from a high level:
 
@@ -141,7 +141,7 @@ Continuous delivery is the instantiation of the application to an integration st
 
 When an organization provides answers to the above, it can create an ephemeral test environments for application integration testing on deployed build artifacts. The application integration tests can be optimized into tests which exercise a small set of critical features and transactions throughout the entire application life cycle in order to consume as little time as possible for the next generation, ad hoc CI process.
 
-This is how a DevOps approach can enable next generation continuous integration: not only are broken builds eliminated, but we can achieve a minimal set of software quality and deployability through automated application integration testing. Application orchestration and deployability are true examples of the blending of __DEV__elopment and __OP__eration__S__ together.
+This is how a DevOps approach can enable next generation continuous integration: not only are broken builds eliminated, but we can achieve a minimal set of software quality and deployability through automated application integration testing. Application orchestration and deployability are true examples of the blending of [DEV]elopment and [OP]eration[S] together.
 
 Testing is a diverse area and the scope of performance, security, longevity testing can only follow and build on application integration testing: they are often omitted or performed manually and represent other areas ripe for automation.
 

@@ -251,7 +251,7 @@ I arrived at graphing the abstract progressions of both agility and
  the successive stages for a journey to DevOps to travel from the lower left
  quadrant to the upper right quadrant.
 
-![DevOps Journey Diagram](../devops-journey.png)
+![DevOps Journey Diagram](/img/devops-journey.png)
 
 With my career experience, confirmed by speaking to peers at DevOpsDays
  as well as many Calm.io and Nutanix customers,
@@ -320,7 +320,7 @@ A legend not only helped explain the stages of each parallel, but also
 
 # Second Diagram: DevOps Maturity #
 
-![DevOps Maturity Diagram](../devops-maturity.png)
+![DevOps Maturity Diagram](/img/devops-maturity.png)
 
 On June 29, I presented both diagrams on stage at .Next D.C.
  for my portion of the talk "AW209: Agile Infrastructure for Mode 2 Apps,"
@@ -353,17 +353,18 @@ My proposal was accepted by the organizers, voted upon by the attendees, and
  I’ll show early work on how we're building with our customers
  cost metric models to determine DevOps total cost of ownership.
 
-I didn't get to the DevOps TCO model, but I was happy
- John Willis [@botchagalupe](https://twitter.com/botchagalupe)
+I didn't get to the DevOps TCO model, but I was happy John Willis [@botchagalupe](https://twitter.com/botchagalupe)
  was at the talk and he helped define DevOps, agreeing that it is cultural:
  "at the end of the day, it is what you make of it."
 
 # Update: 2019-02-22 #
 
+- Session Title maximum 25 words/75 characters
+- Description maximum 150 words
+
 Variations for abstracts:
 
     Demystifying DevOps: Agile Infrastructure and Applications for IT
-    (Session Title maximum 25 words/75 characters, Description maximum 150 words)
 
     Business expectations for IT have changed, have you been asked to provide IaaS: Infrastructure as a Service?
 
@@ -375,8 +376,6 @@ Variations for abstracts:
 
     Learning Objectives and Key Takeaways: (maximum 30 words)
 
-    # Understanding "DevOps" with a clear definition, cultural implications, and how it achieves business agility.
-    # Understanding "Pets versus Cattle," then using it to evaluate and eliminate single points of failure to achieve scalability.
-    # Mapping agility and scalability goals onto the DevOps Maturity Diagram to illustrate your journey towards advanced IT services and service levels.
-
--
+    - Understanding "DevOps" with a clear definition, cultural implications, and how it achieves business agility.
+    - Understanding "Pets versus Cattle," then using it to evaluate and eliminate single points of failure to achieve scalability.
+    - Mapping agility and scalability goals onto the DevOps Maturity Diagram to illustrate your journey towards advanced IT services and service levels.
