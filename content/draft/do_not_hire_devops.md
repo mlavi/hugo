@@ -1,4 +1,10 @@
-Do Not Hire DevOps: How to Build a DevOps Culture for Long-Term Success
+---
+tags: ['devops', 'career', '', '']
+draft: true
+date: "2020-02-09T16:29:10-06:00"
+title: "Do Not Hire DevOps: How to Build a DevOps Culture for Long-Term Success"
+---
+# Do Not Hire DevOps: How to Build a DevOps Culture for Long-Term Success
 
 A lightening talk: 20 slides, auto advancement every 15 seconds.
 
