@@ -1,3 +1,9 @@
+---
+tags: ['', '', '', '']
+draft: true
+date: "2020-02-09T16:29:10-06:00"
+title: "Blog Ideas"
+---
 #Short blog ideas:
 - Dev env container layers + production: immutable challenges
 - Microservices

@@ -1,3 +1,10 @@
+---
+tags: ['devrel', 'career', '', '']
+draft: true
+date: "2020-02-09T16:29:10-06:00"
+title: "Future Developer Summit Notes: 2019: Menlo Park, CA Sept?"
+---
+
 IBM:
 open enterprise
 codeforchange?.org: 200K devs in 2nd year
@@ -51,7 +58,7 @@ sdata.me/WS2
 
 Brad Meiseles: innersourcing
 
---
+# BOOK CHAPTER: DRAFT PROPOSAL
 nicolas.sauvage@tdk-ventures.com
 Andreas Constantinou <andreas@slashdata.co>
 

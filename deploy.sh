@@ -40,7 +40,7 @@ find content -name "*~" -delete
 
 # grep --recursive -e png -e jpg -e jpeg -e gif content/ > bugs.txt
 
-_DRAFT=$(      grep --ignore-case --recursive 'draft' content/ | grep --ignore-case 'true') || true
+#_DRAFT=$(      grep --ignore-case --recursive 'draft' content/ | grep --ignore-case 'true') || true
 _PLACEHOLDER=$(grep --ignore-case --recursive --extended-regexp 'Placeholder' content/) || true
 
 if [[ ${_PLACEHOLDER} || ${_DRAFT} ]]; then

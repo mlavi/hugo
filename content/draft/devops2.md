@@ -1,4 +1,9 @@
-Summary of the devops2 marketing hook by X...
+---
+tags: ['devops', '', '', '']
+draft: true
+date: "2020-02-09T16:29:10-06:00"
+title: "Summary of the devops2 marketing hook by X"
+---
 
 Add specialists to any dev team, perform pair dev work, until they can cycle out:
 QA: to add testabilty in design for: unit/functional, application integration, API contracts, performance, and KPI
