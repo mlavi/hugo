@@ -73,7 +73,7 @@ fi
 # Successfully installed yell-2.2.1
 # Successfully installed html-proofer-3.15.0
 
-#
+# http://validator.w3.org/
 if [[ ${TEST} ]]; then
   echo -e "\nSTART: test..."
   if ! bundle exec htmlproof --verbose ./public; then

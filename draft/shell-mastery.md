@@ -17,7 +17,11 @@ There were so many hidden tricks, potentially going back to 1970's epoch birth o
 # Documentation and Writings
 ## man Up
 
-Well, reading the man pages for bash was one important key step forward.
+Well, reading the man pages for bash was one important key step forward, but I needed
+a plane ride disconnected from the Internet to finally do it!
+
+### man and info
+Even this week, I learned more about man
 
 ## First was the command line, by Neal Stephenson
 
@@ -50,6 +54,8 @@ Still haven't finished this.
 ### cheat sheets
 ## Android game
 
+# tmux (and screen)
+
 # Alternate shells
 ## csh and tsch tab completion
 ## fish
@@ -73,6 +79,7 @@ Still haven't finished this.
 ## command prompt-fu
 ## bats
 ## ansible
+## live pair programming in a terminal
 
 # IDEAS:
 ## Prezi/shell command map from man pages:see also
