@@ -1,10 +1,10 @@
-tags: ['career', 'DevOps', '', '']
+tags: ['career', 'DevOps']
 draft: true
 date: "2020-02-09T16:29:10-06:00"
 title: "Career as a Feedback Loop"
 ---
 
-Career as a Feedback Loop: serial DevOps? Nomadic ramblings on the attention economoy of cloud, web, Internet native
+Career as a Feedback Loop: serial DevOps? Nomadic ramblings on the attention economy of cloud, web, Internet native
 
 # I Couldn't Get a Job with my Degree!
 

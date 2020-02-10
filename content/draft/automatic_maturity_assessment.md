@@ -1,4 +1,4 @@
-tags: ['', '', '', '']
+tags: ['Maturity']
 draft: true
 date: "2020-02-09T16:29:10-06:00"
 title: "Automated Maturity Assessment"
