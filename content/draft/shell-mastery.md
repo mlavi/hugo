@@ -45,6 +45,17 @@ Still haven't finished this.
 
 # alias and functions
 
+# Update Alteratives
+
+    https://wiki.debian.org/DefaultWebBrowser
+    https://askubuntu.com/questions/18418/how-to-set-which-application-is-launched-by-xdg-open
+    https://freedesktop.org/wiki/Software/xdg-utils/
+
+    sudo apt install debian-policy
+    man sensible-browser # Package sensible-utils
+    man -7 environ
+    man select-editor
+
 # Simple text editor accelerators
 ## vim
 
