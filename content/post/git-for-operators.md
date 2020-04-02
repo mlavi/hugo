@@ -1,36 +1,35 @@
 ---
-tags: ['git', 'operators', 'tutorial']
+tags: ['git', 'operators', 'tutorial', 'version-control']
 date: "2020-03-25T15:15:18-05:00"
 title: "Version Control for Operators"
 ---
 Version Control is an essential tool, because it makes your work reproducible
 and visible, which can unlock profound amplifying effects for your contributions.
-It also builds to state of the art GitOps!
+It also builds to state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
 
-Let me ask: are you the same person you were last year?
-last month? last second?
-https://en.wikipedia.org/wiki/Ship_of_Theseus
+Let me ask a very simple question: are you the same person you were last year? last month? last second?
+This is a deeply philosophical question, addressed by maintenance on the
+[Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
 
-Change is eternal, even when a single individual is involved through time,
-e.g.: I can't be relied upon to memorize a unique password for every account. (more on this later)
-
-Complexity multiplies with additional people.
-Hence [change management](https://en.wikipedia.org/wiki/Change_management) is an essential discipline for operators.
-
-Unfortunately, many operators do not utilize version control and rely on pet ops and backups.
-
-Humor: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
+Change is eternal, even when a single individual is involved through time.
+*e.g.:* I can't be relied upon to memorize a unique password for every account
+(more on this later) on every VM on every cluster in every infrastructure provider
+for every project I work on! Complexity multiplies with additional people. Hence
+[change management](https://en.wikipedia.org/wiki/Change_management) is an
+essential discipline for operators. Unfortunately, many operators do not
+utilize version control and rely on pet ops and backups.
 
 Version control makes our work:
 - reproducible: the essential characteristic of scientific method
 - historical: full point in time recovery
-- full attribution of change is recorded, i.e.: who did what
-- metrics can be derived from the corpus: LoC, etc. enabling process engineering
+- full attribution of change is recorded, *i.e.:* who did what
+- metrics can be derived from the corpus: Lines of Code (LoC), etc. enabling process engineering
 - shareable for collaboration: democratization of work
 
-Version control has amplifying network effects for work: (pet vs. cattle improvements)
-- re-purposed: as the basis of new work (fork)
+Version control has amplifying network effects for work which can be summarized
+as pet vs. cattle improvements:
+- re-purposed: as the basis of new work (fork, submodule)
 - incorporated: as a library or function or microservice of a bigger system
 - scope: private to self, private to group of contributors, or...
 - social: when public (with a public license), enables crowd sharing:
@@ -42,16 +41,18 @@ Version control has amplifying network effects for work: (pet vs. cattle improve
 Understanding version control gives you a new perspective on social systems.
 You can look at operations, scientific journals, and social coding through this lens and see the same pattern.
 You will also look at point to point communication and artifacts as bespoke and tactical,
-contrasted to strategic, repeatable, scalable processes to improve the results.
+contrasted to strategic, repeatable, scalable processes to improve results.
 You will also see how people try to approximate version control all over the place.
 
-What follows is really a combination of rants and constructive criticism, e.g.:
+Humor sidebar: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
+
+What follows is a combination of rants and constructive criticism, *e.g.:*
 - Scheduling:
   - Question: do you have any time on Tuesday or Wednesday for my customer meeting? You said the afternoons were open last week.
   - Answer: Please use our corporate calendar to save time for both of us.
     - Find the current, updated answer (*sync on availability*) and then take action to schedule directly,
     - while also coordinating with external resources that you represent, to avoid *conflicts.*
-    - Othewise, we must resort to you getting an updated answer and potentially repeating the process again:
+    - Otherwise, we must resort to you getting an updated answer and potentially repeating the process again:
     question, check, answer, ACK, and then take action.
       - I copy and paste a brief version of this, sometimes with customized variations, every week!
     - Variation on the same problem:
@@ -59,7 +60,7 @@ What follows is really a combination of rants and constructive criticism, e.g.:
         - something came up, I'm really out doing something else,
         - I didn't block out travel time or lunch, it would be better on X day
         - it would be better that we meet after some dependency is satisfied.
-      - i.e.: I have a resource availability *conflict.* Can you reschedule the appointment?
+      - *i.e.:* I have a resource availability *conflict.* Can you reschedule the appointment?
       - Answer: sure, but given that you can best represent your constraints,
         could you counter-propose a better time for both of us? :)
   - Positive habits:
@@ -75,13 +76,13 @@ What follows is really a combination of rants and constructive criticism, e.g.:
   - Question: I found a bug, let me verbally report it in #productname channel.
   - Answer: If you do not have JIRA training or access, that is fine.
     - For everyone else, learn and directly contribute your work to one of the pillars of truth at Nutanix for work management.
-- Operations, e.g.:
+- Operations, *e.g.:*
   - Copy config.file to config.file.old.bak
   - Production change procedure:
     - identify last night's backup as your revert point for server 1...X
     - make several changes on server1
       - change monitoring alert levels, set maintenance mode, or pull out of rotation
-      - make changes, e.g.: database schema, data, RBAC
+      - make changes, *e.g.:* database schema, data, RBAC
       - sanity check: test the changes (in semi-isolation? depends on disruption) and proceed
       - trigger a non-disruptive backup if possible and timely without a change control window
       - restore monitoring alert levels, turn off maintenance mode, or put into rotation
@@ -89,8 +90,10 @@ What follows is really a combination of rants and constructive criticism, e.g.:
   - All of these are workarounds for *reverting a change* and reveal the need for revision control.
 
 # Poll: Know your Peers
-[Poll in #xpert-automation (population 242)](https://nutanix.slack.com/archives/G4088HLAF/p1585093304150000):
-"I can collaborate using public Git" results:
+
+So I asked my colleagues via a
+[poll in #xpert-automation (population 242)](https://nutanix.slack.com/archives/G4088HLAF/p1585093304150000):
+"I can collaborate using public Git:"
 - Of 16 responses, ~1/3 request training
 - the remainder list their public repos:
   1. https://github.com/thombrown
@@ -104,10 +107,13 @@ What follows is really a combination of rants and constructive criticism, e.g.:
   9. https://github.com/MichaelHaigh/
   1. mlavi@{github, gitlab, bitbucket}
 
+and this tutorial started soon thereafter.
+
 # Glossary of Contextual Terms
 
-It is easiest to think of revision control as managing the changes to a project folder of text files,
-so I'll define terms in that context, however there are more formal and abstract answers for many terms.
+It is easiest to think of revision control as managing the changes to a project
+folder of text files, so I'll define terms in that context, however there are
+more formal and abstract answers for many of the following terms.
 
 ## Generic:
 
@@ -151,7 +157,7 @@ Remote
 : a destination endpoint for your local repo
 
 Push
-: send updates to a remote (branch), e.g.: `git push origin master`
+: send updates to a remote (branch), *e.g.:* `git push origin master`
 
 .gitignore
 : a list of files and file patterns to omit when adding files to the stage. See: https://gitignore.io/
@@ -160,16 +166,16 @@ Tags and Releases
 : meta data applied to a branch commit
 
 Gitflow and GitHub Flow
-: branching strategies, see references.
+: branching strategies, see the [branches](#branches) section, below.
 
 GitOps
-: see [section](#GitOps), below.
+: operations triggered by git, see the [GitOps](#gitops-the-convergence-of-devops) section, below.
 
 ## Public git hosting:
 Fork
 : a linked copy/clone of a repo for collaboration without requiring commit access to a repo.
   - It can be thought of a one way, entire repo branch/remote, but that's not entirely accurate
-  because although there is repo linkage (e.g.: this downstream fork is X commits behind upstream repo)
+  because although there is repo linkage (*e.g.:* this downstream fork is X commits behind upstream repo)
   there is no requirement for coordination aside from initial access to create the fork. Example uses:
   - maintain an abandoned repo.
   - when there is a divorce in culture and separation of work.
@@ -227,11 +233,11 @@ A: It depends on the context: if you are completely local for your private use, 
    file in a repo and sometimes the total size of a repo to enforce these rules
    in order to keep their SLAs. free tier, and capacity planning as well as
    to prevent spillover from becoming a file host provider
-   (e.g. DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
+   (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
 
 Q: If we shouldn't store credentials and other hard coded pets in revision control,
    where should they go?
-A: It depends what would the best source of truth should be for each pet.
+A: It depends what the best source of truth should be for each pet.
    Because you have revision control, you can safely refactor towards improving your
    processes and easily revert any experiment as you learn.
 
@@ -255,53 +261,55 @@ A: It depends what would the best source of truth should be for each pet.
         - Docker container registry
         - etc.
 Q: How does one decide on project repo organization?
-A: This is a huge indicator of engineering culture, e.g.: monoculture = one repo for everything
+A: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything
    versus fragmentation over too many repos. There is a project life cycle to consider as well.
 
 ---
-# GIT TUTORIAL
+# Git Tutorial
 
-## First steps with git
+## First steps with git (completely local and safe)
 
 Our first git kata will be simple: consume a public repo.
 
-First, get git! :) Multiple ways, might be built into an IDE already.
-We will use the official git CLI, it makes things explicit which a GUI or defaults can hide.
+First, get git! :) There are multiple ways and it might be built into your IDE already.
+We will use the official git CLI because it can makes things explicit, which a GUI or defaults can hide,
+or worse, there may be basic git operations that some GUIs cannot easily handle.
 
 We will skip basic setup of credentials and use a fully public code repository,
-e.g.: https://github.com/nutanix/calm-dsl
+*e.g.:* https://github.com/nutanix/calm-dsl
 
     git clone https://github.com/nutanix/calm-dsl.git
     git clone git@github.com:nutanix/calm-dsl.git # uses SSH
 
 I like to create a standard working area for my local repositories:
-~/Documents/$Provider/$Project/$Repo, e.g.:
+~/Documents/$Provider/$Project/$Repo, *e.g.:*
 
 - Documents/github.com/nutanix/calm-dsl/
 - Documents/gitlab.com/nutanix-se/ansible/lcm-darksite-webserver
 - Documents/repo.local/mysecretprojects
 
 so it is not confusing if I'm using GitHub, GitLab, or any other instance.
-I found tool that helps me navigate and enforce this convention: [ghq](https://github.com/x-motemen/ghq), e.g.:
+I found tool that helps me navigate and enforce this convention: [ghq](https://github.com/x-motemen/ghq), *e.g.:*
  `ghq get nutanix/calm-dsl` versus `git clone https://github.com/nutanix/calm-dsl.git`.
 However, ghq defaults to https:// URLs, which can be a problem if you want to use SSH (git:) method,
 which is advisable for public repos with two factor authentication.
 
-
 Now we have a local copy of the entire repository with it's full history.
 This means we can manipulate and experiment with the repo any way we like as well as revert our changes,
-and if we get in trouble, we can clone again. You are free to make mistakes and learn with revision control.
+and if we get in trouble, we can clone again.
+You are free and safe to make mistakes as you learn revision control. #failfastfixfast
 
-## A simple round trip: no remotes or branches
+## A simple round trip into history: no remotes or branches
 
 Our second git kata will start from scratch, this diagram from https://marklodato.github.io/visual-git-guide/index-en.html
 shows the basic cycle from from:
 - files in local, working directory
-- git add # to the stage
-- git commit # to the repository history
-- inspecting the log and history
+- `git add` files to the stage
+- `git commit` files to the repository history
+- inspecting the commit history log
 
-There are some basic terms I want to introduce:
+There are some basic terms I want to introduce,
+ see the [#glossary](#glossary-of-contextual-terms) for more detail:
 - head
 - branch
 - tag
@@ -329,7 +337,7 @@ There are some basic terms I want to introduce:
     git log # note the git hash for each commit.
     cat file*txt
 
-## Make some local changes, recover, and merge!
+### Make some local changes, recover, and merge!
 
     vi file{2,4}.txt
     git st    # shows two modified files
@@ -356,7 +364,11 @@ There are some basic terms I want to introduce:
 
 ## Let's go public
 
-- Create a project in Gitlab, e.g.: demoproject
+Hosted git providers generally organize repositories with a organization/team/group
+and then the project repo under them, *e.g.:* nutanix/blueprints. For personal
+projects, your username is the organization, *e.g.:* mlavi/demoproject
+
+- Create a project in Gitlab, *e.g.:* demoproject
 
         git remote add origin git@gitlab.com:mlavi/demoproject.git
         git remote --verbose
@@ -365,21 +377,21 @@ There are some basic terms I want to introduce:
         git push --set-upstream bb master
 - https://bitbucket.org/mlavi/demoproject/src/master/
 - https://gitlab.com/mlavi/demoproject
-  - Make changes on webIDE, commit
+  - Make changes with the webIDE and commit them.
   - Changes not seen by tig or git status?
 
         git status
-        git fetch
-        git pull
+        git fetch #from the remote
+        git pull  #from the remote
         git status
 
   - Now they are seen!
 
-## Open repo.local/demoproject in Atom, edit, commit, and push!
+### Open repo.local/demoproject in Atom, edit, commit, and push!
 
     atom .
 
-## Clone public repo and edit from Atom
+### Clone public repo and edit from Atom
 
     ghq get gitlab.com/mlavi/demoproject
     git status
@@ -408,11 +420,10 @@ We can talk about gitflow, etc. for branch strategies.
 Remember, software is designed and it resembles the organizational structure:
 https://en.wikipedia.org/wiki/Conway%27s_law
 
-# Collaboration: Forks and Pulls
+# Collaboration: Pulls, Forks, and Submodules
 
-From https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project
-https://git-scm.com/book/en/v2/images/small-team-flow.png
-and https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows
+Take a look at this diagram from [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project): ![Small Team Flow](https://git-scm.com/book/en/v2/images/small-team-flow.png)
+and diagrams in [Distributed Git - Distributed Workflows](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
 
 Let's look at https://github.com/nutanixworkshops/stageworkshop and review all of the:
 - forks = https://github.com/nutanixworkshops/stageworkshop/network/members
@@ -426,7 +437,7 @@ Let's look at https://github.com/nutanixworkshops/stageworkshop and review all o
 - No human touching anything BUT git!
   - Every configuration is under revision control
   - Process is triggered by a git operation
-  - Every process is also in git (e.g. Jenkinsfile build job, Dockerfile build, webhooks, scripts, blueprints, etc.)
+  - Every process is also in git (*e.g.:* Jenkinsfile build job, Dockerfile build, webhooks, scripts, blueprints, etc.)
 - Git commit a change and make a pull request to a branch that represents an environment:
   - Master = production
   - Staging, dev, QA, etc.
@@ -445,18 +456,19 @@ Let's look at https://github.com/nutanixworkshops/stageworkshop and review all o
 3. Create a private repo on a Git host
    - GitHub, GitLab, BitBucket, Azure DevOps
    - OG: Sourceforge and RIP: Google CodePlex
-   - Host your own: Gitea, etc.
-4. After practice, make your hosted repo public
+   - Host your own: [Gitea](https://en.wikipedia.org/wiki/Gitea), etc.
+4. After practice, make your (hosted) repo public
 5. #crowdsource and profit!!!
 
 # Conclusion
 
-- Look for how to make your pet work become 100X more effective for cattle work.
-  - Adopt the mantra: "Git or it didn't happen."
-  - Refactor your lifesytl
+Constantly look how to make your pet work become 100X more effective as cattle work.
+- Adopt the mantra: "Git or it didn't happen."
+- Refactor your lifestyle for reproducible cattle!
+- Drive towards achieving GitOps, most of the world doesn't know about it yet!
 
 ---
-# 2020-04-01: Postscript
+# 2020-04-01: Postscript and Appendix TODO
 I will continue to publish updates as I flush out and refine this material.
 
 Git revision history for this blog: https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md
@@ -466,12 +478,14 @@ In the initial demo, I contrasted a filesystem rename to a git mv operation
 then repointed HEAD to an earlier point in time (detached HEAD situation, almost a branch),
 and made a change to that file (before it was renamed).
 When I went back to master branch and merged the short hash of the detached HEAD,
-we saw that the file changed AND was renamed (e.g.: a git pull fast forward).
+we saw that the file changed AND was renamed (*e.g.:* a git pull fast forward).
 
-# Appendix: TODO
+Finish [#collaboration-pulls-forks-and-submodules](#collaboration-pulls-forks-and-submodules)
 
-https://www.atlassian.com/git/tutorials/git-forks-and-upstreams Git tip: ahead/behind
-
+- https://www.atlassian.com/git/tutorials/git-forks-and-upstreams Git tip: ahead/behind
+- https://gitgraphjs.com/stories/?path=/story/gitgraph-js-1-basic-usage--branching-from-a-past-reference
+- https://codepen.io/nicoespeon/pen/arqPWb?editors=1010
+- https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=mermaid
 
 ```mermaid
 graph TD
@@ -484,7 +498,3 @@ graph TD
   C --> F;
 
 ```
-https://gitgraphjs.com/stories/?path=/story/gitgraph-js-1-basic-usage--branching-from-a-past-reference
-https://codepen.io/nicoespeon/pen/arqPWb?editors=1010
-https://shd101wyy.github.io/markdown-preview-enhanced/#/diagrams?id=mermaid
----
