@@ -7,9 +7,14 @@ Version Control is an essential tool, because it makes your work reproducible
 and visible, which can unlock profound amplifying effects for your contributions.
 It also builds to state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
+__Note:__ I often use revision control and version control interchangeably; they are synonyms.
+
 Side bar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
 
+# Overview: Why do we need Version Control?
+
 Let me ask a very simple question: are you the same person you were last year? last month? last second?
+
 This is a deeply philosophical question, addressed by maintenance on the
 [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
 
@@ -45,8 +50,14 @@ You will also look at point to point communication and artifacts as bespoke and 
 contrasted to strategic, repeatable, scalable processes to improve results.
 You will also see how people try to approximate version control all over the place.
 
+Revision control is an essential tool to manage change, collaborate, and scale work,
+preventing inefficient overhead of abandoned workarounds and point to point synchronization.
+Most operators don't realize that GitOps represents their future, but I see it as
+a refinement of and progression past CI/CD for "invisible ops."
+
 Humor sidebar: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
 
+## Examples of the Problem and Need
 What follows is a combination of rants and constructive criticism, *e.g.:*
 - Scheduling:
   - Question: do you have any time on Tuesday or Wednesday for my customer meeting? You said the afternoons were open last week.
@@ -116,7 +127,7 @@ It is easiest to think of revision control as managing the changes to a project
 folder of text files, so I'll define terms in that context, however there are
 more formal and abstract answers for many of the following terms.
 
-## Generic:
+## Generic
 
 Repository (repo)
 : a logical "parent folder" for a project's content.
@@ -147,7 +158,7 @@ Branch
 Master or mainline
 : the branch where all work is coordinated for release. When there are no branches, this is implicit.
 
-## Git:
+## Git
 Stage
 : local changes are added into a commit, providing granular control across the repo and planning reversible change sets.
 
@@ -172,7 +183,7 @@ Gitflow and GitHub Flow
 GitOps
 : operations triggered by git, see the [GitOps](#gitops-the-convergence-of-devops) section, below.
 
-## Public git hosting:
+## Public git hosting
 Fork
 : a linked copy/clone of a repo for collaboration without requiring commit access to a repo.
   - It can be thought of a one way, entire repo branch/remote, but that's not entirely accurate
@@ -485,7 +496,7 @@ When every system has a REST API, automation of every operation can be possible,
     - No credentials, ever.
     - No host names, no IP addresses, no usernames.
   - See [The 12 Factor App](https://12factor.net/) for ideal designs.
-    - See also Kelsey Hightower's response: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
+    - See Kelsey Hightower's response: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
 3. Create a private repo on a Git host
    - GitHub, GitLab, BitBucket, Azure DevOps, Sourceforge, etc.
    - Host your own: [Gitea](https://en.wikipedia.org/wiki/Gitea), etc.
