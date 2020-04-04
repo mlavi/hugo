@@ -19,8 +19,8 @@ This is a deeply philosophical question, addressed by maintenance on the
 [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
 
 Change is eternal, even when a single individual is involved through time.
-*e.g.:* I can't be relied upon to memorize a unique password for every account
-(more on this later) on every VM on every cluster in every infrastructure provider
+*e.g.:* I can't be relied upon to memorize a unique [pet password](#pet-passwords) for every account
+on every VM on every cluster in every infrastructure provider
 for every project I work on! Complexity multiplies with additional people. Hence
 [change management](https://en.wikipedia.org/wiki/Change_management) is an
 essential discipline for operators. Unfortunately, many operators do not
@@ -53,7 +53,7 @@ You will also see how people try to approximate version control all over the pla
 Revision control is an essential tool to manage change, collaborate, and scale work,
 preventing inefficient overhead of abandoned workarounds and point to point synchronization.
 Most operators don't realize that GitOps represents their future, but I see it as
-a refinement of and progression past CI/CD for "invisible ops."
+a refinement of and progression past [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) for "invisible ops."
 
 Humor sidebar: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
 
@@ -228,9 +228,12 @@ https://en.wikipedia.org/wiki/Comparison_of_version-control_software#History_and
 
 # FAQ
 Q: Can you give an example of how Git helps a Sales Engineer (or operator)?
-A: Take a look at the #collaboration section, where the bootcamp automation scripts
-   save SEs multiple hours for any demo or experiment, while preventing mistakes
-   when setting up a new cluster for a bootcamp, Global Tech Summit, etc.
+A: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section,
+   where the bootcamp automation scripts save SEs multiple hours for any demo or
+   experiment, preventing mistakes when setting up a new cluster for a bootcamp, Global Tech Summit, etc.
+   and were the basis or contributed to GTS2019 EMEA and APAC hackathon winners.
+   This work has paid off 10,000 times the investment, enabled thousands of SEs,
+   saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
 
 Q: Is git (or any revision control system) good for storing large files: videos, pictures, etc.
 A: It depends on the context: if you are completely local for your private use, go for it,
@@ -257,15 +260,7 @@ A: It depends what the best source of truth should be for each pet.
    - IP addresses: try to move to DHCP and IPAM systems to get rid of them.
       Remember this indicates the need to adopt the category of service discovery
       and service addressing (DNS) solutions.
-   - Passwords: move or drive them towards:
-      - environment variable files and those files to .gitignore
-      - synthesize variable files from your cattle systems
-        - Pupper Hiera, Chef databags, etcd/database stores, Vault
-        - local secret repos (keyring, KeepassXC, etc.)
-        - authentication systems (LDAP, OAUTH, SAML, SSO/WebSSO)
-      - from static passwords to ephemeral passwords/accounts: synthesized for the lifecycle of the app or user session
-        - SSH keys, then ephemeral keys
-        - from credentials to dynamic, session tokens (JWT, etc.)
+   - Passwords: see [Pet Passwords](#pet-passwords), below. Markdown doesn't handle HTML anchors gracefully.
    - Binary artifacts: drive to
       - filers NFS/SBM/FTP/SFTP and filer hosting
       - artifact management (Nexxus, Artifactory) specific to the artifact for metadata and post processing
@@ -275,6 +270,18 @@ A: It depends what the best source of truth should be for each pet.
 Q: How does one decide on project repo organization?
 A: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything
    versus fragmentation over too many repos. There is a project life cycle to consider as well.
+
+## Pet Passwords
+
+Death to the static password on one user login on one OS, work to move or drive them towards:
+- environment variable files and add those files to .gitignore
+- synthesize variable files from your cattle systems
+  - Pupper Hiera, Chef databags, etcd/database stores, Vault
+  - local secret repos (keyring, KeepassXC, etc.)
+  - authentication systems (LDAP, OAUTH, SAML, SSO/WebSSO)
+- from static passwords to ephemeral passwords/accounts: synthesized for the lifecycle of the app or user session
+  - SSH keys, then ephemeral keys
+  - from credentials to dynamic, session tokens (JWT, etc.)
 
 ---
 # Git Tutorial
@@ -501,7 +508,7 @@ When every system has a REST API, automation of every operation can be possible,
    - GitHub, GitLab, BitBucket, Azure DevOps, Sourceforge, etc.
    - Host your own: [Gitea](https://en.wikipedia.org/wiki/Gitea), etc.
 4. After practice, make your (hosted) repo public
-5. Work towards CI/CD and GitOps!
+5. Work towards [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) and GitOps!
 5. #crowdsource and profit!!!
 
 # Conclusion

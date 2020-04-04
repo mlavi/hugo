@@ -1,6 +1,6 @@
 ---
 date: "2018-04-22T12:46:39-07:00"
-tags: ['ssh', 'authentication', 'Windows', 'cloud-init', 'Linux', 'calm', 'security']
+tags: ['ssh', 'authentication', 'Windows', 'cloud-init', 'Linux', 'calm', 'security', 'tutorial']
 title: 'SSH Key Authentication Overview'
 ---
 For those of you new to automation, it can be overwhelming on first
@@ -19,8 +19,7 @@ I will continue to update and expand this blog, it serves as a script for a quic
   - But if you must use a static password, make it mathematically secure.
   - SSH keys = long mathematical passwords, broken into public and private parts.
 
-Combining these two ideas together, one would want to dynamically insert SSH public
- keys onto a cloud VM during instantiation. For Linux, cloud-init provides this facility.
+Combining these two ideas together, one would want to dynamically insert SSH public keys onto a cloud VM during instantiation. For Linux, cloud-init provides this facility.
 
 ## The Details: SSH ##
 
@@ -29,6 +28,7 @@ Combining these two ideas together, one would want to dynamically insert SSH pub
 - [ssh-keygen](https://man.openbsd.org/ssh-keygen.1) in Linux and MacOS
 - [cygwin](http://cygwin.org/) on Windows to get the OpenSSH suite
   - Perhaps? it is easier to use [Windows Powershell SSH](https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/ssh-remoting-in-powershell-core?view=powershell-6), but I haven't tried this yet.
+  - WSL: [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about)
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)-gen on Windows
   - For exported PuTTY keys, they have their own .PPK format.
   - Insure you export the public key, then private key in OpenSSH format
@@ -39,7 +39,7 @@ Combining these two ideas together, one would want to dynamically insert SSH pub
 
 # Use Your SSH Keypair #
 
-How do I put the SSH public key onto a VM image?
+How do I put a SSH public key onto a VM image?
 
 ## Easy Way ##
   - bake credentials into the VM image by putting SSH cred on an VM,
