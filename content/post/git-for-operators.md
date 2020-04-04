@@ -7,6 +7,7 @@ Version Control is an essential tool, because it makes your work reproducible
 and visible, which can unlock profound amplifying effects for your contributions.
 It also builds to state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
+Side bar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
 
 Let me ask a very simple question: are you the same person you were last year? last month? last second?
 This is a deeply philosophical question, addressed by maintenance on the
@@ -27,7 +28,7 @@ Version control makes our work:
 - metrics can be derived from the corpus: Lines of Code (LoC), etc. enabling process engineering
 - shareable for collaboration: democratization of work
 
-Version control has amplifying network effects for work which can be summarized
+Version control has amplifying network effects for work and communities which can be summarized
 as pet vs. cattle improvements:
 - re-purposed: as the basis of new work (fork, submodule)
 - incorporated: as a library or function or microservice of a bigger system
@@ -288,21 +289,23 @@ I like to create a standard working area for my local repositories:
 - Documents/gitlab.com/nutanix-se/ansible/lcm-darksite-webserver
 - Documents/repo.local/mysecretprojects
 
-so it is not confusing if I'm using GitHub, GitLab, or any other instance.
-I found tool that helps me navigate and enforce this convention: [ghq](https://github.com/x-motemen/ghq), *e.g.:*
- `ghq get nutanix/calm-dsl` versus `git clone https://github.com/nutanix/calm-dsl.git`.
+so it is not confusing when using GitHub, GitLab, or any other instance.
+I found a tool that helps me navigate and enforce this convention:
+[ghq](https://github.com/x-motemen/ghq),
+*e.g.:* `ghq get nutanix/calm-dsl` versus `git clone https://github.com/nutanix/calm-dsl.git`.
+
 However, ghq defaults to https:// URLs, which can be a problem if you want to use SSH (git:) method,
-which is advisable for public repos with two factor authentication.
+which is advisable for git hosting requiring two factor authentication.
 
 Now we have a local copy of the entire repository with it's full history.
-This means we can manipulate and experiment with the repo any way we like as well as revert our changes,
-and if we get in trouble, we can clone again.
-You are free and safe to make mistakes as you learn revision control. #failfastfixfast
+This means we can experiment with the repo any way we like, even revert our changes,
+and if we get in trouble, we can clone again. You are free and safe to make mistakes
+as you learn revision control. #failfastfixfast
 
 ## A simple round trip into history: no remotes or branches
 
 Our second git kata will start from scratch, this diagram from https://marklodato.github.io/visual-git-guide/index-en.html
-shows the basic cycle from from:
+shows the basic cycle from:
 - files in local, working directory
 - `git add` files to the stage
 - `git commit` files to the repository history
@@ -310,9 +313,8 @@ shows the basic cycle from from:
 
 There are some basic terms I want to introduce,
  see the [#glossary](#glossary-of-contextual-terms) for more detail:
-- head
-- branch
-- tag
+- head: pointer to the latest commit
+- branch: we're going to see this used indirectly
 - commit hash: short and long form
 
 ![Basic local cycle](https://marklodato.github.io/visual-git-guide/basic-usage.svg)
@@ -327,46 +329,63 @@ There are some basic terms I want to introduce,
     ls; tree
 
     cat file4.txt
-    git add file0.txt # added to the stage
-    git commit --all --message 'This is my first commit comment!'
-    git status
+    git add file0.txt   # add to the stage
+    git commit --message 'This is my first commit comment!'
+    git status          # Note we are on a the default branch; it is named master
 
-    git add --all
-    git st # Note that we just need to specify enough to be unique, all the rest of the files are staged.
-    git commit -a -m "Part 2"
+    git add --all       # recurse child directories
+    git st # Note that we need to specify enough to be unique; see all remaining files staged.
+    git commit -m "Part 2"
     git log # note the git hash for each commit.
     cat file*txt
 
-### Make some local changes, recover, and merge!
-
+### Make some changes
     vi file{2,4}.txt
     git st    # shows two modified files
     git diff  # shows modifications
     git add . # adds modified files recursively down from the current directory
-    git com
+    git commit # will use $EDITOR and omit #comment lines
     cat f*
-    git mv file0.txt file5.txt
-    vi file5.txt # s/change/move/
+    git mv file0.txt file5.txt  # Git Operation; preserves change history vs. pet op loses history = delete and add
+    vi +/change file5.txt # :s/change/move/
     git status
-    git add *
+    git add * # lots of ways to do similar things, however not recursive
     git status
     git commit -m "Renamed file0to5"
-    git status
-    git checkout 299d6550765557a46748af3e36747a219a2e50c6 #full hash
+    git st
+
+### Go back in time
+    git log   # you can pick a point in time by picking commit's long hash
+    git checkout master~3 # go back -3 commits or specify commit hash
     cat f* ; vi file0.txt ; git st
-    rm file0.txt ; git checkout file0.txt
+
+### Recover accidental deletion
+    rm file0.txt
+    ls        # file0.txt is gone
+    git checkout file0.txt
+    tree      # file0.txt is back from history
+
+### Make a detached head change on the past, merge into the present
     vi file0.txt && git add -a
-    git commit . -m "Back to the future!"
+    git commit -m "Back to the future!"
     git checkout master
-    git merge #short hash
+    git merge short hash
+    cat file5.txt # note: both the detached head change and rename operation!
+
     git log --oneline --decorate --all --graph
     TIG_DIFF_OPTS="--relative-date" tig
+
+### Protect yourself with .gitignore
+    echo "file6.txt" > .gitignore && git add . && git commit -m 'ignore file6.txt'
+    echo "secret" > file6.txt
+    git status
+    git add . && git commit # nothing to commit!
 
 ## Let's go public
 
 Hosted git providers generally organize repositories with a organization/team/group
-and then the project repo under them, *e.g.:* nutanix/blueprints. For personal
-projects, your username is the organization, *e.g.:* mlavi/demoproject
+and then the project repo under them, *e.g.:* nutanix/blueprints.
+For personal projects, your username is the organization, *e.g.:* mlavi/demoproject
 
 - Create a project in Gitlab, *e.g.:* demoproject
 
@@ -399,19 +418,29 @@ projects, your username is the organization, *e.g.:* mlavi/demoproject
 
 # Branches
 
-The idea for branching is to manage changes that should not block the main branch.
-Long lived branches are a bad idea.
+We've seen that every repo is initialized with a default branch named master
+(unless specified otherwise). It is sometimes called the mainline branch
+and while it is arbitrarily important, by convention for many projects,
+it is where attention is focused to keep it stable from riskier changes.
 
-You can create a branch in a repo, make some changes there,
-merge changes onto your branch periodically to keep up to date and minimize conflicts,
-and finally merge your branch back, then delete your branch.
+Branching allows anyone to manage changes that should not block the main branch.
+Long lived branches are usually a bad idea and should be discarded,
+branches usually represent different types of shorter lived work:
+experiments, a bug fix, a new feature, refactoring, and so on. Sometimes branches
+are referred to as topic branches to highlight their focused, short lived scope.
 
-This is used for bug fixes and development of a new feature/topic.
+You can create a branch in a repo, make some changes there, and commit changes onto your topic branch.
+It is ideal to merge changes from master onto your branch periodically
+to keep it up to date and minimize conflicts down the line.
+The final stage of a branch lifecycle is to merge your branch to master, then delete the topic branch.
 
 https://agripongit.vincenttunru.com/
 
-Branching is not an advanced topic, it is easy with git.
+Branching is not an advanced topic and it is easy with git.
 However, merge conflicts will always be a challenge and usually require talking to people. :)
+In other revision control systems, branches could be used to indicate and preserve
+the state of the repo for a release, but git can accommodate this with a simple tag
+applied to a commit.
 
 We can talk about gitflow, etc. for branch strategies.
 - https://nvie.com/posts/a-successful-git-branching-model/
@@ -431,9 +460,10 @@ Let's look at https://github.com/nutanixworkshops/stageworkshop and review all o
 - contributors = https://github.com/nutanixworkshops/stageworkshop/graphs/contributors
 
 # GitOps: the Convergence of Dev+Ops
-- 2017-08-07: [weave.works/blog/gitops-operations-by-pull-request](https://www.weave.works/blog/gitops-operations-by-pull-request)
-  - WeaveWorks = makers of Calico, this will be the next generation of Karbon's networking feature
-  - 2018-08-21: [weave.works/blog/what-is-gitops-really](https://www.weave.works/blog/what-is-gitops-really)
+
+We saw the benefit of git operations on our repo in the example: it replayed a file update and file move.
+When every system has a REST API, automation of every operation can be possible, removing pet ops.
+
 - No human touching anything BUT git!
   - Every configuration is under revision control
   - Process is triggered by a git operation
@@ -441,6 +471,9 @@ Let's look at https://github.com/nutanixworkshops/stageworkshop and review all o
 - Git commit a change and make a pull request to a branch that represents an environment:
   - Master = production
   - Staging, dev, QA, etc.
+- History: WeaveWorks = makers of Calico, this will be the next generation of Karbon's networking feature
+  - 2017-08-07: [weave.works/blog/gitops-operations-by-pull-request](https://www.weave.works/blog/gitops-operations-by-pull-request)
+  - 2018-08-21: [weave.works/blog/what-is-gitops-really](https://www.weave.works/blog/what-is-gitops-really)
 
 # Learn Git Safely
 1. Work locally until comfortable with the basics #failfastfixfast
@@ -454,10 +487,10 @@ Let's look at https://github.com/nutanixworkshops/stageworkshop and review all o
   - See [The 12 Factor App](https://12factor.net/) for ideal designs.
     - See also Kelsey Hightower's response: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
 3. Create a private repo on a Git host
-   - GitHub, GitLab, BitBucket, Azure DevOps
-   - OG: Sourceforge and RIP: Google CodePlex
+   - GitHub, GitLab, BitBucket, Azure DevOps, Sourceforge, etc.
    - Host your own: [Gitea](https://en.wikipedia.org/wiki/Gitea), etc.
 4. After practice, make your (hosted) repo public
+5. Work towards CI/CD and GitOps!
 5. #crowdsource and profit!!!
 
 # Conclusion
@@ -470,8 +503,6 @@ Constantly look how to make your pet work become 100X more effective as cattle w
 ---
 # 2020-04-01: Postscript and Appendix TODO
 I will continue to publish updates as I flush out and refine this material.
-
-Git revision history for this blog: https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md
 
 In the initial demo, I contrasted a filesystem rename to a git mv operation
 (I joked that this was the first step to GitOps),
