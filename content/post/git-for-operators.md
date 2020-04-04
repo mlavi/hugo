@@ -3,38 +3,41 @@ tags: ['git', 'operators', 'tutorial', 'version-control']
 date: "2020-03-25T15:15:18-05:00"
 title: "Version Control for Operators"
 ---
-Version Control is an essential tool, because it makes your work reproducible
-and visible, which can unlock profound amplifying effects for your contributions.
-It also builds to state of the art [GitOps](#gitops-the-convergence-of-devops)!
+Version Control is an essential tool making your work reproducible and visible,
+which can unlock profound amplifying effects of your contributions. As operators
+grow into developers, they can build toward state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
-__Note:__ I often use revision control and version control interchangeably; they are synonyms.
+__Note:__ I use revision control and version control interchangeably because they are synonyms.
 
-Side bar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
+> Side bar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
 
 # Overview: Why do we need Version Control?
 
-Let me ask a very simple question: are you the same person you were last year? last month? last second?
+Let me ask a very simple question: are you the same person you were last year?
+last month? last second?
 
 This is a deeply philosophical question, addressed by maintenance on the
 [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
 
 Change is eternal, even when a single individual is involved through time.
-*e.g.:* I can't be relied upon to memorize a unique [pet password](#pet-passwords) for every account
-on every VM on every cluster in every infrastructure provider
-for every project I work on! Complexity multiplies with additional people. Hence
-[change management](https://en.wikipedia.org/wiki/Change_management) is an
+*e.g.:* I can't be relied upon to memorize, expire, and update a unique
+[pet password](#pet-passwords) for every account on every VM on every cluster
+in every infrastructure provider for every project I work on!
+Complexity multiplies with additional people
+Hence [change management](https://en.wikipedia.org/wiki/Change_management) is an
 essential discipline for operators. Unfortunately, many operators do not
-utilize version control and rely on pet ops and backups.
+utilize version control and rely on pet ops and backups for change management.
 
 Version control makes our work:
 - reproducible: the essential characteristic of scientific method
 - historical: full point in time recovery
 - full attribution of change is recorded, *i.e.:* who did what
-- metrics can be derived from the corpus: Lines of Code (LoC), etc. enabling process engineering
+- metrics can be derived from the corpus: Lines of Code (LoC), etc.
+  enabling process engineering
 - shareable for collaboration: democratization of work
 
-Version control has amplifying network effects for work and communities which can be summarized
-as pet vs. cattle improvements:
+Version control has amplifying network effects for work and communities
+which can be summarized as pet vs. cattle improvements:
 - re-purposed: as the basis of new work (fork, submodule)
 - incorporated: as a library or function or microservice of a bigger system
 - scope: private to self, private to group of contributors, or...
@@ -45,20 +48,26 @@ as pet vs. cattle improvements:
   - community implications and the economy of attention
 
 Understanding version control gives you a new perspective on social systems.
-You can look at operations, scientific journals, and social coding through this lens and see the same pattern.
+You can look at operations, scientific journals, and social coding
+through this lens and see the same pattern.
 You will also look at point to point communication and artifacts as bespoke and tactical,
 contrasted to strategic, repeatable, scalable processes to improve results.
 You will also see how people try to approximate version control all over the place.
 
-Revision control is an essential tool to manage change, collaborate, and scale work,
-preventing inefficient overhead of abandoned workarounds and point to point synchronization.
-Most operators don't realize that GitOps represents their future, but I see it as
-a refinement of and progression past [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) for "invisible ops."
+Revision control is an essential tool to manage change, collaboration,
+and scale work efforts, preventing inefficient overhead of abandoned workarounds
+and point to point synchronization.
+Most operators don't realize that [GitOps](#gitops-the-convergence-of-devops)
+represents their future, but I see it as a refinement of and progression past
+[CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/)
+for "invisible ops."
 
-Humor sidebar: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
+> Humor sidebar: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
 
 ## Examples of the Problem and Need
+
 What follows is a combination of rants and constructive criticism, *e.g.:*
+
 - Scheduling:
   - Question: do you have any time on Tuesday or Wednesday for my customer meeting? You said the afternoons were open last week.
   - Answer: Please use our corporate calendar to save time for both of us.

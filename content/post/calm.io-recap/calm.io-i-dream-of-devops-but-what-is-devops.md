@@ -15,9 +15,8 @@ Let me share what I’ve learned on my journey to DevOps: it is a culturally
  rendered term and it has a different meaning for everyone. My definition
  has stood for years with slight reductions and I have arrived at:
 
-<div style="text-align: center; font-weight: bold; font-size: large;">DevOps
- is the <em>process</em> of removing all friction
- <br />between the developer and customer value.<br /><br /></div>
+> DevOps is the __process__ of removing friction
+ between the developer and customer value.
 
 Over the years, the more words I removed from my DevOps definition,
  the closer it encompassed all of the nuances I had experienced.
@@ -30,19 +29,19 @@ Working backwards to expand on the terms used for my DevOps definition:
 * __Value:__ typically, the products and services customers use,
   * *e.g.:* software or web site.
 * __Customer:__ a value consumer,
-  * *e.g.:* target audience or end-user.
+  * *e.g.:* target audience or end-user (internal or exteral).
 * __Developer:__ value creator and contributor.
-* __Friction:__ anything that slows, diminishes, or reduces the value delivery,
+* __Friction:__ anything that blocks, slows, diminishes, or reduces value delivery,
   * *e.g.:* manual hand-offs, separation of duties, silos of responsibility,
   or isolation from the entire value system.
 * __Process:__ the methodology to accomplish work.
 
 Putting all of the above together implies that
- __*DevOps is a dynamic system
- which expands or shrinks to the capacity of the people who practice it.*__
- This is what makes a universal, static DevOps definition so hard to create
- and it gives the DevOps movement increasing power: it is a process that will
- change and grow over time as we pursue the state of the art!
+ __*DevOps is a dynamic system which expands or shrinks to the capacity
+ of the people who practice it.*__
+This is what makes a universal, static DevOps definition so hard to create
+while also giving the DevOps movement increasing power: it is a process that
+will change and grow over time as we pursue the state of the art!
 
 The term [DevOps is about six years old](https://en.wikipedia.org/wiki/DevOps)
  <sup>[1](#postscript-february-18-2018)</sup>,
