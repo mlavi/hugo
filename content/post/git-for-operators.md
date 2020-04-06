@@ -415,21 +415,30 @@ There are some basic terms I want to introduce,
 
 ## Let's go public
 
+Working with a remote repo is as simple as fetch and pull to synchronize state "down" to your local repo before you push your changes "up" to the remote repo. You can specify your choice of destination or source remote and repo branch. __failfastfixfast:__ I am working on making this image clearer, *sorry for the blurriness!*
+
+![basic-remote-usage.svg](/MarkLodato/visual-git-guide/basic-remote-usage.svg)
+
 Hosted git providers generally organize repositories with a organization/team/group
 and then the project repo under them, *e.g.:* nutanix/blueprints.
 For personal projects, your username is the organization, *e.g.:* mlavi/demoproject
 
-- Create a project in Gitlab, *e.g.:* demoproject
+- Create a project in Gitlab, *e.g.:* demoproject = https://gitlab.com/mlavi/demoproject
+
+- Add a remote with an alias or name of "origin," then set it as a push destination.
 
         git remote add origin git@gitlab.com:mlavi/demoproject.git
         git remote --verbose
         git push --set-upstream origin master
+
+  - TODO:
+
         git remote add bb git@bitbucket.org:mlavi/demoproject.git
         git push --set-upstream bb master
-- https://bitbucket.org/mlavi/demoproject/src/master/
-- https://gitlab.com/mlavi/demoproject
-  - Make changes with the webIDE and commit them.
-  - Changes not seen by tig or git status?
+        git push bb # https://bitbucket.org/mlavi/demoproject/src/master/
+
+- Make changes with the webIDE and commit them.
+  - Changes not seen by `git status` or tig?
 
         git status
         git fetch #from the remote
@@ -468,8 +477,8 @@ the state of the repo for a release, but git can accommodate this with a simple 
 applied to a commit.
 
 We can talk about different branch strategies:
-- https://nvie.com/posts/a-successful-git-branching-model/
-- https://guides.github.com/introduction/flow/
+- [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/): for more traditional software engineering release models
+- GitHub Flow: [Overview](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) || [Source](https://guides.github.com/introduction/flow/)
 
 Remember, software is designed and it resembles the organizational structure:
 https://en.wikipedia.org/wiki/Conway%27s_law
@@ -479,10 +488,11 @@ https://en.wikipedia.org/wiki/Conway%27s_law
 Take a look at this diagram from [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project): ![Small Team Flow](https://git-scm.com/book/en/v2/images/small-team-flow.png)
 and diagrams in [Distributed Git - Distributed Workflows](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
 
-Let's look at https://github.com/nutanixworkshops/stageworkshop and review all of the:
-- forks = https://github.com/nutanixworkshops/stageworkshop/network/members
-- pulls = https://github.com/nutanixworkshops/stageworkshop/pulls?q=is%3Apr+is%3Aclosed
-- contributors = https://github.com/nutanixworkshops/stageworkshop/graphs/contributors
+Let's look at https://github.com/nutanixworkshops/stageworkshop and review all of the: [forks](https://github.com/nutanixworkshops/stageworkshop/network/members), [pulls](https://github.com/nutanixworkshops/stageworkshop/pulls?q=is%3Apr+is%3Aclosed), [contributors](https://github.com/nutanixworkshops/stageworkshop/graphs/contributors).
+
+With out of the box git, you get all or nothing access to the full repository contents: branches, tags, and history. The only manner to source external work is through [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), which can be challenging to maintain because they require manual synchronization, just like merges.
+
+However, there are valuable extensions (not part of the git toolset) for distributed collaborative efforts of software projects by hosted git providers. RBAC: Role Based Access Control, such as read only versus contributor only on a certain branch. *To be confirmed:* Forks and pull requests are git provider specific.
 
 # GitOps: the Convergence of Dev+Ops
 
