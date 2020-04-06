@@ -276,6 +276,8 @@ A: It depends what the best source of truth should be for each pet.
         - language libaries/installs
         - Docker container registry
         - etc.
+    - See [The 12 Factor App](https://12factor.net/) for ideal design principles.
+      - Kelsey Hightower's response/examples: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
 Q: How does one decide on project repo organization?
 A: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything
    versus fragmentation over too many repos. There is a project life cycle to consider as well.
@@ -361,19 +363,22 @@ There are some basic terms I want to introduce,
     git status          # Note we are on a the default branch; it is named master
 
     git add --all       # recurse child directories
-    git st # Note that we need to specify enough to be unique; see all remaining files staged.
+    git status          # see all remaining files staged
+                        # "git st" works on Linux, not Mac!
     git commit -m "Part 2"
     git log # note the git hash for each commit.
-    cat file*txt
 
 ### Make some changes
+    cat file*txt
     vi file{2,4}.txt
-    git st    # shows two modified files
-    git diff  # shows modifications
-    git add . # adds modified files recursively down from the current directory
+    git status  # shows two modified files
+    git diff    # shows modifications
+    git add .   # adds modified files recursively down from the current directory
     git commit # will use $EDITOR and omit #comment lines
     cat f*
-    git mv file0.txt file5.txt  # Git Operation; preserves change history vs. pet op loses history = delete and add
+    git mv file0.txt file5.txt  # Git Operation
+                # preserves change history
+                # vs. pet op loses history = delete and add
     vi +/change file5.txt # :s/change/move/
     git status
     git add * # lots of ways to do similar things, however not recursive
@@ -382,9 +387,9 @@ There are some basic terms I want to introduce,
     git st
 
 ### Go back in time
-    git log   # you can pick a point in time by picking commit's long hash
-    git checkout master~3 # go back -3 commits or specify commit hash
-    cat f* ; vi file0.txt ; git st
+    git log                # pick a point in time
+    git checkout master~3  # go back -3 commits or specify commit hash
+    cat f* ; vi file0.txt ; git status
 
 ### Recover accidental deletion
     rm file0.txt
@@ -395,18 +400,18 @@ There are some basic terms I want to introduce,
 ### Make a detached head change on the past, merge into the present
     vi file0.txt && git add -a
     git commit -m "Back to the future!"
-    git checkout master
-    git merge short hash
+    git checkout master   # Note: $ShortHash of detached head
+    git merge $ShortHash
     cat file5.txt # note: both the detached head change and rename operation!
 
-    git log --oneline --decorate --all --graph
-    TIG_DIFF_OPTS="--relative-date" tig
+    git log --oneline --decorate --all --graph  # branch visualization (text)
+    TIG_DIFF_OPTS="--relative-date" tig         # I like this TUI
 
 ### Protect yourself with .gitignore
     echo "file6.txt" > .gitignore && git add . && git commit -m 'ignore file6.txt'
     echo "secret" > file6.txt
     git status
-    git add . && git commit # nothing to commit!
+    git add . && git commit # nothing to commit because file6.txt is .gitignore(d)!
 
 ## Let's go public
 
@@ -447,29 +452,22 @@ For personal projects, your username is the organization, *e.g.:* mlavi/demoproj
 
 We've seen that every repo is initialized with a default branch named master
 (unless specified otherwise). It is sometimes called the mainline branch
-and while it is arbitrarily important, by convention for many projects,
-it is where attention is focused to keep it stable from riskier changes.
+and while it is arbitrarily important, but by convention for many projects,
+it is where attention is focused to keep it stable from risky changes.
 
-Branching allows anyone to manage changes that should not block the main branch.
-Long lived branches are usually a bad idea and should be discarded,
-branches usually represent different types of shorter lived work:
-experiments, a bug fix, a new feature, refactoring, and so on. Sometimes branches
-are referred to as topic branches to highlight their focused, short lived scope.
+Branching allows anyone to manage changes that should not block the main branch stability. Long lived branches are usually a bad idea and should be discarded as soon as possible to avoid larger merge conflicts due to drift. Branches usually represent different types of shorter lived work: experiments, a bug fix, a new feature, refactoring, and so on. Sometimes branches are referred to as topic branches to highlight their focused, short lived scope.
 
-You can create a branch in a repo, make some changes there, and commit changes onto your topic branch.
-It is ideal to merge changes from master onto your branch periodically
-to keep it up to date and minimize conflicts down the line.
-The final stage of a branch lifecycle is to merge your branch to master, then delete the topic branch.
+You can create a branch in a repo, make some changes there, and commit changes onto your topic branch. It is ideal to merge changes from master onto your branch periodically to keep it up to date and minimize merge conflicts down the line.
+The final stage of a branch lifecycle is to merge your branch to master and then delete the topic branch.
 
-https://agripongit.vincenttunru.com/
+A nice visualization of branching: https://agripongit.vincenttunru.com/
 
-Branching is not an advanced topic and it is easy with git.
-However, merge conflicts will always be a challenge and usually require talking to people. :)
+Branching is not an advanced topic and it is easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :)
 In other revision control systems, branches could be used to indicate and preserve
 the state of the repo for a release, but git can accommodate this with a simple tag
 applied to a commit.
 
-We can talk about gitflow, etc. for branch strategies.
+We can talk about different branch strategies:
 - https://nvie.com/posts/a-successful-git-branching-model/
 - https://guides.github.com/introduction/flow/
 
@@ -488,8 +486,7 @@ Let's look at https://github.com/nutanixworkshops/stageworkshop and review all o
 
 # GitOps: the Convergence of Dev+Ops
 
-We saw the benefit of git operations on our repo in the example: it replayed a file update and file move.
-When every system has a REST API, automation of every operation can be possible, removing pet ops.
+We saw the benefit of git operations on our repo in the example: it replayed a file update and file move. Today, when every system has a REST API, automation of every operation can be possible, removing pet ops.
 
 - No human touching anything BUT git!
   - Every configuration is under revision control
@@ -503,7 +500,7 @@ When every system has a REST API, automation of every operation can be possible,
   - 2018-08-21: [weave.works/blog/what-is-gitops-really](https://www.weave.works/blog/what-is-gitops-really)
 
 # Learn Git Safely
-1. Work locally until comfortable with the basics #failfastfixfast
+1. Work locally until comfortable with the basics. #failfastfixfast
   - git status and git log are your friends and provide sanity checks
   - I use status frequently: `alias gits='git status --short --branch && echo'`
     and I've adjusted my shell prompt to reflect it as well!
@@ -511,8 +508,6 @@ When every system has a REST API, automation of every operation can be possible,
   - Isolate your pets to environment variables:
     - No credentials, ever.
     - No host names, no IP addresses, no usernames.
-  - See [The 12 Factor App](https://12factor.net/) for ideal designs.
-    - See Kelsey Hightower's response: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
 3. Create a private repo on a Git host
    - GitHub, GitLab, BitBucket, Azure DevOps, Sourceforge, etc.
    - Host your own: [Gitea](https://en.wikipedia.org/wiki/Gitea), etc.
@@ -532,11 +527,7 @@ Constantly look how to make your pet work become 100X more effective as cattle w
 I will continue to publish updates as I flush out and refine this material.
 
 In the initial demo, I contrasted a filesystem rename to a git mv operation
-(I joked that this was the first step to GitOps),
-then repointed HEAD to an earlier point in time (detached HEAD situation, almost a branch),
-and made a change to that file (before it was renamed).
-When I went back to master branch and merged the short hash of the detached HEAD,
-we saw that the file changed AND was renamed (*e.g.:* a git pull fast forward).
+(I joked that this was the first step to GitOps), then repointed HEAD to an earlier point in time (detached HEAD situation, almost a branch), and made a change to that file (before it was renamed). When I went back to master branch and merged the short hash of the detached HEAD, we saw that the file changed AND was renamed (*e.g.:* a git pull fast forward).
 
 Finish [#collaboration-pulls-forks-and-submodules](#collaboration-pulls-forks-and-submodules)
 

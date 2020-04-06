@@ -39,7 +39,7 @@ Given that developer environments vary, their local development build results ca
 * __maintained and consistent:__ up to date facilities are also placed under change control so that the environment does not drift from a known good configuration
 * __official and centralized:__ allowing the organization to converge and manage their methodology and policies
 
-As the next stage in the software delivery pipeline after the software repository, build systems can expand to incorporate additional organizational processes. However, build systems are often ignorant of the entire software development life cycle and require significant investment to customize, thereby concentrating risk, complexity, and dependencies for an engineering organization. As suggested above, centralized build systems can represent contention between official and local developer builds. Optimizing build systems and refactoring the software development life cycle pipeline should be a DevOps exercise in order to address all organizational needs, suggesting yet another future blog entry, but let us return to the topic of continuous integration.
+As the next stage in the software delivery pipeline after the software repository, build systems can expand to incorporate additional organizational processes. However, build systems are often ignorant of the entire software development life cycle and require significant investment to customize, thereby concentrating risk, complexity, and dependencies for an engineering organization. As suggested above, centralized build systems can represent contention between official and local developer builds. Optimizing build systems and refactoring the software development life cycle pipeline should be a DevOps exercise in order to address all organizational needs, *suggesting yet another future blog entry,* but let us return to the topic of continuous integration.
 
 # Continuous Integration #
 
@@ -89,7 +89,7 @@ Many organizations take the next step to incorporate CI as a pre-commit check, b
 
 However, pre-commit CI build checks still fall short of achieving DevOps agility when considering the entire software development life cycle. A passing build does not guarantee software quality or the ability to be delivered until those dimensions are exercised, leading to the next section, “Continuous Integration Testing” which extends the software delivery pipeline to enable next generation CI, continuous delivery, and deployment.
 
-The traditional software engineering organization uses the successful build results (called build artifacts) on their build system as an artifact repository where they are handed off to testing and operations teams to consume. There exists an entire industry category for software distribution of build artifacts and management, but we will defer that discussion for another blog entry.
+The traditional software engineering organization uses the successful build results (called build artifacts) on their build system as an artifact repository where they are handed off to testing and operations teams to consume. There exists an entire industry category for software distribution of build artifacts and management, *but we will defer that discussion for another blog entry.*
 
 The testing and quality assurance teams consume the build artifacts to assess the quality of the features across the permutations of platforms for delivery. However, the existence of manual hand offs to testing and later to operation teams signals the need for DevOps evangelism when we hear “my work built fine, so there is no problem as far as I am concerned!” Before the days of DevOps, traditional testing happens before any operations and deployment considerations were addressed.
 
@@ -151,7 +151,7 @@ Continuous delivery is the deployment of a fully orchestrated application instan
 
 What is the difference between Continuous Delivery and Continuous Deployment? Ideally, very little except for test scope and destination.
 
-Application integration testing is an example of continuous delivery to test application environment. Each test environments should be treated as short-lived, ephemeral instances so that each test is isolated and no state passes between test environments. Once a build passes the optimized application integration test, the process could repeat that application deployment to a longer lived instance for manual and long term test runs (for full integration, performance, longevity, etc. testing) and this would be continuous delivery to a test application environment for the QA/test teams.
+Application integration testing is an example of continuous delivery to a test application environment. Each test environment should be treated as short-lived, ephemeral instances (cattle) so that each test is isolated and fully reproducible, prevent corruption because no state can be passed between (pet) test environments. Once a build passes the optimized application integration test, the process could repeat that application deployment to a longer lived instance for manual and long term test runs (for full integration, performance, longevity, etc. testing) and this would be continuous delivery to a test application environment for the QA/test teams.
 
 Longer lived test environment instances represent an infrastructure management challenge that an organization will decide based on the need to perform forensics, preserve reproducible bugs, and hand off to teams to perform manual tests. All of these represent automation friction which can prevent or block ephemeral continuous delivery and another call for DevOps evangelism!
 
@@ -159,5 +159,4 @@ If exhaustive application integration testing passes, then continuous delivery c
 
 # Postscript 2018-04-13: Netscape Tinderbox #
 
-When I started work for Netscape in 1996, it was the first time I had worked for a software company. I had not realized that a continuous integration build server was something fairly new: *Tinderbox* merely existed and it made perfect sense for release engineering to identify broken builds. A recent article pointed me to a reference which reveals this was not the case, [it was pioneering work](
-https://oduinn.com/2014/06/04/farewell-to-tinderbox/)!
+When I started work for Netscape in 1996, it was the first time I had worked for a software company. I had not realized that a continuous integration build server was something fairly new: *Tinderbox* merely existed and it made perfect sense for release engineering to identify broken builds. A recent article pointed me to a reference which reveals this was not the case, [it was pioneering work](https://oduinn.com/2014/06/04/farewell-to-tinderbox/)!
