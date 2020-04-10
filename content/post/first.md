@@ -30,11 +30,11 @@ Recently, I discovered [MkDocs](http://www.mkdocs.org/) for "Project documentati
  exercise in transferring most of the standard content management system functionality into
  smaller tools and libraries which inverts the work flow from typing content into a WYSIWYG
  form-based editor to add formatting to simple markdown during writing.
- I think the journey was be worth it because I caught glimpses which validate this efficient approach:
+ I think the journey was worth it because I caught glimpses which validate this efficient approach:
 
 - I can blog from the command line and presumably anywhere (including my phone) with some setup.
 - I can test the build of my content, templates, and enhanced work on those elements.
-- Everything under revision control, therefore: blog + content = testable software!
+- Everything under revision control, therefore blog + content = testable software!
 
 ### A Static Web CMS?
 
@@ -97,3 +97,7 @@ Self hosted, open source alternatives (from https://gohugo.io/content-management
 - https://utteranc.es/ (uses GitHub issues)
 - https://posativ.org/isso/docs/
 - https://github.com/debiki/talkyard-prod-one
+
+## Postscript: 2020-04-10 ##
+
+Time to investigate https://jamstack.org/best-practices and https://jamstack.wtf/, I like the principles of the project.
