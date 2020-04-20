@@ -1,5 +1,5 @@
 ---
-tags: ['git', 'operators', 'tutorial', 'version-control']
+tags: ['git', 'operators', 'GitOps', 'tutorial', 'version-control']
 date: "2020-03-25T15:15:18-05:00"
 title: "Version Control for Operators"
 ---
