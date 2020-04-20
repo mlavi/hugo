@@ -7,9 +7,9 @@ Version Control is an essential tool making your work reproducible and visible,
 which can unlock profound amplifying effects of your contributions. As operators
 grow into developers, they can build toward state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
-__Note:__ I use revision control and version control interchangeably because they are synonyms.
+__Note:__ I use revision control and version control terms interchangeably because they are synonyms.
 
-> Side bar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
+> Sidebar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
 
 # Overview: Why do we need Version Control?
 
@@ -37,23 +37,15 @@ which can be summarized as pet vs. cattle improvements:
   - new use cases discovered, new features contributed
   - community implications and the economy of attention
 
-Understanding version control gives you a new perspective on social systems.
-You can look at operations, scientific journals, and social coding
-through this lens and see the same pattern. Point to point communication and artifacts are bespoke and tactical, contrasted to strategic, repeatable, scalable processes to improve results. People regularly approximate version control all over the place.
+>Sidebar: In hindsight, I was lucky enough to start my first year of colleage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and a luxury I expect.
 
-Sidebar: In hindsight, I was lucky enough to start my first year of colleage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and a luxury I expect.
+Revision control is an essential tool to manage change, collaboration, and scale work efforts, preventing inefficient overhead of workarounds and point to point synchronization. Most operators don't realize that [GitOps](#gitops-the-convergence-of-devops) represents their future, but I see it as a refinement of and progression past [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) for "invisible ops."
 
-Revision control is an essential tool to manage change, collaboration,
-and scale work efforts, preventing inefficient overhead of abandoned workarounds
-and point to point synchronization.
-Most operators don't realize that [GitOps](#gitops-the-convergence-of-devops)
-represents their future, but I see it as a refinement of and progression past
-[CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/)
-for "invisible ops."
+## Example Problems and Approximating Version Control
+
+Understanding version control gives you a new perspective on social systems. You can look at operations, scientific journals, and social coding through this lens and see the same pattern. Point to point communication and artifacts are bespoke and tactical, contrasted to strategic, repeatable, scalable processes to improve results. People regularly approximate version control all over the place.
 
 > Humor sidebar: [Journal of Irreproducible Results](https://en.wikipedia.org/wiki/Journal_of_Irreproducible_Results)
-
-## Examples of the Problem and Need
 
 What follows is a combination of rants and constructive criticism, *e.g.:*
 
@@ -77,11 +69,8 @@ What follows is a combination of rants and constructive criticism, *e.g.:*
     - Sent calendar invites to the team for the furlough weeks.
     - Share your vacation as an invite to the team as a "free" time.
 - Collaborative work:
-  - Question: I need your help on this {RFP, message, presentation}, here it is in email:
-    communication-v2-wednesday-myname.
-  - Answer: Can we collaborate via Google Drive or Onedrive,
-    which might also have passive version control built in
-    to avoid passing the baton *sync* problems?
+  - Question: I need your help on this {RFP, message, presentation}, here it is in email: `communication-v2-wednesday-myname`.
+  - Answer: Can we collaborate via Google Drive or Onedrive, which might also have passive version control built in to avoid passing the baton *sync* problems?
 - Software defects:
   - Question: I found a bug, let me verbally report it in #productname channel.
   - Answer: If you do not have JIRA training or access, that is fine.
@@ -101,8 +90,7 @@ What follows is a combination of rants and constructive criticism, *e.g.:*
 
 # Poll: Know your Peers
 
-So I asked my colleagues via a
-[poll in #xpert-automation (population 242)](https://nutanix.slack.com/archives/G4088HLAF/p1585093304150000):
+I asked my colleagues via a [poll in #xpert-automation (population 242)](https://nutanix.slack.com/archives/G4088HLAF/p1585093304150000):
 "I can collaborate using public Git:"
 - Of 16 responses, ~1/3 request training
 - the remainder list their public repos:
@@ -225,6 +213,7 @@ https://en.wikipedia.org/wiki/Comparison_of_version-control_software#History_and
 - GTS 2020: [CI/CD Lab with Calm+Karbon](https://nutanix.handsonworkshops.com/workshops/73114240-32b0-4999-b9c9-42bdc02dc5bb/view/calm_karbon_cicd/calm_karbon_cicd/)
 
 # FAQ
+
 Q: Can you give an example of how Git helps a Sales Engineer (or operator)?
 A: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section,
    where the bootcamp automation scripts save SEs multiple hours for any demo or
@@ -245,11 +234,8 @@ A: It depends on the context: if you are completely local for your private use, 
    to prevent spillover from becoming a file host provider
    (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
 
-Q: If we shouldn't store credentials and other hard coded pets in revision control,
-   where should they go?
-A: It depends what the best source of truth should be for each pet.
-   Because you have revision control, you can safely refactor towards improving your
-   processes and easily revert any experiment as you learn.
+Q: If we shouldn't store credentials and other hard coded pets in revision control, where should they go?
+A: It depends what the best source of truth should be for each pet. Because you have revision control, you can safely refactor towards improving your processes and easily revert any experiment as you learn.
 
    So try to answer each question, how do you manage your cattle of:
    - IP addresses: try to move to DHCP and IPAM systems to get rid of them.
@@ -264,9 +250,9 @@ A: It depends what the best source of truth should be for each pet.
         - etc.
     - See [The 12 Factor App](https://12factor.net/) for ideal design principles.
       - Kelsey Hightower's response/examples: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
+
 Q: How does one decide on project repo organization?
-A: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything
-   versus fragmentation over too many repos. There is a project life cycle to consider as well.
+A: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything versus fragmentation over too many repos. There is a project life cycle to consider as well.
 
 ## Pet Passwords
 
@@ -290,9 +276,7 @@ See the [Postscript: Securing Pets in Git](#2020-04-19-securing-pets-in-git) for
 
 Our first git kata will be simple: consume a public repo.
 
-First, get git! :) There are multiple ways and it might be built into your IDE already.
-We will use the official git CLI because it can makes things explicit, which a GUI or defaults can hide,
-or worse, there may be basic git operations that some GUIs cannot easily handle.
+First, get git! :) There are multiple ways and it might be built into your editor or IDE: Integrated Development Environment already. We will use the official git CLI because it can makes things explicit, which a GUI or defaults can hide, or worse, there may be basic git operations that some GUIs cannot easily handle.
 
 We will skip basic setup of credentials and use a fully public code repository,
 *e.g.:* https://github.com/nutanix/calm-dsl
@@ -408,9 +392,7 @@ Working with a remote repo is as simple as fetch and pull to synchronize state "
 
 ![basic-remote-usage.svg](/MarkLodato/visual-git-guide/basic-remote-usage.svg)
 
-Hosted git providers generally organize repositories with a organization/team/group
-and then the project repo under them, *e.g.:* nutanix/blueprints.
-For personal projects, your username is the organization, *e.g.:* mlavi/demoproject
+Hosted git providers generally organize repositories with a organization/team/group and then the project repo under them, *e.g.:* nutanix/blueprints. For personal projects, your username is the organization, *e.g.:* mlavi/demoproject
 
 - Create a project in Gitlab, *e.g.:* demoproject = https://gitlab.com/mlavi/demoproject
 
@@ -448,10 +430,7 @@ For personal projects, your username is the organization, *e.g.:* mlavi/demoproj
 
 # Branches
 
-We've seen that every repo is initialized with a default branch named master
-(unless specified otherwise). It is sometimes called the mainline branch
-and while it is arbitrarily important, but by convention for many projects,
-it is where attention is focused to keep it stable from risky changes.
+We've seen that every repo is initialized with a default branch named master (unless specified otherwise). It is sometimes called the mainline branch and while it is arbitrarily important, but by convention for many projects, it is where attention is focused to keep it stable from risky changes.
 
 Branching allows anyone to manage changes that should not block the main branch stability. Long lived branches are usually a bad idea and should be discarded as soon as possible to avoid larger merge conflicts due to drift. Branches usually represent different types of shorter lived work: experiments, a bug fix, a new feature, refactoring, and so on. Sometimes branches are referred to as topic branches to highlight their focused, short lived scope.
 
@@ -460,10 +439,8 @@ The final stage of a branch lifecycle is to merge your branch to master and then
 
 A nice visualization of branching: https://agripongit.vincenttunru.com/
 
-Branching is not an advanced topic and it is easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :)
-In other revision control systems, branches could be used to indicate and preserve
-the state of the repo for a release, but git can accommodate this with a simple tag
-applied to a commit.
+Branching is not an advanced topic and it is easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :) In other revision control systems, branches could be used to indicate and preserve
+the state of the repo for a release, but git can accommodate this with a simple tag applied to a commit.
 
 We can talk about different branch strategies:
 - [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/): for more traditional software engineering release models
@@ -474,8 +451,7 @@ https://en.wikipedia.org/wiki/Conway%27s_law
 
 # Collaboration: Pulls, Forks, and Submodules
 
-Take a look at this diagram from [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project): ![Small Team Flow](https://git-scm.com/book/en/v2/images/small-team-flow.png)
-and diagrams in [Distributed Git - Distributed Workflows](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
+Take a look at this diagram from [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project): ![Small Team Flow](https://git-scm.com/book/en/v2/images/small-team-flow.png) and diagrams in [Distributed Git - Distributed Workflows](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
 
 Let's look at https://github.com/nutanixworkshops/stageworkshop and review all of the: [forks](https://github.com/nutanixworkshops/stageworkshop/network/members), [pulls](https://github.com/nutanixworkshops/stageworkshop/pulls?q=is%3Apr+is%3Aclosed), [contributors](https://github.com/nutanixworkshops/stageworkshop/graphs/contributors).
 
@@ -525,8 +501,7 @@ Constantly look how to make your pet work become 100X more effective as cattle w
 # 2020-04-01: Postscript and Appendix TODO
 I will continue to publish updates as I flush out and refine this material.
 
-In the initial demo, I contrasted a filesystem rename to a git mv operation
-(I joked that this was the first step to GitOps), then repointed HEAD to an earlier point in time (detached HEAD situation, almost a branch), and made a change to that file (before it was renamed). When I went back to master branch and merged the short hash of the detached HEAD, we saw that the file changed AND was renamed (*e.g.:* a git pull fast forward).
+In the initial demo, I contrasted a filesystem rename to a git mv operation (I joked that this was the first step to GitOps), then repointed HEAD to an earlier point in time (detached HEAD situation, almost a branch), and made a change to that file (before it was renamed). When I went back to master branch and merged the short hash of the detached HEAD, we saw that the file changed AND was renamed (*e.g.:* a git pull fast forward).
 
 Finish [#collaboration-pulls-forks-and-submodules](#collaboration-pulls-forks-and-submodules)
 
@@ -563,4 +538,4 @@ For the second stage, I searched for an off-line password manager for storing cr
 
 I will elaborate on the search candidates and stack rank ordering another time, but [KeepassXC](https://keepassxc.org) satisfied most of my requirements and won my loyalty due to design values, regular updates, and an [endorsement by the EFF](https://ssd.eff.org/en/module/how-use-keepassxc). While the credential file store is encrypted by pass phrase (Transcrypt doubly protects it for some defense in depth), it derives from a well known file format, allowing alternative GUI and web browser plug-in/extensions. Finally, the app fairly gracefully handles changes from file sync and I have gotten my conflict resolution process under control. So I have been happy to continually refactor my hard-coded pets into the credential file store and leverage updates across several machines and apps.
 
-Finally, not only are my secrets portable across machines and apps, but now I've begun to generate pet configuration files to populate environment variables from my store. This keeps pets out of binaries, configuration files, and Git as much as possible! It is a matter of time to drive this effort towards LDAP, Kerberos, Vault, etc. for service based pets and ephemeral, dynamic session tokens and passwords with audit logs.
+Finally, not only are my secrets portable across machines and apps, but now I've begun to generate pet configuration files to populate environment variables from my store. This keeps pets out of binaries, configuration files, and Git as much as possible! It is a matter of time to drive this effort towards LDAP, Kerberos, Vault, etc. for service based pets and ephemeral, dynamic session tokens and passwords with audit logs as listed in [pet password](#pet-passwords).
