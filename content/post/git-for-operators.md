@@ -492,10 +492,10 @@ We saw the benefit of git operations on our repo in the example: it replayed a f
 
 # Conclusion
 
-Constantly look how to make your pet work become 100X more effective as cattle work.
+Constantly look how to make your pet work become 100X more effective as cattle.
 - Adopt the mantra: "Git or it didn't happen."
-- Refactor your lifestyle for reproducible cattle!
-- Drive towards achieving GitOps, most of the world doesn't know about it yet!
+- Refactor your lifestyle for reproducible cattle processes!
+- Drive towards GitOps, most of the world doesn't know about it yet!
 
 ---
 # 2020-04-01: Postscript and Appendix TODO
@@ -524,7 +524,7 @@ graph TD
 
 # 2020-04-19: Securing Pets in Git
 
-I began my [Dotfiles](https://github.com/webpro/awesome-dotfiles) journey when I began refactoring my work from a Macbook Air to a Dell XPS running Linux Mint (akin to the XPS Developer Edition/Project Sputnik). I love the Mac, but the battery and keyboard were failing, and I had wanted to make Linux my primary OS for years. I prepared by driving towards cross-platform, web, and open source applications as much as possible.
+I began my [Dotfiles](https://github.com/webpro/awesome-dotfiles) journey when I began refactoring my work from a Macbook Air to a Dell XPS running [Linux Mint](https://www.linuxmint.com/) (akin to the XPS Developer Edition/Project Sputnik). I love the Mac, but the battery and keyboard were failing, and I had wanted to make Linux my primary OS for years. I prepared by driving towards cross-platform, web, and open source applications as much as possible.
 
 I had been successful making my home directory portable across OS updates on my Linux desktop, making my data somewhat OS version independent. Rather than just migrate with a one-time lift and shift from Mac to Linux, it took time to make my work portable. I ended up where I could go back and forth between laptops as needed to have the best of both worlds. e.g.: I still need the Mac for PowerPoint, but I may get around that with Frame IT desktop, dual-booting to Windows, or running a Windows VM.
 
