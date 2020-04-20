@@ -13,25 +13,15 @@ __Note:__ I use revision control and version control interchangeably because the
 
 # Overview: Why do we need Version Control?
 
-Let me ask a very simple question: are you the same person you were last year?
-last month? last second?
+Let me ask a very simple question: are you the same person you were last year? How about last month? How are you different now from one second ago?
 
-This is a deeply philosophical question, addressed by maintenance on the
-[Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
+This is a deeply philosophical question, addressed by maintenance on the [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
 
-Change is eternal, even when a single individual is involved through time.
-*e.g.:* I can't be relied upon to memorize, expire, and update a unique
-[pet password](#pet-passwords) for every account on every VM on every cluster
-in every infrastructure provider for every project I work on!
-Complexity multiplies with additional people
-Hence [change management](https://en.wikipedia.org/wiki/Change_management) is an
-essential discipline for operators. Unfortunately, many operators do not
-utilize version control and rely on pet ops and backups for change management.
+Change is eternal, even when a single individual is involved through time. *e.g.:* I can't be relied upon to memorize, expire, and update a unique [pet password](#pet-passwords) for every account on every VM on every cluster in every infrastructure provider for every project I work on! Complexity multiplies with additional people, hence [change management](https://en.wikipedia.org/wiki/Change_management) is an essential discipline for operators. Unfortunately, many operators do not utilize version control and rely on pet ops and backups for change management.
 
 Version control makes our work:
-- reproducible: the essential characteristic of scientific method
-- historical: full point in time recovery
-- full attribution of change is recorded, *i.e.:* who did what
+- reproducible: an essential characteristic of the scientific method
+- historical: full point in time recovery with full attribution of change is recorded, *i.e.:* who did what and when
 - metrics can be derived from the corpus: Lines of Code (LoC), etc.
   enabling process engineering
 - shareable for collaboration: democratization of work
@@ -563,7 +553,7 @@ I began my [Dotfiles](https://github.com/webpro/awesome-dotfiles) journey when I
 
 I had been successful making my home directory portable across OS updates on my Linux desktop, making my data somewhat OS version independent. Rather than just migrate with a one-time lift and shift from Mac to Linux, it took time to make my work portable. I ended up where I could go back and forth between laptops as needed to have the best of both worlds. e.g.: I still need the Mac for PowerPoint, but I may get around that with Frame IT desktop, dual-booting to Windows, or running a Windows VM.
 
-Dotfiles are primarily text, therefore revision control is a more logical choice over file sync. As soon as I settled on a [dotfile manager](https://github.com/webpro/awesome-dotfiles), I began to put my work into a Git repo. The first dotfile manager I tried had GPG encryption; I didn't stick with it long enough to take advantage of that feature. However, it set a valuable expectation for transparent encryption. I continued to document my Mac setup, placing it under local revision control. As I placed more into the repo, I eventually added and pushed to a hosted, remote, private repo to and test my work on the Linux laptop.
+Dotfiles are primarily text, therefore revision control is a more logical choice over file sync for collaboration across machines and for backups. As soon as I settled on a [dotfile manager](https://github.com/webpro/awesome-dotfiles), I began to put my work into a Git repo. The first dotfile manager I tried had GPG encryption; I didn't stick with it long enough to take advantage of that feature. However, it set a valuable expectation for transparent encryption. I continued to document my Mac setup, placing it under local revision control. As I placed more into the repo, I eventually added and pushed to a hosted, remote, private repo to and test my work on the Linux laptop.
 
 For my standards, a private, remote repo and security in transit wasn't enough to secure valuable information. I had lots of valuable pets such as: username, password, IP address, hostname, account number, install location path names, etc. I wanted to prevent accidental leakage of secrets and I tackled the problem in two stages.
 
