@@ -53,6 +53,8 @@ We will address the second in a moment, but let's explore the first functional e
 
 An operations manager required tools to be compatible with their staff of "YAML developers." This certainly was an indication of automation success, but it was also a tacit admission of tunnel vision and state of their programming skills. First, JSON is a subset of YAML, many tools exist for bi-directional conversion, therefore there can be transformation between data formats: so a choice of data format could and should be arbitrary. Second, any transformation will not likely accommodate work between engines, revealing the operations manager probably conflated data format and engine. This realization brings us to the next level of strategic understanding: the platform.
 
+> "How do we prevent becoming the next COBOL engineer?"
+
 Even when an automation engine is open source, it is effectively a "black box" which cannot be customized without drifting out of the support model, thereby driving the burden of maintenance and availability back to the customer. We seee this over and over with ERP and CRM systems like Oracle EBS and SAP, even SaaS systems such as SalesForce: all of them become some customized and extended that they become wholly proprietary, extremely hard to leave, and have a much larger maintenance burden. Innovating on
 
 while new plug-ins extend the capability of the engine and require corresponding investment to configure in the data format to harness. Both dimensions change the investment from a simple tool choice into a proprietary platform, dependent on a partnership of in-house skills and third party vendors, who may operate under open-source community support models.

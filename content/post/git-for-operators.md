@@ -49,10 +49,9 @@ which can be summarized as pet vs. cattle improvements:
 
 Understanding version control gives you a new perspective on social systems.
 You can look at operations, scientific journals, and social coding
-through this lens and see the same pattern.
-You will also look at point to point communication and artifacts as bespoke and tactical,
-contrasted to strategic, repeatable, scalable processes to improve results.
-You will also see how people try to approximate version control all over the place.
+through this lens and see the same pattern. Point to point communication and artifacts are bespoke and tactical, contrasted to strategic, repeatable, scalable processes to improve results. People regularly approximate version control all over the place.
+
+Sidebar: In hindsight, I was lucky enough to start my first year of colleage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and a luxury I expect.
 
 Revision control is an essential tool to manage change, collaboration,
 and scale work efforts, preventing inefficient overhead of abandoned workarounds
@@ -245,14 +244,11 @@ A: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules)
    saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
 
 Q: Is git (or any revision control system) good for storing large files: videos, pictures, etc.
-A: It depends on the context: if you are completely local for your private use, go for it,
-   however there are systems like git-annex that are better suited for git to manage the
-   (textual) metadata of large files across multiple file sources and backups.
+A: It depends on the context: if you are completely local for your private use, go for it! However there are systems like [Git Large File Storage](https://git-lfs.github.com/) and [git-annex](https://git-annex.branchable.com/) that are better suited for git to manage the (textual) metadata of large files across multiple file sources and backups.
 
    Ultimately, the answer is no: revision control is best suited for text files
    (source code, configuration, scripts, documentation, etc.), not BLOBs to deal
-   with textual diffs and merges. So store the procedure to build the application,
-   not the application binary or libraries, in git.
+   with textual diffs and merges. So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries.
    You will see public git host providers restrict the size of an individual
    file in a repo and sometimes the total size of a repo to enforce these rules
    in order to keep their SLAs. free tier, and capacity planning as well as
@@ -294,7 +290,10 @@ Death to the static password on one user login on one OS, work to move or drive 
   - SSH keys, then ephemeral keys
   - from credentials to dynamic, session tokens (JWT, etc.)
 
+See the [Postscript: Securing Pets in Git](#2020-04-19-securing-pets-in-git) for my journey in some more detail!
+
 ---
+
 # Git Tutorial
 
 ## First steps with git (completely local and safe)
@@ -557,3 +556,21 @@ graph TD
   C --> F;
 
 ```
+
+# 2020-04-19: Securing Pets in Git
+
+I began my [Dotfiles](https://github.com/webpro/awesome-dotfiles) journey when I began refactoring my work from a Macbook Air to a Dell XPS running Linux Mint (akin to the XPS Developer Edition/Project Sputnik). I love the Mac, but the battery and keyboard were failing, and I had wanted to make Linux my primary OS for years. I prepared by driving towards cross-platform, web, and open source applications as much as possible.
+
+I had been successful making my home directory portable across OS updates on my Linux desktop, making my data somewhat OS version independent. Rather than just migrate with a one-time lift and shift from Mac to Linux, it took time to make my work portable. I ended up where I could go back and forth between laptops as needed to have the best of both worlds. e.g.: I still need the Mac for PowerPoint, but I may get around that with Frame IT desktop, dual-booting to Windows, or running a Windows VM.
+
+Dotfiles are primarily text, therefore revision control is a more logical choice over file sync. As soon as I settled on a [dotfile manager](https://github.com/webpro/awesome-dotfiles), I began to put my work into a Git repo. The first dotfile manager I tried had GPG encryption; I didn't stick with it long enough to take advantage of that feature. However, it set a valuable expectation for transparent encryption. I continued to document my Mac setup, placing it under local revision control. As I placed more into the repo, I eventually added and pushed to a hosted, remote, private repo to and test my work on the Linux laptop.
+
+For my standards, a private, remote repo and security in transit wasn't enough to secure valuable information. I had lots of valuable pets such as: username, password, IP address, hostname, account number, install location path names, etc. I wanted to prevent accidental leakage of secrets and I tackled the problem in two stages.
+
+For the first stage, I researched GPG and wanted to coordinate that with e-mail (which is an ongoing project). I settled on an easier initial step with transparent, team-based git encryption: [Transcrypt](https://github.com/elasticdog/transcrypt) is open source and cross platform enough. :) This solution allowed me to safely add my pet files with hard coded work while I continued to refactor them in the second stage.
+
+For the second stage, I searched for an off-line password manager for storing credentials and other confidential information for all my pets! I didn't want to trust an online, cloud, SaaS service to accidentally breach my secrets, e.g.: this happens regularly with credit cards. Furthermore, it was important that the app was open source, cross platform, and had web browser integration. This would allow me to refactor everything into a common store: all pet credentials, in a pet profile, in a pet browser, under a pet account, on a pet OS.
+
+I will elaborate on the search candidates and stack rank ordering another time, but [KeepassXC](https://keepassxc.org) satisfied most of my requirements and won my loyalty due to design values, regular updates, and an [endorsement by the EFF](https://ssd.eff.org/en/module/how-use-keepassxc). While the credential file store is encrypted by pass phrase (Transcrypt doubly protects it for some defense in depth), it derives from a well known file format, allowing alternative GUI and web browser plug-in/extensions. Finally, the app fairly gracefully handles changes from file sync and I have gotten my conflict resolution process under control. So I have been happy to continually refactor my hard-coded pets into the credential file store and leverage updates across several machines and apps.
+
+Finally, not only are my secrets portable across machines and apps, but now I've begun to generate pet configuration files to populate environment variables from my store. This keeps pets out of binaries, configuration files, and Git as much as possible! It is a matter of time to drive this effort towards LDAP, Kerberos, Vault, etc. for service based pets and ephemeral, dynamic session tokens and passwords with audit logs.
