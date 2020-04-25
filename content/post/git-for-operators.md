@@ -3,8 +3,7 @@ tags: ['git', 'operators', 'GitOps', 'tutorial', 'version-control']
 date: "2020-03-25T15:15:18-05:00"
 title: "Version Control for Operators"
 ---
-Version Control is an essential tool making your work reproducible and visible,
-which can unlock profound amplifying effects of your contributions. As operators
+Version Control is an essential tool making your work reproducible and visible, which can unlock profound amplifying effects of your contributions. As operators
 grow into developers, they can build toward state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
 __Note:__ I use revision control and version control terms interchangeably because they are synonyms.
@@ -22,13 +21,12 @@ Change is eternal, even when a single individual is involved through time. *e.g.
 Version control makes our work:
 - reproducible: an essential characteristic of the scientific method
 - historical: full point in time recovery with full attribution of change is recorded, *i.e.:* who did what and when
-- metrics can be derived from the corpus: Lines of Code (LoC), etc.
-  enabling process engineering
+- metrics can be derived from the corpus: Lines of Code (LoC), etc. enabling process engineering
 - shareable for collaboration: democratization of work
 
 Version control has amplifying network effects for work and communities
 which can be summarized as pet vs. cattle improvements:
-- re-purposed: as the basis of new work (fork, submodule)
+- re-purposed: as the basis of new work (see: [fork, submodule](#collaboration-pulls-forks-and-submodules))
 - incorporated: as a library or function or microservice of a bigger system
 - scope: private to self, private to group of contributors, or...
 - social: when public (with a public license), enables crowd sharing:
@@ -37,9 +35,9 @@ which can be summarized as pet vs. cattle improvements:
   - new use cases discovered, new features contributed
   - community implications and the economy of attention
 
->Sidebar: In hindsight, I was lucky enough to start my first year of colleage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and a luxury I expect.
-
 Revision control is an essential tool to manage change, collaboration, and scale work efforts, preventing inefficient overhead of workarounds and point to point synchronization. Most operators don't realize that [GitOps](#gitops-the-convergence-of-devops) represents their future, but I see it as a refinement of and progression past [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) for "invisible ops."
+
+>Sidebar: In hindsight, I was lucky enough to start my first year of colleage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and a luxury I expect.
 
 ## Example Problems and Approximating Version Control
 
@@ -109,9 +107,7 @@ and this tutorial started soon thereafter.
 
 # Glossary of Contextual Terms
 
-It is easiest to think of revision control as managing the changes to a project
-folder of text files, so I'll define terms in that context, however there are
-more formal and abstract answers for many of the following terms.
+It is easiest to think of revision control as managing the changes to a project folder of text files, so I'll define terms in that context, however there are more formal and abstract answers for many of the following terms.
 
 ## Generic
 
@@ -172,16 +168,13 @@ GitOps
 ## Public git hosting
 Fork
 : a linked copy/clone of a repo for collaboration without requiring commit access to a repo.
-  - It can be thought of a one way, entire repo branch/remote, but that's not entirely accurate
-  because although there is repo linkage (*e.g.:* this downstream fork is X commits behind upstream repo)
-  there is no requirement for coordination aside from initial access to create the fork. Example uses:
+  - It can be thought of a one way, entire repo branch/remote, but that's not entirely accurate because although there is repo linkage (*e.g.:* this downstream fork is X commits behind upstream repo) there is no requirement for coordination aside from initial access to create the fork. Example uses:
   - maintain an abandoned repo.
   - when there is a divorce in culture and separation of work.
 
 Pull request
 : process reconcile a fork and the upstream/original repo, a commit in the fork is targeted for merge.
-  - This starts a collaborative review process by the repo admins or their proxies
-  with potentially many stages of interaction resulting in partial or complete acceptance or rejection.
+  - This starts a collaborative review process by the repo admins or their proxies with potentially many stages of interaction resulting in partial or complete acceptance or rejection.
 
 # Revision Control History
 A progression from pets to cattle:
@@ -215,32 +208,20 @@ https://en.wikipedia.org/wiki/Comparison_of_version-control_software#History_and
 # FAQ
 
 Q: Can you give an example of how Git helps a Sales Engineer (or operator)?
-A: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section,
-   where the bootcamp automation scripts save SEs multiple hours for any demo or
-   experiment, preventing mistakes when setting up a new cluster for a bootcamp, Global Tech Summit, etc.
-   and were the basis or contributed to GTS2019 EMEA and APAC hackathon winners.
-   This work has paid off 10,000 times the investment, enabled thousands of SEs,
-   saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
+A: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section, where the bootcamp automation scripts save SEs multiple hours for any demo or experiment, preventing mistakes when setting up a new cluster for a bootcamp, Global Tech Summit, etc.
+   and were the basis or contributed to GTS2019 EMEA and APAC hackathon winners. This work has paid off 10,000 times the investment, enabled thousands of SEs, saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
 
 Q: Is git (or any revision control system) good for storing large files: videos, pictures, etc.
 A: It depends on the context: if you are completely local for your private use, go for it! However there are systems like [Git Large File Storage](https://git-lfs.github.com/) and [git-annex](https://git-annex.branchable.com/) that are better suited for git to manage the (textual) metadata of large files across multiple file sources and backups.
 
-   Ultimately, the answer is no: revision control is best suited for text files
-   (source code, configuration, scripts, documentation, etc.), not BLOBs to deal
-   with textual diffs and merges. So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries.
-   You will see public git host providers restrict the size of an individual
-   file in a repo and sometimes the total size of a repo to enforce these rules
-   in order to keep their SLAs. free tier, and capacity planning as well as
-   to prevent spillover from becoming a file host provider
-   (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
+   Ultimately, the answer is no: revision control is best suited for text files (source code, configuration, scripts, documentation, etc.), not BLOBs to deal with textual diffs and merges. So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries. You will see public git host providers restrict the size of an individual file in a repo and sometimes the total size of a repo to enforce these rules in order to keep their SLAs. free tier, and capacity planning as well as
+   to prevent spillover from becoming a file host provider (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
 
 Q: If we shouldn't store credentials and other hard coded pets in revision control, where should they go?
 A: It depends what the best source of truth should be for each pet. Because you have revision control, you can safely refactor towards improving your processes and easily revert any experiment as you learn.
 
    So try to answer each question, how do you manage your cattle of:
-   - IP addresses: try to move to DHCP and IPAM systems to get rid of them.
-      Remember this indicates the need to adopt the category of service discovery
-      and service addressing (DNS) solutions.
+   - IP addresses: try to move to DHCP and IPAM systems to get rid of them. Remember this indicates the need to adopt the category of service discovery and service addressing (DNS) solutions.
    - Passwords: see [Pet Passwords](#pet-passwords), below. Markdown doesn't handle HTML anchors gracefully.
    - Binary artifacts: drive to
       - filers NFS/SBM/FTP/SFTP and filer hosting
@@ -284,41 +265,35 @@ We will skip basic setup of credentials and use a fully public code repository,
     git clone https://github.com/nutanix/calm-dsl.git
     git clone git@github.com:nutanix/calm-dsl.git # uses SSH
 
-I like to create a standard working area for my local repositories:
-~/Documents/$Provider/$Project/$Repo, *e.g.:*
+I like to create a standard working area for my local repositories: ~/Documents/$Provider/$Project/$Repo, *e.g.:*
 
 - Documents/github.com/nutanix/calm-dsl/
 - Documents/gitlab.com/nutanix-se/ansible/lcm-darksite-webserver
 - Documents/repo.local/mysecretprojects
 
 so it is not confusing when using GitHub, GitLab, or any other instance.
-I found a tool that helps me navigate and enforce this convention:
-[ghq](https://github.com/x-motemen/ghq),
+
+I found a tool that helps me navigate and enforce this convention: [ghq](https://github.com/x-motemen/ghq),
 *e.g.:* `ghq get nutanix/calm-dsl` versus `git clone https://github.com/nutanix/calm-dsl.git`.
 
-However, ghq defaults to https:// URLs, which can be a problem if you want to use SSH (git:) method,
-which is advisable for git hosting requiring two factor authentication.
+However, ghq defaults to https:// URLs, which can be a problem if you want to use SSH (git:) method, which is advisable for git hosting requiring two factor authentication.
 
-Now we have a local copy of the entire repository with it's full history.
-This means we can experiment with the repo any way we like, even revert our changes,
-and if we get in trouble, we can clone again. You are free and safe to make mistakes
-as you learn revision control. #failfastfixfast
+Once you have a local clone of the entire repository with it's full history, it is time to play. You can experiment with the repo any way you like, even revert changes and mistakes. If you get in any trouble, you can clone again. You are free and safe to make mistakes as you learn revision control. #failfastfixfast
 
 ## A simple round trip into history: no remotes or branches
 
-Our second git kata will start from scratch, this diagram from https://marklodato.github.io/visual-git-guide/index-en.html
-shows the basic cycle from:
-- files in local, working directory
+Our second git kata will start from scratch, this diagram from https://marklodato.github.io/visual-git-guide/index-en.html shows the basic cycle from:
+- files in the local, "working directory"
 - `git add` files to the stage
-- `git commit` files to the repository history
+- `git commit` files into the repository history
 - inspecting the commit history log
 
-There are some basic terms I want to introduce,
- see the [#glossary](#glossary-of-contextual-terms) for more detail:
+There are some basic terms I want to introduce, see the [#glossary](#glossary-of-contextual-terms) for more detail:
 - head: pointer to the latest commit
 - branch: we're going to see this used indirectly
 - commit hash: short and long form
 
+Because git uses sensible defaults, you will see some parameters indicated by italics, they are usually *optional*.
 ![Basic local cycle](https://marklodato.github.io/visual-git-guide/basic-usage.svg)
 
     mkdir demoproject && cd $_
@@ -388,9 +363,9 @@ There are some basic terms I want to introduce,
 
 ## Let's go public
 
-Working with a remote repo is as simple as fetch and pull to synchronize state "down" to your local repo before you push your changes "up" to the remote repo. You can specify your choice of destination or source remote and repo branch. __failfastfixfast:__ I am working on making this image clearer, *sorry for the blurriness!*
+Working with a remote repo is as simple as `git fetch` (which checks for updates) and `git pull` to synchronize state to your local repo before you push your changes to the remote repo. You can specify your choice of remote destination and branch. Because git uses sensible defaults, these parameters are usually *optional* (indicated by italics).
 
-![basic-remote-usage.svg](/MarkLodato/visual-git-guide/basic-remote-usage.svg)
+![basic-remote-usage.svg](/MarkLodato/visual-git-guide/basic-remote-usage.png)
 
 Hosted git providers generally organize repositories with a organization/team/group and then the project repo under them, *e.g.:* nutanix/blueprints. For personal projects, your username is the organization, *e.g.:* mlavi/demoproject
 
@@ -434,30 +409,40 @@ We've seen that every repo is initialized with a default branch named master (un
 
 Branching allows anyone to manage changes that should not block the main branch stability. Long lived branches are usually a bad idea and should be discarded as soon as possible to avoid larger merge conflicts due to drift. Branches usually represent different types of shorter lived work: experiments, a bug fix, a new feature, refactoring, and so on. Sometimes branches are referred to as topic branches to highlight their focused, short lived scope.
 
-You can create a branch in a repo, make some changes there, and commit changes onto your topic branch. It is ideal to merge changes from master onto your branch periodically to keep it up to date and minimize merge conflicts down the line.
-The final stage of a branch lifecycle is to merge your branch to master and then delete the topic branch.
+You can create a branch in a repo, make some changes there, and commit changes onto your topic branch. It is ideal to merge changes from master onto your branch periodically to keep it up to date and minimize merge conflicts down the line. The final stage of a branch life cycle is to merge your branch to master and then delete the topic branch.
 
 A nice visualization of branching: https://agripongit.vincenttunru.com/
 
-Branching is not an advanced topic and it is easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :) In other revision control systems, branches could be used to indicate and preserve
-the state of the repo for a release, but git can accommodate this with a simple tag applied to a commit.
+Branching is not an advanced topic and it is easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :) In other revision control systems, branches could be used to indicate and preserve the state of the repo for a release, but git can accommodate this with a simple tag applied to a commit.
 
 We can talk about different branch strategies:
 - [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/): for more traditional software engineering release models
 - GitHub Flow: [Overview](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) || [Source](https://guides.github.com/introduction/flow/)
 
-Remember, software is designed and it resembles the organizational structure:
-https://en.wikipedia.org/wiki/Conway%27s_law
+Remember, software is designed and it resembles the organizational structure: https://en.wikipedia.org/wiki/Conway%27s_law
+
+# Hooks
+
+Git can be extended in a few ways, aliases are simple to grasp to help save keystrokes. Hooks allow scripts to run in response to an event, such as a pre-commit check running a code guideline tool, generating documentation, validating work, performing a build, etc. If a hook invokes a remote service over the network, this becomes the origin of the term "web hook," and can be used to invoke local or remote build systems, CI/CD pipelines, SaaS, and more.
 
 # Collaboration: Pulls, Forks, and Submodules
 
-Take a look at this diagram from [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project): ![Small Team Flow](https://git-scm.com/book/en/v2/images/small-team-flow.png) and diagrams in [Distributed Git - Distributed Workflows](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
-
-Let's look at https://github.com/nutanixworkshops/stageworkshop and review all of the: [forks](https://github.com/nutanixworkshops/stageworkshop/network/members), [pulls](https://github.com/nutanixworkshops/stageworkshop/pulls?q=is%3Apr+is%3Aclosed), [contributors](https://github.com/nutanixworkshops/stageworkshop/graphs/contributors).
-
-With out of the box git, you get all or nothing access to the full repository contents: branches, tags, and history. The only manner to source external work is through [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), which can be challenging to maintain because they require manual synchronization, just like merges.
+With out of the box git, you get all or nothing access to the full repository contents: branches, tags, and history. The only manner to source external work inside a repo is through [git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). Submodule maintenance can be a little challenging because they require manual synchronization, they are just like merges.
 
 However, there are valuable extensions (not part of the git toolset) for distributed collaborative efforts of software projects by hosted git providers. RBAC: Role Based Access Control, such as read only versus contributor only on a certain branch. *To be confirmed:* Forks and pull requests are git provider specific.
+
+Take a look at this diagram from [Contributing to a Project](https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project): ![Small Team Flow](https://git-scm.com/book/en/v2/images/small-team-flow.png) and diagrams in [Distributed Git - Distributed Workflows](https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows).
+
+Let's look at https://github.com/nutanixworkshops/stageworkshop to review all of the:
+
+- [forks](https://github.com/nutanixworkshops/stageworkshop/network/members)
+  - this public repo has been forked multiple times (one parent, multiple child repos)!
+  - forks facilitate keeping in sync without needing to be a contributor on the parent repo
+- [pulls](https://github.com/nutanixworkshops/stageworkshop/pulls?q=is%3Apr+is%3Aclosed)
+  - pull requests can contribute changes back to the parent after review and acceptance: community coding!
+- [contributors](https://github.com/nutanixworkshops/stageworkshop/graphs/contributors)
+  - normally, this would only list the authors with commit access to the repo
+  - when a pull request is accepted, the parent code base benefits from the collaboration, enriched by non-committers.
 
 # GitOps: the Convergence of Dev+Ops
 
@@ -476,19 +461,26 @@ We saw the benefit of git operations on our repo in the example: it replayed a f
 
 # Learn Git Safely
 1. Work locally until comfortable with the basics. #failfastfixfast
-  - git status and git log are your friends and provide sanity checks
-  - I use status frequently: `alias gits='git status --short --branch && echo'`
-    and I've adjusted my shell prompt to reflect it as well!
-2. Learn about .gitignore and use it to:
-  - Isolate your pets to environment variables:
-    - No credentials, ever.
-    - No host names, no IP addresses, no usernames.
+
+    - `git status` and `git log` are your friends and provide sanity checks
+    - I use `git status` so frequently, I made a short cut: `alias gits='git status --short --branch && echo'` and I've adjusted my shell prompt to reflect it as well!
+
+2. Learn about `.gitignore` and use it to:
+
+    - Isolate your pets to environment variables:
+      - __No credentials, ever.__
+      - No host names, no IP addresses, no usernames.
+
 3. Create a private repo on a Git host
+
    - GitHub, GitLab, BitBucket, Azure DevOps, Sourceforge, etc.
    - Host your own: [Gitea](https://en.wikipedia.org/wiki/Gitea), etc.
+
 4. After practice, make your (hosted) repo public
+
 5. Work towards [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) and GitOps!
-5. #crowdsource and profit!!!
+
+5. __#crowdsource,__ make your work visible for social coding, and profit!!!
 
 # Conclusion
 
@@ -524,18 +516,18 @@ graph TD
 
 # 2020-04-19: Securing Pets in Git
 
-I began my [Dotfiles](https://github.com/webpro/awesome-dotfiles) journey when I began refactoring my work from a Macbook Air to a Dell XPS running [Linux Mint](https://www.linuxmint.com/) (akin to the XPS Developer Edition/Project Sputnik). I love the Mac, but the battery and keyboard were failing, and I had wanted to make Linux my primary OS for years. I prepared by driving towards cross-platform, web, and open source applications as much as possible.
+I began my [Dotfiles](https://github.com/webpro/awesome-dotfiles) journey when I began refactoring my work from a Macbook Air to a Dell XPS running [Linux Mint](https://www.linuxmint.com/) (akin to the XPS Developer Edition/Project Sputnik). I loved the Mac for many years, but the battery and keyboard were failing, and I had wanted to make Linux my primary OS. Over the years, I prepared by driving towards cross-platform, web, and open source applications as much as possible.
 
-I had been successful making my home directory portable across OS updates on my Linux desktop, making my data somewhat OS version independent. Rather than just migrate with a one-time lift and shift from Mac to Linux, it took time to make my work portable. I ended up where I could go back and forth between laptops as needed to have the best of both worlds. e.g.: I still need the Mac for PowerPoint, but I may get around that with Frame IT desktop, dual-booting to Windows, or running a Windows VM.
+I had been successful making my home directory portable across OS updates on my Linux desktop, making my data somewhat OS version independent. Rather than just migrate with a one-time lift and shift from Mac to Linux, I took the time to make my work portable and that effort continues. I ended up where I can go back and forth between laptops as needed, keeping my work and environments up to date, to have the best of both worlds. Today, I have few exceptions which anchor me to one or the other. e.g.: I still need the Mac for PowerPoint, but I may get around that with Frame IT desktop, dual-booting to Windows, or running a Windows VM.
 
-Dotfiles are primarily text, therefore revision control is a more logical choice over file sync for collaboration across machines and for backups. As soon as I settled on a [dotfile manager](https://github.com/webpro/awesome-dotfiles), I began to put my work into a local Git repo. The first dotfile manager I tried had GPG encryption; I didn't stick with it long enough to take advantage of that feature; however, it set a valuable expectation for transparent encryption. I continued to document my Mac setup, placing it under revision control. As I placed more into the local repo, I eventually added and pushed to a hosted, private repo to and test my work on the Linux laptop.
+Dotfiles are primarily text, therefore revision control is a more logical choice over file sync for collaboration across machines and for backups. As soon as I settled on a [dotfile manager](https://github.com/webpro/awesome-dotfiles), I began to put my work into a local Git repo. The first dotfile manager I tried had GPG encryption. I didn't stick with it long enough to take advantage of that feature; however, it set a valuable expectation for transparent encryption. I continued to document my Mac setup, placing it under revision control. As I placed more into the local repo, I eventually added and pushed to a hosted, private repo to and test my work on the Linux laptop.
 
 For my standards, a private hosted repo and security in transit wasn't enough to secure valuable information. I had lots of valuable pets such as: username, password, IP address, hostname, account number, install location path names, etc. I wanted to prevent accidental leakage of secrets and I tackled the problem in two stages.
 
 For the first stage, I researched GPG and wanted to coordinate that with e-mail (which is an ongoing project). I settled on an easier initial step with transparent, team-based git encryption: [Transcrypt](https://github.com/elasticdog/transcrypt) is open source and cross platform enough. :) This solution allowed me to safely add my pet files with hard coded work while I continued to refactor them in the second stage.
 
-For the second stage, I searched for an off-line password manager for storing credentials and other confidential information for all my pets! I didn't want to trust an online, cloud, SaaS service to accidentally breach my secrets, e.g.: this happens regularly with credit cards. Furthermore, it was important that the app was open source, cross platform, and had web browser integration. This would allow me to refactor everything into a common store: all pet credentials, in a pet profile, in a pet browser, under a pet account, on a pet OS.
+For the second stage, I searched for an off-line password manager for storing credentials and other confidential information for all my pets! I didn't want to trust an online, cloud, SaaS service to accidentally breach my secrets, e.g.: this happens regularly with credit cards. Furthermore, it was important that the app was open source, cross platform, and had web browser integration. This would allow me to refactor everything into a common store: all pet credentials, in a pet profile, in a pet browser, under a pet account, on a pet OS could finally become cattle.
 
-I will elaborate on the search candidates and stack rank ordering another time, but [KeepassXC](https://keepassxc.org) satisfied most of my requirements and won my loyalty due to design values, regular updates, and an [endorsement by the EFF](https://ssd.eff.org/en/module/how-use-keepassxc). While the credential file store is encrypted by pass phrase (Transcrypt doubly protects it for some defense in depth), it derives from a well known file format, allowing alternative GUI and web browser plug-in/extensions. Finally, the app fairly gracefully handles changes from file sync and I have gotten my conflict resolution process under control. So I have been happy to continually refactor my hard-coded pets into the credential file store and leverage updates across several machines and apps.
+I might elaborate on the research candidates another time, but [KeepassXC](https://keepassxc.org) satisfied most of my requirements and won my loyalty due to design values, regular updates, and an [endorsement by the EFF](https://ssd.eff.org/en/module/how-use-keepassxc). While the credential file store is encrypted by pass phrase (Transcrypt doubly protects it for some defense in depth), it derives from a well known file format, allowing alternative GUI and web browser plug-in/extensions. Finally, the app fairly gracefully handles changes from file sync and I have gotten my conflict resolution process under control. I have been happy to continually refactor my hard-coded pets into the credential file store and leverage updates across several machines and apps.
 
 Finally, not only are my secrets portable across machines and apps, but now I've begun to generate pet configuration files to populate environment variables from my store. This keeps pets out of binaries, configuration files, and Git as much as possible! It is a matter of time to drive this effort towards LDAP, Kerberos, Vault, etc. for service based pets and ephemeral, dynamic session tokens and passwords with audit logs as listed in [pet password](#pet-passwords).
