@@ -37,7 +37,7 @@ which can be summarized as pet vs. cattle improvements:
 
 Revision control is an essential tool to manage change, collaboration, and scale work efforts, preventing inefficient overhead of workarounds and point to point synchronization. Most operators don't realize that [GitOps](#gitops-the-convergence-of-devops) represents their future, but I see it as a refinement of and progression past [CI/CD](/post/calm.io-recap/calm.io-demystifying-continuous-integration-delivery-and-deployment/) for "invisible ops."
 
->Sidebar: In hindsight, I was lucky enough to start my first year of colleage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and a luxury I expect.
+>Sidebar: I was lucky enough to start my first year of collage on a DEC VAX system and benefit from one of the few [versioning file systems](https://en.wikipedia.org/wiki/Versioning_file_system#Files-11_(RSX-11_and_OpenVMS)). One of my part-time jobs (which also became my first employer after college) also leveraged this system, so version control is an ingrained discipline and in hindsight, a luxury, which I expect.
 
 ## Example Problems and Approximating Version Control
 
@@ -207,33 +207,43 @@ https://en.wikipedia.org/wiki/Comparison_of_version-control_software#History_and
 
 # FAQ
 
-Q: Can you give an example of how Git helps a Sales Engineer (or operator)?
-A: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section, where the bootcamp automation scripts save SEs multiple hours for any demo or experiment, preventing mistakes when setting up a new cluster for a bootcamp, Global Tech Summit, etc.
-   and were the basis or contributed to GTS2019 EMEA and APAC hackathon winners. This work has paid off 10,000 times the investment, enabled thousands of SEs, saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
+Question
+: Can you give an example of how Git helps a Sales Engineer (or operator)?
 
-Q: Is git (or any revision control system) good for storing large files: videos, pictures, etc.
-A: It depends on the context: if you are completely local for your private use, go for it! However there are systems like [Git Large File Storage](https://git-lfs.github.com/) and [git-annex](https://git-annex.branchable.com/) that are better suited for git to manage the (textual) metadata of large files across multiple file sources and backups.
+Answer
+: Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section, where the bootcamp automation scripts save SEs multiple hours for any demo or experiment, preventing mistakes when setting up a new cluster for a bootcamp, Global Tech Summit, etc. and were the basis or contributed to GTS2019 EMEA and APAC hackathon winners. This work has paid off 10,000 times the investment, enabled thousands of SEs, saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
 
-   Ultimately, the answer is no: revision control is best suited for text files (source code, configuration, scripts, documentation, etc.), not BLOBs to deal with textual diffs and merges. So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries. You will see public git host providers restrict the size of an individual file in a repo and sometimes the total size of a repo to enforce these rules in order to keep their SLAs. free tier, and capacity planning as well as
-   to prevent spillover from becoming a file host provider (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
+Question
+: Is Git (or any revision control system) good for storing large files: videos, pictures, etc.
 
-Q: If we shouldn't store credentials and other hard coded pets in revision control, where should they go?
-A: It depends what the best source of truth should be for each pet. Because you have revision control, you can safely refactor towards improving your processes and easily revert any experiment as you learn.
+Answer
+: It depends on the context: if you are completely local for your private use, go for it! However there are systems like [Git Large File Storage](https://git-lfs.github.com/) and [git-annex](https://git-annex.branchable.com/) that are better suited for git to manage the (textual) metadata of large files across multiple file sources and backups.
+
+  Ultimately, the answer is no: revision control is best suited for text files (source code, configuration, scripts, documentation, etc.), not BLOBs to deal with textual diffs and merges. So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries. You will see public git host providers restrict the size of an individual file in a repo and sometimes the total size of a repo to enforce these rules in order to keep their SLAs. free tier, and capacity planning as well as to prevent spillover from becoming a file host provider (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
+
+Question
+: If we shouldn't store credentials and other hard coded pets in revision control, where should they go?
+
+Answer
+: It depends what the best source of truth should be for each pet. Because you have revision control, you can safely refactor towards improving your processes and easily revert any experiment as you learn.
 
    So try to answer each question, how do you manage your cattle of:
    - IP addresses: try to move to DHCP and IPAM systems to get rid of them. Remember this indicates the need to adopt the category of service discovery and service addressing (DNS) solutions.
-   - Passwords: see [Pet Passwords](#pet-passwords), below. Markdown doesn't handle HTML anchors gracefully.
+   - Passwords: see [Pet Passwords](#pet-passwords), below.
+   (Side note: Markdown doesn't handle HTML anchors gracefully.)
    - Binary artifacts: drive to
       - filers NFS/SBM/FTP/SFTP and filer hosting
       - artifact management (Nexxus, Artifactory) specific to the artifact for metadata and post processing
         - language libaries/installs
         - Docker container registry
         - etc.
-    - See [The 12 Factor App](https://12factor.net/) for ideal design principles.
-      - Kelsey Hightower's response/examples: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
+    - See [The 12 Factor App](https://12factor.net/) for ideal design principles and Kelsey Hightower's response/examples: [12 Fractured Apps](https://medium.com/@kelseyhightower/12-fractured-apps-1080c73d481c)
 
-Q: How does one decide on project repo organization?
-A: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything versus fragmentation over too many repos. There is a project life cycle to consider as well.
+Question
+: How does one decide on multiple projects repo organization?
+
+Answer
+: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything versus fragmentation over too many repos. There is a project life cycle to consider as well.
 
 ## Pet Passwords
 
