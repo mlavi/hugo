@@ -1,5 +1,5 @@
 ---
-tags: ['git', 'operators', 'GitOps', 'tutorial', 'version-control']
+tags: ['git', 'operators', 'GitOps', 'tutorial', 'version-control', 'BlackLivesMatter']
 date: "2020-03-25T15:15:18-05:00"
 title: "Version Control for Operators"
 ---
@@ -130,15 +130,15 @@ HEAD
   However, this can be changed to go back in history for point in time reconstruction.
 
 Branch
-: a complete copy of the repo contents (it is contained in the repo with it's own HEAD), used to prevent changes from impacting the master or main branch.
+: a complete copy of the repo contents (it is contained in the repo with it's own HEAD), used to prevent changes from impacting the main or default branch.
   - Typically used for non-blocking work as experiments, historical releases (can be simulated with Tag), and hotfix/patches.
   - Challenge:
     - continually merge each branch from main branch to minimize potential merge conflicts when eventually ending a branch.
     - Lifecycle of a branch to prevent increase the repo overhead due to branch sprawl.
   - Branches benefit from increased collaboration versus an uncoordinated clone of the repo.
 
-Master or mainline
-: the branch where all work is coordinated for release. When there are no branches, this is implicit.
+Main or mainline
+: the default branch where all work is coordinated for release. When there are no branches, this is implicit. An older convention used to call this master.
 
 ## Git
 Stage
@@ -151,7 +151,7 @@ Remote
 : a destination endpoint for your local repo
 
 Push
-: send updates to a remote (branch), *e.g.:* `git push origin master`
+: send updates to a remote (branch), *e.g.:* `git push origin main`
 
 .gitignore
 : a list of files and file patterns to omit when adding files to the stage. See: https://gitignore.io/
@@ -318,7 +318,7 @@ Because git uses sensible defaults, you will see some parameters indicated by it
     cat file4.txt
     git add file0.txt   # add to the stage
     git commit --message 'This is my first commit comment!'
-    git status          # Note we are on a the default branch; it is named master
+    git status          # Note we are on a the default branch
 
     git add --all       # recurse child directories
     git status          # see all remaining files staged
@@ -415,11 +415,11 @@ Hosted git providers generally organize repositories with a organization/team/gr
 
 # Branches
 
-We've seen that every repo is initialized with a default branch named master (unless specified otherwise). It is sometimes called the mainline branch and while it is arbitrarily important, but by convention for many projects, it is where attention is focused to keep it stable from risky changes.
+We've seen that every repo is initialized with a default branch named master (unless specified otherwise). [Update Summer 2020](https://tech.slashdot.org/story/20/06/10/1922255/tech-terms-face-scrutiny-amid-anti-racism-efforts): there is a new convention to use "main" or "primary" instead and I will work to update this tutorial. It is sometimes called the mainline or default branch and while it is arbitrarily important, but by convention for many projects, it is where attention is focused to keep it stable from risky changes.
 
 Branching allows anyone to manage changes that should not block the main branch stability. Long lived branches are usually a bad idea and should be discarded as soon as possible to avoid larger merge conflicts due to drift. Branches usually represent different types of shorter lived work: experiments, a bug fix, a new feature, refactoring, and so on. Sometimes branches are referred to as topic branches to highlight their focused, short lived scope.
 
-You can create a branch in a repo, make some changes there, and commit changes onto your topic branch. It is ideal to merge changes from master onto your branch periodically to keep it up to date and minimize merge conflicts down the line. The final stage of a branch life cycle is to merge your branch to master and then delete the topic branch.
+You can create a branch in a repo, make some changes there, and commit changes onto your topic branch. It is ideal to merge changes from main onto your branch periodically to keep it up to date and minimize merge conflicts down the line. The final stage of a branch life cycle is to merge your branch to the mainline and then delete the topic branch.
 
 A nice visualization of branching: https://agripongit.vincenttunru.com/
 
@@ -463,7 +463,7 @@ We saw the benefit of git operations on our repo in the example: it replayed a f
   - Process is triggered by a git operation
   - Every process is also in git (*e.g.:* Jenkinsfile build job, Dockerfile build, webhooks, scripts, blueprints, etc.)
 - Git commit a change and make a pull request to a branch that represents an environment:
-  - Master = production
+  - Main = production
   - Staging, dev, QA, etc.
 - History: WeaveWorks = makers of Calico, this will be the next generation of Karbon's networking feature
   - 2017-08-07: [weave.works/blog/gitops-operations-by-pull-request](https://www.weave.works/blog/gitops-operations-by-pull-request)
@@ -536,8 +536,12 @@ For my standards, a private hosted repo and security in transit wasn't enough to
 
 For the first stage, I researched GPG and wanted to coordinate that with e-mail (which is an ongoing project). I settled on an easier initial step with transparent, team-based git encryption: [Transcrypt](https://github.com/elasticdog/transcrypt) is open source and cross platform enough. :) This solution allowed me to safely add my pet files with hard coded work while I continued to refactor them in the second stage.
 
-For the second stage, I searched for an off-line password manager for storing credentials and other confidential information for all my pets! I didn't want to trust an online, cloud, SaaS service to accidentally breach my secrets, e.g.: this happens regularly with credit cards. Furthermore, it was important that the app was open source, cross platform, and had web browser integration. This would allow me to refactor everything into a common store: all pet credentials, in a pet profile, in a pet browser, under a pet account, on a pet OS could finally become cattle. Bonus points for consolidating Time-based One Time Passwords (TOTP), so I no longer have to maintain a separate app and store (Google Authenticator, etc.). SSH and GPG keys may be next!
+For the second stage, I searched for an off-line password manager for storing credentials and other confidential information for all my pets! I didn't want to trust an online, cloud, SaaS service to accidentally breach my secrets, e.g.: this happens regularly with credit cards. Furthermore, it was important that the app was open source, cross platform, and had web browser integration. This would allow me to refactor everything into a common store: all pet credentials, in a pet profile, in a pet browser, under a pet account, on a pet OS could finally become cattle. Bonus points for consolidating Time-based One Time Passwords (TOTP), so I no longer have to maintain a separate application and credential store via Google Authenticator or equivalent. SSH and GPG keys may be next!
 
 I might elaborate on the research candidates another time, but [KeepassXC](https://keepassxc.org) satisfied most of my requirements and won my loyalty due to design values, regular updates, and an [endorsement by the EFF](https://ssd.eff.org/en/module/how-use-keepassxc). While the credential file store is encrypted by pass phrase (Transcrypt doubly protects it for some defense in depth), it derives from a well known file format, allowing alternative GUI and web browser plug-in/extensions. Finally, the app fairly gracefully handles changes from file sync and I have gotten my conflict resolution process under control. I have been happy to continually refactor my hard-coded pets into the credential file store and leverage updates across several machines and apps.
 
 Finally, not only are my secrets portable across machines and apps, but now I've begun to generate pet configuration files to populate environment variables from my store. This keeps pets out of binaries, configuration files, and Git as much as possible! It is a matter of time to drive this effort towards LDAP, Kerberos, Vault, etc. for service based pets and ephemeral, dynamic session tokens and passwords with audit logs as listed in [pet password](#pet-passwords).
+
+# 2020-07-24: Refactoring the default branch
+
+[#BlackLivesMatter: Update Summer 2020](https://tech.slashdot.org/story/20/06/10/1922255/tech-terms-face-scrutiny-amid-anti-racism-efforts): there is a new convention to use "main" or "primary" instead and I will work to update this tutorial.
