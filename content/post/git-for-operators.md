@@ -154,7 +154,7 @@ Push
 : send updates to a remote (branch), *e.g.:* `git push origin main`
 
 .gitignore
-: a list of files and file patterns to omit when adding files to the stage. See: https://gitignore.io/
+: a list of files and file patterns to omit when adding files to the stage. This is useful for excluding temporary, sensitive, artifact, and binary files which should never be under revision control. See: https://gitignore.io/ for a wonderful set of ready made use cases.
 
 Tags and Releases
 : meta data applied to a branch commit
