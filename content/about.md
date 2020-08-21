@@ -34,5 +34,6 @@ You can follow him on Twitter @calm_mark or read his blog at https://mlavi.githu
 As Principal DevOps Advocate, Mark adapts advanced engineering methods, technology, and culture to accelerate the business needs of Nutanix customers, partners, and employees.
 With over twenty years of Silicon Valley experience, Mark was a senior web master at Netscape, Silicon Graphics, CNN, and News Corp., a Technology Evangelist in Netscape Developer Relations covering JavaScript and LDAP, and has held management roles in engineering and operations.
 One compliment, “Mark is an engineer who can speak,” captures his ability to relate technical subjects to anyone. You can follow him on Twitter [@calm_mark](https://twitter.com/calm_mark) and GitHub [@mlavi](https://github.com/mlavi).
-
+---
+I started at the first commercial, national Internet Service Provider in 1993 creating a self-taught role we would now call a full-stack web developer. Because I split my time between development and the data center, I have been doing DevOps my entire career. I spent over 20 years in Silicon Valley having worked at Netscape, Silicon Graphics, News Corp, CNN/fn and then several start-ups as a engineering and operations manager. When Calm.io was acquired...
 -->

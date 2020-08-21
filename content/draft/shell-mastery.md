@@ -56,6 +56,9 @@ Still haven't finished this.
     man -7 environ
     man select-editor
 
+# Learning
+https://www.learnshell.org/
+
 # Simple text editor accelerators
 ## vim
 

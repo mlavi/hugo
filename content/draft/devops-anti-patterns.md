@@ -3,8 +3,8 @@ tags: ['DevOps', 'anti-pattern', 'experience']
 draft: true
 ---
 
-DevOps is a cultural term, so in a recent discussion with my friend, David Hawthorne, 
-we spoke about what "DevOps is not..." and I think it could be a hilareous article.
+DevOps is a cultural term, so in a recent discussion with my friend, David Hawthorne,
+we spoke about what "DevOps is not..." and I think it could be a hilarious article.
 <!--more-->
 In response to my DevOps maturity model, David pointed out the
 [Capability_Maturity_Model](https://en.wikipedia.org/wiki/Capability_Maturity_Model)
@@ -22,7 +22,7 @@ https://www.startpage.com/do/dsearch?query=devops+certificate&cat=web&pl=opensea
 ![DevOps Cert](devops-cert.png)
 
 ## A Job Title
-## A Team 
+## A Team
 ## Something you can buy
 
 ## Achievable

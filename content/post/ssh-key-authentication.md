@@ -82,6 +82,6 @@ On Windows, you can configure your PuTTY session to use your SSH keypair, but it
 
 On the Unix/Linux/MacOS side of the house, you can generate your keypair with ssh-keygen and load your OpenSSH keypair into ssh-agent upon shell invocation. In this example, I used 4096 bits (which is considered secure today, less bits are easier to crack), I saved my key into my home directory's .ssh folder, and I also saved it without a passphrase to make things easier. I would recommend using a passphrase next, because Calm can support it now.
 
-````ssh-keygen -b 4096 -f ~/.ssh/First.LastName.passphraseless````
+````ssh-keygen -m pem -b 4096 -f ~/.ssh/First.LastName-YYYY-passphraseless````
 
 Fortunately, because you have likely provided your SSH keypair while provisioning a blueprint, Calm will reuse these credentials when you audit the Application deployment: pick the Manage tab, choose the VM service desired, and then leverage the Web terminal session to log in with one-click!
