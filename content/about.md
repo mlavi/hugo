@@ -18,12 +18,12 @@ During his twenty+ years in Silicon Valley, he was a co-founder or early team me
 
 When Calm.io was acquired in 2016, he became Nutanix's first Automation Solutions Architect  in Systems Engineering, directly working with some of the largest corporations and government institutions. Over three years, he helped the role grow to seven peers worldwide, partnered with Marketing as a .NEXT and Executive Briefing Center speaker, and collaborated with Global Sales Enablement to deliver content and automation for multiple Technical Summits, Sales Kick Offs, bootcamps, hands-on-labs, and Sales Engineering certification around the world. In 2019, as Principal DevOps Advocate, Mark has returned to the field of Developer Relations to adapt advanced engineering methods, technology, and culture to accelerate the business needs of Nutanix customers, partners, and employees globally.
 
-Mark's approach mixes software engineering disciplines with emotional intelligence and operations. His system design and life cycle thinking leads to nurturing teams, applications, and infrastructure to work together while planning their continuous operations and improvement. He can build, secure, scale, and manage Internet architectures, real-time media, and software development pipelines. In retrospect, his career and multidisciplinary practice can only be summarized and complimented by the term [DevOps](https://en.wikipedia.org/wiki/DevOps).
+Mark's approach mixes software engineering disciplines with emotional intelligence and operations. His system design and life cycle thinking leads to nurturing teams, applications, and infrastructure to work together while planning their continuous operations and improvement. He can build, secure, scale, and manage Internet architectures, real-time media, and software development pipelines. In retrospect, his career and multidisciplinary practice is summarized and complimented by the umbrella term [DevOps](https://en.wikipedia.org/wiki/DevOps) and its variants of DevSecOps, DataOps, et. al.
 
 Mark's home is wherever his wife, two children, and dog are, but our traveling family resides in Austin, Texas, USA.
 
-You can review Mark's career and endorsements on [LinkedIn](https://www.linkedin.com/in/marklavi), follow him on Twitter [@calm_mark](https://twitter.com/calm_mark) and GitHub [@mlavi](https://github.com/mlavi),
- or read his [blog](http://mlavi.github.io).
+Please review Mark's career and endorsements on [LinkedIn](https://www.linkedin.com/in/marklavi), follow him on Twitter [@calm_mark](https://twitter.com/calm_mark) and GitHub [@mlavi](https://github.com/mlavi),
+ and read his [blog](http://mlavi.github.io).
 
 <!-- Shorter:
 
