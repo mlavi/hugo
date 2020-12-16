@@ -1,5 +1,5 @@
 ---
-tags: [''totp, '2FA']
+tags: ['totp', '2FA', 'passwords', 'security']
 draft: true
 date: "2020-12-14T16:56:47-06:00"
 title: "Why You Want Google Authenticator, but Don't Need It"
