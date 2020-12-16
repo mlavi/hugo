@@ -98,3 +98,7 @@ https://www.learnshell.org/
 # IDEAS:
 ## Prezi/shell command map from man pages:see also
 ## Interactive PATH explorer
+
+# More Resources
+- https://www.commandlinefu.com/commands/browse/sort-by-votes
+- https://mywiki.wooledge.org/BashPitfalls
