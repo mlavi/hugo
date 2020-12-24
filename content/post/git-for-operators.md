@@ -6,7 +6,7 @@ title: "Version Control for Operators"
 Version Control is an essential tool making your work reproducible and visible, which can unlock profound amplifying effects of your contributions. As operators
 grow into developers, they can build toward state of the art [GitOps](#gitops-the-convergence-of-devops)!
 <!--more-->
-__Note:__ I use revision control and version control terms interchangeably because they are synonyms.
+__Note:__ I use the terms **revision control** and **version control** interchangeably because they are synonyms.
 
 > Sidebar: [revision history for this blog](https://github.com/mlavi/hugo/commits/master/content/post/git-for-operators.md)
 
@@ -112,22 +112,20 @@ It is easiest to think of revision control as managing the changes to a project 
 ## Generic
 
 Repository (repo)
-: a logical "parent folder" for a project's content.
+: a logical "parent folder" for all of a project's content.
 
 Commit
-: a change placed into the history of the project.
+: a state change recorded, becoming part of the history.
+  - Note that single commit may group and combine multiple changes and operations across multiple files to the repository.
 
 Diff (difference)
-: the delta between the previous and current state of the project.
-  - Note that this could be multiple changes and operations across multiple files.
+: the delta between your current work and a repository commit state.
 
 Merge Conflict
-: local changes collide with the committed state of a remote repo (shared resource diff conflict),
-  so the commit is blocked until either or both sides can resolve, sync updates, and try again.
+: local changes collide with the committed state of a remote repo (shared resource diff conflict), so the commit is blocked until either or both sides can resolve, sync updates, and try again.
 
 HEAD
-: a pointer to the where the next commit will go, normally the latest commit.
-  However, this can be changed to go back in history for point in time reconstruction.
+: a pointer to the where the next commit will go, normally the latest commit. However, this can be changed to go back in history for point in time reconstruction.
 
 Branch
 : a complete copy of the repo contents (it is contained in the repo with it's own HEAD), used to prevent changes from impacting the main or default branch.
@@ -208,7 +206,7 @@ https://en.wikipedia.org/wiki/Comparison_of_version-control_software#History_and
 # FAQ
 
 Question
-: Can you give an example of how Git helps a Sales Engineer (or operator)?
+: Can you give an example of how Git helps an operator?
 
 Answer
 : Take a look at the [Collaboration](#collaboration-pulls-forks-and-submodules) section, where the bootcamp automation scripts save SEs multiple hours for any demo or experiment, preventing mistakes when setting up a new cluster for a bootcamp, Global Tech Summit, etc. and were the basis or contributed to GTS2019 EMEA and APAC hackathon winners. This work has paid off 10,000 times the investment, enabled thousands of SEs, saved immeasurable SE hours, powered uncountable demos, and continues to improve for more use cases/labs.
@@ -217,9 +215,9 @@ Question
 : Is Git (or any revision control system) good for storing large files: videos, pictures, etc.
 
 Answer
-: It depends on the context: if you are completely local for your private use, go for it! However there are systems like [Git Large File Storage](https://git-lfs.github.com/) and [git-annex](https://git-annex.branchable.com/) that are better suited for git to manage the (textual) metadata of large files across multiple file sources and backups.
+: It depends on the context: if you are completely local for your private use, go for it! However there are systems like [Git Large File Storage](https://git-lfs.github.com/) and [git-annex](https://git-annex.branchable.com/) that are better suited for git to manage the textual metadata of large files across multiple file sources and backups.
 
-  Ultimately, the answer is no: revision control is best suited for text files (source code, configuration, scripts, documentation, etc.), not BLOBs to deal with textual diffs and merges. So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries. You will see public git host providers restrict the size of an individual file in a repo and sometimes the total size of a repo to enforce these rules in order to keep their SLAs. free tier, and capacity planning as well as to prevent spillover from becoming a file host provider (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
+  Ultimately, the answer is no: revision control is best suited for managing text files (source code, configuration, scripts, documentation, etc.) facilitating diffs and merges, not large binary objects (BLOBs). So we arrive at the idea to store the procedure to build the application in git, not the application binary or libraries. You will see public git host providers restrict the size of an individual file in a repo and sometimes the total size of a repo to enforce these rules in order to keep their SLAs. free tier, and capacity planning as well as to prevent spillover from becoming a file host provider (*e.g.:* DropBox, OneDrive, GDrive, Netapp, S3, Files/Objects, etc.).
 
 Question
 : If we shouldn't store credentials and other hard coded pets in revision control, where should they go?
@@ -243,7 +241,7 @@ Question
 : How does one decide on multiple projects repo organization?
 
 Answer
-: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything versus fragmentation over too many repos. There is a project life cycle to consider as well.
+: This is a huge indicator of engineering culture, *e.g.:* monoculture = one repo for everything versus fragmentation over too many repos. There is a project life cycle to consider as well. There are arguments for reducing repository count to reduce fragmentation over time.
 
 ## Pet Passwords
 
@@ -267,28 +265,25 @@ See the [Postscript: Securing Pets in Git](#2020-04-19-securing-pets-in-git) for
 
 Our first git kata will be simple: consume a public repo.
 
-First, get git! :) There are multiple ways and it might be built into your editor or IDE: Integrated Development Environment already. We will use the official git CLI because it can makes things explicit, which a GUI or defaults can hide, or worse, there may be basic git operations that some GUIs cannot easily handle.
+First, get git! :) Because git is open source, there are multiple sources and versions and it might already be built into your editor or IDE: Integrated Development Environment. We will use the official git CLI because we will explicitly use every parameter at introduction, which a GUI or CLI defaults can hide, or worse, there may be basic git operations that some GUIs cannot easily handle.
 
-We will skip basic setup of credentials and use a fully public code repository,
+We will skip setup of credentials and use a fully public code repository,
 *e.g.:* https://github.com/nutanix/calm-dsl
 
     git clone https://github.com/nutanix/calm-dsl.git
     git clone git@github.com:nutanix/calm-dsl.git # uses SSH
 
-I like to create a standard working area for my local repositories: ~/Documents/$Provider/$Project/$Repo, *e.g.:*
+I like to create a standard working area for my local repositories: ~/Documents/$Organization/$Project/$Repo, *e.g.:*
 
 - Documents/github.com/nutanix/calm-dsl/
 - Documents/gitlab.com/nutanix-se/ansible/lcm-darksite-webserver
 - Documents/repo.local/mysecretprojects
 
-so it is not confusing when using GitHub, GitLab, or any other instance.
+so it is not confusing when using GitHub, GitLab, or any other git remote instance.
 
-I found a tool that helps me navigate and enforce this convention: [ghq](https://github.com/x-motemen/ghq),
-*e.g.:* `ghq get nutanix/calm-dsl` versus `git clone https://github.com/nutanix/calm-dsl.git`.
+I found a tool that helps me navigate and enforce this convention: [ghq](https://github.com/x-motemen/ghq), *e.g.:* `ghq get nutanix/calm-dsl` versus `git clone https://github.com/nutanix/calm-dsl.git`. However, ghq defaults to https:// URLs, which can be a problem if you want to use SSH transport via the git: method, which is advisable for git hosting requiring two factor authentication.
 
-However, ghq defaults to https:// URLs, which can be a problem if you want to use SSH (git:) method, which is advisable for git hosting requiring two factor authentication.
-
-Once you have a local clone of the entire repository with it's full history, it is time to play. You can experiment with the repo any way you like, even revert changes and mistakes. If you get in any trouble, you can clone again. You are free and safe to make mistakes as you learn revision control. #failfastfixfast
+Once you have a local clone of the entire repository checked out with it's full history, it is time to play. You can experiment with the repo any way you like, even revert changes and mistakes. If you get in any trouble, you can clone again. You are free and safe to make mistakes as you learn revision control. #failfastfixfast
 
 ## A simple round trip into history: no remotes or branches
 
@@ -423,7 +418,7 @@ You can create a branch in a repo, make some changes there, and commit changes o
 
 A nice visualization of branching: https://agripongit.vincenttunru.com/
 
-Branching is not an advanced topic and it is easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :) In other revision control systems, branches could be used to indicate and preserve the state of the repo for a release, but git can accommodate this with a simple tag applied to a commit.
+Branching is fairly easy with git. However, merge conflicts will always be a challenge and usually requires talking to people. :) In other revision control systems, branches could be used to indicate and preserve the state of the repo for a release, but git can accommodate this with a simple tag applied to a commit.
 
 We can talk about different branch strategies:
 - [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/): for more traditional software engineering release models
@@ -478,7 +473,7 @@ We saw the benefit of git operations on our repo in the example: it replayed a f
 2. Learn about `.gitignore` and use it to:
 
     - Isolate your pets to environment variables:
-      - __No credentials, ever.__
+      - __No credentials committed into the repo, ever.__
       - No host names, no IP addresses, no usernames.
 
 3. Create a private repo on a Git host

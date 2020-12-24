@@ -11,8 +11,6 @@ I've been silent for months, largely because I'm depressed by the amount of huma
 
 If the United States still cannot coordinate an effective response to save lives during a global pandemic as a health issue, then there is no question that protests leading to revolution is needed to change our society when Black Lives Matter. Every citizen's life is at risk and we must demand more of ourselves and our government to change.
 
-I've been silent this past weeks, largely because I'm angry by the amount of human suffering and ignorance during the Corona virus pandemic. This has been exacerbated by a failure of leadership on many levels of the American Federal, State, and local government.
-
 I cannot be complicit with the injustice I've seen, so I cannot be silent anymore. There is a problem of perception in America, so I will make my principles clear so that their implications follow a logical order to arrive at desired solutions and outcomes.
 
 # Black Lives Matter (BLM)
@@ -20,21 +18,25 @@ I cannot be complicit with the injustice I've seen, so I cannot be silent anymor
 [#blacklivesmatter](https://twitter.com/hashtag/BlackLivesMatter) more than anyone else in the United States.
 Because of the historical, political systems that remain in place to abuse our Constitution, we must continually address and take action against the injustice of our police, which is an aspect of societal racism.
 
-> Do #allives matter? No, because that is the wrong order of operations.
->
-> The most morally wrong problem perpetuated on the largest American population is egregious and specific: it must have priority and it cannot be made generic. Civil rights are not guaranteed or finished: the civil rights movement continues the struggle today. We do not need any more evidence, we cannot "whitewash" the problem of this injustice: slavery is rooted in the soul of America. This is the "original sin" every American, even our newest citizens, have inherited.
+> Do #allives matter?
 
-You must stand with your brother and sister, you can identify as being Black when you change your mindset and put yourself in your brother's shoes. "I am Black and I'm mad as hell!" should be comprehensible by every American. This should lead to demonstrate your solidarity through continual education, outreach, and action. It will take many election cycles of continued political pressure to reform our choice of representatives and their policies on all levels of government, funding of policies (such as police), and the laws of society. It will become easier as the passing of the current generation in power's active or passive participation and perpetuation of their societal dysfunction is lost to time and replaced by the shared values of a more just and egalitarian generation.
+No, because that is the wrong order of operations.
 
-When we allow the subjugation of any American, then we are all Black, because the abuse can and will happen to any American. So please try to correct your perspective: we are our brother's keeper and we must put #blacklivesmatter first. If we can solve it, then can we say we have achieved the mechanisms necessary for #alllives to progress.
+The most morally wrong problem perpetuated on the largest American population is egregious and specific: it must have priority and it cannot be made generic. Civil rights are not guaranteed or finished: the civil rights movement continues the struggle today. We do not need any more evidence, we cannot "whitewash" the problem of this injustice: slavery is rooted in the soul of America. This is the "original sin" every American, even our newest citizens, have inherited.
 
-> What about female, LGBTQ, and every other injustice America perpetuates on any one group? Each group must forge forward on their agenda, but they can join #blacklivesmatter to enable the common agenda for the soul of America to fight discrimination. Over time, there will be no separation of any group.
+You must stand with your brother and sister, you can identify as being Black when you change your mindset and put yourself in your brother's shoes. "I am Black and I'm mad as hell!" should be comprehensible by every American. This should lead to demonstrate your solidarity through continual education, outreach, and action. It will take many election cycles of continued political pressure to reform our choice of representatives and their policies on all levels of government, funding of policies (such as police), and the laws of society. It will become easier as the passing of the current generation in power's active or passive participation and perpetuation of their societal dysfunction is lost to time and replaced by the shared values of a more just and egalitarian generation. I am optimistic for the future because America has a huge capacity to mobilize and change.
+
+When we allow the subjugation of any American, then we are all Black, because that abuse can and will happen to any American. So please try to correct your perspective: we are our brother's keeper and we must put #blacklivesmatter first. If we can solve it, then can we say we have achieved the mechanisms necessary for #alllives to progress.
+
+> What about female, LGBTQ, and every other injustice America perpetuates on any one group?
+
+Each group must forge forward on their agenda, but they can join #blacklivesmatter to enable the common agenda for the soul of America to fight discrimination. With success over time, there will be less separation between any group's agenda.
 
 Indeed, if you wish, you can support any overlapping cause if that helps you engage: https://centerforblackequity.org/
 
 Even if you do not feel discrimination today, you will eventually encounter it: there is rampant #agism in the hiring process. Even as I suffer this injustice, I know we must solve #blacklivesmatter first. That is my sacrifice to love my neighbor, provide a better future for all our children, and lead the world out of ignorance. The problem extends to our justice system and the disproportionate effects of Corona virus on these populations allows me to say: these are societal health issues for the relation of poverty, incarceration, and work safety. There are multiple symptoms of the same problem: American discrimination.
 
-So the Black Lives Matter movement is the best manner for the short-term benefit focus on our biggest problem and the long-term benefit of making the America the best society for of all on this planet. I can't think of a more American thing to do but to save America from itself.
+So the Black Lives Matter movement is the best manner for the short-term benefit focus on our biggest problem and the long-term benefit of making the America the best society on this planet. I can't think of a more patriotic American thing to do but to save America from itself.
 
 # What must be done?
 
@@ -68,7 +70,7 @@ Third, you must activate:
     - [How Diversity Can Drive Innovation](https://hbr.org/2013/12/how-diversity-can-drive-innovation)
     - [Research: When Gender Diversity Makes Firms More Productive](https://hbr.org/2019/02/research-when-gender-diversity-makes-firms-more-productive)
 
-While I dislike restriction on speech, I do want to bring down any barrier to adoption, so I advocate change in technical language, e.g.: [Software Leaders and Project Adopt Race Neutral Terminology](https://developers.slashdot.org/story/20/06/14/1722223/github-android-python-go-more-software-adopts-race-neutral-terminology).
+While I dislike restrictions on speech, I do want to bring down any barrier to adoption, so I advocate change in technical language, e.g.: [Software Leaders and Project Adopt Race Neutral Terminology](https://developers.slashdot.org/story/20/06/14/1722223/github-android-python-go-more-software-adopts-race-neutral-terminology). Further consideration is needed in how we communicate, consider how even an animated GIF can propagate stereotypes and systematic racism via [Digital Blackface](https://www.womenshealthmag.com/life/a33278412/digital-blackface/).
 
 ## Today's Final Thoughts
 
