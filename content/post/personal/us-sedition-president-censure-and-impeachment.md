@@ -1,19 +1,19 @@
 ---
-tags: ['us', 'democracy','personal']
+tags: ['america', 'politics']
 date: "2021-01-10T08:18:29-06:00"
 title: "US Sedition, Presidential Censure, and Impeachment"
 ---
-Democracy is a process: this past Wednesday was another test of US democracy and a reckoning of our current administration's dangerous tactics to stay in power. This has been another disheartening, depressing, embarrassing week in our enduring COVID-19 imposed lock down, but an older threat, the disease of poor thinking, was evident.
+Democracy is a process: this past Wednesday was another test of United States democracy and a reckoning of our current administration's dangerous tactics to stay in power. This has been another disheartening, depressing, embarrassing week in our enduring COVID-19 imposed lock down, but an older threat, the disease of poor thinking, was evident.
 
 <!--more-->
 
-A Support the President/#StopTheSteal rally where the President and his lawyer spoke spurred on a protest march to become a mob attack on and looting of the Capitol building. The design was planned to stop the Electoral College count and certification of the the 2020 US Federal election results, but it turned deadly (four rioters and one Capitol Policeman have died) and delayed Congress a few hours. Early the next morning, President-elect Biden and VP-elect Harris were certified by Congress.
+A Support the President/#StopTheSteal rally where the President and his lawyer spoke spurred on a protest march to become a mob attack on and looting of the Capitol building. The design was planned to stop the Electoral College count and certification of the the 2020 United States Federal election results, but it turned deadly (four rioters and one Capitol Policeman have died) and delayed Congress a few hours. Early the next morning, President-elect Biden and VP-elect Harris were certified by Congress.
 
 There are so many simple questions:
 
 - For anyone who trespassed into the Capitol building this past Wednesday: how was your goal anything but violence?
   - You changed from a peaceful protester (whom I would defend as a right) to one of the mob of rioters, shouldn't you be prosecuted?
-  - You can't claim revolution against and patriotism for the United States at the same time, are you loyal to the President and not the US?
+  - You can't claim revolution against and patriotism for the United States at the same time, are you loyal to the President and not the United States?
   - Some were looking to find and hang the "traitorous" Vice President of the current administration, who led the Senate Electoral College session. How can you reconcile loyalty to the President and not the VP unless the election was the only factor in your decision?
 
 - For the Capitol Police who took selfie photos with the rioters in the building: is it hypocritical to support a criminal event in the place you protect?
@@ -28,7 +28,7 @@ There are so many simple questions:
     - The VP called for the National Guard to protect the Capitol and Congress because the President had not done so. Given the emergency, it is unlikely the President delegated the task and more likely the President was allowing the riot to continue for his benefit.
   - How can you keep your conscious to stay in office, why won't you resign instead of continuing to threaten our Republic?
 
-Yes, I've learned how "Law and Order" is an epitaph for systematic racial oppression by the police in the US, which historically arose from the previous attempt in Congress to overturn the election and creation of a comittee that enacted Jim Crow laws.
+Yes, I've learned how "Law and Order" is an epitaph for systematic racial oppression by the police in the United States, which historically arose from the previous attempt in Congress to overturn the election and creation of a comittee that enacted Jim Crow laws.
 
 But I suspect, there are only simple answers:
 
@@ -42,4 +42,4 @@ But I suspect, there are only simple answers:
 
 The other concerning problem is that 100+ Republican Congress Representatives continue to object to the Election, maintaining election fraud claims with no evidence. While some backed down from objecting when Congress resumed on Wednesday, because continuing that thread could lead to further sedition, many have not.
 
-Make no mistake, all this subterfuge and chaos is designed to weaken US citizens, our democracy, and our Constitution. It's horrible that a minority of citizens are trying to rebuke a voting majority of citizens at the behest of this President, they are willing participants in undermining their own and our collective fortune, peace, and country. The appropriate authorities (the FBI and Congress) need to prosecute the rioters and those who supported them, including the Capitol Police and Congress people, for violent sedition while Congress impeaches and the Administration censures the President. I will hold objecting Republicans responsible at every election, I won't forget Wednesday every time I vote in Texas.
+Make no mistake, all this subterfuge and chaos is designed to weaken United States citizens, our democracy, and our Constitution. It's horrible that a minority of citizens are trying to rebuke a voting majority of citizens at the behest of this President, they are willing participants in undermining their own and our collective fortune, peace, and country. The appropriate authorities (the FBI and Congress) need to prosecute the rioters and those who supported them, including the Capitol Police and Congress people, for violent sedition while Congress impeaches and the Administration censures the President. I will hold objecting Republicans responsible at every election, I won't forget Wednesday every time I vote in Texas.
