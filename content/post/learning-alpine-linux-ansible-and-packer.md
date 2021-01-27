@@ -1,5 +1,5 @@
 ---
-tags: ['linux', 'alpine', 'ansible', 'packer']
+tags: ['linux', 'alpine', 'ansible', 'packer', 'artifact', 'infrastructure-as-code', 'developer', 'operating-system', 'pets', 'configuration-management', 'cloud-init', 'bootstrap']
 date: "2021-01-26T09:37:33-06:00"
 title: "Learning AlpineLinux.org, Ansible.com, and Packer.io"
 ---
@@ -628,7 +628,7 @@ I hope you've seen some of my development best practices and strategies, I try t
   - Optimize the entire cycle to be minimal on resources, therefore faster to synthesize an ephemeral instance or provision a test
   - the smaller the time (and distance) between your change and a build+test result, the better = agility and #fastfeedback is important for developer flow
   - All of the above supports *red-green-refactor*, a development cycle pattern to keep your work in an optimal working state!
-  
+
 - Make your work reproducable:
   - Script your PetOps, save your work in git, share your work from git!
   - Virtualization is cheap: I used two providers over the course of this project to work on virtual machine guests for development, make mistakes and learn on them: **#failfastfixfast**!
@@ -641,4 +641,3 @@ I hope you've seen some of my development best practices and strategies, I try t
     - I tried to leverage environment variables in all facilities (Docker, Vagrant, Ansible, shell scripts) to remove hard-coded values and increase re-use across facilities.
 
 Finally, you haven't seen the services I'm working on, that'll be another blog in the future. There is so much bootstrapping, research, and discovery involved with each that I'm still evaluating alternatives based upon support and documentation, when I'm not helping improve the docs and filing bugs as well!
-

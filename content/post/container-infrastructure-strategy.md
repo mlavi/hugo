@@ -1,6 +1,6 @@
 +++
 date = "2015-04-04T07:55:39-07:00"
-tags = ["container", "immutable", "infrastructure", "configuration"]
+tags = ["container", "immutable", "infrastructure", "configuration-management"]
 title = "Container Infrastructure Strategy"
 +++
 
@@ -151,7 +151,7 @@ This likely includes the server dependencies (libraries and other run-times).
 
 However, the run-time configuration of this server facility could be dynamic
 so I would consider that data and a layer closer to the application. In fact, it would be
-ideal to make dynamic run-time configuration a service and pull it out of the 
+ideal to make dynamic run-time configuration a service and pull it out of the
 container entirely, allowing you to reuse this container for all stacks.
 
 The idea is that the server facility is a separate layer from our application: it iterates
