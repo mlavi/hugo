@@ -23,7 +23,7 @@ I investigated the current minimal Ubuntu or Debian server variant distributions
 
 After importing the AlpineLinux.org GPG key, [downloading](https://alpinelinux.org/downloads/), checking,
 
-```bash
+```shell
 URL=https://dl-cdn.alpinelinux.org/alpine/v3.12/releases/x86_64/alpine-extended-3.12.3-x86_64.iso
 
 for FILE in '' .asc .sha256; do
@@ -53,7 +53,7 @@ I SCP'd the answer file and any other supporting notes, scripts, or configuratio
 
 Here's my development VM answer file = **alpine/answerfile/skull-vm-packer-dev.toml**:
 
-```shell
+```toml
 # Answer file for setup-alpine script; tested on: cat /etc/alpine-release
 # 3.12.3, 3.13.0
 #---
@@ -313,20 +313,19 @@ echo "\
 
 ```
 
-This one command:
+From the script above, I wanted to call attention to this command:
 
-  > vboxmanage showvminfo "${VM_NAME}" --machinereadable \
-  > "${VM_NAME}".machinereadable.toml`
+    `vboxmanage showvminfo "${VM_NAME}" --machinereadable "${VM_NAME}".machinereadable.toml`
 
-allows me to diff a VM setup, *e.g:* `diff alpine/*.machinereadable.toml`, to understand what I needed to synthesize the same results by building an infrastructure VM. This is a critical differentiation for *infrastructure as code* versus the standard operator facilities of snapshot and clone in order to reproduce VM results. Furthermore, this leads to the path of building infrastructure VM artifacts in a later section. When we act more like a scientist than a craftsman, we can amplify that knowledge gain across any organization. Of course, I aspire to be a craftsman scientist: the hybrid is more interesting and relatable. The journey to improve one's skills and while pursuing or improving the state of the art will never end!
+which allows me to easily find the textual difference between any two VM setups, *e.g:* `diff alpine/*.machinereadable.toml`, to understand what I needed to synthesize the same results by building an infrastructure VM. This is a critical differentiation for *infrastructure as code* versus the standard operator facilities of snapshot and clone in order to reproduce VM results. Furthermore, this leads to the path of building infrastructure VM artifacts in a later section. When we act more like a scientist than a craftsman, we can amplify that knowledge gain across any organization. Of course, I aspire to be a craftsman scientist: the hybrid is more interesting and relatable. The journey to improve one's skills and while pursuing or improving the state of the art will never end!
 
 I continued development of my bootstrap procedure and scripts by creating an initialization script (`init.sh`), which would SCP the answer file and a post-OS install script (`post.sh`) from my desktop, then use them.
 
 Alpine's default shell is `busybox`, a reduced form of `ash`. Fortunately, [shellcheck](https://www.shellcheck.net/) is a nice addition to my IDE and it kept me in good form and syntax as I developed these scripts. I didn't have to install and test `busybox` directly on my Desktop OS or install `bash` on Alpine, which would have required further bootstrapping during the initialization stage.
 
-I re-factored `init.sh` from using `scp` to use `git` and then to use http for file transfer with `wget`, removing the need to install any packages. I have a habit of keeping copious notes in my code: it can consist of goals, pseudo code, lots of URLs, #TODOs, and #TOFIX notes. All of the time, I was improve capabilities while moving procedures and references out of my code and into documentation when I found a better method, an alternate facility, or a dead-end. I also moved work between `init.sh` and `post.sh` where appropriate to minimize setup before the first reboot to boot the OS from storage.
+I re-factored `init.sh` from using `scp` to use `git` and then to use http for file transfer with `wget`, removing the need to install any packages. You can see in my examples that I have a habit of keeping copious notes in my code. Notes can consist of goals, pseudo code, lots of URLs, #TODOs, and #TOFIX notes. All of the time, I would improve capabilities while moving procedures and references out of my code and into documentation when I found a better method, an alternate facility, or a dead-end. I also moved work between `init.sh` and `post.sh` where appropriate to minimize setup before the first reboot to boot the OS from storage.
 
-I arrived at a point where I needed to type three commands to bootstrap the development VM with a fully automated OS install and reboot, leaving one post OS configuration script that would survive the reboot.
+I arrived at a point where I needed to type three commands to bootstrap the development VM with a fully automated OS install and reboot, leaving one post OS configuration script that would survive the reboot. You will see this pattern repeated and most of the scripts reused in the the VM Artifact section!
 
 ```bash
 KEYMAPOPTS='us us' setup-alpine -q # keep commands in this order!
@@ -626,7 +625,7 @@ I hope you've seen some of my development best practices and strategies, I try t
     - Always use facility linting as a second check before execution:
       - work to reduce and eventually remove any exceptions and warnings
   - Optimize the entire cycle to be minimal on resources, therefore faster to synthesize an ephemeral instance or provision a test
-  - the smaller the time (and distance) between your change and a build+test result, the better = agility and #fastfeedback is important for developer flow
+    - the smaller the time (and distance) between your change and a build+test result, the better = agility and #fastfeedback is important for developer flow
   - All of the above supports *red-green-refactor*, a development cycle pattern to keep your work in an optimal working state!
 
 - Make your work reproducable:
@@ -640,4 +639,11 @@ I hope you've seen some of my development best practices and strategies, I try t
     - I loved that my `post.sh` was reused by Packer, that my `vm-init.sh` arrived at the same place as Packer using HTTP for basic file transfer without adding more facilities to the OS,
     - I tried to leverage environment variables in all facilities (Docker, Vagrant, Ansible, shell scripts) to remove hard-coded values and increase re-use across facilities.
 
-Finally, you haven't seen the services I'm working on, that'll be another blog in the future. There is so much bootstrapping, research, and discovery involved with each that I'm still evaluating alternatives based upon support and documentation, when I'm not helping improve the docs and filing bugs as well!
+Finally, you haven't seen the services I'm working on, that'll be for the future. There is so much bootstrapping, research, and discovery involved with each that I'm still evaluating alternatives based upon support and documentation, when I'm not helping improve the docs and filing bugs as well!
+
+# Postscript: Patterns (TODO)
+
+- Development pattern: Red -> Green -> Refactor (repeat)
+- My research and development process over time was Alpine -> Ansible -> VirtualBox -> Packer -> QEMU, but my work process is focused on either:
+  - Alpine -> Packer -> QEMU -> VirtualBox and Artifact pipeline
+  - VirtualBox -> Ansible for container service development

@@ -1,5 +1,5 @@
 ---
-tags: ['america', 'blacklivesmatter', 'education', 'politics']
+tags: ['america', 'blacklivesmatter', 'education', 'politics', 'culture', 'advocate', 'personal']
 date: "2020-06-07T09:11:52-05:00"
 title: "The American Soul: A Way Forward on Juneteenth"
 ---

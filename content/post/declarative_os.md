@@ -1,6 +1,6 @@
 +++
 date = "2016-03-12T15:44:02-08:00"
-tags = ["declarative", "operating system"]
+tags = ["declarative", "operating system", 'security']
 title = "Declarative Operating Systems"
 +++
 
@@ -66,6 +66,6 @@ There is more to investigate:
   on Intel hardware. Most interesting is their design goal of making [the OS
   stateless](https://clearlinux.org/features/stateless). This approach should
   be contrasted to the minimal host OSs for containers: RancherOS, CoreOS, etc.
-  
+
 - Docker's recent acquisition of [Unikernel Systems](https://blog.docker.com/2016/01/unikernel/)
   and the micro-kernel movement as a whole (http://unikernel.org/projects/)

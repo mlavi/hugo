@@ -1,5 +1,5 @@
 ---
-tags: ['america', 'politics']
+tags: ['america', 'politics', 'personal']
 date: "2021-01-10T08:18:29-06:00"
 title: "US Sedition, Presidential Censure, and Impeachment"
 ---
