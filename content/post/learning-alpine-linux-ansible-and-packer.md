@@ -105,7 +105,7 @@ I was spoiled by the small customizations and optimizations I could make with `V
 
 I worked to refactor many of the hard-coded values out of `vm-init.sh` and move them to a [DirEnv](https://direnv.net/) .env file, which automatically populate my shell's environment variables when I change into an enabled directory. I configured `.gitignore` to omit any .env file, so I will not accidentally commit any sensitive information, such as a password. By moving the hard-coded values to environment values, my code will support different scenarios without change. I can further leverage these environment variables for Docker, Ansible, and Packer and can think about how to organize them for better re-use and consistency across tools and environments.
 
-Let me share my current DirEnv's `.envrc` and `.env` configuration files, then my `vm-init.sh` guest maintenance script. You can see I override VM_NAME and MEDIUM_ISO rather than comment them out in the `.env` file. I've also expanded the maintenance script for more use cases.
+Let me share my current DirEnv's `.envrc` and `.env` configuration files, then my `vm-init.sh` guest maintenance script. You can see I override VM_NAME and MEDIUM_ISO rather than comment them out in the `.env` file. I've also expanded the maintenance script for more use cases and you will see some cloud-init experimental work.
 
 ```shell
 $ cat .envrc
@@ -574,10 +574,10 @@ Writing JSON from scratch, even when cutting and pasting in examples, is easy to
       "boot_key_interval": "{{user `boot_key_interval`}}",
       "boot_command": [
         "{{user `remote_user`}}<enter><wait>",
+        "passwd<enter><wait1>{{user `remote_password`}}<enter>{{user `remote_password`}}<enter>",
         "KEYMAPOPTS='us us' setup-alpine -q ; hostname {{user `vm_name`}}<enter>",
         "wget http://{{ .HTTPIP }}:{{ .HTTPPort }}/id_rsa.pub -O /etc/id_rsa.pub<enter>",
         "wget http://{{ .HTTPIP }}:{{ .HTTPPort }}/answerfile/{{user `vm_name`}}.toml<enter><wait>",
-        "passwd<enter><wait1>{{user `remote_password`}}<enter>{{user `remote_password`}}<enter>",
         "wget http://{{ .HTTPIP }}:{{ .HTTPPort }}/bootstrap.sh -O - | sh<enter>"
       ]
     }
@@ -603,7 +603,7 @@ Writing JSON from scratch, even when cutting and pasting in examples, is easy to
 
 ```
 
-Now I have reproducible, lightly customized VM images ready for Configuration Management and further development. Cloud-init will be a welcome replacement for the Packer work, but this exercise has allowed me to refresh my knowledge with the great tools, leverage my previous work, and form a flexible foundation for moving forward.
+Now I have reproducible, lightly customized VM images ready for Configuration Management and further development. Cloud-init will be a welcome replacement for the Packer+QEMU work, but this exercise has allowed me to refresh my knowledge with the great tools, leverage my previous work, and form a flexible foundation for moving forward. Another plus is that it was trivial to switch to a new release of Alpine Linux (3.13.0), use the smaller and faster 43 MB Virtual image ISO (rather than the 525MB 3.12.3 extended ISO I started with), and my post-process custom image compressed to 63MB!
 
 # Epilog
 
