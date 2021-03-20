@@ -13,6 +13,9 @@ My previous three employers had provided an Apple laptop and most recently I req
 
 When COVID-19 and shut-down travel, my 10 year old Linux desktop became my primary workstation. Fortunately, I'd  upgraded my monitor earlier that year, so I was set. With a lot of polishing, I migrated all of my day to day work to Linux from Mac. Today, the primary reason I use my Mac is for being on the road, videoconferencing, and Powerpoint.
 
+> Update: February 2021
+> The following month, I found I could no longer use Homebrew's Linux compiled Python because my old AMD Athelon Phenom II processor doesn't support Intel Core 2 instruction set which seems to be required. Of course, my OS provides Python as a workaround, but this wasn't the first time I had encountered a processor compile issue. Exactly a decade (to the month), I upgraded my desktop to a current AMD Rizen 3000 desktop CPU/motherboard. COVID-19 seems to have impacted some choice and availability in the market. Ironically, I've yet to feel much of a difference in performance.
+
 I had personally invested into buying double the memory for a work supplied Intel Skull Canyon i5 NUC, but it always struggled to run [Nutanix Community Edition](https://www.nutanix.com/products/community-edition) with AOS, Prism Central, and Calm plus some workload VMs and furthermore, community support would challenge my productivity. So it was idle, smaller, faster, and quieter than my desktop, and ideal to host this holiday project as a headless server.
 
 # Operating System

@@ -1,10 +1,10 @@
 ---
-tags: ['shell', 'cli', 'mastery', 'bash']
+tags: ['shell', 'cli', 'command', 'bash']
 draft: true
 date: "2020-02-09T14:42:59-06:00"
-title: "Shellmaster: Mastering the Command Line Interface"
+title: "Shell: Commanding the Command Line Interface"
 ---
-Through my years of DOS, Unix, and Linux, I've scraped by just fine with the command line and shell scripting. But over the past two years, I've worked to improve my mastery because there's no other place to bootstrap automation. So I'm documenting some of my learnings and research goals.
+Through my years of DOS, Unix, and Linux, I've scraped by just fine with the command line and shell scripting. But over the past two years, I've worked to improve my command because there's no better place to bootstrap automation. So I'm documenting some of my learnings and research goals.
 <!--more-->
 Even when I worked at SGI and started to work with the the DCO: Data Center Operations teams, I thought I'd find the gods of the command line for system administation, and I did to some extent, but it was rare for me to pick up a trick. I did find one SysAdmin (Brent) who did software development, and he did expose me to parallel makes and other ideas for automation.
 
