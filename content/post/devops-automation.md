@@ -26,15 +26,14 @@ some of which are not easily identified off the shelf.
 ### Updated! ###
 My original release was 2015-03-11 (source below), but today's update adds detail, removes many crossed lines for simple visual flow parsing, and is organized vertically.
 
-[devops_automation.pu.svg](devops_automation.pu.svg) is one format, so please "view the SVG image" in a new browser window or tab and scale it to your liking, you can copy text from it.
+[devops_automation.pu.svg](/post/devops_automation.pu.svg) is one format, so please "view the SVG image" in a new browser window or tab and scale it to your liking, you can copy text from it.
 
-The inline display is currently broken:
-![DevOps Automation Diagram - 2015-03-17](devops_automation.pu.svg)
+![DevOps Automation Diagram - 2015-03-17](/post/devops_automation.pu.svg)
 
 Source code: devops_automation.pu
-{{< highlight "js+genshitext" >}}
 
 ```PlantUML
+
 @startuml
 title DevOps Automation (2015-03-11) by Mark Lavi
 state Development {
@@ -186,9 +185,8 @@ state Stack {
   node -> Logs
   node -> Metrics
 }
-@enduml```
-
-{{< /highlight >}}
+@enduml
+```
 
 I will put this under revision control in the Infrastructure as Code project I'm undertaking.
 I do not believe authored hyperlinks export to SVG yet, perhaps that will be my first request for PlantUML.
