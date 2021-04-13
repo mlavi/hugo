@@ -102,3 +102,4 @@ https://www.learnshell.org/
 # More Resources
 - https://www.commandlinefu.com/commands/browse/sort-by-votes
 - https://mywiki.wooledge.org/BashPitfalls
+- https://github.com/alebcay/awesome-shell
