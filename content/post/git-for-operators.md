@@ -16,7 +16,7 @@ Let me ask a very simple question: are you the same person you were last year? H
 
 This is a deeply philosophical question, addressed by maintenance on the [Ship of Theseus](https://en.wikipedia.org/wiki/Ship_of_Theseus) through time.
 
-Change is eternal, even when dealing with single individual. *e.g.:* I can't be relied upon to memorize, expire, and update a unique [pet password](#pet-passwords) for every account on every VM on every cluster in every infrastructure provider for every project I work on and rotate those passwords every 3-12 months! Complexity multiplies with additional people, hence [change management](https://en.wikipedia.org/wiki/Change_management) is an essential discipline for operators. Unfortunately, many operators do not utilize version control and rely on pet ops and backups for change management.
+Change is eternal, especially when depending on any single individual. *e.g.:* I can't be relied upon to memorize, expire, and update a unique [pet password](#pet-passwords) for every account on every VM on every cluster in every infrastructure provider for every project I work on and rotate those passwords every 3-12 months! Complexity multiplies with additional people, hence [change management](https://en.wikipedia.org/wiki/Change_management) is an essential discipline for operators. Unfortunately, many operators do not utilize version control and rely on pet ops and backups for change management.
 
 Version control makes our work:
 - reproducible: an essential characteristic of the scientific method
