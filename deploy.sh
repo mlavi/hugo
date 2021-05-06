@@ -13,6 +13,7 @@ set -e -x # halt script on error
 #  init a new working copy:
 #  rm -rf public; git rm public # make idempotent
 #  git submodule add --force https://github.com/mlavi/mlavi.github.io.git public
+#  git submodule add --force git@github.com:mlavi/mlavi.github.io.git public
 #  rm -rf public/*; ./deploy.sh
 # ____ Fish: function slides
 #  cd ~/Documents/github.com/mlavi/hugo/static/slides
