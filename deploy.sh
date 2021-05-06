@@ -3,11 +3,8 @@
 set -e -x # halt script on error
 
 # hugo server --watch &
-#  Install hugo:
+#  Install hugo via brew
 #  hugo version # https://github.com/spf13/hugo/releases
-#   sudo apt-get remove hugo && sudo dpkg -i /home/mark/Downloads/hugo_0.17-64bit.deb && hugo version
-#   vs. brew --version && brew update && brew upgrade
-#    brew list ; brew cask list ; brew desc -n /libff*/
 #  Install hugo theme:
 #   cd themes; git clone https://github.com/tmaiaroto/hugo-redlounge
 # git config --local --edit
@@ -78,7 +75,7 @@ if [[ ${TEST} ]]; then
   echo -e "\nSTART: test..."
   if ! bundle exec htmlproof --verbose ./public; then
     echo "ERROR: test, exiting."
-    exit                               1
+    exit 1
   fi
 else
   echo -e "\n SKIP: test..."
