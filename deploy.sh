@@ -12,7 +12,7 @@ set -e -x # halt script on error
 # ____ Filesystem:
 #  init a new working copy:
 #  rm -rf public; git rm public # make idempotent
-#  git submodule add --force git@github.com:mlavi/mlavi.github.io.git public
+#  git submodule add --force https://github.com/mlavi/mlavi.github.io.git public
 #  rm -rf public/*; ./deploy.sh
 # ____ Fish: function slides
 #  cd ~/Documents/github.com/mlavi/hugo/static/slides
@@ -58,17 +58,6 @@ fi
 # https://github.com/gjtorikian/html-proofer
 # sudo apt-get install -y ruby ruby-dev ruby-bundler
 # sudo gem install html-proofer
-#
-# Building native extensions. This could take a while...
-# Successfully installed nokogiri-1.10.7
-# Successfully installed nokogumbo-2.0.2
-# Successfully installed parallel-1.19.1
-# Successfully installed rainbow-3.0.0
-# Successfully installed ffi-1.11.3
-# Successfully installed ethon-0.12.0
-# Successfully installed typhoeus-1.3.1
-# Successfully installed yell-2.2.1
-# Successfully installed html-proofer-3.15.0
 
 # http://validator.w3.org/
 if [[ ${TEST} ]]; then
