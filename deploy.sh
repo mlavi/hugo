@@ -11,10 +11,10 @@ set -e -x # halt script on error
 #  hugo new post/name.md --editor=gedit &
 # ____ Filesystem:
 #  init a new working copy:
-#  rm -rf public; git rm public # make idempotent
+#  rm -rf public && git rm public # make idempotent
 #  git submodule add --force https://github.com/mlavi/mlavi.github.io.git public
 #  git submodule add --force git@github.com:mlavi/mlavi.github.io.git public
-#  rm -rf public/*; ./deploy.sh
+#  rm -rf public/*/* public/*.*; ./deploy.sh
 # ____ Fish: function slides
 #  cd ~/Documents/github.com/mlavi/hugo/static/slides
 #  echo; pwd; ls
@@ -71,16 +71,16 @@ else
   echo -e "\n SKIP: test..."
 fi
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+echo -e "\033[0;32mCommit changes and deploying updates...\033[0m"
 
-# Commit changes.
-cd public && git add --all
-msg="rebuilding site $(date)"
 if [ $# -eq 1 ]; then
   msg="$1"
+else
+  msg="rebuilding site $(date)"
 fi
-git commit -m "$msg"
 
-# Push source and build repos.
-git push origin HEAD:master --force-with-lease
+cd public \
+  && git add --all \
+  && git commit -m "$msg" \
+  && git push origin HEAD:master --force-with-lease
 cd ..
