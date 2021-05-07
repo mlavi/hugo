@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e -x # halt script on error
+#_submodule=docs # from .env
 
 # hugo server --watch &
 #  Install hugo via brew
@@ -11,10 +12,10 @@ set -e -x # halt script on error
 #  hugo new post/name.md --editor=gedit &
 # ____ Filesystem:
 #  init a new working copy:
-#  rm -rf public && git rm public # make idempotent
-#  git submodule add --force https://github.com/mlavi/mlavi.github.io.git public
-#  git submodule add --force git@github.com:mlavi/mlavi.github.io.git public
-#  rm -rf public/*/* public/*.*; ./deploy.sh
+#  rm -rf ${_submodule} && git rm ${_submodule} # make idempotent
+#  git submodule add --force https://github.com/mlavi/mlavi.github.io.git ${_submodule}
+#  git submodule add --force git@github.com:mlavi/mlavi.github.io.git ${_submodule}
+#  rm -rf ${_submodule}/*/* ${_submodule}/*.*; ./deploy.sh
 # ____ Fish: function slides
 #  cd ~/Documents/github.com/mlavi/hugo/static/slides
 #  echo; pwd; ls
@@ -48,7 +49,7 @@ if [[ ${_PLACEHOLDER} || ${_DRAFT} ]]; then
 fi
 
 echo -e "\nSTART: building project..."
-rm -rf public/*
+rm -rf "${_submodule:?}/*"
 
 if ! hugo --verbose; then
   echo "ERROR: hugo build, exiting."
@@ -63,7 +64,7 @@ fi
 # http://validator.w3.org/
 if [[ ${TEST} ]]; then
   echo -e "\nSTART: test..."
-  if ! bundle exec htmlproof --verbose ./public; then
+  if ! bundle exec htmlproof --verbose "./${_submodule}"; then
     echo "ERROR: test, exiting."
     exit 1
   fi
@@ -79,8 +80,8 @@ else
   msg="rebuilding site $(date)"
 fi
 
-cd public \
+cd "${_submodule}" \
   && git add --all \
   && git commit -m "$msg" \
-  && git push origin HEAD:master --force-with-lease
+  && git push origin HEAD:main --force-with-lease
 cd ..
