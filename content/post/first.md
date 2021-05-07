@@ -100,4 +100,4 @@ Self hosted, open source alternatives (from https://gohugo.io/content-management
 
 ## Postscript: 2020-04-10 ##
 
-Time to investigate https://jamstack.org/best-practices and https://jamstack.wtf/, I like the principles of the project.
+Time to investigate https://jamstack.org/best-practices and [https://jamstack.wtf/](https://jamstack.wtf/), I like the principles of the project.
