@@ -98,8 +98,11 @@ https://www.learnshell.org/
 # IDEAS:
 ## Prezi/shell command map from man pages:see also
 ## Interactive PATH explorer
+- https://github.com/facebook/PathPicker
 
 # More Resources
 - https://www.commandlinefu.com/commands/browse/sort-by-votes
 - https://mywiki.wooledge.org/BashPitfalls
 - https://github.com/alebcay/awesome-shell
+- https://github.com/awesome-lists/awesome-bash
+- https://github.com/alebcay/awesome-shell#system-utilities

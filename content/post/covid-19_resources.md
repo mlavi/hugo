@@ -22,3 +22,4 @@ http://flattenthecurve.com
 - [WIRED](https://www.wired.com/video/series/wired-news-and-science) magazine: News and Science: [Cause and Control playlist](https://www.youtube.com/playlist?list=PLibNZv5Zd0dzNFYDca37tAixwnmzXC-jR) features Dr. Seema Yasmin
 - How to deal with reopening an economy: https://freakonomics.com/podcast/covid-19-reopen/
   - [The Risks - Know Them - Avoid Them](https://www.erinbromage.com/post/the-risks-know-them-avoid-them)
+- https://berthub.eu/articles/posts/reverse-engineering-source-code-of-the-biontech-pfizer-vaccine/
