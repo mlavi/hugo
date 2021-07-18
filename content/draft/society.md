@@ -22,6 +22,8 @@ Table: societal organization, ordered by size
 Of course, sports (as remnants of the city-state) overlays are fun organizing cultural factors
 Political gerrymandering is certainly a corrupting influence.
 
+- https://www.yalelawjournal.org/note/amazons-antitrust-paradox
+
 # The Dictator as Pet
 
 Through societal contract, often enforced by military might, a Dictator seeks to
